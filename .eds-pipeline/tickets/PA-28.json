@@ -5,7 +5,7 @@
   "variant": null,
   "local_identity": "tabs",
   "title": "Tabs With Composite Content",
-  "state": "approved",
+  "state": "done",
   "depends_on": [],
   "epic": {
     "id": "PA-22",
@@ -88,7 +88,7 @@
   "created_by": "component-architect",
   "approved_by": "human-gate-2",
   "assigned_to": "eds-developer",
-  "branch": null,
+  "branch": "copilot/pa-28-implement-eds-tabs",
   "history": [
     {
       "date": "2026-08-10",
@@ -110,6 +110,35 @@
       "to": "approved",
       "by": "human-gate-2",
       "note": "Gate 2: aprobar todo"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "approved",
+      "to": "in_dev",
+      "by": "dispatch-copilot-tasks",
+      "note": "Tarea de Copilot 1e738215-c247-4ab0-bc9f-0c8138387397 en la rama eds-ai-pa-28-tabs"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "in_dev",
+      "by": "code-review",
+      "note": "Revisión final paralela de PR #6 mediante tarea c95b074b-21f0-4f66-95a7-99b63356a7ee."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "in_dev",
+      "by": "quality-gate",
+      "note": "Validación medida obligatoria de PR #6 mediante tarea 0badcb98-e170-473e-87ff-652edc17bb2e."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "done",
+      "by": "merge-review",
+      "note": "PR #6 fusionada en main (c5e0176). Jira actualizado a Listo."
     }
-  ]
+  ],
+  "copilot_task_id": "0badcb98-e170-473e-87ff-652edc17bb2e"
 }

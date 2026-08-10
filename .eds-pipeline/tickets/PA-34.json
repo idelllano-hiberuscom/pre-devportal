@@ -5,7 +5,7 @@
   "variant": null,
   "local_identity": "code-block",
   "title": "Code Block",
-  "state": "approved",
+  "state": "done",
   "depends_on": [],
   "epic": {
     "id": "PA-19",
@@ -97,7 +97,7 @@
   "created_by": "component-architect",
   "approved_by": "human-gate-2",
   "assigned_to": "eds-developer",
-  "branch": null,
+  "branch": "copilot/pa-34-code-block-eds-developer",
   "history": [
     {
       "date": "2026-08-10",
@@ -119,6 +119,42 @@
       "to": "approved",
       "by": "human-gate-2",
       "note": "Gate 2: aprobar todo"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "approved",
+      "to": "in_dev",
+      "by": "dispatch-copilot-tasks",
+      "note": "Tarea de Copilot 7adb80ba-d00c-4d1e-a5ba-ef96285b332c en la rama eds-ai-pa-34-code-block"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "in_dev",
+      "by": "dispatch-copilot-tasks",
+      "note": "Recuperación de la PR #9 vacía mediante tarea 5f0c0a9f-1015-4eb7-887b-633530e977d6 sobre su head_ref real."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "in_dev",
+      "by": "code-review",
+      "note": "Revisión final paralela de PR #9 mediante tarea 2deb1180-5096-40e0-87f4-010208d5bace."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "in_dev",
+      "by": "quality-gate",
+      "note": "Validación medida obligatoria de PR #9 mediante tarea 20bd5b45-6a2e-46f4-8581-6705e9e16c2f."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "done",
+      "by": "merge-review",
+      "note": "PR #9 fusionada en main (54cc51f). Jira actualizado a Listo."
     }
-  ]
+  ],
+  "copilot_task_id": "20bd5b45-6a2e-46f4-8581-6705e9e16c2f"
 }

@@ -5,7 +5,7 @@
   "variant": "editorial",
   "local_identity": "cards--editorial",
   "title": "Editorial Cards",
-  "state": "approved",
+  "state": "done",
   "depends_on": [
     "PA-32"
   ],
@@ -113,7 +113,7 @@
   "created_by": "component-architect",
   "approved_by": "human-gate-2",
   "assigned_to": "eds-developer",
-  "branch": null,
+  "branch": "copilot/pa-33-implement-cards-block",
   "history": [
     {
       "date": "2026-08-10",
@@ -135,6 +135,28 @@
       "to": "approved",
       "by": "human-gate-2",
       "note": "Gate 2: aprobar todo"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "approved",
+      "to": "in_dev",
+      "by": "dispatch-copilot-tasks",
+      "note": "Tarea de Copilot 40d4d417-83e1-4613-a144-36282e4d2d46 en la rama eds-ai-pa-33-cards"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "in_dev",
+      "by": "quality-gate",
+      "note": "Validación medida obligatoria de PR #13 mediante tarea c44a17c7-801e-4af1-bc30-b64e506c7380 sobre su head_ref real."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "done",
+      "by": "merge-review",
+      "note": "PR #13 revisada y fusionada en main."
     }
-  ]
+  ],
+  "copilot_task_id": "c44a17c7-801e-4af1-bc30-b64e506c7380"
 }

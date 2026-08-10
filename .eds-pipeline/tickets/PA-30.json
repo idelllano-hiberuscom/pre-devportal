@@ -5,7 +5,7 @@
   "variant": null,
   "local_identity": "pie-chart",
   "title": "Pie Chart",
-  "state": "approved",
+  "state": "done",
   "depends_on": [],
   "epic": {
     "id": "PA-20",
@@ -109,7 +109,7 @@
   "created_by": "component-architect",
   "approved_by": "human-gate-2",
   "assigned_to": "eds-developer",
-  "branch": null,
+  "branch": "copilot/pa-30-implement-pie-chart",
   "history": [
     {
       "date": "2026-08-10",
@@ -131,6 +131,35 @@
       "to": "approved",
       "by": "human-gate-2",
       "note": "Gate 2: aprobar todo"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "approved",
+      "to": "in_dev",
+      "by": "dispatch-copilot-tasks",
+      "note": "Tarea de Copilot 9d5ed503-edc6-43f6-a14e-efc99ad102bc en la rama eds-ai-pa-30-pie-chart"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "in_dev",
+      "by": "code-review",
+      "note": "Revisión final paralela de PR #8 mediante tarea 38158195-7342-4e88-a545-8de28aefe22d."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "in_dev",
+      "by": "quality-gate",
+      "note": "Validación medida obligatoria de PR #8 mediante tarea ec10b81b-6330-4445-b90c-10c47c81e00f."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "done",
+      "by": "merge-review",
+      "note": "PR #8 fusionada en main (df9aa9c). Jira actualizado a Listo."
     }
-  ]
+  ],
+  "copilot_task_id": "ec10b81b-6330-4445-b90c-10c47c81e00f"
 }

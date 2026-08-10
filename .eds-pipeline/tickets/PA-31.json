@@ -5,7 +5,7 @@
   "variant": "icon-cards",
   "local_identity": "cards--icon-cards",
   "title": "Icon Cards",
-  "state": "approved",
+  "state": "done",
   "depends_on": [
     "PA-25"
   ],
@@ -118,7 +118,7 @@
   "created_by": "component-architect",
   "approved_by": "human-gate-2",
   "assigned_to": "eds-developer",
-  "branch": null,
+  "branch": "copilot/pa-31-implement-cards-block",
   "history": [
     {
       "date": "2026-08-10",
@@ -140,6 +140,28 @@
       "to": "approved",
       "by": "human-gate-2",
       "note": "Gate 2: aprobar todo"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "approved",
+      "to": "in_dev",
+      "by": "dispatch-copilot-tasks",
+      "note": "Tarea de Copilot c3d74134-9bbe-4282-b376-1269fa014dda en la rama eds-ai-pa-31-cards"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "in_dev",
+      "by": "code-review",
+      "note": "Corrección contractual y contenido de prueba requeridos en PR #11 mediante tarea b962c151-9a0a-45f0-8b08-2185a8aeb3ca antes de desbloquear PA-32."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "done",
+      "by": "code-review",
+      "note": "PR #11 validada con build:json, lint y navegador responsive, y fusionada en main como 394e2b5; PA-32 queda desbloqueada."
     }
-  ]
+  ],
+  "copilot_task_id": "b962c151-9a0a-45f0-8b08-2185a8aeb3ca"
 }

@@ -5,7 +5,7 @@
   "variant": null,
   "local_identity": "accordion",
   "title": "Accordion",
-  "state": "approved",
+  "state": "done",
   "depends_on": [],
   "epic": {
     "id": "PA-17",
@@ -87,7 +87,7 @@
   "created_by": "component-architect",
   "approved_by": "human-gate-2",
   "assigned_to": "eds-developer",
-  "branch": null,
+  "branch": "copilot/pa-27-implement-eds-accordion",
   "history": [
     {
       "date": "2026-08-10",
@@ -109,6 +109,42 @@
       "to": "approved",
       "by": "human-gate-2",
       "note": "Gate 2: aprobar todo"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "approved",
+      "to": "in_dev",
+      "by": "dispatch-copilot-tasks",
+      "note": "Tarea de Copilot 32044344-c010-429e-baac-a0da820cde5f en la rama eds-ai-pa-27-accordion"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "in_dev",
+      "by": "dispatch-copilot-tasks",
+      "note": "Recuperación de la PR #5 tras fallo de descarga 404 mediante tarea f3ef037a-7ae9-417a-a46a-58c22a712583."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "in_dev",
+      "by": "code-review",
+      "note": "Revisión final paralela de PR #5 mediante tarea aaa9e235-5ace-4d05-990f-94e806d9868c."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "in_dev",
+      "by": "quality-gate",
+      "note": "Validación medida obligatoria de PR #5 mediante tarea 51bfb465-d45f-413d-9898-11bed8138561."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "done",
+      "by": "merge-review",
+      "note": "PR #5 fusionada en main (2983d05). Jira actualizado a Listo."
     }
-  ]
+  ],
+  "copilot_task_id": "51bfb465-d45f-413d-9898-11bed8138561"
 }

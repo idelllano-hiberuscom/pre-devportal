@@ -5,7 +5,7 @@
   "variant": "plugins",
   "local_identity": "cards--plugins",
   "title": "Plugin Cards",
-  "state": "approved",
+  "state": "done",
   "depends_on": [
     "PA-31"
   ],
@@ -119,7 +119,7 @@
   "created_by": "component-architect",
   "approved_by": "human-gate-2",
   "assigned_to": "eds-developer",
-  "branch": null,
+  "branch": "copilot/pa-32-implement-cards-block",
   "history": [
     {
       "date": "2026-08-10",
@@ -141,6 +141,21 @@
       "to": "approved",
       "by": "human-gate-2",
       "note": "Gate 2: aprobar todo"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "approved",
+      "to": "in_dev",
+      "by": "dispatch-copilot-tasks",
+      "note": "Tarea de Copilot b8f1c7d9-8ff0-4fa5-9b15-aee416558e6a en la rama copilot/pa-32-implement-cards-block"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "done",
+      "by": "code-review",
+      "note": "PR #12 corregida y validada: Lighthouse 100/100/100/100, axe 0, DOM 8/8, build:json y lint; fusionada en main como c50864b. PA-33 queda desbloqueada."
     }
-  ]
+  ],
+  "copilot_task_id": "b8f1c7d9-8ff0-4fa5-9b15-aee416558e6a"
 }

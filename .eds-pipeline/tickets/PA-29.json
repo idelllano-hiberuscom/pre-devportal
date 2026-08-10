@@ -5,7 +5,7 @@
   "variant": null,
   "local_identity": "video",
   "title": "Video",
-  "state": "approved",
+  "state": "done",
   "depends_on": [],
   "epic": {
     "id": "PA-17",
@@ -83,7 +83,7 @@
   "created_by": "component-architect",
   "approved_by": "human-gate-2",
   "assigned_to": "eds-developer",
-  "branch": null,
+  "branch": "copilot/pa-29-implement-video-block",
   "history": [
     {
       "date": "2026-08-10",
@@ -105,6 +105,42 @@
       "to": "approved",
       "by": "human-gate-2",
       "note": "Gate 2: aprobar todo"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "approved",
+      "to": "in_dev",
+      "by": "dispatch-copilot-tasks",
+      "note": "Tarea de Copilot ff256db3-bfc5-4608-a614-c242f2d27dd3 en la rama eds-ai-pa-29-video"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "in_dev",
+      "by": "dispatch-copilot-tasks",
+      "note": "Recuperación de la PR #7 vacía mediante tarea fd6218f7-2226-4aee-9769-509dc061d735 sobre su head_ref real."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "in_dev",
+      "by": "code-review",
+      "note": "Revisión final paralela de PR #7 mediante tarea b95e73c4-b17e-4e98-82ad-533e0de01578."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "in_dev",
+      "by": "quality-gate",
+      "note": "Validación medida obligatoria de PR #7 mediante tarea 1d47159c-c3ae-4da4-8445-f00bfc8c7a49."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "done",
+      "by": "merge-review",
+      "note": "PR #7 fusionada en main (d3bfd25). Jira actualizado a Listo."
     }
-  ]
+  ],
+  "copilot_task_id": "1d47159c-c3ae-4da4-8445-f00bfc8c7a49"
 }

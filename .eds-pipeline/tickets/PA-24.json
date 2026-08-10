@@ -5,7 +5,7 @@
   "variant": null,
   "local_identity": "swagger-console",
   "title": "Authenticated Swagger Console",
-  "state": "approved",
+  "state": "done",
   "depends_on": [],
   "epic": {
     "id": "PA-14",
@@ -97,7 +97,7 @@
   "created_by": "component-architect",
   "approved_by": "human-gate-2",
   "assigned_to": "eds-developer",
-  "branch": null,
+  "branch": "copilot/pa-24-swagger-console",
   "history": [
     {
       "date": "2026-08-10",
@@ -119,6 +119,42 @@
       "to": "approved",
       "by": "human-gate-2",
       "note": "Gate 2: aprobar todo"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "approved",
+      "to": "in_dev",
+      "by": "dispatch-copilot-tasks",
+      "note": "Tarea de Copilot b239bfec-b7bd-4086-b504-3b454a5d16e9 en la rama eds-ai-pa-24-swagger-conso"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "in_dev",
+      "by": "dispatch-copilot-tasks",
+      "note": "Recuperación de la PR #3 vacía mediante tarea 09978f24-1303-4db4-91f8-79a4bdbb0e3a sobre su head_ref real."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "in_dev",
+      "by": "code-review",
+      "note": "Revisión final paralela de PR #3 mediante tarea b3e70825-68e7-4ede-85f6-65187e70e3c7."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "in_dev",
+      "by": "quality-gate",
+      "note": "Validación medida obligatoria de PR #3 mediante tarea 1923f04d-8ea1-4b3d-9248-a60eb4532cf2."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "done",
+      "by": "merge-review",
+      "note": "PR #3 fusionada en main (39ff2b7). Jira actualizado a Listo."
     }
-  ]
+  ],
+  "copilot_task_id": "1923f04d-8ea1-4b3d-9248-a60eb4532cf2"
 }

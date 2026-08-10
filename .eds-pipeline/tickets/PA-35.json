@@ -5,7 +5,7 @@
   "variant": null,
   "local_identity": "carousel",
   "title": "Step Carousel",
-  "state": "approved",
+  "state": "done",
   "depends_on": [],
   "epic": {
     "id": "PA-19",
@@ -96,7 +96,7 @@
   "created_by": "component-architect",
   "approved_by": "human-gate-2",
   "assigned_to": "eds-developer",
-  "branch": null,
+  "branch": "copilot/pa-35-implement-carousel-block",
   "history": [
     {
       "date": "2026-08-10",
@@ -118,6 +118,28 @@
       "to": "approved",
       "by": "human-gate-2",
       "note": "Gate 2: aprobar todo"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "approved",
+      "to": "in_dev",
+      "by": "dispatch-copilot-tasks",
+      "note": "Tarea de Copilot e67ec82e-368e-4312-a6e4-a14b8073d07c en la rama copilot/pa-35-implement-carousel-block"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "in_dev",
+      "by": "code-review",
+      "note": "Revisión final paralela de PR #10 mediante tarea a582828c-eca9-44a3-babc-b4f35da9c4da."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "to": "done",
+      "by": "merge-review",
+      "note": "PR #10 fusionada en main (5c70a70). Jira actualizado a Listo."
     }
-  ]
+  ],
+  "copilot_task_id": "a582828c-eca9-44a3-babc-b4f35da9c4da"
 }
