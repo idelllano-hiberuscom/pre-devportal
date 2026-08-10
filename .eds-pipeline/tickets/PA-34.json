@@ -1,0 +1,124 @@
+{
+  "ticket_id": "PA-34",
+  "component_id": "cmp-code-block",
+  "block_name": "code-block",
+  "variant": null,
+  "local_identity": "code-block",
+  "title": "Code Block",
+  "state": "approved",
+  "depends_on": [],
+  "epic": {
+    "id": "PA-19",
+    "nombre": "Plantilla: integration-summary",
+    "tipo": "plantilla"
+  },
+  "templates": {
+    "primary": "integration-summary",
+    "additional": [
+      "developer-tools-api-detail"
+    ]
+  },
+  "confidence_score": 0.86,
+  "is_container": false,
+  "technical_contract": {
+    "confluence_url": "https://hiberus-team-dxp.atlassian.net/wiki/spaces/PA/pages/214335489",
+    "local_path": ".eds-pipeline/contracts/code-block.md",
+    "assets_dir": ".eds-pipeline/assets/code-block/",
+    "breakpoints_capturados": [
+      "desktop",
+      "tablet",
+      "mobile"
+    ],
+    "completo": true,
+    "incomplete_reasons": [],
+    "confluence_attachments": {
+      "uploaded": [
+        "computed-styles.json",
+        "desktop-context.jpg",
+        "desktop.png",
+        "evidence.json",
+        "fragment.html",
+        "mobile-context.jpg",
+        "mobile.png",
+        "tablet-context.jpg",
+        "tablet.png"
+      ],
+      "referenced": [
+        "desktop.png",
+        "desktop-context.jpg",
+        "tablet.png",
+        "tablet-context.jpg",
+        "mobile.png",
+        "mobile-context.jpg"
+      ],
+      "missing": [],
+      "verified": true
+    }
+  },
+  "source": {
+    "portal_url": "https://pre-devportaltpv.cloud.cecabank.es",
+    "page_url": "https://pre-devportaltpv.cloud.cecabank.es/integraciones/api",
+    "pages": [
+      "https://pre-devportaltpv.cloud.cecabank.es/integraciones/api",
+      "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/tokenizacion"
+    ],
+    "selector": ".custom-code-block",
+    "snapshot_date": "2026-08-10"
+  },
+  "dedup": {
+    "verdict": "new",
+    "closest_match": "default pre/code content",
+    "similarity": 0.52,
+    "rationale": "El contenido por defecto preserva codigo, pero no resuelve lenguaje, numeracion, tema ni accion accesible de copia."
+  },
+  "content_mapping": [
+    {
+      "source_selector": ".custom-code-block__title",
+      "target_field": "title",
+      "type": "text"
+    },
+    {
+      "source_selector": "pre code",
+      "target_field": "language",
+      "type": "text",
+      "source_attribute": "ng-reflect-language|data-language|class",
+      "transform": "normalizar_identificador_de_lenguaje"
+    },
+    {
+      "source_selector": "pre code",
+      "target_field": "code",
+      "type": "text"
+    }
+  ],
+  "repeat_selector": null,
+  "ambiguities": [],
+  "business_input_required": false,
+  "collision": null,
+  "created_by": "component-architect",
+  "approved_by": "human-gate-2",
+  "assigned_to": "eds-developer",
+  "branch": null,
+  "history": [
+    {
+      "date": "2026-08-10",
+      "from": null,
+      "to": "draft",
+      "by": "task-writer",
+      "note": "Creado desde propuesta-componentes.json aprobada en Gate 1"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "draft",
+      "to": "draft",
+      "by": "task-writer",
+      "note": "Decisiones humanas de Gate 2 aplicadas; el ticket permanece draft pendiente de aprobación explícita."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "draft",
+      "to": "approved",
+      "by": "human-gate-2",
+      "note": "Gate 2: aprobar todo"
+    }
+  ]
+}

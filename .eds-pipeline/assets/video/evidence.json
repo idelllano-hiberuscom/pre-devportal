@@ -1,0 +1,59 @@
+{
+  "block_name": "video",
+  "selector": "article.media--type-video",
+  "source_url": "https://pre-devportaltpv.cloud.cecabank.es/inicio",
+  "captured_at": "2026-08-10",
+  "breakpoints": [
+    {
+      "label": "desktop",
+      "width": 1440,
+      "height": 900,
+      "present": true,
+      "box": {
+        "x": 32,
+        "y": 4528,
+        "width": 1376,
+        "height": 737
+      },
+      "above_the_fold": false,
+      "ratio": 1.87,
+      "screenshot": "desktop.png",
+      "context_screenshot": "desktop-context.jpg"
+    },
+    {
+      "label": "tablet",
+      "width": 768,
+      "height": 1024,
+      "present": true,
+      "box": {
+        "x": 32,
+        "y": 4286,
+        "width": 704,
+        "height": 353
+      },
+      "above_the_fold": false,
+      "ratio": 1.99,
+      "screenshot": "tablet.png",
+      "context_screenshot": "tablet-context.jpg"
+    },
+    {
+      "label": "mobile",
+      "width": 375,
+      "height": 812,
+      "present": true,
+      "box": {
+        "x": 32,
+        "y": 5546,
+        "width": 311,
+        "height": 261
+      },
+      "above_the_fold": false,
+      "ratio": 1.19,
+      "screenshot": "mobile.png",
+      "context_screenshot": "mobile-context.jpg"
+    }
+  ],
+  "fragment": "fragment.html",
+  "fragment_from": "desktop",
+  "computed_styles": "computed-styles.json"
+}

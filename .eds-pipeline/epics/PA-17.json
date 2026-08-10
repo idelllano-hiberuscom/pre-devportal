@@ -1,0 +1,15 @@
+{
+  "epic_id": "PA-17",
+  "template_id": "home-help-shared",
+  "name": "Plantilla: home-help-shared",
+  "state": "draft",
+  "pages_matched": 2,
+  "pages_analyzed": 2,
+  "pages_propagated": 0,
+  "tickets": [
+    "PA-31",
+    "PA-27",
+    "PA-26",
+    "PA-29"
+  ]
+}

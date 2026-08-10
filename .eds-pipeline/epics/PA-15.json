@@ -1,0 +1,12 @@
+{
+  "epic_id": "PA-15",
+  "template_id": "developer-tools-payment-detail",
+  "name": "Plantilla: developer-tools-payment-detail",
+  "state": "draft",
+  "pages_matched": 4,
+  "pages_analyzed": 3,
+  "pages_propagated": 1,
+  "tickets": [
+    "PA-32"
+  ]
+}

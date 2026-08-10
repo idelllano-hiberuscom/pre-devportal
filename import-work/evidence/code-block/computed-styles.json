@@ -1,0 +1,41 @@
+{
+  "root": {
+    "tag": "div",
+    "classes": "custom-code-block lightTheme",
+    "text": null,
+    "styles": {
+      "display": "block",
+      "width": "984px",
+      "height": "276.391px",
+      "margin": "0px 0px 32px",
+      "color": "rgba(0, 0, 0, 0.87)",
+      "background-color": "rgba(119, 119, 123, 0.04)",
+      "font-family": "Poppins, sans-serif",
+      "font-size": "16px",
+      "line-height": "24px",
+      "border": "0px none rgba(0, 0, 0, 0.87)",
+      "border-radius": "8px",
+      "box-shadow": "rgba(0, 0, 0, 0.15) 2px 0px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 4px 0px",
+      "overflow": "hidden"
+    }
+  },
+  "children": [
+    {
+      "tag": "button",
+      "classes": "custom-code-block__copy-btn",
+      "text": null,
+      "styles": {
+        "display": "block",
+        "width": "36px",
+        "height": "26px",
+        "padding": "1px 6px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "24px",
+        "text-align": "center",
+        "border": "0px none rgb(255, 255, 255)"
+      }
+    }
+  ]
+}

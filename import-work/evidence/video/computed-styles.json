@@ -1,0 +1,19 @@
+{
+  "root": {
+    "tag": "article",
+    "classes": "media media--type-video media--view-mode-default",
+    "text": null,
+    "styles": {
+      "display": "block",
+      "width": "1376px",
+      "height": "737px",
+      "padding": "256px 208px",
+      "color": "rgba(0, 0, 0, 0.87)",
+      "font-family": "Poppins, sans-serif",
+      "font-size": "16px",
+      "line-height": "24px",
+      "border": "0px none rgba(0, 0, 0, 0.87)"
+    }
+  },
+  "children": []
+}

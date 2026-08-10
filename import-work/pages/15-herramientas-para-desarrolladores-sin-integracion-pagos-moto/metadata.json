@@ -1,0 +1,35 @@
+{
+  "url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/pagos-moto",
+  "timestamp": "2026-08-10T07:36:02.900Z",
+  "paths": {
+    "documentPath": "/herramientas-para-desarrolladores/sin-integracion/pagos-moto",
+    "htmlFilePath": "/herramientas-para-desarrolladores/sin-integracion/pagos-moto.plain.html",
+    "mdFilePath": "/herramientas-para-desarrolladores/sin-integracion/pagos-moto.md",
+    "dirPath": "/herramientas-para-desarrolladores/sin-integracion",
+    "filename": "pagos-moto"
+  },
+  "screenshot": "import-work\\pages\\15-herramientas-para-desarrolladores-sin-integracion-pagos-moto\\screenshot.png",
+  "html": {
+    "filePath": "import-work\\pages\\15-herramientas-para-desarrolladores-sin-integracion-pagos-moto\\cleaned.html",
+    "size": 912
+  },
+  "metadata": {
+    "title": "Cecabank",
+    "description": "Description for Cecabank",
+    "google": "notranslate",
+    "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+    "theme-color": "#000000"
+  },
+  "images": {
+    "count": 0,
+    "mapping": {},
+    "stats": {
+      "total": 0,
+      "converted": 0,
+      "skipped": 0,
+      "failed": 0,
+      "tooLarge": 0,
+      "limitReached": 0
+    }
+  }
+}

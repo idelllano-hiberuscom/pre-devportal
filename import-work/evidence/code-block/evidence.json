@@ -1,0 +1,59 @@
+{
+  "block_name": "code-block",
+  "selector": ".custom-code-block",
+  "source_url": "https://pre-devportaltpv.cloud.cecabank.es/integraciones/api",
+  "captured_at": "2026-08-10",
+  "breakpoints": [
+    {
+      "label": "desktop",
+      "width": 1440,
+      "height": 900,
+      "present": true,
+      "box": {
+        "x": 228,
+        "y": 5777,
+        "width": 984,
+        "height": 276
+      },
+      "above_the_fold": false,
+      "ratio": 3.56,
+      "screenshot": "desktop.png",
+      "context_screenshot": "desktop-context.jpg"
+    },
+    {
+      "label": "tablet",
+      "width": 768,
+      "height": 1024,
+      "present": true,
+      "box": {
+        "x": 40,
+        "y": 5525,
+        "width": 688,
+        "height": 276
+      },
+      "above_the_fold": false,
+      "ratio": 2.49,
+      "screenshot": "tablet.png",
+      "context_screenshot": "tablet-context.jpg"
+    },
+    {
+      "label": "mobile",
+      "width": 375,
+      "height": 812,
+      "present": true,
+      "box": {
+        "x": 40,
+        "y": 5705,
+        "width": 295,
+        "height": 276
+      },
+      "above_the_fold": false,
+      "ratio": 1.07,
+      "screenshot": "mobile.png",
+      "context_screenshot": "mobile-context.jpg"
+    }
+  ],
+  "fragment": "fragment.html",
+  "fragment_from": "desktop",
+  "computed_styles": "computed-styles.json"
+}

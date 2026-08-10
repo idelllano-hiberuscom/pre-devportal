@@ -1,0 +1,573 @@
+{
+  "generated": "2026-08-10T08:41:29.895Z",
+  "token_source": "local-config-fallback",
+  "confluence": [
+    {
+      "identity": "accordion",
+      "page_id": "214401025",
+      "uploaded": [
+        "computed-styles.json",
+        "desktop-context.jpg",
+        "desktop.png",
+        "evidence.json",
+        "fragment.html",
+        "mobile-context.jpg",
+        "mobile.png",
+        "tablet-context.jpg",
+        "tablet.png"
+      ],
+      "referenced": [
+        "desktop.png",
+        "desktop-context.jpg",
+        "tablet.png",
+        "tablet-context.jpg",
+        "mobile.png",
+        "mobile-context.jpg"
+      ],
+      "missing": [],
+      "body_updated": true,
+      "verified": true
+    },
+    {
+      "identity": "cards--editorial",
+      "page_id": "214073346",
+      "uploaded": [
+        "computed-styles.json",
+        "desktop-context.jpg",
+        "desktop.png",
+        "evidence.json",
+        "fragment.html",
+        "mobile-context.jpg",
+        "mobile.png",
+        "tablet-context.jpg",
+        "tablet.png"
+      ],
+      "referenced": [
+        "desktop.png",
+        "desktop-context.jpg",
+        "tablet.png",
+        "tablet-context.jpg",
+        "mobile.png",
+        "mobile-context.jpg"
+      ],
+      "missing": [],
+      "body_updated": true,
+      "verified": true
+    },
+    {
+      "identity": "cards--icon-cards",
+      "page_id": "214368257",
+      "uploaded": [
+        "computed-styles.json",
+        "desktop-context.jpg",
+        "desktop.png",
+        "evidence.json",
+        "fragment.html",
+        "mobile-context.jpg",
+        "mobile.png",
+        "tablet-context.jpg",
+        "tablet.png"
+      ],
+      "referenced": [
+        "desktop.png",
+        "desktop-context.jpg",
+        "tablet.png",
+        "tablet-context.jpg",
+        "mobile.png",
+        "mobile-context.jpg"
+      ],
+      "missing": [],
+      "body_updated": true,
+      "verified": true
+    },
+    {
+      "identity": "cards--logos",
+      "page_id": "214302721",
+      "uploaded": [
+        "computed-styles.json",
+        "desktop-context.jpg",
+        "desktop.png",
+        "evidence.json",
+        "fragment.html",
+        "mobile-context.jpg",
+        "mobile.png",
+        "tablet-context.jpg",
+        "tablet.png"
+      ],
+      "referenced": [
+        "desktop.png",
+        "desktop-context.jpg",
+        "tablet.png",
+        "tablet-context.jpg",
+        "mobile.png",
+        "mobile-context.jpg"
+      ],
+      "missing": [],
+      "body_updated": true,
+      "verified": true
+    },
+    {
+      "identity": "cards--plugins",
+      "page_id": "214237185",
+      "uploaded": [
+        "computed-styles.json",
+        "desktop-context.jpg",
+        "desktop.png",
+        "evidence.json",
+        "fragment.html",
+        "mobile-context.jpg",
+        "mobile.png",
+        "tablet-context.jpg",
+        "tablet.png"
+      ],
+      "referenced": [
+        "desktop.png",
+        "desktop-context.jpg",
+        "tablet.png",
+        "tablet-context.jpg",
+        "mobile.png",
+        "mobile-context.jpg"
+      ],
+      "missing": [],
+      "body_updated": true,
+      "verified": true
+    },
+    {
+      "identity": "carousel",
+      "page_id": "214269953",
+      "uploaded": [
+        "computed-styles.json",
+        "desktop-context.jpg",
+        "desktop.png",
+        "evidence.json",
+        "fragment.html",
+        "mobile-context.jpg",
+        "mobile.png",
+        "tablet-context.jpg",
+        "tablet.png"
+      ],
+      "referenced": [
+        "desktop.png",
+        "desktop-context.jpg",
+        "tablet.png",
+        "tablet-context.jpg",
+        "mobile.png",
+        "mobile-context.jpg"
+      ],
+      "missing": [],
+      "body_updated": true,
+      "verified": true
+    },
+    {
+      "identity": "code-block",
+      "page_id": "214335489",
+      "uploaded": [
+        "computed-styles.json",
+        "desktop-context.jpg",
+        "desktop.png",
+        "evidence.json",
+        "fragment.html",
+        "mobile-context.jpg",
+        "mobile.png",
+        "tablet-context.jpg",
+        "tablet.png"
+      ],
+      "referenced": [
+        "desktop.png",
+        "desktop-context.jpg",
+        "tablet.png",
+        "tablet-context.jpg",
+        "mobile.png",
+        "mobile-context.jpg"
+      ],
+      "missing": [],
+      "body_updated": true,
+      "verified": true
+    },
+    {
+      "identity": "contact-form",
+      "page_id": "212893697",
+      "uploaded": [
+        "computed-styles.json",
+        "desktop-context.jpg",
+        "desktop.png",
+        "evidence.json",
+        "fragment.html",
+        "mobile-context.jpg",
+        "mobile.png",
+        "tablet-context.jpg",
+        "tablet.png"
+      ],
+      "referenced": [
+        "desktop.png",
+        "desktop-context.jpg",
+        "tablet.png",
+        "tablet-context.jpg",
+        "mobile.png",
+        "mobile-context.jpg"
+      ],
+      "missing": [],
+      "body_updated": true,
+      "verified": true
+    },
+    {
+      "identity": "pie-chart",
+      "page_id": "214204417",
+      "uploaded": [
+        "computed-styles.json",
+        "desktop-context.jpg",
+        "desktop.png",
+        "evidence.json",
+        "fragment.html",
+        "mobile-context.jpg",
+        "mobile.png",
+        "tablet-context.jpg",
+        "tablet.png"
+      ],
+      "referenced": [
+        "desktop.png",
+        "desktop-context.jpg",
+        "tablet.png",
+        "tablet-context.jpg",
+        "mobile.png",
+        "mobile-context.jpg"
+      ],
+      "missing": [],
+      "body_updated": true,
+      "verified": true
+    },
+    {
+      "identity": "swagger-console",
+      "page_id": "214171649",
+      "uploaded": [
+        "computed-styles.json",
+        "desktop-context.jpg",
+        "desktop.png",
+        "evidence.json",
+        "fragment.html",
+        "mobile-context.jpg",
+        "mobile.png",
+        "tablet-context.jpg",
+        "tablet.png"
+      ],
+      "referenced": [
+        "desktop.png",
+        "desktop-context.jpg",
+        "tablet.png",
+        "tablet-context.jpg",
+        "mobile.png",
+        "mobile-context.jpg"
+      ],
+      "missing": [],
+      "body_updated": true,
+      "verified": true
+    },
+    {
+      "identity": "tabs",
+      "page_id": "214106113",
+      "uploaded": [
+        "computed-styles.json",
+        "desktop-context.jpg",
+        "desktop.png",
+        "evidence.json",
+        "fragment.html",
+        "mobile-context.jpg",
+        "mobile.png",
+        "tablet-context.jpg",
+        "tablet.png"
+      ],
+      "referenced": [
+        "desktop.png",
+        "desktop-context.jpg",
+        "tablet.png",
+        "tablet-context.jpg",
+        "mobile.png",
+        "mobile-context.jpg"
+      ],
+      "missing": [],
+      "body_updated": true,
+      "verified": true
+    },
+    {
+      "identity": "video",
+      "page_id": "214138881",
+      "uploaded": [
+        "computed-styles.json",
+        "desktop-context.jpg",
+        "desktop.png",
+        "evidence.json",
+        "fragment.html",
+        "mobile-context.jpg",
+        "mobile.png",
+        "tablet-context.jpg",
+        "tablet.png"
+      ],
+      "referenced": [
+        "desktop.png",
+        "desktop-context.jpg",
+        "tablet.png",
+        "tablet-context.jpg",
+        "mobile.png",
+        "mobile-context.jpg"
+      ],
+      "missing": [],
+      "body_updated": true,
+      "verified": true
+    }
+  ],
+  "jira": [
+    {
+      "ticket_id": "PA-24",
+      "attachment": "PA-24.json",
+      "verified": true,
+      "status": "Por hacer",
+      "labels": [
+        "eds-block:swagger-console",
+        "eds-business-input",
+        "eds-component:cmp-swagger-console",
+        "eds-contract:incomplete",
+        "eds-state:draft",
+        "eds-template:swagger-singleton"
+      ],
+      "parent": "PA-14",
+      "description_updated": true,
+      "depends_on": [],
+      "issue_links_created": [],
+      "issue_links_verified": true,
+      "contract_label_verified": true
+    },
+    {
+      "ticket_id": "PA-25",
+      "attachment": "PA-25.json",
+      "verified": true,
+      "status": "Por hacer",
+      "labels": [
+        "eds-block:cards",
+        "eds-collision:cards",
+        "eds-component:cmp-logo-cards",
+        "eds-contract:complete",
+        "eds-state:draft",
+        "eds-template:onboarding-singleton",
+        "eds-variant:logos"
+      ],
+      "parent": "PA-22",
+      "description_updated": true,
+      "depends_on": [],
+      "issue_links_created": [],
+      "issue_links_verified": true,
+      "contract_label_verified": true
+    },
+    {
+      "ticket_id": "PA-26",
+      "attachment": "PA-26.json",
+      "verified": true,
+      "status": "Por hacer",
+      "labels": [
+        "eds-block:contact-form",
+        "eds-business-input",
+        "eds-component:cmp-contact-form",
+        "eds-contract:incomplete",
+        "eds-state:draft",
+        "eds-template:home-help-shared"
+      ],
+      "parent": "PA-17",
+      "description_updated": true,
+      "depends_on": [],
+      "issue_links_created": [],
+      "issue_links_verified": true,
+      "contract_label_verified": true
+    },
+    {
+      "ticket_id": "PA-27",
+      "attachment": "PA-27.json",
+      "verified": true,
+      "status": "Por hacer",
+      "labels": [
+        "eds-block:accordion",
+        "eds-component:cmp-accordion",
+        "eds-contract:complete",
+        "eds-state:draft",
+        "eds-template:home-help-shared"
+      ],
+      "parent": "PA-17",
+      "description_updated": true,
+      "depends_on": [],
+      "issue_links_created": [],
+      "issue_links_verified": true,
+      "contract_label_verified": true
+    },
+    {
+      "ticket_id": "PA-28",
+      "attachment": "PA-28.json",
+      "verified": true,
+      "status": "Por hacer",
+      "labels": [
+        "eds-block:tabs",
+        "eds-component:cmp-tabs",
+        "eds-contract:complete",
+        "eds-state:draft",
+        "eds-template:onboarding-singleton"
+      ],
+      "parent": "PA-22",
+      "description_updated": true,
+      "depends_on": [],
+      "issue_links_created": [],
+      "issue_links_verified": true,
+      "contract_label_verified": true
+    },
+    {
+      "ticket_id": "PA-29",
+      "attachment": "PA-29.json",
+      "verified": true,
+      "status": "Por hacer",
+      "labels": [
+        "eds-block:video",
+        "eds-component:cmp-video",
+        "eds-contract:complete",
+        "eds-state:draft",
+        "eds-template:home-help-shared"
+      ],
+      "parent": "PA-17",
+      "description_updated": true,
+      "depends_on": [],
+      "issue_links_created": [],
+      "issue_links_verified": true,
+      "contract_label_verified": true
+    },
+    {
+      "ticket_id": "PA-30",
+      "attachment": "PA-30.json",
+      "verified": true,
+      "status": "Por hacer",
+      "labels": [
+        "eds-block:pie-chart",
+        "eds-component:cmp-pie-chart",
+        "eds-contract:complete",
+        "eds-state:draft",
+        "eds-template:blog-fraud-shared"
+      ],
+      "parent": "PA-20",
+      "description_updated": true,
+      "depends_on": [],
+      "issue_links_created": [],
+      "issue_links_verified": true,
+      "contract_label_verified": true
+    },
+    {
+      "ticket_id": "PA-31",
+      "attachment": "PA-31.json",
+      "verified": true,
+      "status": "Por hacer",
+      "labels": [
+        "eds-block:cards",
+        "eds-collision:cards",
+        "eds-component:cmp-icon-cards",
+        "eds-contract:complete",
+        "eds-state:draft",
+        "eds-template:home-help-shared",
+        "eds-template:integration-summary",
+        "eds-variant:icon-cards"
+      ],
+      "parent": "PA-17",
+      "description_updated": true,
+      "depends_on": [
+        "PA-25"
+      ],
+      "issue_links_created": [
+        "PA-25"
+      ],
+      "issue_links_verified": true,
+      "contract_label_verified": true
+    },
+    {
+      "ticket_id": "PA-32",
+      "attachment": "PA-32.json",
+      "verified": true,
+      "status": "Por hacer",
+      "labels": [
+        "eds-block:cards",
+        "eds-collision:cards",
+        "eds-component:cmp-plugin-cards",
+        "eds-contract:complete",
+        "eds-state:draft",
+        "eds-template:developer-tools-payment-detail",
+        "eds-variant:plugins"
+      ],
+      "parent": "PA-15",
+      "description_updated": true,
+      "depends_on": [
+        "PA-31"
+      ],
+      "issue_links_created": [
+        "PA-31"
+      ],
+      "issue_links_verified": true,
+      "contract_label_verified": true
+    },
+    {
+      "ticket_id": "PA-33",
+      "attachment": "PA-33.json",
+      "verified": true,
+      "status": "Por hacer",
+      "labels": [
+        "eds-block:cards",
+        "eds-collision:cards",
+        "eds-component:cmp-editorial-cards",
+        "eds-contract:complete",
+        "eds-state:draft",
+        "eds-template:blog-fraud-shared",
+        "eds-variant:editorial"
+      ],
+      "parent": "PA-20",
+      "description_updated": true,
+      "depends_on": [
+        "PA-32"
+      ],
+      "issue_links_created": [
+        "PA-32"
+      ],
+      "issue_links_verified": true,
+      "contract_label_verified": true
+    },
+    {
+      "ticket_id": "PA-34",
+      "attachment": "PA-34.json",
+      "verified": true,
+      "status": "Por hacer",
+      "labels": [
+        "eds-block:code-block",
+        "eds-component:cmp-code-block",
+        "eds-contract:complete",
+        "eds-state:draft",
+        "eds-template:developer-tools-api-detail",
+        "eds-template:integration-summary"
+      ],
+      "parent": "PA-19",
+      "description_updated": true,
+      "depends_on": [],
+      "issue_links_created": [],
+      "issue_links_verified": true,
+      "contract_label_verified": true
+    },
+    {
+      "ticket_id": "PA-35",
+      "attachment": "PA-35.json",
+      "verified": true,
+      "status": "Por hacer",
+      "labels": [
+        "eds-block:carousel",
+        "eds-component:cmp-carousel",
+        "eds-contract:complete",
+        "eds-state:draft",
+        "eds-template:integration-summary"
+      ],
+      "parent": "PA-19",
+      "description_updated": true,
+      "depends_on": [],
+      "issue_links_created": [],
+      "issue_links_verified": true,
+      "contract_label_verified": true
+    }
+  ],
+  "deprecated_endpoints": []
+}

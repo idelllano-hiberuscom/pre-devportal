@@ -1,0 +1,430 @@
+{
+  "generated": "2026-08-10",
+  "client": "PreDevPortal Cecabank",
+  "backend": {
+    "jira_tickets": "MCP nivel 1",
+    "confluence_pages": "MCP nivel 1",
+    "confluence_attachments": "REST nivel 2 — verificado",
+    "jira_attachments": "REST nivel 2 — verificado",
+    "confluence_macro_updates": "REST nivel 2 — verificado",
+    "token_source": "local-config-fallback",
+    "deprecated_endpoints": []
+  },
+  "gate": 2,
+  "gate_2": {
+    "state": "approved",
+    "approved_by": "human-gate-2",
+    "date": "2026-08-10",
+    "note": "Gate 2: aprobar todo"
+  },
+  "status": "gate-2-approved-development-not-started",
+  "epics": [
+    {
+      "epic_id": "PA-21",
+      "template_id": "plugin-integration-detail-a",
+      "name": "Plantilla: plugin-integration-detail-a",
+      "state": "draft",
+      "pages_matched": 5,
+      "pages_analyzed": 3,
+      "pages_propagated": 2,
+      "tickets": []
+    },
+    {
+      "epic_id": "PA-15",
+      "template_id": "developer-tools-payment-detail",
+      "name": "Plantilla: developer-tools-payment-detail",
+      "state": "draft",
+      "pages_matched": 4,
+      "pages_analyzed": 3,
+      "pages_propagated": 1,
+      "tickets": [
+        "PA-32"
+      ]
+    },
+    {
+      "epic_id": "PA-19",
+      "template_id": "integration-summary",
+      "name": "Plantilla: integration-summary",
+      "state": "draft",
+      "pages_matched": 4,
+      "pages_analyzed": 3,
+      "pages_propagated": 1,
+      "tickets": [
+        "PA-35",
+        "PA-34"
+      ]
+    },
+    {
+      "epic_id": "PA-18",
+      "template_id": "developer-tools-api-detail",
+      "name": "Plantilla: developer-tools-api-detail",
+      "state": "draft",
+      "pages_matched": 3,
+      "pages_analyzed": 3,
+      "pages_propagated": 0,
+      "tickets": []
+    },
+    {
+      "epic_id": "PA-23",
+      "template_id": "plugin-payment-detail-b",
+      "name": "Plantilla: plugin-payment-detail-b",
+      "state": "draft",
+      "pages_matched": 3,
+      "pages_analyzed": 2,
+      "pages_propagated": 1,
+      "tickets": []
+    },
+    {
+      "epic_id": "PA-12",
+      "template_id": "no-integration-detail",
+      "name": "Plantilla: no-integration-detail",
+      "state": "draft",
+      "pages_matched": 3,
+      "pages_analyzed": 2,
+      "pages_propagated": 1,
+      "tickets": []
+    },
+    {
+      "epic_id": "PA-17",
+      "template_id": "home-help-shared",
+      "name": "Plantilla: home-help-shared",
+      "state": "draft",
+      "pages_matched": 2,
+      "pages_analyzed": 2,
+      "pages_propagated": 0,
+      "tickets": [
+        "PA-31",
+        "PA-27",
+        "PA-26",
+        "PA-29"
+      ]
+    },
+    {
+      "epic_id": "PA-16",
+      "template_id": "developer-tools-sdk-moto",
+      "name": "Plantilla: developer-tools-sdk-moto",
+      "state": "draft",
+      "pages_matched": 2,
+      "pages_analyzed": 2,
+      "pages_propagated": 0,
+      "tickets": []
+    },
+    {
+      "epic_id": "PA-20",
+      "template_id": "blog-fraud-shared",
+      "name": "Plantilla: blog-fraud-shared",
+      "state": "draft",
+      "pages_matched": 2,
+      "pages_analyzed": 2,
+      "pages_propagated": 0,
+      "tickets": [
+        "PA-33",
+        "PA-30"
+      ]
+    },
+    {
+      "epic_id": "PA-22",
+      "template_id": "onboarding-singleton",
+      "name": "Plantilla: onboarding-singleton",
+      "state": "draft",
+      "pages_matched": 1,
+      "pages_analyzed": 1,
+      "pages_propagated": 0,
+      "tickets": [
+        "PA-25",
+        "PA-28"
+      ]
+    },
+    {
+      "epic_id": "PA-13",
+      "template_id": "developer-tools-index-singleton",
+      "name": "Plantilla: developer-tools-index-singleton",
+      "state": "draft",
+      "pages_matched": 1,
+      "pages_analyzed": 1,
+      "pages_propagated": 0,
+      "tickets": []
+    },
+    {
+      "epic_id": "PA-14",
+      "template_id": "swagger-singleton",
+      "name": "Plantilla: swagger-singleton",
+      "state": "draft",
+      "pages_matched": 1,
+      "pages_analyzed": 1,
+      "pages_propagated": 0,
+      "tickets": [
+        "PA-24"
+      ]
+    }
+  ],
+  "tickets": [
+    {
+      "ticket_id": "PA-31",
+      "component_id": "cmp-icon-cards",
+      "block_name": "cards",
+      "variant": "icon-cards",
+      "local_identity": "cards--icon-cards",
+      "state": "approved",
+      "depends_on": [
+        "PA-25"
+      ],
+      "epic": "PA-17",
+      "templates": {
+        "primary": "home-help-shared",
+        "additional": [
+          "integration-summary"
+        ]
+      },
+      "complete": true
+    },
+    {
+      "ticket_id": "PA-33",
+      "component_id": "cmp-editorial-cards",
+      "block_name": "cards",
+      "variant": "editorial",
+      "local_identity": "cards--editorial",
+      "state": "approved",
+      "depends_on": [
+        "PA-32"
+      ],
+      "epic": "PA-20",
+      "templates": {
+        "primary": "blog-fraud-shared",
+        "additional": []
+      },
+      "complete": true
+    },
+    {
+      "ticket_id": "PA-32",
+      "component_id": "cmp-plugin-cards",
+      "block_name": "cards",
+      "variant": "plugins",
+      "local_identity": "cards--plugins",
+      "state": "approved",
+      "depends_on": [
+        "PA-31"
+      ],
+      "epic": "PA-15",
+      "templates": {
+        "primary": "developer-tools-payment-detail",
+        "additional": []
+      },
+      "complete": true
+    },
+    {
+      "ticket_id": "PA-25",
+      "component_id": "cmp-logo-cards",
+      "block_name": "cards",
+      "variant": "logos",
+      "local_identity": "cards--logos",
+      "state": "approved",
+      "depends_on": [],
+      "epic": "PA-22",
+      "templates": {
+        "primary": "onboarding-singleton",
+        "additional": []
+      },
+      "complete": true
+    },
+    {
+      "ticket_id": "PA-27",
+      "component_id": "cmp-accordion",
+      "block_name": "accordion",
+      "variant": null,
+      "local_identity": "accordion",
+      "state": "approved",
+      "depends_on": [],
+      "epic": "PA-17",
+      "templates": {
+        "primary": "home-help-shared",
+        "additional": []
+      },
+      "complete": true
+    },
+    {
+      "ticket_id": "PA-28",
+      "component_id": "cmp-tabs",
+      "block_name": "tabs",
+      "variant": null,
+      "local_identity": "tabs",
+      "state": "approved",
+      "depends_on": [],
+      "epic": "PA-22",
+      "templates": {
+        "primary": "onboarding-singleton",
+        "additional": []
+      },
+      "complete": true
+    },
+    {
+      "ticket_id": "PA-35",
+      "component_id": "cmp-carousel",
+      "block_name": "carousel",
+      "variant": null,
+      "local_identity": "carousel",
+      "state": "approved",
+      "depends_on": [],
+      "epic": "PA-19",
+      "templates": {
+        "primary": "integration-summary",
+        "additional": []
+      },
+      "complete": true
+    },
+    {
+      "ticket_id": "PA-26",
+      "component_id": "cmp-contact-form",
+      "block_name": "contact-form",
+      "variant": null,
+      "local_identity": "contact-form",
+      "state": "approved",
+      "depends_on": [],
+      "epic": "PA-17",
+      "templates": {
+        "primary": "home-help-shared",
+        "additional": []
+      },
+      "complete": false
+    },
+    {
+      "ticket_id": "PA-29",
+      "component_id": "cmp-video",
+      "block_name": "video",
+      "variant": null,
+      "local_identity": "video",
+      "state": "approved",
+      "depends_on": [],
+      "epic": "PA-17",
+      "templates": {
+        "primary": "home-help-shared",
+        "additional": []
+      },
+      "complete": true
+    },
+    {
+      "ticket_id": "PA-34",
+      "component_id": "cmp-code-block",
+      "block_name": "code-block",
+      "variant": null,
+      "local_identity": "code-block",
+      "state": "approved",
+      "depends_on": [],
+      "epic": "PA-19",
+      "templates": {
+        "primary": "integration-summary",
+        "additional": [
+          "developer-tools-api-detail"
+        ]
+      },
+      "complete": true
+    },
+    {
+      "ticket_id": "PA-30",
+      "component_id": "cmp-pie-chart",
+      "block_name": "pie-chart",
+      "variant": null,
+      "local_identity": "pie-chart",
+      "state": "approved",
+      "depends_on": [],
+      "epic": "PA-20",
+      "templates": {
+        "primary": "blog-fraud-shared",
+        "additional": []
+      },
+      "complete": true
+    },
+    {
+      "ticket_id": "PA-24",
+      "component_id": "cmp-swagger-console",
+      "block_name": "swagger-console",
+      "variant": null,
+      "local_identity": "swagger-console",
+      "state": "approved",
+      "depends_on": [],
+      "epic": "PA-14",
+      "templates": {
+        "primary": "swagger-singleton",
+        "additional": []
+      },
+      "complete": false
+    }
+  ],
+  "reutilizations": [
+    {
+      "secuencia": "Hero simple de ayuda, blog, onboarding, fraude, indice de herramientas e inicio",
+      "veredicto": "existing",
+      "bloque": "hero",
+      "rationale": "El bloque local ya ofrece imagen, alt y richtext. El titulo y el texto del portal caben en el richtext sin nuevo comportamiento."
+    },
+    {
+      "secuencia": "Hero con tarjetas de las paginas de integracion",
+      "veredicto": "existing",
+      "bloque": "hero + cards (variante icon-cards)",
+      "rationale": "La envoltura Angular combina un hero y una rejilla ya separables en EDS. Crear hero-cards duplicaria ambos modelos; se contribuyen como dos bloques en una seccion con fondo."
+    },
+    {
+      "secuencia": "Destacados con imagen, listas a dos columnas y composiciones texto-imagen",
+      "veredicto": "existing",
+      "bloque": "columns",
+      "rationale": "El bloque local admite columnas con title, text, image y button; las diferencias observadas son alineacion, orden y fondo de seccion."
+    },
+    {
+      "secuencia": "Titulares, parrafos introductorios y CTA aislados",
+      "veredicto": "existing",
+      "bloque": "default content",
+      "rationale": "Son contenido semantico lineal sin estado ni estructura repetible; modelarlo como bloque empeoraria la experiencia de autor."
+    },
+    {
+      "secuencia": "Cabecera, navegacion y pie global",
+      "veredicto": "existing",
+      "bloque": "header / footer",
+      "rationale": "Son casos globales cubiertos por el boilerplate EDS y contenido de navegacion, no componentes de pagina nuevos."
+    }
+  ],
+  "dag": {
+    "broken_references": [],
+    "dependency_free": [
+      "PA-25",
+      "PA-27",
+      "PA-28",
+      "PA-35",
+      "PA-26",
+      "PA-29",
+      "PA-34",
+      "PA-30",
+      "PA-24"
+    ],
+    "max_depth": 3
+  },
+  "cards_collision": {
+    "block_name": "cards",
+    "shared_target": "blocks/cards/*",
+    "tickets": [
+      "PA-31",
+      "PA-33",
+      "PA-32",
+      "PA-25"
+    ],
+    "identities": [
+      "cards--icon-cards",
+      "cards--editorial",
+      "cards--plugins",
+      "cards--logos"
+    ],
+    "status": "resolved-serial",
+    "dispatch_safe": true,
+    "serial_order": [
+      "PA-25",
+      "PA-31",
+      "PA-32",
+      "PA-33"
+    ],
+    "resolution": "PA-25 es la base; PA-31 espera PA-25; PA-32 espera PA-31; PA-33 espera PA-32."
+  },
+  "evidence": {
+    "complete_components": 12,
+    "total_components": 12,
+    "broken_image_references": []
+  }
+}

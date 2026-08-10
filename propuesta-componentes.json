@@ -1,0 +1,833 @@
+{
+  "cliente": "Cecabank DevPortal TPV",
+  "portal_url": "https://pre-devportaltpv.cloud.cecabank.es",
+  "paginas_analizadas": [
+    "https://pre-devportaltpv.cloud.cecabank.es/ayuda",
+    "https://pre-devportaltpv.cloud.cecabank.es/blog",
+    "https://pre-devportaltpv.cloud.cecabank.es/empieza-con-nosotros",
+    "https://pre-devportaltpv.cloud.cecabank.es/fraude",
+    "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores",
+    "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones",
+    "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones",
+    "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/swagger",
+    "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/tokenizacion",
+    "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/hosted-checkout",
+    "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/iframe",
+    "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/sdk",
+    "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/otros/apple-pay",
+    "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/otros/bizum",
+    "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/pagos-moto",
+    "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/pay-by-link",
+    "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/plugins/resumen",
+    "https://pre-devportaltpv.cloud.cecabank.es/inicio",
+    "https://pre-devportaltpv.cloud.cecabank.es/integraciones/api",
+    "https://pre-devportaltpv.cloud.cecabank.es/integraciones/hosted-checkout",
+    "https://pre-devportaltpv.cloud.cecabank.es/integraciones/sdk",
+    "https://pre-devportaltpv.cloud.cecabank.es/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce",
+    "https://pre-devportaltpv.cloud.cecabank.es/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce",
+    "https://pre-devportaltpv.cloud.cecabank.es/sin-integracion/pago-por-email",
+    "https://pre-devportaltpv.cloud.cecabank.es/sin-integracion/pagos-moto"
+  ],
+  "snapshot_date": "2026-08-10",
+  "memoria_consultada": true,
+  "memoria_detalle": {
+    "vault": "C:/Users/IvanDelLlanoBlanco/Documents/AI_memory",
+    "taxonomia_cliente_disponible": false,
+    "patrones_cliente_disponibles": false,
+    "control_versiones_detectado": true,
+    "riesgo": "La boveda fue consultada, pero no existe taxonomia ni historial del cliente; ningun componente es auto-aprobable."
+  },
+  "libreria_transversal_consultada": true,
+  "libreria_transversal_detalle": "Global/patterns no contiene patrones reutilizables.",
+  "adobe_block_collection_consultada": true,
+  "adobe_block_collection_sync": {
+    "commit": "5ad878baf454c55301aa600d9f74cd2b793bbfea",
+    "last_synced": "2026-08-10"
+  },
+  "cobertura_clusters": {
+    "paginas_portal": 31,
+    "paginas_observadas": 25,
+    "paginas_propagadas": 6,
+    "clusters": 12,
+    "outliers_flagged": 4,
+    "pages_not_clustered": 0,
+    "advertencia": "El clustering es moderadamente fragil. Las ocurrencias proyectadas solo se usan cuando dos representantes comparten la secuencia; los cuatro outliers siguen declarados como riesgo."
+  },
+  "inventario": {
+    "bloques_locales": ["cards", "columns", "footer", "fragment", "header", "hero"],
+    "block_collection_disponible": ["accordion", "cards", "carousel", "columns", "embed", "footer", "form", "fragment", "header", "hero", "modal", "quote", "search", "table", "tabs", "video"]
+  },
+  "reutilizaciones": [
+    {
+      "secuencia": "Hero simple de ayuda, blog, onboarding, fraude, indice de herramientas e inicio",
+      "veredicto": "existing",
+      "bloque": "hero",
+      "rationale": "El bloque local ya ofrece imagen, alt y richtext. El titulo y el texto del portal caben en el richtext sin nuevo comportamiento."
+    },
+    {
+      "secuencia": "Hero con tarjetas de las paginas de integracion",
+      "veredicto": "existing",
+      "bloque": "hero + cards (variante icon-cards)",
+      "rationale": "La envoltura Angular combina un hero y una rejilla ya separables en EDS. Crear hero-cards duplicaria ambos modelos; se contribuyen como dos bloques en una seccion con fondo."
+    },
+    {
+      "secuencia": "Destacados con imagen, listas a dos columnas y composiciones texto-imagen",
+      "veredicto": "existing",
+      "bloque": "columns",
+      "rationale": "El bloque local admite columnas con title, text, image y button; las diferencias observadas son alineacion, orden y fondo de seccion."
+    },
+    {
+      "secuencia": "Titulares, parrafos introductorios y CTA aislados",
+      "veredicto": "existing",
+      "bloque": "default content",
+      "rationale": "Son contenido semantico lineal sin estado ni estructura repetible; modelarlo como bloque empeoraria la experiencia de autor."
+    },
+    {
+      "secuencia": "Cabecera, navegacion y pie global",
+      "veredicto": "existing",
+      "bloque": "header / footer",
+      "rationale": "Son casos globales cubiertos por el boilerplate EDS y contenido de navegacion, no componentes de pagina nuevos."
+    }
+  ],
+  "componentes": [
+    {
+      "component_id": "cmp-icon-cards",
+      "block_name": "cards",
+      "variant": "icon-cards",
+      "title": "Icon Cards",
+      "is_container": true,
+      "veredicto": "variant",
+      "confidence_score": 0.86,
+      "auto_aprobable": false,
+      "motivo_no_auto_aprobable": "No hay taxonomia del cliente y los iconos SVG deben convertirse a assets autorables.",
+      "dedup": {
+        "closest_match": "cards (local)",
+        "similarity": 0.88,
+        "rationale": "Comparte contenedor repetible, media y richtext. Solo requiere estilo de icono y añadir imageAlt opcional al item local."
+      },
+      "justificacion": "Las rejillas de iconos de home, onboarding y paginas de integracion comparten dos campos visibles, icono y contenido, y solo cambian fondo y numero de columnas. El hero con tarjetas se descompone para reutilizar esta misma variante.",
+      "clustering": {
+        "ocurrencias": 9,
+        "ocurrencias_verificadas": 7,
+        "regla_aplicada": "Presente con la misma estructura en representantes de integration-summary y no-integration-detail; se proyecta a 2 paginas no observadas y se cuentan paginas, no items.",
+        "variantes_detectadas": ["light", "on-dark", "two-column", "four-column"]
+      },
+      "depends_on": ["cmp-logo-cards"],
+      "campos_detectados": [
+        {"name": "image", "component": "reference", "valueType": "string", "required": false},
+        {"name": "imageAlt", "component": "text", "valueType": "string", "required": true},
+        {"name": "text", "component": "richtext", "valueType": "string", "required": true}
+      ],
+      "dom_entrada_propuesto": "cards (filter: cards)\n  card*\n    image + imageAlt\n    text (richtext)",
+      "repeat_selector": ".features-with-image__content__cards > div",
+      "content_mapping": [
+        {"source_selector": ".icon-card__header svg", "target_field": "image", "type": "image", "status": "convertir_svg_local_o_dam", "transform": "sanitizar_svg_y_conservar_viewBox"},
+        {"source_selector": ".icon-card__header svg", "target_field": "imageAlt", "type": "text", "source_attribute": "aria-label|title", "fallback": "derivar_del_contexto_visible_del_item"},
+        {"source_selector": ".icon-card__content", "target_field": "text", "type": "richtext"}
+      ],
+      "evidencia": {
+        "paginas": ["https://pre-devportaltpv.cloud.cecabank.es/inicio", "https://pre-devportaltpv.cloud.cecabank.es/integraciones/api"],
+        "selector_origen": ".features-with-image__content__cards",
+        "dir": "import-work/evidence/icon-cards/",
+        "breakpoints_capturados": ["desktop", "tablet", "mobile"],
+        "ausente_en": [],
+        "above_the_fold_desktop": false,
+        "fragment": "import-work/evidence/icon-cards/fragment.html",
+        "computed_styles": "import-work/evidence/icon-cards/computed-styles.json"
+      },
+      "patron_global_candidato": {"es_candidato": false, "motivo": "Es variante de un bloque local, no un patron nuevo."},
+      "ambiguedades": [],
+      "gate_2_decisions": {
+        "cards_serial_order": ["cmp-logo-cards", "cmp-icon-cards", "cmp-plugin-cards", "cmp-editorial-cards"],
+        "asset_policy": "Los SVG se convierten en assets locales versionados o DAM autorables, se sanitizan y conservan viewBox; no se conserva SVG inline arbitrario.",
+        "attribute_mapping": "imageAlt se extrae de atributos accesibles y, si no existe, se genera desde el contexto visible del item."
+      }
+    },
+    {
+      "component_id": "cmp-editorial-cards",
+      "block_name": "cards",
+      "variant": "editorial",
+      "title": "Editorial Cards",
+      "is_container": true,
+      "veredicto": "variant",
+      "confidence_score": 0.93,
+      "auto_aprobable": false,
+      "motivo_no_auto_aprobable": "No hay taxonomia del cliente.",
+      "dedup": {
+        "closest_match": "cards (local)",
+        "similarity": 0.94,
+        "rationale": "Imagen y richtext repetibles coinciden exactamente; la jerarquia featured y el grid editorial son solo CSS."
+      },
+      "justificacion": "Las tres entradas comparten imagen, fecha y titular. La primera cambia de tamaño y heading, pero no de modelo ni comportamiento.",
+      "clustering": {
+        "ocurrencias": 1,
+        "ocurrencias_verificadas": 1,
+        "regla_aplicada": "Aparece solo en blog; no se propaga al otro representante del cluster blog-fraud porque fraude no contiene esta secuencia.",
+        "variantes_detectadas": ["featured-first"]
+      },
+      "depends_on": ["cmp-plugin-cards"],
+      "campos_detectados": [
+        {"name": "image", "component": "reference", "valueType": "string", "required": true},
+        {"name": "imageAlt", "component": "text", "valueType": "string", "required": true},
+        {"name": "text", "component": "richtext", "valueType": "string", "required": true}
+      ],
+      "dom_entrada_propuesto": "cards (editorial)\n  card*\n    image + imageAlt\n    text: fecha + titular",
+      "repeat_selector": ".blog-entry",
+      "content_mapping": [
+        {"source_selector": ".blog-entry__image", "target_field": "image", "type": "image", "status": "pendiente_dam"},
+        {"source_selector": ".blog-entry__image img", "target_field": "imageAlt", "type": "text", "source_attribute": "alt"},
+        {"source_selector": ".blog-entry__content", "target_field": "text", "type": "richtext"}
+      ],
+      "evidencia": {
+        "paginas": ["https://pre-devportaltpv.cloud.cecabank.es/blog"],
+        "selector_origen": ".blog-featured",
+        "dir": "import-work/evidence/editorial-cards/",
+        "breakpoints_capturados": ["desktop", "tablet", "mobile"],
+        "ausente_en": [],
+        "above_the_fold_desktop": true,
+        "fragment": "import-work/evidence/editorial-cards/fragment.html",
+        "computed_styles": "import-work/evidence/editorial-cards/computed-styles.json"
+      },
+      "patron_global_candidato": {"es_candidato": false, "motivo": "Es variante de cards local."},
+      "ambiguedades": [],
+      "gate_2_decisions": {
+        "cards_serial_order": ["cmp-logo-cards", "cmp-icon-cards", "cmp-plugin-cards", "cmp-editorial-cards"],
+        "attribute_mapping": "imageAlt se extrae literalmente del atributo alt durante la contribucion."
+      }
+    },
+    {
+      "component_id": "cmp-plugin-cards",
+      "block_name": "cards",
+      "variant": "plugins",
+      "title": "Plugin Cards",
+      "is_container": true,
+      "veredicto": "variant",
+      "confidence_score": 0.83,
+      "auto_aprobable": false,
+      "motivo_no_auto_aprobable": "La URL de tarjeta no cabe en el modelo local actual y no hay taxonomia del cliente.",
+      "dedup": {
+        "closest_match": "cards (local)",
+        "similarity": 0.79,
+        "rationale": "Mantiene imagen y contenido repetible, pero requiere enlace de tarjeta y metadatos editoriales dentro del richtext."
+      },
+      "justificacion": "Las cinco tarjetas comparten logo, version, fecha, compatibilidad, descripcion y enlace. Son una variante de cards porque el comportamiento sigue siendo un enlace estatico por item.",
+      "clustering": {
+        "ocurrencias": 1,
+        "ocurrencias_verificadas": 1,
+        "regla_aplicada": "Solo el resumen de plugins contiene la lista; no se proyecta a pay-by-link aunque compartan cluster.",
+        "variantes_detectadas": []
+      },
+      "depends_on": ["cmp-icon-cards"],
+      "campos_detectados": [
+        {"name": "image", "component": "reference", "valueType": "string", "required": true},
+        {"name": "imageAlt", "component": "text", "valueType": "string", "required": true},
+        {"name": "text", "component": "richtext", "valueType": "string", "required": true},
+        {"name": "link", "component": "text", "valueType": "string", "required": true}
+      ],
+      "dom_entrada_propuesto": "cards (plugins)\n  card*\n    image + imageAlt\n    text: version + fecha + compatibilidad + descripcion\n    link",
+      "repeat_selector": ".plugin-list > plugin-card",
+      "content_mapping": [
+        {"source_selector": ".plugin-card-img", "target_field": "image", "type": "image", "status": "pendiente_dam"},
+        {"source_selector": ".plugin-card-img img", "target_field": "imageAlt", "type": "text", "source_attribute": "alt"},
+        {"source_selector": ".plugin-card-body", "target_field": "text", "type": "richtext"},
+        {"source_selector": "a.plugin-card", "target_field": "link", "type": "text", "source_attribute": "href"}
+      ],
+      "evidencia": {
+        "paginas": ["https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/plugins/resumen"],
+        "selector_origen": ".plugin-list",
+        "dir": "import-work/evidence/plugin-cards/",
+        "breakpoints_capturados": ["desktop", "tablet", "mobile"],
+        "ausente_en": [],
+        "above_the_fold_desktop": true,
+        "fragment": "import-work/evidence/plugin-cards/fragment.html",
+        "computed_styles": "import-work/evidence/plugin-cards/computed-styles.json"
+      },
+      "patron_global_candidato": {"es_candidato": false, "motivo": "Es variante de cards local."},
+      "ambiguedades": [],
+      "gate_2_decisions": {
+        "cards_serial_order": ["cmp-logo-cards", "cmp-icon-cards", "cmp-plugin-cards", "cmp-editorial-cards"],
+        "attribute_mapping": "link se extrae de href e imageAlt se extrae de alt durante la contribucion."
+      }
+    },
+    {
+      "component_id": "cmp-logo-cards",
+      "block_name": "cards",
+      "variant": "logos",
+      "title": "Logo Cards",
+      "is_container": true,
+      "veredicto": "variant",
+      "confidence_score": 0.91,
+      "auto_aprobable": false,
+      "motivo_no_auto_aprobable": "No hay taxonomia del cliente.",
+      "dedup": {
+        "closest_match": "cards (local)",
+        "similarity": 0.9,
+        "rationale": "Es el mismo contenedor repetible reducido a image; text queda opcional y la diferencia es el layout de logos."
+      },
+      "justificacion": "Las cinco instancias de metodos de pago dentro de tabs repiten una lista de seis logos con la misma semantica y sin interaccion.",
+      "clustering": {
+        "ocurrencias": 1,
+        "ocurrencias_verificadas": 1,
+        "regla_aplicada": "Se cuenta la pagina onboarding una vez; contiene cinco listas equivalentes dentro de sus cinco paneles, sin proyeccion a otros clusters.",
+        "variantes_detectadas": ["compact"]
+      },
+      "depends_on": [],
+      "campos_detectados": [
+        {"name": "image", "component": "reference", "valueType": "string", "required": true},
+        {"name": "imageAlt", "component": "text", "valueType": "string", "required": true},
+        {"name": "text", "component": "richtext", "valueType": "string", "required": false}
+      ],
+      "dom_entrada_propuesto": "cards (logos)\n  card*\n    image + imageAlt",
+      "repeat_selector": ".payment-methods__list__item",
+      "content_mapping": [
+        {"source_selector": ".payment-methods__list__item img", "target_field": "image", "type": "image", "status": "pendiente_dam"},
+        {"source_selector": ".payment-methods__list__item img", "target_field": "imageAlt", "type": "text", "source_attribute": "alt"}
+      ],
+      "evidencia": {
+        "paginas": ["https://pre-devportaltpv.cloud.cecabank.es/empieza-con-nosotros"],
+        "selector_origen": ".payment-methods",
+        "dir": "import-work/evidence/logo-cards/",
+        "breakpoints_capturados": ["desktop", "tablet", "mobile"],
+        "ausente_en": [],
+        "above_the_fold_desktop": false,
+        "fragment": "import-work/evidence/logo-cards/fragment.html",
+        "computed_styles": "import-work/evidence/logo-cards/computed-styles.json"
+      },
+      "patron_global_candidato": {"es_candidato": false, "motivo": "Es variante de cards local."},
+      "ambiguedades": [],
+      "gate_2_decisions": {
+        "cards_serial_order": ["cmp-logo-cards", "cmp-icon-cards", "cmp-plugin-cards", "cmp-editorial-cards"],
+        "attribute_mapping": "imageAlt se extrae literalmente del atributo alt durante la contribucion."
+      }
+    },
+    {
+      "component_id": "cmp-accordion",
+      "block_name": "accordion",
+      "title": "Accordion",
+      "is_container": true,
+      "veredicto": "collection",
+      "confidence_score": 0.97,
+      "auto_aprobable": false,
+      "motivo_no_auto_aprobable": "Todo bloque de Collection pasa por Gate 1 y no hay taxonomia del cliente.",
+      "dedup": {
+        "closest_match": "accordion (Adobe Block Collection)",
+        "similarity": 0.98,
+        "rationale": "Coinciden contenedor, item repetible, summary y richtext; no hay diferencia funcional."
+      },
+      "justificacion": "Los items observados tienen exactamente pregunta y respuesta desplegable. El titulo de seccion queda como contenido por defecto anterior al bloque.",
+      "adobe_reference": {
+        "bloque": "accordion",
+        "similitud_estructural": 0.98,
+        "que_se_reutiliza": "Modelo summary + text, filtro de items y decoracion con details/summary.",
+        "que_hay_que_adaptar": "Tokens visuales del cliente.",
+        "nota": "Global/adobe-block-collection/accordion.md"
+      },
+      "clustering": {
+        "ocurrencias": 1,
+        "ocurrencias_verificadas": 1,
+        "regla_aplicada": "La pagina ayuda contiene cinco grupos accordion; se contabiliza una pagina y se valida un grupo con cuatro items.",
+        "variantes_detectadas": []
+      },
+      "depends_on": [],
+      "campos_detectados": [
+        {"name": "summary", "component": "text", "valueType": "string", "required": true},
+        {"name": "text", "component": "richtext", "valueType": "string", "required": true}
+      ],
+      "dom_entrada_propuesto": "accordion (filter: accordion)\n  accordion-item*\n    summary\n    text",
+      "repeat_selector": ".accordion-container__items > component-wrapper",
+      "content_mapping": [
+        {"source_selector": ".accordion-item__header__title", "target_field": "summary", "type": "text"},
+        {"source_selector": ".accordion-item__content", "target_field": "text", "type": "richtext"}
+      ],
+      "evidencia": {
+        "paginas": ["https://pre-devportaltpv.cloud.cecabank.es/ayuda"],
+        "selector_origen": ".accordion-container",
+        "dir": "import-work/evidence/accordion/",
+        "breakpoints_capturados": ["desktop", "tablet", "mobile"],
+        "ausente_en": [],
+        "above_the_fold_desktop": false,
+        "fragment": "import-work/evidence/accordion/fragment.html",
+        "computed_styles": "import-work/evidence/accordion/computed-styles.json"
+      },
+      "patron_global_candidato": {"es_candidato": false, "motivo": "Cubierto por Adobe Block Collection."},
+      "ambiguedades": []
+    },
+    {
+      "component_id": "cmp-tabs",
+      "block_name": "tabs",
+      "title": "Tabs With Composite Content",
+      "is_container": true,
+      "veredicto": "new",
+      "confidence_score": 0.62,
+      "auto_aprobable": false,
+      "motivo_no_auto_aprobable": "El contenido de cada tab contiene composiciones complejas y la pagina es singleton.",
+      "dedup": {
+        "closest_match": "tabs (Adobe Block Collection)",
+        "similarity": 0.68,
+        "rationale": "La interaccion coincide, pero el modelo Adobe de heading, image y richtext no representa las listas de cards, logos y CTA anidados sin una adaptacion del contenido."
+      },
+      "justificacion": "Las cinco pestañas comparten titulo y un panel complejo equivalente. Se conserva un solo bloque tabs, pero no se declara collection exacta porque el contenido anidado excede el modelo Adobe.",
+      "adobe_reference": {
+        "bloque": "tabs",
+        "similitud_estructural": 0.68,
+        "que_se_reutiliza": "Interaccion, roles ARIA, teclado y coordinacion tab/panel.",
+        "que_hay_que_adaptar": "Modelo de item para contenido compuesto y estrategia de contribucion de paneles.",
+        "nota": "Global/adobe-block-collection/tabs.md"
+      },
+      "clustering": {
+        "ocurrencias": 1,
+        "ocurrencias_verificadas": 1,
+        "regla_aplicada": "Singleton de onboarding con cinco items homogeneos; no hay propagacion posible.",
+        "variantes_detectadas": []
+      },
+      "depends_on": [],
+      "campos_detectados": [
+        {"name": "title", "component": "text", "valueType": "string", "required": true},
+        {"name": "fragmentPath", "component": "aem-content", "valueType": "string", "required": true}
+      ],
+      "dom_entrada_propuesto": "tabs (template.filter: tabs)\n  tabs-item*\n    title (text, requerido)\n    fragmentPath (fragment EDS, requerido)",
+      "repeat_selector": ".tab-bar__sections > tab-component",
+      "content_mapping": [
+        {"source_selector": ".tab-bar__item h3", "target_field": "title", "type": "text"},
+        {"source_selector": ".tab-component", "target_field": "fragmentPath", "type": "text", "transform": "crear_fragment_eds_y_guardar_path"}
+      ],
+      "evidencia": {
+        "paginas": ["https://pre-devportaltpv.cloud.cecabank.es/empieza-con-nosotros"],
+        "selector_origen": "tabs",
+        "dir": "import-work/evidence/tabs/",
+        "breakpoints_capturados": ["desktop", "tablet", "mobile"],
+        "ausente_en": [],
+        "above_the_fold_desktop": false,
+        "fragment": "import-work/evidence/tabs/fragment.html",
+        "computed_styles": "import-work/evidence/tabs/computed-styles.json"
+      },
+      "patron_global_candidato": {
+        "es_candidato": true,
+        "tipo": "tabs",
+        "rasgo": "pestanas con panel de contenido compuesto",
+        "coincide_con": null,
+        "motivo": "No hay patron global y la referencia Adobe solo cubre parcialmente el modelado."
+      },
+      "ambiguedades": [],
+      "gate_2_decisions": {
+        "authoring_strategy": "Cada tabs-item referencia un fragmento EDS mediante fragmentPath.",
+        "loading_strategy": "El fragmento se carga bajo demanda al activar el tab por primera vez y se conserva en cache de memoria.",
+        "interaction_pattern": "ARIA tabs con flechas, Home/End y Enter/Space; estados loading, error y empty especificados."
+      }
+    },
+    {
+      "component_id": "cmp-carousel",
+      "block_name": "carousel",
+      "title": "Step Carousel",
+      "is_container": true,
+      "veredicto": "collection",
+      "confidence_score": 0.94,
+      "auto_aprobable": false,
+      "motivo_no_auto_aprobable": "Todo bloque de Collection pasa por Gate 1 y falta resolver alt por atributo.",
+      "dedup": {
+        "closest_match": "carousel (Adobe Block Collection)",
+        "similarity": 0.94,
+        "rationale": "Coinciden slides repetibles con image, imageAlt y richtext; el indice es decoracion calculable."
+      },
+      "justificacion": "Los tres carruseles verificados comparten imagen y texto por paso, controles y estado. Titulo y subtitulo se mantienen como contenido por defecto antes del bloque.",
+      "adobe_reference": {
+        "bloque": "carousel",
+        "similitud_estructural": 0.94,
+        "que_se_reutiliza": "Modelo de slide, lazy load, controles e instrumentacion UE.",
+        "que_hay_que_adaptar": "Numeracion visual y tokens del cliente.",
+        "nota": "Global/adobe-block-collection/carousel.md"
+      },
+      "clustering": {
+        "ocurrencias": 4,
+        "ocurrencias_verificadas": 3,
+        "regla_aplicada": "Presente en los dos representantes y el outlier observado de integration-summary; se proyecta al cuarto miembro con distancia 5.",
+        "variantes_detectadas": []
+      },
+      "depends_on": [],
+      "campos_detectados": [
+        {"name": "media_image", "component": "reference", "valueType": "string", "required": true},
+        {"name": "media_imageAlt", "component": "text", "valueType": "string", "required": true},
+        {"name": "content_text", "component": "richtext", "valueType": "string", "required": true}
+      ],
+      "dom_entrada_propuesto": "carousel (filter: carousel)\n  carousel-item*\n    media_image + media_imageAlt\n    content_text",
+      "repeat_selector": ".carousel__slides > .carousel__slide.ng-star-inserted",
+      "content_mapping": [
+        {"source_selector": ".carousel__slide.ng-star-inserted .carousel__slide__image", "target_field": "media_image", "type": "image", "status": "pendiente_dam"},
+        {"source_selector": ".carousel__slide.ng-star-inserted .carousel__slide__image img", "target_field": "media_imageAlt", "type": "text", "source_attribute": "alt"},
+        {"source_selector": ".carousel__slide.ng-star-inserted .carousel__slide__text", "target_field": "content_text", "type": "richtext"}
+      ],
+      "evidencia": {
+        "paginas": ["https://pre-devportaltpv.cloud.cecabank.es/integraciones/api", "https://pre-devportaltpv.cloud.cecabank.es/integraciones/hosted-checkout", "https://pre-devportaltpv.cloud.cecabank.es/integraciones/sdk"],
+        "selector_origen": ".carousel",
+        "dir": "import-work/evidence/carousel/",
+        "breakpoints_capturados": ["desktop", "tablet", "mobile"],
+        "ausente_en": [],
+        "above_the_fold_desktop": false,
+        "fragment": "import-work/evidence/carousel/fragment.html",
+        "computed_styles": "import-work/evidence/carousel/computed-styles.json"
+      },
+      "patron_global_candidato": {"es_candidato": false, "motivo": "Cubierto por Adobe Block Collection."},
+      "ambiguedades": [],
+      "gate_2_decisions": {
+        "attribute_mapping": "media_imageAlt se extrae literalmente del atributo alt durante la contribucion."
+      }
+    },
+    {
+      "component_id": "cmp-contact-form",
+      "block_name": "contact-form",
+      "title": "Contact Form",
+      "is_container": false,
+      "veredicto": "new",
+      "confidence_score": 0.76,
+      "auto_aprobable": false,
+      "motivo_no_auto_aprobable": "El endpoint no esta expuesto en el DOM y no hay taxonomia del cliente.",
+      "dedup": {
+        "closest_match": "form (Adobe Block Collection)",
+        "similarity": 0.72,
+        "rationale": "La infraestructura de envio y validacion es reutilizable, pero el bloque observado integra imagen, heading y un esquema fijo de cinco campos que no representa el modelo reference/action sin contenido auxiliar."
+      },
+      "justificacion": "Las dos apariciones comparten imagen, titular, cinco campos obligatorios y submit. Se mantiene un bloque especializado apoyado en la infraestructura Adobe, no un formulario construido desde cero.",
+      "adobe_reference": {
+        "bloque": "form",
+        "similitud_estructural": 0.72,
+        "que_se_reutiliza": "Render de campos, validacion, foco tras errores y envio.",
+        "que_hay_que_adaptar": "Composicion con imagen/heading y configuracion del esquema de contacto.",
+        "nota": "Global/adobe-block-collection/form.md"
+      },
+      "clustering": {
+        "ocurrencias": 2,
+        "ocurrencias_verificadas": 2,
+        "regla_aplicada": "Presente en ambos representantes de home-help-shared, sin propagacion adicional.",
+        "variantes_detectadas": []
+      },
+      "depends_on": [],
+      "campos_detectados": [
+        {"name": "image", "component": "reference", "valueType": "string", "required": true},
+        {"name": "imageAlt", "component": "text", "valueType": "string", "required": true},
+        {"name": "heading", "component": "text", "valueType": "string", "required": true},
+        {"name": "nameLabel", "component": "text", "valueType": "string", "required": true},
+        {"name": "emailLabel", "component": "text", "valueType": "string", "required": true},
+        {"name": "phoneLabel", "component": "text", "valueType": "string", "required": true},
+        {"name": "companyLabel", "component": "text", "valueType": "string", "required": true},
+        {"name": "messageLabel", "component": "text", "valueType": "string", "required": true},
+        {"name": "submitLabel", "component": "text", "valueType": "string", "required": true},
+        {"name": "action", "component": "text", "valueType": "string", "required": true}
+      ],
+      "dom_entrada_propuesto": "contact-form\n  image + imageAlt\n  heading\n  labels de name/email/phone/company/message\n  submitLabel\n  action",
+      "content_mapping": [
+        {"source_selector": ".contact-form__img", "target_field": "image", "type": "image", "status": "pendiente_dam"},
+        {"source_selector": ".contact-form__img-container__heading", "target_field": "heading", "type": "text"},
+        {"source_selector": "mat-form-field:has(input[name='name']) mat-label", "target_field": "nameLabel", "type": "text"},
+        {"source_selector": "mat-form-field:has(input[name='email']) mat-label", "target_field": "emailLabel", "type": "text"},
+        {"source_selector": "mat-form-field:has(input[name='phone']) mat-label", "target_field": "phoneLabel", "type": "text"},
+        {"source_selector": "mat-form-field:has(input[name='company']) mat-label", "target_field": "companyLabel", "type": "text"},
+        {"source_selector": "mat-form-field:has(textarea[name='message']) mat-label", "target_field": "messageLabel", "type": "text"},
+        {"source_selector": ".contact-form__submit-btn", "target_field": "submitLabel", "type": "text"}
+      ],
+      "evidencia": {
+        "paginas": ["https://pre-devportaltpv.cloud.cecabank.es/ayuda", "https://pre-devportaltpv.cloud.cecabank.es/inicio"],
+        "selector_origen": ".contact-form",
+        "dir": "import-work/evidence/contact-form/",
+        "breakpoints_capturados": ["desktop", "tablet", "mobile"],
+        "ausente_en": [],
+        "above_the_fold_desktop": false,
+        "fragment": "import-work/evidence/contact-form/fragment.html",
+        "computed_styles": "import-work/evidence/contact-form/computed-styles.json"
+      },
+      "patron_global_candidato": {
+        "es_candidato": true,
+        "tipo": "form",
+        "rasgo": "formulario de contacto con media lateral y esquema fijo",
+        "coincide_con": null,
+        "motivo": "No existe patron global; Adobe form aporta infraestructura parcial."
+      },
+      "ambiguedades": [
+        "El endpoint action no aparece en el HTML capturado y debe aportarlo el cliente antes de implementar el envio.",
+        "El cliente debe definir la politica de tratamiento, retencion y consentimiento de los datos enviados."
+      ]
+    },
+    {
+      "component_id": "cmp-video",
+      "block_name": "video",
+      "title": "Video",
+      "is_container": true,
+      "veredicto": "collection",
+      "confidence_score": 0.96,
+      "auto_aprobable": false,
+      "motivo_no_auto_aprobable": "Todo bloque de Collection pasa por Gate 1 y no hay taxonomia del cliente.",
+      "dedup": {
+        "closest_match": "video (Adobe Block Collection)",
+        "similarity": 0.97,
+        "rationale": "La referencia Adobe acepta URI de video, clases y placeholder; cubre el MP4 observado sin cambio estructural."
+      },
+      "justificacion": "La unica secuencia es un video MP4 simple y responsive. No requiere un embed nuevo ni comportamiento especifico del portal.",
+      "adobe_reference": {
+        "bloque": "video",
+        "similitud_estructural": 0.97,
+        "que_se_reutiliza": "Modelo URI/placeholder, lazy loading y comportamiento responsive.",
+        "que_hay_que_adaptar": "Tokens de espaciado.",
+        "nota": "Global/adobe-block-collection/video.md"
+      },
+      "clustering": {
+        "ocurrencias": 1,
+        "ocurrencias_verificadas": 1,
+        "regla_aplicada": "Solo aparece en inicio; no se proyecta a ayuda aunque comparten cluster.",
+        "variantes_detectadas": []
+      },
+      "depends_on": [],
+      "campos_detectados": [
+        {"name": "uri", "component": "aem-content", "valueType": "string", "required": true},
+        {"name": "classes", "component": "multiselect", "valueType": "string", "required": false},
+        {"name": "placeholder_image", "component": "reference", "valueType": "string", "required": false},
+        {"name": "placeholder_imageAlt", "component": "text", "valueType": "string", "required": false}
+      ],
+      "dom_entrada_propuesto": "video (filter: video)\n  video item\n    uri\n    classes\n    placeholder_image + placeholder_imageAlt",
+      "repeat_selector": "source",
+      "content_mapping": [
+        {"source_selector": "source", "target_field": "uri", "type": "image", "status": "pendiente_dam"}
+      ],
+      "evidencia": {
+        "paginas": ["https://pre-devportaltpv.cloud.cecabank.es/inicio"],
+        "selector_origen": "article.media--type-video",
+        "dir": "import-work/evidence/video/",
+        "breakpoints_capturados": ["desktop", "tablet", "mobile"],
+        "ausente_en": [],
+        "above_the_fold_desktop": false,
+        "fragment": "import-work/evidence/video/fragment.html",
+        "computed_styles": "import-work/evidence/video/computed-styles.json"
+      },
+      "patron_global_candidato": {"es_candidato": false, "motivo": "Cubierto por Adobe Block Collection."},
+      "ambiguedades": [],
+      "gate_2_decisions": {
+        "placeholder": "placeholder_image y placeholder_imageAlt son opcionales; su ausencia es valida y no bloquea."
+      }
+    },
+    {
+      "component_id": "cmp-code-block",
+      "block_name": "code-block",
+      "title": "Code Block",
+      "is_container": false,
+      "veredicto": "new",
+      "confidence_score": 0.86,
+      "auto_aprobable": false,
+      "motivo_no_auto_aprobable": "Es un bloque nuevo y no hay taxonomia del cliente.",
+      "dedup": {
+        "closest_match": "default pre/code content",
+        "similarity": 0.52,
+        "rationale": "El contenido por defecto preserva codigo, pero no resuelve lenguaje, numeracion, tema ni accion accesible de copia."
+      },
+      "justificacion": "Nueve paginas verificadas usan la misma cabecera, area de codigo resaltado y copia. Se agrupan JSON, XML y otros lenguajes en un solo bloque configurable.",
+      "clustering": {
+        "ocurrencias": 10,
+        "ocurrencias_verificadas": 9,
+        "regla_aplicada": "Estructura verificada en 9 paginas; solo se proyecta al tercer miembro de no-integration-detail porque sus dos representantes contienen codigo.",
+        "variantes_detectadas": ["light", "lenguaje configurable", "con titulo", "sin titulo"]
+      },
+      "depends_on": [],
+      "campos_detectados": [
+        {"name": "title", "component": "text", "valueType": "string", "required": false},
+        {"name": "language", "component": "select", "valueType": "string", "required": true},
+        {"name": "code", "component": "text", "valueType": "string", "required": true}
+      ],
+      "dom_entrada_propuesto": "code-block\n  title\n  language\n  code",
+      "content_mapping": [
+        {"source_selector": ".custom-code-block__title", "target_field": "title", "type": "text"},
+        {"source_selector": "pre code", "target_field": "language", "type": "text", "source_attribute": "ng-reflect-language|data-language|class", "transform": "normalizar_identificador_de_lenguaje"},
+        {"source_selector": "pre code", "target_field": "code", "type": "text"}
+      ],
+      "evidencia": {
+        "paginas": ["https://pre-devportaltpv.cloud.cecabank.es/integraciones/api", "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/tokenizacion"],
+        "selector_origen": ".custom-code-block",
+        "dir": "import-work/evidence/code-block/",
+        "breakpoints_capturados": ["desktop", "tablet", "mobile"],
+        "ausente_en": [],
+        "above_the_fold_desktop": false,
+        "fragment": "import-work/evidence/code-block/fragment.html",
+        "computed_styles": "import-work/evidence/code-block/computed-styles.json"
+      },
+      "patron_global_candidato": {
+        "es_candidato": true,
+        "tipo": "code",
+        "rasgo": "codigo con titulo, lenguaje, lineas y copia",
+        "coincide_con": null,
+        "motivo": "No existe equivalente local, Adobe ni patron global."
+      },
+      "ambiguedades": [],
+      "gate_2_decisions": {
+        "attribute_mapping": "language se extrae del primer atributo disponible entre ng-reflect-language, data-language y class, y se normaliza al valor del selector UE."
+      }
+    },
+    {
+      "component_id": "cmp-pie-chart",
+      "block_name": "pie-chart",
+      "title": "Pie Chart",
+      "is_container": true,
+      "veredicto": "new",
+      "confidence_score": 0.72,
+      "auto_aprobable": false,
+      "motivo_no_auto_aprobable": "Es singleton y la relacion entre datos y geometria del grafico no esta expuesta en el DOM como valores numericos.",
+      "dedup": {
+        "closest_match": "cards (local)",
+        "similarity": 0.43,
+        "rationale": "Comparte items repetibles, pero el grafico sincronizado, leyenda y asignacion de segmentos son comportamiento estructural ausente en cards."
+      },
+      "justificacion": "Seis items comparten icono, titulo y lista; ademas alimentan un grafico circular y una leyenda. Se mantiene separado por visualizacion de datos, no por estilo.",
+      "clustering": {
+        "ocurrencias": 1,
+        "ocurrencias_verificadas": 1,
+        "regla_aplicada": "Solo aparece en fraude; no se proyecta al blog aunque comparten cluster.",
+        "variantes_detectadas": []
+      },
+      "depends_on": [],
+      "campos_detectados": [
+        {"name": "title", "component": "text", "valueType": "string", "required": true},
+        {"name": "value", "component": "number", "valueType": "number", "required": true, "validation": ">0"},
+        {"name": "color", "component": "text", "valueType": "string", "required": false},
+        {"name": "icon", "component": "reference", "valueType": "string", "required": false},
+        {"name": "iconAlt", "component": "text", "valueType": "string", "required": false},
+        {"name": "details", "component": "richtext", "valueType": "string", "required": false}
+      ],
+      "dom_entrada_propuesto": "pie-chart (template.filter: pie-chart)\n  pie-chart-item* (cardinalidad ilimitada)\n    title (text, requerido)\n    value (number, requerido, >0)\n    color (text/color UE, opcional)\n    icon + iconAlt (reference/text, opcionales)\n    details (richtext, opcional)",
+      "dom_salida_referencia": "<div class=\"pie-chart\">\n  <div class=\"pie-chart-visual\">\n    <canvas aria-hidden=\"true\"></canvas>\n    <p class=\"pie-chart-summary\"><!-- resumen textual accesible calculado --></p>\n  </div>\n  <ul class=\"pie-chart-items\">\n    <li class=\"pie-chart-item\"><!-- title, value, icon/iconAlt y details originales --></li>\n  </ul>\n</div>",
+      "repeat_selector": ".pie-chart__list > component-wrapper",
+      "content_mapping": [
+        {"source_selector": ".pie-chart__list .pie-chart-slice__icon svg", "target_field": "icon", "type": "image", "status": "convertir_svg_local_o_dam", "transform": "sanitizar_svg_y_conservar_viewBox"},
+        {"source_selector": ".pie-chart__list .pie-chart-slice__icon svg", "target_field": "iconAlt", "type": "text", "source_attribute": "aria-label|title", "fallback": "derivar_del_title_y_contexto_del_item"},
+        {"source_selector": ".pie-chart__list .pie-chart-slice__details__title", "target_field": "title", "type": "text"},
+        {"source_selector": ".pie-chart__list > component-wrapper", "target_field": "value", "type": "text", "transform": "constant", "default_value": 1, "note": "El portal original no expone pesos; 1 solo reproduce los seis sectores iguales como contenido inicial migrado."},
+        {"source_selector": ".pie-chart__list .pie-chart-slice__details__list", "target_field": "details", "type": "richtext"}
+      ],
+      "evidencia": {
+        "paginas": ["https://pre-devportaltpv.cloud.cecabank.es/fraude"],
+        "selector_origen": ".pie-chart",
+        "dir": "import-work/evidence/pie-chart/",
+        "breakpoints_capturados": ["desktop", "tablet", "mobile"],
+        "ausente_en": [],
+        "above_the_fold_desktop": false,
+        "fragment": "import-work/evidence/pie-chart/fragment.html",
+        "computed_styles": "import-work/evidence/pie-chart/computed-styles.json"
+      },
+      "patron_global_candidato": {
+        "es_candidato": true,
+        "tipo": "data-visualization",
+        "rasgo": "grafico circular derivado de items con icono, titulo y lista",
+        "coincide_con": null,
+        "motivo": "No existe equivalente en local, Adobe ni Global/patterns."
+      },
+      "ambiguedades": [],
+      "gate_2_decisions": {
+        "cardinality": "El autor puede contribuir cualquier numero de pie-chart-item; no existe cardinalidad fija.",
+        "angular_model": "Cada angulo se calcula como value / sum(values); todos los value deben ser mayores que cero.",
+        "default_palette": "Si color esta vacio se aplica una paleta determinista por indice.",
+        "chart_dependency": "Chart.js 4.x como asset local versionado del repositorio; sin CDN y sin bare imports.",
+        "accessible_rendering": "La lista HTML es fuente y fallback; canvas aria-hidden; resumen textual accesible; label/value visibles y la informacion no depende solo del color.",
+        "asset_policy": "SVG/Lucide se convierten a assets SVG locales o DAM autorables, sanitizados y con viewBox conservado."
+      }
+    },
+    {
+      "component_id": "cmp-swagger-console",
+      "block_name": "swagger-console",
+      "title": "Authenticated Swagger Console",
+      "is_container": false,
+      "veredicto": "new",
+      "confidence_score": 0.48,
+      "auto_aprobable": false,
+      "motivo_no_auto_aprobable": "Confianza menor de 0.6: el portal capturado solo muestra login, no el contrato de autenticacion ni la consola posterior.",
+      "dedup": {
+        "closest_match": "form (Adobe Block Collection)",
+        "similarity": 0.38,
+        "rationale": "Form cubre controles y validacion, pero no autenticacion, recuperacion, registro, sesion ni carga de una consola OpenAPI protegida."
+      },
+      "justificacion": "La unica aparicion es una aplicacion autenticada, no contenido editorial. Se propone un bloque integrador solo para encapsular el servicio; su contrato backend debe existir antes de construirlo.",
+      "adobe_reference": {
+        "bloque": "form",
+        "similitud_estructural": 0.38,
+        "que_se_reutiliza": "Patrones de controles, validacion y foco.",
+        "que_hay_que_adaptar": "Autenticacion completa, sesion, recuperacion, registro y montaje de Swagger/OpenAPI.",
+        "nota": "Global/adobe-block-collection/form.md"
+      },
+      "clustering": {
+        "ocurrencias": 1,
+        "ocurrencias_verificadas": 1,
+        "regla_aplicada": "Cluster singleton swagger; no existe recurrencia ni propagacion.",
+        "variantes_detectadas": []
+      },
+      "depends_on": [],
+      "campos_detectados": [
+        {"name": "backgroundImage", "component": "reference", "valueType": "string", "required": false},
+        {"name": "recoveryLink", "component": "richtext", "valueType": "string", "required": true},
+        {"name": "registerLink", "component": "richtext", "valueType": "string", "required": true},
+        {"name": "authEndpoint", "component": "text", "valueType": "string", "required": false},
+        {"name": "openApiEndpoint", "component": "text", "valueType": "string", "required": false}
+      ],
+      "dom_entrada_propuesto": "swagger-console\n  backgroundImage\n  recoveryLink\n  registerLink\n  authEndpoint\n  openApiEndpoint",
+      "content_mapping": [
+        {"source_selector": ".login-container", "target_field": "backgroundImage", "type": "image", "status": "pendiente_dam"},
+        {"source_selector": ".login-form__form__hint", "target_field": "recoveryLink", "type": "richtext"},
+        {"source_selector": ".login-form__disclaimer a", "target_field": "registerLink", "type": "richtext"}
+      ],
+      "evidencia": {
+        "paginas": ["https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/swagger"],
+        "selector_origen": ".swagger",
+        "dir": "import-work/evidence/swagger-console/",
+        "breakpoints_capturados": ["desktop", "tablet", "mobile"],
+        "ausente_en": [],
+        "above_the_fold_desktop": true,
+        "fragment": "import-work/evidence/swagger-console/fragment.html",
+        "computed_styles": "import-work/evidence/swagger-console/computed-styles.json"
+      },
+      "patron_global_candidato": {
+        "es_candidato": false,
+        "tipo": "application-integration",
+        "rasgo": "consola OpenAPI autenticada",
+        "coincide_con": null,
+        "motivo": "No debe globalizarse hasta conocer el contrato de seguridad y confirmar que es contenido EDS apropiado."
+      },
+      "ambiguedades": [
+        "authEndpoint y openApiEndpoint permanecen vacios hasta que el cliente proporcione los endpoints y el contrato externo de autenticacion/OpenAPI."
+      ],
+      "gate_2_decisions": {
+        "mounting": "El bloque completo queda montable con authEndpoint y openApiEndpoint configurables, inicialmente vacios.",
+        "unavailable_state": "Si falta cualquiera de los endpoints muestra estado no disponible/configuracion pendiente y no realiza peticiones.",
+        "diagnostics": "El logging diagnostico usa mensajes y eventos sanitizados y nunca registra secretos, contrasenas, tokens, cookies ni payloads sensibles."
+      }
+    }
+  ],
+  "descartados": [
+    {
+      "secuencia": "Wrappers Angular component-wrapper, ng-star-inserted y contenedores de framework",
+      "motivo": "Infraestructura de renderizado no autorable; no define componentes EDS."
+    },
+    {
+      "secuencia": "SVG internos de Lucide y SVG generado del grafico",
+      "motivo": "Salida de renderizado; se modelan como referencia/icono o se generan desde datos, nunca como HTML autorado."
+    },
+    {
+      "secuencia": "Controles de carrusel, indicadores, botones de copiar y mostrar contrasena",
+      "motivo": "UI derivada por JavaScript y accesibilidad, no campos de contenido."
+    },
+    {
+      "secuencia": "Banner de cookies y elementos de plataforma",
+      "motivo": "Consentimiento/plataforma, fuera del inventario de contenido autorable."
+    }
+  ],
+  "gate_1": {
+    "estado": "PENDIENTE_APROBACION_HUMANA",
+    "componentes_con_ticket": 12,
+    "content_mapping_completo": "12/12",
+    "contenedores_con_repeat_selector": "8/8",
+    "selectores_comprobados_contra_fragment": true,
+    "evidencia_tres_breakpoints": "12/12",
+    "sin_evidencia": [],
+    "ausentes_en_breakpoint": [],
+    "revision_prioritaria": ["cmp-tabs", "cmp-swagger-console"],
+    "decisiones_requeridas": [
+      "Definir estrategia authorable de contenido compuesto para tabs.",
+      "Confirmar si pie-chart usa pesos iguales o valores no visibles.",
+      "Decidir si swagger-console pertenece a EDS y aportar contratos backend.",
+      "Aportar action del contact-form y politica de tratamiento de datos.",
+      "Aprobar conversion de SVG Lucide y extraccion de atributos alt/href/language."
+    ],
+    "siguiente_estado_bloqueado": "D3 no debe comenzar hasta aprobacion explicita de Gate 1."
+  }
+}

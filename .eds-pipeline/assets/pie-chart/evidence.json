@@ -1,0 +1,59 @@
+{
+  "block_name": "pie-chart",
+  "selector": ".pie-chart",
+  "source_url": "https://pre-devportaltpv.cloud.cecabank.es/fraude",
+  "captured_at": "2026-08-10",
+  "breakpoints": [
+    {
+      "label": "desktop",
+      "width": 1440,
+      "height": 900,
+      "present": true,
+      "box": {
+        "x": 0,
+        "y": 1197,
+        "width": 1440,
+        "height": 608
+      },
+      "above_the_fold": false,
+      "ratio": 2.37,
+      "screenshot": "desktop.png",
+      "context_screenshot": "desktop-context.jpg"
+    },
+    {
+      "label": "tablet",
+      "width": 768,
+      "height": 1024,
+      "present": true,
+      "box": {
+        "x": 0,
+        "y": 1245,
+        "width": 768,
+        "height": 1876
+      },
+      "above_the_fold": false,
+      "ratio": 0.41,
+      "screenshot": "tablet.png",
+      "context_screenshot": "tablet-context.jpg"
+    },
+    {
+      "label": "mobile",
+      "width": 375,
+      "height": 812,
+      "present": true,
+      "box": {
+        "x": 0,
+        "y": 993,
+        "width": 375,
+        "height": 1443
+      },
+      "above_the_fold": false,
+      "ratio": 0.26,
+      "screenshot": "mobile.png",
+      "context_screenshot": "mobile-context.jpg"
+    }
+  ],
+  "fragment": "fragment.html",
+  "fragment_from": "desktop",
+  "computed_styles": "computed-styles.json"
+}

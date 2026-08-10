@@ -1,0 +1,13 @@
+{
+  "epic_id": "PA-20",
+  "template_id": "blog-fraud-shared",
+  "name": "Plantilla: blog-fraud-shared",
+  "state": "draft",
+  "pages_matched": 2,
+  "pages_analyzed": 2,
+  "pages_propagated": 0,
+  "tickets": [
+    "PA-33",
+    "PA-30"
+  ]
+}

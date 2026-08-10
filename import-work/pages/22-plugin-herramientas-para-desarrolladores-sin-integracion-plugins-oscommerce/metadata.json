@@ -1,0 +1,35 @@
+{
+  "url": "https://pre-devportaltpv.cloud.cecabank.es/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce",
+  "timestamp": "2026-08-10T07:36:44.494Z",
+  "paths": {
+    "documentPath": "/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce",
+    "htmlFilePath": "/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce.plain.html",
+    "mdFilePath": "/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce.md",
+    "dirPath": "/plugin/herramientas-para-desarrolladores/sin-integracion/plugins",
+    "filename": "oscommerce"
+  },
+  "screenshot": "import-work\\pages\\22-plugin-herramientas-para-desarrolladores-sin-integracion-plugins-oscommerce\\screenshot.png",
+  "html": {
+    "filePath": "import-work\\pages\\22-plugin-herramientas-para-desarrolladores-sin-integracion-plugins-oscommerce\\cleaned.html",
+    "size": 347820
+  },
+  "metadata": {
+    "title": "Cecabank",
+    "description": "Description for Cecabank",
+    "google": "notranslate",
+    "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+    "theme-color": "#000000"
+  },
+  "images": {
+    "count": 0,
+    "mapping": {},
+    "stats": {
+      "total": 5,
+      "converted": 0,
+      "skipped": 0,
+      "failed": 0,
+      "tooLarge": 0,
+      "limitReached": 0
+    }
+  }
+}

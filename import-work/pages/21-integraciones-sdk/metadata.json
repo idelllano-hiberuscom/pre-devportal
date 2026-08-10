@@ -1,0 +1,47 @@
+{
+  "url": "https://pre-devportaltpv.cloud.cecabank.es/integraciones/sdk",
+  "timestamp": "2026-08-10T07:36:39.427Z",
+  "paths": {
+    "documentPath": "/integraciones/sdk",
+    "htmlFilePath": "/integraciones/sdk.plain.html",
+    "mdFilePath": "/integraciones/sdk.md",
+    "dirPath": "/integraciones",
+    "filename": "sdk"
+  },
+  "screenshot": "import-work\\pages\\21-integraciones-sdk\\screenshot.png",
+  "html": {
+    "filePath": "import-work\\pages\\21-integraciones-sdk\\cleaned.html",
+    "size": 898825
+  },
+  "metadata": {
+    "title": "Cecabank",
+    "description": "Description for Cecabank",
+    "google": "notranslate",
+    "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+    "theme-color": "#000000"
+  },
+  "images": {
+    "count": 11,
+    "mapping": {
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/2025-04/logo.png?VersionId=3KeoM4llfc5X6HI4qMketuTOsgUFeErs": "./images/3fa793f9c17617ad136d898554715026.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/wide/public/highlighted-image/2025-05/SDK%20%281%29.png.webp?VersionId=iyLl9c57tdOquoEanRRBAHmtOFafNqdL&itok=D4sgZthY": "./images/896cd72452d932ebc8b51f754bf4476e.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/step-slide/2025-04/hosted-checkout-paso-3.webp?VersionId=vJnLRj9CeNz_qX5T8RuYpp1TAHfu.ZNv": "./images/5b7754df774e51143ae5eee1fa27e794.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/step-slide/2025-04/hosted-checkout-paso-2.webp?VersionId=Gx.Sh6cfkpxZI2JUN0MG11BHgNc1m20y": "./images/58cad05191d70b38ef4700e42dbe3f19.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/step-slide/2025-04/hosted-checkout-paso-1.webp?VersionId=z3K0rns8R.0gZmCMC2XdRzULPW1H3SJY": "./images/fb16bda545602cc2b54a93c958b9f6d3.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/step-slide/2025-04/hosted-checkout-paso-3_5.webp?VersionId=bg8biZ0Sf1W7VfrK4Pbp6yC4wuXHpEl4": "./images/d21960b1d7d3184612ea90a5dbbcae67.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/company-logo/2025-04/logo-footer.png.webp?VersionId=x2TfK26.E6IBZuXwroUxxQx0mXEcIhQT&itok=5NVoBU4U": "./images/2a8268e3d68b67194d74ffe523f6cd94.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/step-slide/2025-04/hosted-checkout-paso-3_1.webp?VersionId=L5iDkzXGW3REuzUJ7KgGtbnrCirybXsh": "./images/e25d87675266dd1e0419d6fbadc1eceb.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/company-certifications/2025-06/visa_logo.png.webp?VersionId=dkpWfXJF7IjTR.4ONGVZ_RYQxpjR1mp8&itok=-i_hwP9F": "./images/93468d66c6927a8afb0727d57dade396.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/company-certifications/2025-06/logo_mastercard.png.webp?VersionId=etKGd.JxlILNooDGTeqsQRNsHILB9Jbq&itok=ZmhdLw_7": "./images/a4d6f056a1abde52b0e47537e281286e.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/company-certifications/2025-06/logo_american_express.png.webp?VersionId=pPyy.Fztn_Q44WZbBw.bNb4xUmT60GpL&itok=KDt-DksG": "./images/c71f4cf72e66db8fd601ead4f49eab04.png"
+    },
+    "stats": {
+      "total": 13,
+      "converted": 10,
+      "skipped": 1,
+      "failed": 0,
+      "tooLarge": 0,
+      "limitReached": 0
+    }
+  }
+}

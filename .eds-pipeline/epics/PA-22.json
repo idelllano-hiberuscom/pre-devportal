@@ -1,0 +1,13 @@
+{
+  "epic_id": "PA-22",
+  "template_id": "onboarding-singleton",
+  "name": "Plantilla: onboarding-singleton",
+  "state": "draft",
+  "pages_matched": 1,
+  "pages_analyzed": 1,
+  "pages_propagated": 0,
+  "tickets": [
+    "PA-25",
+    "PA-28"
+  ]
+}

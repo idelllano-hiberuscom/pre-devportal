@@ -1,0 +1,40 @@
+{
+  "url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/plugins/resumen",
+  "timestamp": "2026-08-10T07:36:11.624Z",
+  "paths": {
+    "documentPath": "/herramientas-para-desarrolladores/sin-integracion/plugins/resumen",
+    "htmlFilePath": "/herramientas-para-desarrolladores/sin-integracion/plugins/resumen.plain.html",
+    "mdFilePath": "/herramientas-para-desarrolladores/sin-integracion/plugins/resumen.md",
+    "dirPath": "/herramientas-para-desarrolladores/sin-integracion/plugins",
+    "filename": "resumen"
+  },
+  "screenshot": "import-work\\pages\\17-herramientas-para-desarrolladores-sin-integracion-plugins-resumen\\screenshot.png",
+  "html": {
+    "filePath": "import-work\\pages\\17-herramientas-para-desarrolladores-sin-integracion-plugins-resumen\\cleaned.html",
+    "size": 448126
+  },
+  "metadata": {
+    "title": "Cecabank",
+    "description": "Description for Cecabank",
+    "google": "notranslate",
+    "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+    "theme-color": "#000000"
+  },
+  "images": {
+    "count": 4,
+    "mapping": {
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/2025-04/logo.png?VersionId=3KeoM4llfc5X6HI4qMketuTOsgUFeErs": "./images/3fa793f9c17617ad136d898554715026.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/plugin/oscommerce-transparente.png.webp?VersionId=ipGI9_T5NE689Q6tBufs4q4FbUiqgIcX&itok=wWO-vW2L": "./images/30a3be19050c4541271872e59572d852.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/plugin/woocommerce-logo-transp.png.webp?VersionId=JZU9WaCI6CwpsRG74LBlVMkaIF.BoYYb&itok=bmpvJFCo": "./images/771102c2a00f54e64ada5f4fef50f7e4.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/plugin/magento-transparente1.png.webp?VersionId=oLhJcGjLEKShi2Zp_NqMN29Tyl9tKQHT&itok=6WK98ruH": "./images/c369d4da35c95b5fa4f115a045465bd5.png"
+    },
+    "stats": {
+      "total": 10,
+      "converted": 3,
+      "skipped": 1,
+      "failed": 0,
+      "tooLarge": 0,
+      "limitReached": 0
+    }
+  }
+}

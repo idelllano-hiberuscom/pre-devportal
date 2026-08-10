@@ -1,0 +1,145 @@
+{
+  "ticket_id": "PA-31",
+  "component_id": "cmp-icon-cards",
+  "block_name": "cards",
+  "variant": "icon-cards",
+  "local_identity": "cards--icon-cards",
+  "title": "Icon Cards",
+  "state": "approved",
+  "depends_on": [
+    "PA-25"
+  ],
+  "epic": {
+    "id": "PA-17",
+    "nombre": "Plantilla: home-help-shared",
+    "tipo": "plantilla"
+  },
+  "templates": {
+    "primary": "home-help-shared",
+    "additional": [
+      "integration-summary"
+    ]
+  },
+  "confidence_score": 0.86,
+  "is_container": true,
+  "technical_contract": {
+    "confluence_url": "https://hiberus-team-dxp.atlassian.net/wiki/spaces/PA/pages/214368257",
+    "local_path": ".eds-pipeline/contracts/cards--icon-cards.md",
+    "assets_dir": ".eds-pipeline/assets/cards--icon-cards/",
+    "breakpoints_capturados": [
+      "desktop",
+      "tablet",
+      "mobile"
+    ],
+    "completo": true,
+    "incomplete_reasons": [],
+    "confluence_attachments": {
+      "uploaded": [
+        "computed-styles.json",
+        "desktop-context.jpg",
+        "desktop.png",
+        "evidence.json",
+        "fragment.html",
+        "mobile-context.jpg",
+        "mobile.png",
+        "tablet-context.jpg",
+        "tablet.png"
+      ],
+      "referenced": [
+        "desktop.png",
+        "desktop-context.jpg",
+        "tablet.png",
+        "tablet-context.jpg",
+        "mobile.png",
+        "mobile-context.jpg"
+      ],
+      "missing": [],
+      "verified": true
+    }
+  },
+  "source": {
+    "portal_url": "https://pre-devportaltpv.cloud.cecabank.es",
+    "page_url": "https://pre-devportaltpv.cloud.cecabank.es/inicio",
+    "pages": [
+      "https://pre-devportaltpv.cloud.cecabank.es/inicio",
+      "https://pre-devportaltpv.cloud.cecabank.es/integraciones/api"
+    ],
+    "selector": ".features-with-image__content__cards",
+    "snapshot_date": "2026-08-10"
+  },
+  "dedup": {
+    "verdict": "variant",
+    "closest_match": "cards (local)",
+    "similarity": 0.88,
+    "rationale": "Comparte contenedor repetible, media y richtext. Solo requiere estilo de icono y añadir imageAlt opcional al item local."
+  },
+  "content_mapping": [
+    {
+      "source_selector": ".icon-card__header svg",
+      "target_field": "image",
+      "type": "image",
+      "status": "convertir_svg_local_o_dam",
+      "transform": "sanitizar_svg_y_conservar_viewBox"
+    },
+    {
+      "source_selector": ".icon-card__header svg",
+      "target_field": "imageAlt",
+      "type": "text",
+      "source_attribute": "aria-label|title",
+      "fallback": "derivar_del_contexto_visible_del_item"
+    },
+    {
+      "source_selector": ".icon-card__content",
+      "target_field": "text",
+      "type": "richtext"
+    }
+  ],
+  "repeat_selector": ".features-with-image__content__cards > div",
+  "ambiguities": [],
+  "business_input_required": false,
+  "collision": {
+    "shared_target": "blocks/cards/*",
+    "components": [
+      "cmp-icon-cards",
+      "cmp-editorial-cards",
+      "cmp-plugin-cards",
+      "cmp-logo-cards"
+    ],
+    "status": "resolved-serial",
+    "dispatch_safe": true,
+    "serial_order": [
+      "PA-25",
+      "PA-31",
+      "PA-32",
+      "PA-33"
+    ],
+    "resolution": "Implementación serial sobre un único bloque cards: logos → icon-cards → plugins → editorial."
+  },
+  "created_by": "component-architect",
+  "approved_by": "human-gate-2",
+  "assigned_to": "eds-developer",
+  "branch": null,
+  "history": [
+    {
+      "date": "2026-08-10",
+      "from": null,
+      "to": "draft",
+      "by": "task-writer",
+      "note": "Creado desde propuesta-componentes.json aprobada en Gate 1"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "draft",
+      "to": "draft",
+      "by": "task-writer",
+      "note": "Decisiones humanas de Gate 2 aplicadas; el ticket permanece draft pendiente de aprobación explícita."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "draft",
+      "to": "approved",
+      "by": "human-gate-2",
+      "note": "Gate 2: aprobar todo"
+    }
+  ]
+}

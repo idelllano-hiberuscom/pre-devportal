@@ -1,0 +1,59 @@
+{
+  "block_name": "icon-cards",
+  "selector": ".features-with-image__content__cards",
+  "source_url": "https://pre-devportaltpv.cloud.cecabank.es/inicio",
+  "captured_at": "2026-08-10",
+  "breakpoints": [
+    {
+      "label": "desktop",
+      "width": 1440,
+      "height": 900,
+      "present": true,
+      "box": {
+        "x": 96,
+        "y": 1267,
+        "width": 608,
+        "height": 508
+      },
+      "above_the_fold": false,
+      "ratio": 1.2,
+      "screenshot": "desktop.png",
+      "context_screenshot": "desktop-context.jpg"
+    },
+    {
+      "label": "tablet",
+      "width": 768,
+      "height": 1024,
+      "present": true,
+      "box": {
+        "x": 24,
+        "y": 1177,
+        "width": 720,
+        "height": 476
+      },
+      "above_the_fold": false,
+      "ratio": 1.51,
+      "screenshot": "tablet.png",
+      "context_screenshot": "tablet-context.jpg"
+    },
+    {
+      "label": "mobile",
+      "width": 375,
+      "height": 812,
+      "present": true,
+      "box": {
+        "x": 24,
+        "y": 865,
+        "width": 327,
+        "height": 896
+      },
+      "above_the_fold": false,
+      "ratio": 0.36,
+      "screenshot": "mobile.png",
+      "context_screenshot": "mobile-context.jpg"
+    }
+  ],
+  "fragment": "fragment.html",
+  "fragment_from": "desktop",
+  "computed_styles": "computed-styles.json"
+}

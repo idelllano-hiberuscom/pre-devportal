@@ -1,0 +1,169 @@
+{
+  "root": {
+    "tag": "div",
+    "classes": "blog-featured",
+    "text": null,
+    "styles": {
+      "display": "block",
+      "width": "1440px",
+      "height": "716.5px",
+      "padding": "96px 100px 56px",
+      "color": "rgba(0, 0, 0, 0.87)",
+      "font-family": "Poppins, sans-serif",
+      "font-size": "16px",
+      "line-height": "24px",
+      "border": "0px none rgba(0, 0, 0, 0.87)"
+    }
+  },
+  "children": [
+    {
+      "tag": "img",
+      "classes": "blog-entry__image",
+      "text": null,
+      "styles": {
+        "display": "block",
+        "width": "810.656px",
+        "max-width": "100%",
+        "height": "564.5px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "24px",
+        "border": "0px none rgb(255, 255, 255)",
+        "overflow": "clip"
+      }
+    },
+    {
+      "tag": "h5",
+      "classes": null,
+      "text": "12 Jun, 2025",
+      "styles": {
+        "display": "block",
+        "width": "746.656px",
+        "height": "20px",
+        "margin": "0px 0px 8px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "20px",
+        "border": "0px none rgb(255, 255, 255)"
+      }
+    },
+    {
+      "tag": "h2",
+      "classes": "ng-star-inserted",
+      "text": "Test blog",
+      "styles": {
+        "display": "block",
+        "width": "746.656px",
+        "height": "60px",
+        "margin": "0px 0px 8px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "40px",
+        "line-height": "60px",
+        "border": "0px none rgb(255, 255, 255)"
+      }
+    },
+    {
+      "tag": "img",
+      "classes": "blog-entry__image",
+      "text": null,
+      "styles": {
+        "display": "block",
+        "width": "405.344px",
+        "max-width": "100%",
+        "height": "270.25px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "24px",
+        "border": "0px none rgb(255, 255, 255)",
+        "overflow": "clip"
+      }
+    },
+    {
+      "tag": "h5",
+      "classes": null,
+      "text": "12 Jun, 2025",
+      "styles": {
+        "display": "block",
+        "width": "341.344px",
+        "height": "20px",
+        "margin": "0px 0px 8px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "20px",
+        "border": "0px none rgb(255, 255, 255)"
+      }
+    },
+    {
+      "tag": "h3",
+      "classes": "ng-star-inserted",
+      "text": "Probando action",
+      "styles": {
+        "display": "block",
+        "width": "341.344px",
+        "height": "34px",
+        "margin": "0px 0px 8px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "24px",
+        "line-height": "34px",
+        "letter-spacing": "0.25px",
+        "border": "0px none rgb(255, 255, 255)"
+      }
+    },
+    {
+      "tag": "img",
+      "classes": "blog-entry__image",
+      "text": null,
+      "styles": {
+        "display": "block",
+        "width": "405.344px",
+        "max-width": "100%",
+        "height": "270.25px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "24px",
+        "border": "0px none rgb(255, 255, 255)",
+        "overflow": "clip"
+      }
+    },
+    {
+      "tag": "h5",
+      "classes": null,
+      "text": "12 Jun, 2025",
+      "styles": {
+        "display": "block",
+        "width": "341.344px",
+        "height": "20px",
+        "margin": "0px 0px 8px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "20px",
+        "border": "0px none rgb(255, 255, 255)"
+      }
+    },
+    {
+      "tag": "h3",
+      "classes": "ng-star-inserted",
+      "text": "Probando action",
+      "styles": {
+        "display": "block",
+        "width": "341.344px",
+        "height": "34px",
+        "margin": "0px 0px 8px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "24px",
+        "line-height": "34px",
+        "letter-spacing": "0.25px",
+        "border": "0px none rgb(255, 255, 255)"
+      }
+    }
+  ]
+}

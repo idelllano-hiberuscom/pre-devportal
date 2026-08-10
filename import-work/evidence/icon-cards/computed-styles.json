@@ -1,0 +1,158 @@
+{
+  "root": {
+    "tag": "div",
+    "classes": "features-with-image__content__cards ng-star-inserted",
+    "text": null,
+    "styles": {
+      "display": "grid",
+      "gap": "48px 24px",
+      "grid-template-columns": "292px 292px",
+      "grid-template-rows": "214px 246px",
+      "width": "608px",
+      "height": "508px",
+      "color": "rgba(0, 0, 0, 0.87)",
+      "font-family": "Poppins, sans-serif",
+      "font-size": "16px",
+      "line-height": "24px",
+      "border": "0px none rgba(0, 0, 0, 0.87)"
+    }
+  },
+  "children": [
+    {
+      "tag": "h4",
+      "classes": null,
+      "text": "Portal de Comercios",
+      "styles": {
+        "display": "block",
+        "width": "292px",
+        "height": "22px",
+        "margin": "0px 0px 8px",
+        "color": "rgba(0, 0, 0, 0.87)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "18px",
+        "font-weight": "500",
+        "line-height": "22px",
+        "letter-spacing": "0.25px",
+        "border": "0px none rgba(0, 0, 0, 0.87)"
+      }
+    },
+    {
+      "tag": "p",
+      "classes": null,
+      "text": "Accede a una visión unificada de todas tus ventas online.",
+      "styles": {
+        "display": "block",
+        "width": "292px",
+        "height": "64px",
+        "margin": "0px 0px 16px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "h4",
+      "classes": null,
+      "text": "Cobra de forma rápida y ágil",
+      "styles": {
+        "display": "block",
+        "width": "292px",
+        "height": "22px",
+        "margin": "0px 0px 8px",
+        "color": "rgba(0, 0, 0, 0.87)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "18px",
+        "font-weight": "500",
+        "line-height": "22px",
+        "letter-spacing": "0.25px",
+        "border": "0px none rgba(0, 0, 0, 0.87)"
+      }
+    },
+    {
+      "tag": "p",
+      "classes": null,
+      "text": "Configuración personalizada de tus métodos de pago para que tus clientes paguen de forma sencilla.",
+      "styles": {
+        "display": "block",
+        "width": "292px",
+        "height": "96px",
+        "margin": "0px 0px 16px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "h4",
+      "classes": null,
+      "text": "Suscripciones y pagos recurrentes",
+      "styles": {
+        "display": "block",
+        "width": "292px",
+        "height": "44px",
+        "margin": "0px 0px 8px",
+        "color": "rgba(0, 0, 0, 0.87)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "18px",
+        "font-weight": "500",
+        "line-height": "22px",
+        "letter-spacing": "0.25px",
+        "border": "0px none rgba(0, 0, 0, 0.87)"
+      }
+    },
+    {
+      "tag": "p",
+      "classes": null,
+      "text": "Nos adaptamos a tu negocio y a tus servicios.",
+      "styles": {
+        "display": "block",
+        "width": "292px",
+        "height": "64px",
+        "margin": "0px 0px 16px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "h4",
+      "classes": null,
+      "text": "Venta Omnicanal",
+      "styles": {
+        "display": "block",
+        "width": "292px",
+        "height": "22px",
+        "margin": "0px 0px 8px",
+        "color": "rgba(0, 0, 0, 0.87)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "18px",
+        "font-weight": "500",
+        "line-height": "22px",
+        "letter-spacing": "0.25px",
+        "border": "0px none rgba(0, 0, 0, 0.87)"
+      }
+    },
+    {
+      "tag": "p",
+      "classes": null,
+      "text": "Con nuestra solución unificada podrás adaptarte a los distintos canales de venta desde un único luga",
+      "styles": {
+        "display": "block",
+        "width": "292px",
+        "height": "128px",
+        "margin": "0px 0px 16px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    }
+  ]
+}

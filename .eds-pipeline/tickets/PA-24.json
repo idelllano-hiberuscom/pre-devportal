@@ -1,0 +1,124 @@
+{
+  "ticket_id": "PA-24",
+  "component_id": "cmp-swagger-console",
+  "block_name": "swagger-console",
+  "variant": null,
+  "local_identity": "swagger-console",
+  "title": "Authenticated Swagger Console",
+  "state": "approved",
+  "depends_on": [],
+  "epic": {
+    "id": "PA-14",
+    "nombre": "Plantilla: swagger-singleton",
+    "tipo": "plantilla"
+  },
+  "templates": {
+    "primary": "swagger-singleton",
+    "additional": []
+  },
+  "confidence_score": 0.48,
+  "is_container": false,
+  "technical_contract": {
+    "confluence_url": "https://hiberus-team-dxp.atlassian.net/wiki/spaces/PA/pages/214171649",
+    "local_path": ".eds-pipeline/contracts/swagger-console.md",
+    "assets_dir": ".eds-pipeline/assets/swagger-console/",
+    "breakpoints_capturados": [
+      "desktop",
+      "tablet",
+      "mobile"
+    ],
+    "completo": false,
+    "incomplete_reasons": [
+      "authEndpoint y openApiEndpoint permanecen vacios hasta que el cliente proporcione los endpoints y el contrato externo de autenticacion/OpenAPI."
+    ],
+    "confluence_attachments": {
+      "uploaded": [
+        "computed-styles.json",
+        "desktop-context.jpg",
+        "desktop.png",
+        "evidence.json",
+        "fragment.html",
+        "mobile-context.jpg",
+        "mobile.png",
+        "tablet-context.jpg",
+        "tablet.png"
+      ],
+      "referenced": [
+        "desktop.png",
+        "desktop-context.jpg",
+        "tablet.png",
+        "tablet-context.jpg",
+        "mobile.png",
+        "mobile-context.jpg"
+      ],
+      "missing": [],
+      "verified": true
+    }
+  },
+  "source": {
+    "portal_url": "https://pre-devportaltpv.cloud.cecabank.es",
+    "page_url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/swagger",
+    "pages": [
+      "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/swagger"
+    ],
+    "selector": ".swagger",
+    "snapshot_date": "2026-08-10"
+  },
+  "dedup": {
+    "verdict": "new",
+    "closest_match": "form (Adobe Block Collection)",
+    "similarity": 0.38,
+    "rationale": "Form cubre controles y validacion, pero no autenticacion, recuperacion, registro, sesion ni carga de una consola OpenAPI protegida."
+  },
+  "content_mapping": [
+    {
+      "source_selector": ".login-container",
+      "target_field": "backgroundImage",
+      "type": "image",
+      "status": "pendiente_dam"
+    },
+    {
+      "source_selector": ".login-form__form__hint",
+      "target_field": "recoveryLink",
+      "type": "richtext"
+    },
+    {
+      "source_selector": ".login-form__disclaimer a",
+      "target_field": "registerLink",
+      "type": "richtext"
+    }
+  ],
+  "repeat_selector": null,
+  "ambiguities": [
+    "authEndpoint y openApiEndpoint permanecen vacios hasta que el cliente proporcione los endpoints y el contrato externo de autenticacion/OpenAPI."
+  ],
+  "business_input_required": true,
+  "collision": null,
+  "created_by": "component-architect",
+  "approved_by": "human-gate-2",
+  "assigned_to": "eds-developer",
+  "branch": null,
+  "history": [
+    {
+      "date": "2026-08-10",
+      "from": null,
+      "to": "draft",
+      "by": "task-writer",
+      "note": "Creado desde propuesta-componentes.json aprobada en Gate 1"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "draft",
+      "to": "draft",
+      "by": "task-writer",
+      "note": "Decisiones humanas de Gate 2 aplicadas; el ticket permanece draft pendiente de aprobación explícita."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "draft",
+      "to": "approved",
+      "by": "human-gate-2",
+      "note": "Gate 2: aprobar todo"
+    }
+  ]
+}

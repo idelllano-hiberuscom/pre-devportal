@@ -1,0 +1,59 @@
+{
+  "block_name": "plugin-cards",
+  "selector": ".plugin-list",
+  "source_url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/plugins/resumen",
+  "captured_at": "2026-08-10",
+  "breakpoints": [
+    {
+      "label": "desktop",
+      "width": 1440,
+      "height": 900,
+      "present": true,
+      "box": {
+        "x": 282,
+        "y": 383,
+        "width": 1126,
+        "height": 652
+      },
+      "above_the_fold": true,
+      "ratio": 1.73,
+      "screenshot": "desktop.png",
+      "context_screenshot": "desktop-context.jpg"
+    },
+    {
+      "label": "tablet",
+      "width": 768,
+      "height": 1024,
+      "present": true,
+      "box": {
+        "x": 48,
+        "y": 519,
+        "width": 672,
+        "height": 898
+      },
+      "above_the_fold": true,
+      "ratio": 0.75,
+      "screenshot": "tablet.png",
+      "context_screenshot": "tablet-context.jpg"
+    },
+    {
+      "label": "mobile",
+      "width": 375,
+      "height": 812,
+      "present": true,
+      "box": {
+        "x": 48,
+        "y": 603,
+        "width": 279,
+        "height": 1546
+      },
+      "above_the_fold": true,
+      "ratio": 0.18,
+      "screenshot": "mobile.png",
+      "context_screenshot": "mobile-context.jpg"
+    }
+  ],
+  "fragment": "fragment.html",
+  "fragment_from": "desktop",
+  "computed_styles": "computed-styles.json"
+}

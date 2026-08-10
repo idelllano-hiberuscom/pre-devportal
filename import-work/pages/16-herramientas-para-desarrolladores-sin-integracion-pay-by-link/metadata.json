@@ -1,0 +1,35 @@
+{
+  "url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/pay-by-link",
+  "timestamp": "2026-08-10T07:36:07.128Z",
+  "paths": {
+    "documentPath": "/herramientas-para-desarrolladores/sin-integracion/pay-by-link",
+    "htmlFilePath": "/herramientas-para-desarrolladores/sin-integracion/pay-by-link.plain.html",
+    "mdFilePath": "/herramientas-para-desarrolladores/sin-integracion/pay-by-link.md",
+    "dirPath": "/herramientas-para-desarrolladores/sin-integracion",
+    "filename": "pay-by-link"
+  },
+  "screenshot": "import-work\\pages\\16-herramientas-para-desarrolladores-sin-integracion-pay-by-link\\screenshot.png",
+  "html": {
+    "filePath": "import-work\\pages\\16-herramientas-para-desarrolladores-sin-integracion-pay-by-link\\cleaned.html",
+    "size": 329543
+  },
+  "metadata": {
+    "title": "Cecabank",
+    "description": "Description for Cecabank",
+    "google": "notranslate",
+    "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+    "theme-color": "#000000"
+  },
+  "images": {
+    "count": 0,
+    "mapping": {},
+    "stats": {
+      "total": 5,
+      "converted": 0,
+      "skipped": 0,
+      "failed": 0,
+      "tooLarge": 0,
+      "limitReached": 0
+    }
+  }
+}

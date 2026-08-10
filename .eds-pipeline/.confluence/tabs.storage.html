@@ -1,0 +1,150 @@
+<h1>Contrato Técnico — tabs</h1><blockquote><p>Ticket: PA-28 (https://hiberus-team-dxp.atlassian.net/browse/PA-28)   ·   Confluence: https://hiberus-team-dxp.atlassian.net/wiki/spaces/PA/pages/214106113</p></blockquote><blockquote><p>component_id: cmp-tabs   ·   block_name: tabs   ·   is_container: sí</p></blockquote><blockquote><p>Origen: https://pre-devportaltpv.cloud.cecabank.es/empieza-con-nosotros   ·   Snapshot: 2026-08-10   ·   Confianza: 0.62</p></blockquote><blockquote><p>Evidencia: adjuntos de esta página</p></blockquote><p>**Selector repetible del portal:** `.tab-bar__sections &gt; tab-component`</p><p>---</p><h2>1. Descripción funcional</h2><p>Tabs With Composite Content corresponde a `cmp-tabs` y se materializa sobre el bloque EDS `tabs`.</p><p>El componente aparece 1 veces en el portal; 1 apariciones fueron verificadas.</p><p>Las páginas observadas son: https://pre-devportaltpv.cloud.cecabank.es/empieza-con-nosotros.</p><p>Las plantillas asociadas son onboarding-singleton; onboarding-singleton es la plantilla primaria de Jira.</p><p>Las cinco pestañas comparten titulo y un panel complejo equivalente. Se conserva un solo bloque tabs, pero no se declara collection exacta porque el contenido anidado excede el modelo Adobe.</p><p>Punto de partida: tabs: se reutiliza Interaccion, roles ARIA, teclado y coordinacion tab/panel.; se adapta Modelo de item para contenido compuesto y estrategia de contribucion de paneles..</p><p>**Apariciones en el portal:** 1 — https://pre-devportaltpv.cloud.cecabank.es/empieza-con-nosotros</p><p>**Posición en página:** fuera del primer viewport en desktop</p><p>**Variantes observadas:** ninguna</p><h2>2. Evidencia visual</h2><table><tbody><tr><th>Breakpoint</th><th>Componente local resoluble</th><th>En contexto local resoluble</th><th>Medidas del componente</th><th>Above the fold</th></tr><tr><td>desktop 1440px</td><td>`desktop.png`</td><td>`desktop-context.jpg`</td><td>1440px × 2853px</td><td>no</td></tr><tr><td>tablet 768px</td><td>`tablet.png`</td><td>`tablet-context.jpg`</td><td>768px × 2567px</td><td>sí</td></tr><tr><td>mobile 375px</td><td>`mobile.png`</td><td>`mobile-context.jpg`</td><td>375px × 2719px</td><td>sí</td></tr></tbody></table><ac:image ac:align="center" ac:width="900" ac:alt="desktop.png"><ri:attachment ri:filename="desktop.png" /></ac:image><ac:image ac:align="center" ac:width="900" ac:alt="desktop-context.jpg"><ri:attachment ri:filename="desktop-context.jpg" /></ac:image><ac:image ac:align="center" ac:width="900" ac:alt="tablet.png"><ri:attachment ri:filename="tablet.png" /></ac:image><ac:image ac:align="center" ac:width="900" ac:alt="tablet-context.jpg"><ri:attachment ri:filename="tablet-context.jpg" /></ac:image><ac:image ac:align="center" ac:width="900" ac:alt="mobile.png"><ri:attachment ri:filename="mobile.png" /></ac:image><ac:image ac:align="center" ac:width="900" ac:alt="mobile-context.jpg"><ri:attachment ri:filename="mobile-context.jpg" /></ac:image><p>**Comportamiento responsivo medido:**</p><ul><li>**desktop 1440px:** caja medida 1440px × 2853px; ratio 0.5; posición x=0px, y=1025px.</li><li>**tablet 768px:** caja medida 768px × 2567px; ratio 0.3; posición x=0px, y=1009px.</li><li>**mobile 375px:** caja medida 375px × 2719px; ratio 0.14; posición x=0px, y=753px.</li></ul><h2>3. DOM del portal → DOM de entrada EDS</h2><h3>3a. Fragmento real del portal (EVIDENCIA — no escribir selectores contra este DOM)</h3><pre><code>&lt;tabs&gt;
+	&lt;tab-bar&gt;&lt;ul class=&quot;tab-bar&quot;&gt;
+  &lt;li class=&quot;tab-bar__item tab-bar__item--selected ng-star-inserted&quot;&gt;
+    &lt;h3&gt;API&lt;/h3&gt;
+  &lt;/li&gt;&lt;li class=&quot;tab-bar__item ng-star-inserted&quot;&gt;
+    &lt;h3&gt;SDK&lt;/h3&gt;
+  &lt;/li&gt;&lt;li class=&quot;tab-bar__item ng-star-inserted&quot;&gt;
+    &lt;h3&gt;iframe&lt;/h3&gt;
+  &lt;/li&gt;&lt;li class=&quot;tab-bar__item ng-star-inserted&quot;&gt;
+    &lt;h3&gt;Hosted&lt;/h3&gt;
+  &lt;/li&gt;&lt;li class=&quot;tab-bar__item ng-star-inserted&quot;&gt;
+    &lt;h3&gt;Plugins&lt;/h3&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;tab-bar__sections&quot;&gt;
+		&lt;tab-component&gt;&lt;div class=&quot;tab-component&quot;&gt;
+			&lt;component-wrapper&gt;&lt;highlighted-feature&gt;&lt;div class=&quot;highlighted-feature&quot;&gt;
+    &lt;div class=&quot;highlighted-feature__image ng-star-inserted&quot;&gt;
+      &lt;img src=&quot;https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/wide/public/highlighted-feature/2025-04/hands-holding-credit-card-using-laptop-computer-mobile-phone-online-shopping.webp?VersionId=_GkIf.diSsp_OCEOhopC14BFHoTUor6t&amp;amp;itok=a6f1f1--&quot; alt=&quot;API&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;highlighted-feature__content ng-star-inserted&quot;&gt;
+      &lt;h2 class=&quot;highlighted-feature__content__title&quot;&gt;API REST&lt;/h2&gt;
+      &lt;div class=&quot;highlighted-feature__content__description&quot;&gt;
+        &lt;div&gt;La integración mediante API REST ofrece un conjunto de servicios REST que facilitan la autenticación y autorización de pagos con tarjetas en entornos de prueba y producción. Cuenta con tres tipos distintos de operación. Además, se disponen de servicios para anulación total y devolución parcial de operaciones. Todos los servicios intercambian mensajes JSON codificados en Base64 y protegidos mediante firma SHA 256.&lt;br&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/highlighted-feature&gt;
+&lt;/component-wrapper&gt;
+&lt;component-wrapper&gt;&lt;feature-list&gt;&lt;section class=&quot;feature-list&quot;&gt;
+  &lt;h2 class=&quot;feature-list__heading&quot;&gt;
+    Funcionalidades
+  &lt;/h2&gt;
+  &lt;div class=&quot;feature-list__list&quot;&gt;
+    &lt;div class=&quot;feature-list__list__item ng-star-inserted&quot;&gt;
+      &lt;component-wrapper&gt;&lt;icon-card&gt;&lt;div class=&quot;icon-card&quot;&gt;
+  &lt;div class=&quot;icon-card__header&quot;&gt;
+      &lt;special-icon&gt;&lt;svg class=&quot;special-icon&quot;&gt;
+	&lt;use xlink:href=&quot;../../../../content/custom-icons/special-icons.svg#icon-Automation&quot;&gt;&lt;/use&gt;
+&lt;/svg&gt;
+&lt;/special-icon&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;icon-card__content&quot;&gt;
+    &lt;h4&gt;Integración flexible&lt;/h4&gt;
+    &lt;p&gt;La misma API permite realizar compras en un paso, compras en dos pasos, y compras tipo MOTO (Mail Order/Telephone Order).
+&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/icon-card&gt;
+&lt;/component-wrapper&gt;
+    &lt;/div&gt;&lt;div class=&quot;feature-list__list__item ng-star-inserted&quot;&gt;
+      &lt;component-wrapper&gt;&lt;icon-card&gt;&lt;div class=&quot;icon-card&quot;&gt;
+  &lt;div class=&quot;icon-card__header&quot;&gt;
+      &lt;special-icon&gt;&lt;svg class=&quot;special-icon&quot;&gt;
+	&lt;use xlink:href=&quot;../../../../content/custom-icons/special-icons.svg#icon-Tools&quot;&gt;&lt;/use&gt;
+&lt;/svg&gt;
+&lt;/special-icon&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;icon-card__content&quot;&gt;
+    &lt;h4&gt;Seguridad avanzada&lt;/h4&gt;
+    &lt;p&gt;Mensajes JSON + Base64 firmados con SHA 256 y soporte 3‑D Secure 2.x.
+&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/icon-card&gt;
+&lt;/component-wrapper&gt;
+    &lt;/div&gt;&lt;div class=&quot;feature-list__list__item ng-star-inserted&quot;&gt;
+      &lt;component-wrapper&gt;&lt;icon-card&gt;&lt;div class=&quot;icon-card&quot;&gt;
+  &lt;div class=&quot;icon-card__header&quot;&gt;
+      &lt;special-icon&gt;&lt;svg class=&quot;special-icon&quot;&gt;
+	&lt;use xlink:href=&quot;../../../../content/custom-icons/special-icons.svg#icon-Settings&quot;&gt;&lt;/use&gt;
+&lt;/svg&gt;
+&lt;/special-icon&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;icon-card__content&quot;&gt;
+    &lt;h4&gt;Control de tu operativa&lt;/h4&gt;
+    &lt;p&gt;Gestiona pagos, anulaciones y devoluciones directamente desde tu servidor. Además, contamos con entorno de pruebas y producción independientes para validar cambios sin riesgo.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/icon-card&gt;
+&lt;/component-wrapper&gt;
+    &lt;/div&gt;&lt;div class=&quot;feature-list__list__item ng-star-inserted&quot;&gt;
+      &lt;component-wrapper&gt;&lt;icon-card&gt;&lt;div class=&quot;icon-card&quot;&gt;
+  &lt;div class=&quot;icon-card__header&quot;&gt;
+      &lt;special-icon&gt;&lt;svg class=&quot;special-icon&quot;&gt;
+	&lt;use xlink:href=&quot;../../../../content/custom-icons/special-icons.svg#icon-Access&quot;&gt;&lt;/use&gt;
+&lt;/svg&gt;
+&lt;/special-icon&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;icon-card__content&quot;&gt;
+    &lt;h4&gt;Prevención de fraude&lt;/h4&gt;
+    &lt;p&gt;Nuestras herramientas avanzadas de análisis y nuestros equipos de expertos en fraude monitorean las transacciones y ofrecen soporte siempre que lo necesites.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/icon-card&gt;
+&lt;/component-wrapper&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;/feature-list&gt;
+&lt;/component-wrapper&gt;
+&lt;component-wrapper&gt;&lt;payment-methods&gt;&lt;section class=&quot;payment-methods&quot;&gt;
+  &lt;div class=&quot;payment-methods__header&quot;&gt;
+    &lt;h2 class=&quot;payment-methods__header__title&quot;&gt;Posibles métodos de pago aceptados&lt;/h2&gt; 
+  &lt;/div&gt;
+  &lt;ul class=&quot;payment-methods__list&quot;&gt;
+    &lt;li class=&quot;payment-methods__list__item ng-star-inserted&quot;&gt;
+      &lt;img src=&quot;https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/metodo-pago/icono/AmericanExpress.svg&quot; alt=&quot;American Express&quot;&gt;
+    &lt;/li&gt;&lt;li class=&quot;payment-methods__list__item ng-star-inserted&quot;&gt;
+      &lt;img src=&quot;https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/metodo-pago/icono/ApplePay.svg&quot; alt=&quot;Apple Pay&quot;&gt;
+    &lt;/li&gt;&lt;li class=&quot;payment-methods__list__item ng-star-inserted&quot;&gt;
+      &lt;img src=&quot;https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/metodo-pago/icono/Bizum.svg&quot; alt=&quot;Bizum&quot;&gt;
+    &lt;/li&gt;&lt;li class=&quot;payment-methods__list__item ng-star-inserted&quot;&gt;
+      &lt;img src=&quot;https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/metodo-pago/icono/GooglePay.svg&quot; alt=&quot;Google Pay&quot;&gt;
+    &lt;/li&gt;&lt;li class=&quot;payment-methods__list__item ng-star-inserted&quot;&gt;
+      &lt;img src=&quot;https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/metodo-pago/icono/MasterCard.svg&quot; alt=&quot;MasterCard&quot;&gt;
+    &lt;/li&gt;&lt;li class=&quot;payment-methods__list__item ng-star-inserted&quot;&gt;
+      &lt;img src=&quot;https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/metodo-pago/icono/Visa.svg&quot; alt=&quot;Visa&quot;&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;
+&lt;/payment-methods&gt;
+&lt;/component-wrapper&gt;
+&lt;component-wrapper&gt;&lt;button-link&gt;&lt;div class=&quot;button-link&quot;&gt;
+  &lt;button class=&quot;btn-filled&quot;&gt;
+    Ver más
+  &lt;/button&gt;
+&lt;/div&gt;
+&lt;/button-link&gt;
+&lt;/component-wrapper&gt;
+&lt;/div&gt;
+&lt;/tab-component&gt;&lt;tab-component&gt;&lt;div class=&quot;tab-component tab-component--hidden&quot;&gt;
+			&lt;component-wrapper&gt;&lt;highlig</code></pre><h3>3b. DOM DE ENTRADA — matriz EDS (EL CONTRATO)</h3><pre><code>tabs (template.filter: tabs)
+  tabs-item*
+    title (text, requerido)
+    fragmentPath (fragment EDS, requerido)</code></pre><h3>3c. Mapeo portal → EDS</h3><table><tbody><tr><th>Celda/campo EDS</th><th>Elemento del portal</th><th>Tipo y nota</th></tr><tr><td>item/fila 0 / `title`</td><td>`.tab-bar__item h3`</td><td>`text`</td></tr><tr><td>item/fila 1 / `fragmentPath`</td><td>`.tab-component`</td><td>`text`; transformación crear_fragment_eds_y_guardar_path</td></tr></tbody></table><p>**content_mapping íntegro y vinculante:**</p><pre><code>[
+  {
+    &quot;source_selector&quot;: &quot;.tab-bar__item h3&quot;,
+    &quot;target_field&quot;: &quot;title&quot;,
+    &quot;type&quot;: &quot;text&quot;
+  },
+  {
+    &quot;source_selector&quot;: &quot;.tab-component&quot;,
+    &quot;target_field&quot;: &quot;fragmentPath&quot;,
+    &quot;type&quot;: &quot;text&quot;,
+    &quot;transform&quot;: &quot;crear_fragment_eds_y_guardar_path&quot;
+  }
+]</code></pre><p>El contribuidor debe iterar `.tab-bar__sections &gt; tab-component` y aplicar cada entrada de `content_mapping` dentro de cada item.</p><h3>3d. DOM DE SALIDA — referencia, no contrato de entrada</h3><pre><code>&lt;div class=&quot;tabs&quot;&gt;
+  &lt;div class=&quot;tabs-content&quot;&gt;&lt;!-- nodos originales decorados desde la matriz de 3b --&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre><h2>4. Estilos extraídos del portal</h2><p>Valores medidos en adjuntos de esta página:</p><table><tbody><tr><th>Elemento medido</th><th>Propiedades computadas</th></tr><tr><td>`tabs.ng-star-inserted`</td><td>`display: inline; color: rgba(0, 0, 0, 0.87); font-family: Poppins, sans-serif; font-size: 16px; line-height: 24px; border: 0px none rgba(0, 0, 0, 0.87)`</td></tr><tr><td>`ul.tab-bar`</td><td>`display: flex; justify-content: center; align-items: center; gap: 40px; width: 1440px; height: 42px; margin: 128px 0px 16px; color: rgb(118, 118, 122); font-family: Poppins, sans-serif; font-size: 16px; line-height: 32px; border: 0px none rgb(118, 118, 122)`</td></tr><tr><td>`li.tab-bar__item.tab-bar__item--selected.ng-star-inserted`</td><td>`display: list-item; width: 38.1094px; height: 42px; color: rgb(1, 52, 81); font-family: Poppins, sans-serif; font-size: 16px; line-height: 32px; border: 0px none rgb(1, 52, 81)`</td></tr><tr><td>`h3`</td><td>`display: block; width: 38.1094px; height: 34px; margin: 0px 0px 8px; color: rgb(1, 52, 81); font-family: Poppins, sans-serif; font-size: 24px; font-weight: 500; line-height: 34px; letter-spacing: 0.25px; border: 0px none rgb(1, 52, 81)`</td></tr><tr><td>`li.tab-bar__item.ng-star-inserted`</td><td>`display: list-item; width: 47.4688px; height: 42px; color: rgb(1, 127, 155); font-family: Poppins, sans-serif; font-size: 16px; line-height: 32px; border: 0px none rgb(1, 127, 155)`</td></tr><tr><td>`h3`</td><td>`display: block; width: 47.4688px; height: 34px; margin: 0px 0px 8px; color: rgb(1, 127, 155); font-family: Poppins, sans-serif; font-size: 24px; font-weight: 500; line-height: 34px; letter-spacing: 0.25px; border: 0px none rgb(1, 127, 155)`</td></tr><tr><td>`li.tab-bar__item.ng-star-inserted`</td><td>`display: list-item; width: 81.0469px; height: 42px; color: rgb(1, 127, 155); font-family: Poppins, sans-serif; font-size: 16px; line-height: 32px; border: 0px none rgb(1, 127, 155)`</td></tr><tr><td>`h3`</td><td>`display: block; width: 81.0469px; height: 34px; margin: 0px 0px 8px; color: rgb(1, 127, 155); font-family: Poppins, sans-serif; font-size: 24px; font-weight: 500; line-height: 34px; letter-spacing: 0.25px; border: 0px none rgb(1, 127, 155)`</td></tr><tr><td>`li.tab-bar__item.ng-star-inserted`</td><td>`display: list-item; width: 86.5625px; height: 42px; color: rgb(1, 127, 155); font-family: Poppins, sans-serif; font-size: 16px; line-height: 32px; border: 0px none rgb(1, 127, 155)`</td></tr><tr><td>`h3`</td><td>`display: block; width: 86.5625px; height: 34px; margin: 0px 0px 8px; color: rgb(1, 127, 155); font-family: Poppins, sans-serif; font-size: 24px; font-weight: 500; line-height: 34px; letter-spacing: 0.25px; border: 0px none rgb(1, 127, 155)`</td></tr><tr><td>`li.tab-bar__item.ng-star-inserted`</td><td>`display: list-item; width: 88.9531px; height: 42px; color: rgb(1, 127, 155); font-family: Poppins, sans-serif; font-size: 16px; line-height: 32px; border: 0px none rgb(1, 127, 155)`</td></tr><tr><td>`h3`</td><td>`display: block; width: 88.9531px; height: 34px; margin: 0px 0px 8px; color: rgb(1, 127, 155); font-family: Poppins, sans-serif; font-size: 24px; font-weight: 500; line-height: 34px; letter-spacing: 0.25px; border: 0px none rgb(1, 127, 155)`</td></tr><tr><td>`img`</td><td>`display: block; width: 579.984px; max-width: 100%; height: 386.844px; color: rgba(0, 0, 0, 0.87); font-family: Poppins, sans-serif; font-size: 16px; line-height: 24px; border: 0px none rgba(0, 0, 0, 0.87); overflow: clip`</td></tr></tbody></table><p>**Tokens existentes que deben reutilizarse:** se comparan y reutilizan durante implementación; cualquier valor no medido permanece sujeto a los tokens del repositorio y no a estimación visual.</p><h2>5. Campos editables (Universal Editor)</h2><p>**Contenedor raíz:** usa `template.filter`; los campos siguientes pertenecen a cada item repetible.</p><table><tbody><tr><th>Campo</th><th>name</th><th>component</th><th>valueType</th><th>Requerido</th><th>Descripción para el autor</th></tr><tr><td>title</td><td>`title`</td><td>`text`</td><td>`string`</td><td>sí</td><td>Campo extraído de la propuesta aprobada.</td></tr><tr><td>fragmentPath</td><td>`fragmentPath`</td><td>`aem-content`</td><td>`string`</td><td>sí</td><td>Campo extraído de la propuesta aprobada.</td></tr></tbody></table><h2>6. Imágenes y rendimiento</h2><table><tbody><tr><th>Imagen/campo</th><th>Origen</th><th>Dimensiones intrínsecas</th><th>Ratio</th><th>LCP</th><th>Tratamiento</th></tr><tr><td>No aplica</td><td>No hay campos de imagen</td><td>—</td><td>—</td><td>no</td><td>—</td></tr></tbody></table><ul><li>Las dimensiones de la tabla de sección 2 son del recorte del componente, no del asset; no se reutilizan como dimensiones intrínsecas.</li><li>Los estados `pendiente_dam` o `convertir_svg_local_o_dam` del content_mapping se resuelven como assets locales versionados o DAM autorables antes de contribución.</li><li>Las referencias de imagen deben producir `&lt;picture&gt;` optimizado en EDS; no se copian URLs del portal.</li></ul><h2>7. Interacciones y estados</h2><table><tbody><tr><th>Elemento</th><th>Estado</th><th>Comportamiento</th><th>Implementación</th></tr><tr><td>tab</td><td>default</td><td>Solo un tab tiene aria-selected=true y tabindex=0; los demás tienen tabindex=-1.</td><td>ARIA tabs roving tabindex.</td></tr><tr><td>tab</td><td>hover</td><td>Se aplican tokens interactivos existentes del repositorio.</td><td>CSS.</td></tr><tr><td>tab</td><td>focus-visible</td><td>Foco visible sin activar contenido automáticamente.</td><td>CSS :focus-visible.</td></tr><tr><td>tab</td><td>active</td><td>Activa y muestra el panel asociado; la primera activación carga fragmentPath bajo demanda.</td><td>JS + fragment EDS.</td></tr><tr><td>panel</td><td>loading</td><td>Muestra estado de carga con aria-live=polite mientras se resuelve el fragmento.</td><td>JS.</td></tr><tr><td>panel</td><td>error</td><td>Muestra mensaje accesible y permite reintentar una carga fallida.</td><td>JS.</td></tr><tr><td>panel</td><td>empty</td><td>Muestra estado vacío accesible cuando el fragmento no produce contenido.</td><td>JS.</td></tr></tbody></table><p>**¿Requiere JS?** Sí: activación, teclado ARIA, carga diferida de fragmentos y caché en memoria.</p><h2>8. Accesibilidad</h2><ul><li>**Nivel objetivo:** WCAG 2.1 AA.</li><li>**Contraste medido cuando hay par explícito color/fondo:**</li><li>li.payment-methods__list__item: rgb(118, 118, 122) sobre rgb(255, 255, 255) = 4.52:1.</li><li>li.payment-methods__list__item: rgb(118, 118, 122) sobre rgb(255, 255, 255) = 4.52:1.</li><li>li.payment-methods__list__item: rgb(118, 118, 122) sobre rgb(255, 255, 255) = 4.52:1.</li><li>**Orden de tabulación:** debe seguir el orden DOM de tab; el patrón accesible aprobado define el foco y la activación.</li><li>**Etiquetas requeridas:** los campos de imagen requieren alt; los controles requieren nombre accesible visible o equivalente.</li><li>**Problemas del portal original que no se replican:** atributos Angular y custom elements no se trasladan al DOM EDS.</li></ul><ul><li>**Patrón de teclado:** flechas mueven el foco, Home/End saltan al extremo y Enter/Space activan; cada tab controla un panel con identificadores estables.</li></ul><h2>9. Dependencias</h2><ul><li>**Depende de:** ninguna.</li><li>**Requerido por:** ningún ticket declarado en la propuesta.</li><li>Las plantillas adicionales (ninguna) son asociaciones de alcance, no dependencias técnicas.</li></ul><h2>10. Ambigüedades y decisiones pendientes</h2><ul><li>Ninguna ambigüedad declarada en la propuesta aprobada.</li></ul>

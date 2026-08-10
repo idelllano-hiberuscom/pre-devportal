@@ -1,0 +1,527 @@
+{
+  "root": {
+    "tag": "tabs",
+    "classes": "ng-star-inserted",
+    "text": null,
+    "styles": {
+      "display": "inline",
+      "color": "rgba(0, 0, 0, 0.87)",
+      "font-family": "Poppins, sans-serif",
+      "font-size": "16px",
+      "line-height": "24px",
+      "border": "0px none rgba(0, 0, 0, 0.87)"
+    }
+  },
+  "children": [
+    {
+      "tag": "ul",
+      "classes": "tab-bar",
+      "text": null,
+      "styles": {
+        "display": "flex",
+        "justify-content": "center",
+        "align-items": "center",
+        "gap": "40px",
+        "width": "1440px",
+        "height": "42px",
+        "margin": "128px 0px 16px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "tab-bar__item tab-bar__item--selected ng-star-inserted",
+      "text": null,
+      "styles": {
+        "display": "list-item",
+        "width": "38.1094px",
+        "height": "42px",
+        "color": "rgb(1, 52, 81)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(1, 52, 81)"
+      }
+    },
+    {
+      "tag": "h3",
+      "classes": null,
+      "text": "API",
+      "styles": {
+        "display": "block",
+        "width": "38.1094px",
+        "height": "34px",
+        "margin": "0px 0px 8px",
+        "color": "rgb(1, 52, 81)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "24px",
+        "font-weight": "500",
+        "line-height": "34px",
+        "letter-spacing": "0.25px",
+        "border": "0px none rgb(1, 52, 81)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "tab-bar__item ng-star-inserted",
+      "text": null,
+      "styles": {
+        "display": "list-item",
+        "width": "47.4688px",
+        "height": "42px",
+        "color": "rgb(1, 127, 155)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(1, 127, 155)"
+      }
+    },
+    {
+      "tag": "h3",
+      "classes": null,
+      "text": "SDK",
+      "styles": {
+        "display": "block",
+        "width": "47.4688px",
+        "height": "34px",
+        "margin": "0px 0px 8px",
+        "color": "rgb(1, 127, 155)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "24px",
+        "font-weight": "500",
+        "line-height": "34px",
+        "letter-spacing": "0.25px",
+        "border": "0px none rgb(1, 127, 155)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "tab-bar__item ng-star-inserted",
+      "text": null,
+      "styles": {
+        "display": "list-item",
+        "width": "81.0469px",
+        "height": "42px",
+        "color": "rgb(1, 127, 155)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(1, 127, 155)"
+      }
+    },
+    {
+      "tag": "h3",
+      "classes": null,
+      "text": "iframe",
+      "styles": {
+        "display": "block",
+        "width": "81.0469px",
+        "height": "34px",
+        "margin": "0px 0px 8px",
+        "color": "rgb(1, 127, 155)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "24px",
+        "font-weight": "500",
+        "line-height": "34px",
+        "letter-spacing": "0.25px",
+        "border": "0px none rgb(1, 127, 155)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "tab-bar__item ng-star-inserted",
+      "text": null,
+      "styles": {
+        "display": "list-item",
+        "width": "86.5625px",
+        "height": "42px",
+        "color": "rgb(1, 127, 155)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(1, 127, 155)"
+      }
+    },
+    {
+      "tag": "h3",
+      "classes": null,
+      "text": "Hosted",
+      "styles": {
+        "display": "block",
+        "width": "86.5625px",
+        "height": "34px",
+        "margin": "0px 0px 8px",
+        "color": "rgb(1, 127, 155)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "24px",
+        "font-weight": "500",
+        "line-height": "34px",
+        "letter-spacing": "0.25px",
+        "border": "0px none rgb(1, 127, 155)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "tab-bar__item ng-star-inserted",
+      "text": null,
+      "styles": {
+        "display": "list-item",
+        "width": "88.9531px",
+        "height": "42px",
+        "color": "rgb(1, 127, 155)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(1, 127, 155)"
+      }
+    },
+    {
+      "tag": "h3",
+      "classes": null,
+      "text": "Plugins",
+      "styles": {
+        "display": "block",
+        "width": "88.9531px",
+        "height": "34px",
+        "margin": "0px 0px 8px",
+        "color": "rgb(1, 127, 155)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "24px",
+        "font-weight": "500",
+        "line-height": "34px",
+        "letter-spacing": "0.25px",
+        "border": "0px none rgb(1, 127, 155)"
+      }
+    },
+    {
+      "tag": "img",
+      "classes": null,
+      "text": null,
+      "styles": {
+        "display": "block",
+        "width": "579.984px",
+        "max-width": "100%",
+        "height": "386.844px",
+        "color": "rgba(0, 0, 0, 0.87)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "24px",
+        "border": "0px none rgba(0, 0, 0, 0.87)",
+        "overflow": "clip"
+      }
+    },
+    {
+      "tag": "h2",
+      "classes": "highlighted-feature__content__title",
+      "text": "API REST",
+      "styles": {
+        "display": "block",
+        "width": "580px",
+        "height": "60px",
+        "margin": "0px 0px 16px",
+        "color": "rgba(0, 0, 0, 0.87)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "40px",
+        "line-height": "60px",
+        "border": "0px none rgba(0, 0, 0, 0.87)"
+      }
+    },
+    {
+      "tag": "h2",
+      "classes": "feature-list__heading",
+      "text": "Funcionalidades",
+      "styles": {
+        "display": "block",
+        "width": "540px",
+        "height": "1091px",
+        "margin": "1px 0px 8px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "40px",
+        "line-height": "60px"
+      }
+    },
+    {
+      "tag": "h4",
+      "classes": null,
+      "text": "Integración flexible",
+      "styles": {
+        "display": "block",
+        "width": "396px",
+        "height": "60px",
+        "margin": "0px 0px 8px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "40px",
+        "line-height": "60px",
+        "border": "0px none rgb(255, 255, 255)"
+      }
+    },
+    {
+      "tag": "p",
+      "classes": null,
+      "text": "La misma API permite realizar compras en un paso, compras en dos pasos, y compras tipo MOTO (Mail Or",
+      "styles": {
+        "display": "block",
+        "width": "396px",
+        "height": "96px",
+        "margin": "0px 0px 16px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(255, 255, 255)"
+      }
+    },
+    {
+      "tag": "h4",
+      "classes": null,
+      "text": "Seguridad avanzada",
+      "styles": {
+        "display": "block",
+        "width": "396px",
+        "height": "120px",
+        "margin": "0px 0px 8px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "40px",
+        "line-height": "60px",
+        "border": "0px none rgb(255, 255, 255)"
+      }
+    },
+    {
+      "tag": "p",
+      "classes": null,
+      "text": "Mensajes JSON + Base64 firmados con SHA 256 y soporte 3‑D Secure 2.x.",
+      "styles": {
+        "display": "block",
+        "width": "396px",
+        "height": "64px",
+        "margin": "0px 0px 16px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(255, 255, 255)"
+      }
+    },
+    {
+      "tag": "h4",
+      "classes": null,
+      "text": "Control de tu operativa",
+      "styles": {
+        "display": "block",
+        "width": "396px",
+        "height": "120px",
+        "margin": "0px 0px 8px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "40px",
+        "line-height": "60px",
+        "border": "0px none rgb(255, 255, 255)"
+      }
+    },
+    {
+      "tag": "p",
+      "classes": null,
+      "text": "Gestiona pagos, anulaciones y devoluciones directamente desde tu servidor. Además, contamos con ento",
+      "styles": {
+        "display": "block",
+        "width": "396px",
+        "height": "128px",
+        "margin": "0px 0px 16px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(255, 255, 255)"
+      }
+    },
+    {
+      "tag": "h4",
+      "classes": null,
+      "text": "Prevención de fraude",
+      "styles": {
+        "display": "block",
+        "width": "396px",
+        "height": "120px",
+        "margin": "0px 0px 8px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "40px",
+        "line-height": "60px",
+        "border": "0px none rgb(255, 255, 255)"
+      }
+    },
+    {
+      "tag": "p",
+      "classes": null,
+      "text": "Nuestras herramientas avanzadas de análisis y nuestros equipos de expertos en fraude monitorean las ",
+      "styles": {
+        "display": "block",
+        "width": "396px",
+        "height": "128px",
+        "margin": "0px 0px 16px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(255, 255, 255)"
+      }
+    },
+    {
+      "tag": "h2",
+      "classes": "payment-methods__header__title",
+      "text": "Posibles métodos de pago aceptados",
+      "styles": {
+        "display": "block",
+        "width": "1440px",
+        "height": "60px",
+        "margin": "0px 0px 8px",
+        "color": "rgba(0, 0, 0, 0.87)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "40px",
+        "line-height": "60px",
+        "text-align": "center",
+        "border": "0px none rgba(0, 0, 0, 0.87)"
+      }
+    },
+    {
+      "tag": "ul",
+      "classes": "payment-methods__list",
+      "text": null,
+      "styles": {
+        "display": "flex",
+        "justify-content": "center",
+        "align-items": "center",
+        "gap": "48px",
+        "width": "1440px",
+        "height": "144px",
+        "margin": "0px 0px 16px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "payment-methods__list__item ng-star-inserted",
+      "text": null,
+      "styles": {
+        "display": "flex",
+        "justify-content": "center",
+        "align-items": "center",
+        "width": "144px",
+        "height": "144px",
+        "padding": "16px",
+        "color": "rgb(118, 118, 122)",
+        "background-color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)",
+        "border-radius": "100%",
+        "box-shadow": "rgba(0, 0, 0, 0.15) 2px 0px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 4px 0px"
+      }
+    },
+    {
+      "tag": "img",
+      "classes": null,
+      "text": null,
+      "styles": {
+        "display": "block",
+        "width": "72px",
+        "max-width": "100%",
+        "height": "49px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)",
+        "overflow": "clip"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "payment-methods__list__item ng-star-inserted",
+      "text": null,
+      "styles": {
+        "display": "flex",
+        "justify-content": "center",
+        "align-items": "center",
+        "width": "144px",
+        "height": "144px",
+        "padding": "16px",
+        "color": "rgb(118, 118, 122)",
+        "background-color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)",
+        "border-radius": "100%",
+        "box-shadow": "rgba(0, 0, 0, 0.15) 2px 0px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 4px 0px"
+      }
+    },
+    {
+      "tag": "img",
+      "classes": null,
+      "text": null,
+      "styles": {
+        "display": "block",
+        "width": "100px",
+        "max-width": "100%",
+        "height": "43px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)",
+        "overflow": "clip"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "payment-methods__list__item ng-star-inserted",
+      "text": null,
+      "styles": {
+        "display": "flex",
+        "justify-content": "center",
+        "align-items": "center",
+        "width": "144px",
+        "height": "144px",
+        "padding": "16px",
+        "color": "rgb(118, 118, 122)",
+        "background-color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)",
+        "border-radius": "100%",
+        "box-shadow": "rgba(0, 0, 0, 0.15) 2px 0px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 4px 0px"
+      }
+    },
+    {
+      "tag": "img",
+      "classes": null,
+      "text": null,
+      "styles": {
+        "display": "block",
+        "width": "112px",
+        "max-width": "100%",
+        "height": "37.3281px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)",
+        "overflow": "clip"
+      }
+    }
+  ]
+}

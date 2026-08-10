@@ -1,0 +1,146 @@
+{
+  "ticket_id": "PA-32",
+  "component_id": "cmp-plugin-cards",
+  "block_name": "cards",
+  "variant": "plugins",
+  "local_identity": "cards--plugins",
+  "title": "Plugin Cards",
+  "state": "approved",
+  "depends_on": [
+    "PA-31"
+  ],
+  "epic": {
+    "id": "PA-15",
+    "nombre": "Plantilla: developer-tools-payment-detail",
+    "tipo": "plantilla"
+  },
+  "templates": {
+    "primary": "developer-tools-payment-detail",
+    "additional": []
+  },
+  "confidence_score": 0.83,
+  "is_container": true,
+  "technical_contract": {
+    "confluence_url": "https://hiberus-team-dxp.atlassian.net/wiki/spaces/PA/pages/214237185",
+    "local_path": ".eds-pipeline/contracts/cards--plugins.md",
+    "assets_dir": ".eds-pipeline/assets/cards--plugins/",
+    "breakpoints_capturados": [
+      "desktop",
+      "tablet",
+      "mobile"
+    ],
+    "completo": true,
+    "incomplete_reasons": [],
+    "confluence_attachments": {
+      "uploaded": [
+        "computed-styles.json",
+        "desktop-context.jpg",
+        "desktop.png",
+        "evidence.json",
+        "fragment.html",
+        "mobile-context.jpg",
+        "mobile.png",
+        "tablet-context.jpg",
+        "tablet.png"
+      ],
+      "referenced": [
+        "desktop.png",
+        "desktop-context.jpg",
+        "tablet.png",
+        "tablet-context.jpg",
+        "mobile.png",
+        "mobile-context.jpg"
+      ],
+      "missing": [],
+      "verified": true
+    }
+  },
+  "source": {
+    "portal_url": "https://pre-devportaltpv.cloud.cecabank.es",
+    "page_url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/plugins/resumen",
+    "pages": [
+      "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/plugins/resumen"
+    ],
+    "selector": ".plugin-list",
+    "snapshot_date": "2026-08-10"
+  },
+  "dedup": {
+    "verdict": "variant",
+    "closest_match": "cards (local)",
+    "similarity": 0.79,
+    "rationale": "Mantiene imagen y contenido repetible, pero requiere enlace de tarjeta y metadatos editoriales dentro del richtext."
+  },
+  "content_mapping": [
+    {
+      "source_selector": ".plugin-card-img",
+      "target_field": "image",
+      "type": "image",
+      "status": "pendiente_dam"
+    },
+    {
+      "source_selector": ".plugin-card-img img",
+      "target_field": "imageAlt",
+      "type": "text",
+      "source_attribute": "alt"
+    },
+    {
+      "source_selector": ".plugin-card-body",
+      "target_field": "text",
+      "type": "richtext"
+    },
+    {
+      "source_selector": "a.plugin-card",
+      "target_field": "link",
+      "type": "text",
+      "source_attribute": "href"
+    }
+  ],
+  "repeat_selector": ".plugin-list > plugin-card",
+  "ambiguities": [],
+  "business_input_required": false,
+  "collision": {
+    "shared_target": "blocks/cards/*",
+    "components": [
+      "cmp-icon-cards",
+      "cmp-editorial-cards",
+      "cmp-plugin-cards",
+      "cmp-logo-cards"
+    ],
+    "status": "resolved-serial",
+    "dispatch_safe": true,
+    "serial_order": [
+      "PA-25",
+      "PA-31",
+      "PA-32",
+      "PA-33"
+    ],
+    "resolution": "Implementación serial sobre un único bloque cards: logos → icon-cards → plugins → editorial."
+  },
+  "created_by": "component-architect",
+  "approved_by": "human-gate-2",
+  "assigned_to": "eds-developer",
+  "branch": null,
+  "history": [
+    {
+      "date": "2026-08-10",
+      "from": null,
+      "to": "draft",
+      "by": "task-writer",
+      "note": "Creado desde propuesta-componentes.json aprobada en Gate 1"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "draft",
+      "to": "draft",
+      "by": "task-writer",
+      "note": "Decisiones humanas de Gate 2 aplicadas; el ticket permanece draft pendiente de aprobación explícita."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "draft",
+      "to": "approved",
+      "by": "human-gate-2",
+      "note": "Gate 2: aprobar todo"
+    }
+  ]
+}

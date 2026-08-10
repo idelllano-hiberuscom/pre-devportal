@@ -1,0 +1,50 @@
+{
+  "url": "https://pre-devportaltpv.cloud.cecabank.es/empieza-con-nosotros",
+  "timestamp": "2026-08-10T07:35:00.599Z",
+  "paths": {
+    "documentPath": "/empieza-con-nosotros",
+    "htmlFilePath": "/empieza-con-nosotros.plain.html",
+    "mdFilePath": "/empieza-con-nosotros.md",
+    "dirPath": "",
+    "filename": "empieza-con-nosotros"
+  },
+  "screenshot": "import-work\\pages\\03-empieza-con-nosotros\\screenshot.png",
+  "html": {
+    "filePath": "import-work\\pages\\03-empieza-con-nosotros\\cleaned.html",
+    "size": 1074829
+  },
+  "metadata": {
+    "title": "Cecabank",
+    "description": "Description for Cecabank",
+    "google": "notranslate",
+    "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+    "theme-color": "#000000"
+  },
+  "images": {
+    "count": 14,
+    "mapping": {
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/2025-04/logo.png?VersionId=3KeoM4llfc5X6HI4qMketuTOsgUFeErs": "./images/3fa793f9c17617ad136d898554715026.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/metodo-pago/icono/AmericanExpress.svg": "./images/ff9db8c355465b56c3d986ca7ecb5beb.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/metodo-pago/icono/ApplePay.svg": "./images/b026d4c1b82ba8e50213d4219f325777.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/metodo-pago/icono/GooglePay.svg": "./images/78b6d246f39d57c19a300b72f848a56d.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/metodo-pago/icono/Bizum.svg": "./images/b2adbcc4ae6eb318510e228656094343.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/metodo-pago/icono/Visa.svg": "./images/753695c36eebd624fe8d7d6ae1f323e3.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/metodo-pago/icono/MasterCard.svg": "./images/4364fbf5dd404d48a717cc758d71f390.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/wide/public/highlighted-feature/2025-04/Captura%20de%20pantalla%202025-04-24%20a%20las%209.18.19.webp?VersionId=9yrHz_AN26zkqoNzT3XvQiesmR7Kbi0R&itok=02h8UwOw": "./images/6a5e0fbed4e4968333ca22e7624627bf.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/wide/public/highlighted-feature/2025-04/hands-holding-credit-card-using-laptop-computer-mobile-phone-online-shopping.webp?VersionId=_GkIf.diSsp_OCEOhopC14BFHoTUor6t&itok=a6f1f1--": "./images/ce7cd95fb274ba9db6c6afc9c447be06.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/company-certifications/2025-06/logo_mastercard.png.webp?VersionId=etKGd.JxlILNooDGTeqsQRNsHILB9Jbq&itok=ZmhdLw_7": "./images/a4d6f056a1abde52b0e47537e281286e.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/company-certifications/2025-06/visa_logo.png.webp?VersionId=dkpWfXJF7IjTR.4ONGVZ_RYQxpjR1mp8&itok=-i_hwP9F": "./images/93468d66c6927a8afb0727d57dade396.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/company-logo/2025-04/logo-footer.png.webp?VersionId=x2TfK26.E6IBZuXwroUxxQx0mXEcIhQT&itok=5NVoBU4U": "./images/2a8268e3d68b67194d74ffe523f6cd94.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/wide/public/highlighted-feature/2025-04/Captura%20de%20pantalla%202025-04-24%20a%20las%209.53.34.webp?VersionId=gPJf4RzOl2Cp.v76x.TZsbU4R0v1DT5p&itok=_VK_UEib": "./images/31468801eef1cf374876d4c75c33fc5e.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/company-certifications/2025-06/logo_american_express.png.webp?VersionId=pPyy.Fztn_Q44WZbBw.bNb4xUmT60GpL&itok=KDt-DksG": "./images/c71f4cf72e66db8fd601ead4f49eab04.png"
+    },
+    "stats": {
+      "total": 17,
+      "converted": 13,
+      "skipped": 1,
+      "failed": 0,
+      "tooLarge": 0,
+      "limitReached": 0
+    }
+  }
+}

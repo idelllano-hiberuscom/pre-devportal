@@ -1,0 +1,142 @@
+{
+  "ticket_id": "PA-25",
+  "component_id": "cmp-logo-cards",
+  "block_name": "cards",
+  "variant": "logos",
+  "local_identity": "cards--logos",
+  "title": "Logo Cards",
+  "state": "failed",
+  "depends_on": [],
+  "epic": {
+    "id": "PA-22",
+    "nombre": "Plantilla: onboarding-singleton",
+    "tipo": "plantilla"
+  },
+  "templates": {
+    "primary": "onboarding-singleton",
+    "additional": []
+  },
+  "confidence_score": 0.91,
+  "is_container": true,
+  "technical_contract": {
+    "confluence_url": "https://hiberus-team-dxp.atlassian.net/wiki/spaces/PA/pages/214302721",
+    "local_path": ".eds-pipeline/contracts/cards--logos.md",
+    "assets_dir": ".eds-pipeline/assets/cards--logos/",
+    "breakpoints_capturados": [
+      "desktop",
+      "tablet",
+      "mobile"
+    ],
+    "completo": true,
+    "incomplete_reasons": [],
+    "confluence_attachments": {
+      "uploaded": [
+        "computed-styles.json",
+        "desktop-context.jpg",
+        "desktop.png",
+        "evidence.json",
+        "fragment.html",
+        "mobile-context.jpg",
+        "mobile.png",
+        "tablet-context.jpg",
+        "tablet.png"
+      ],
+      "referenced": [
+        "desktop.png",
+        "desktop-context.jpg",
+        "tablet.png",
+        "tablet-context.jpg",
+        "mobile.png",
+        "mobile-context.jpg"
+      ],
+      "missing": [],
+      "verified": true
+    }
+  },
+  "source": {
+    "portal_url": "https://pre-devportaltpv.cloud.cecabank.es",
+    "page_url": "https://pre-devportaltpv.cloud.cecabank.es/empieza-con-nosotros",
+    "pages": [
+      "https://pre-devportaltpv.cloud.cecabank.es/empieza-con-nosotros"
+    ],
+    "selector": ".payment-methods",
+    "snapshot_date": "2026-08-10"
+  },
+  "dedup": {
+    "verdict": "variant",
+    "closest_match": "cards (local)",
+    "similarity": 0.9,
+    "rationale": "Es el mismo contenedor repetible reducido a image; text queda opcional y la diferencia es el layout de logos."
+  },
+  "content_mapping": [
+    {
+      "source_selector": ".payment-methods__list__item img",
+      "target_field": "image",
+      "type": "image",
+      "status": "pendiente_dam"
+    },
+    {
+      "source_selector": ".payment-methods__list__item img",
+      "target_field": "imageAlt",
+      "type": "text",
+      "source_attribute": "alt"
+    }
+  ],
+  "repeat_selector": ".payment-methods__list__item",
+  "ambiguities": [],
+  "business_input_required": false,
+  "collision": {
+    "shared_target": "blocks/cards/*",
+    "components": [
+      "cmp-icon-cards",
+      "cmp-editorial-cards",
+      "cmp-plugin-cards",
+      "cmp-logo-cards"
+    ],
+    "status": "resolved-serial",
+    "dispatch_safe": true,
+    "serial_order": [
+      "PA-25",
+      "PA-31",
+      "PA-32",
+      "PA-33"
+    ],
+    "resolution": "Implementación serial sobre un único bloque cards: logos → icon-cards → plugins → editorial."
+  },
+  "created_by": "component-architect",
+  "approved_by": "human-gate-2",
+  "assigned_to": "eds-developer",
+  "branch": "eds-ai-pa-25-cards",
+  "history": [
+    {
+      "date": "2026-08-10",
+      "from": null,
+      "to": "draft",
+      "by": "task-writer",
+      "note": "Creado desde propuesta-componentes.json aprobada en Gate 1"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "draft",
+      "to": "draft",
+      "by": "task-writer",
+      "note": "Decisiones humanas de Gate 2 aplicadas; el ticket permanece draft pendiente de aprobación explícita."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "draft",
+      "to": "approved",
+      "by": "human-gate-2",
+      "note": "Gate 2: aprobar todo"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "approved",
+      "to": "in_dev",
+      "by": "dispatch-copilot-tasks",
+      "note": "Tarea de Copilot 28c6774d-d972-494e-8d19-36bffdf992c4 en la rama eds-ai-pa-25-cards"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "in_dev",
+      "t

@@ -1,0 +1,85 @@
+{
+  "root": {
+    "tag": "div",
+    "classes": "contact-form",
+    "text": null,
+    "styles": {
+      "display": "grid",
+      "grid-template-columns": "720px 720px",
+      "grid-template-rows": "800px",
+      "width": "1440px",
+      "height": "800px",
+      "min-height": "800px",
+      "margin": "96px 0px",
+      "color": "rgba(0, 0, 0, 0.87)",
+      "font-family": "Poppins, sans-serif",
+      "font-size": "16px",
+      "line-height": "24px",
+      "border": "0px none rgba(0, 0, 0, 0.87)"
+    }
+  },
+  "children": [
+    {
+      "tag": "img",
+      "classes": "contact-form__img",
+      "text": null,
+      "styles": {
+        "display": "block",
+        "position": "relative",
+        "width": "720px",
+        "max-width": "100%",
+        "height": "800px",
+        "color": "rgba(0, 0, 0, 0.87)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "24px",
+        "border": "0px none rgba(0, 0, 0, 0.87)",
+        "object-fit": "cover",
+        "overflow": "clip"
+      }
+    },
+    {
+      "tag": "h2",
+      "classes": "contact-form__img-container__heading",
+      "text": "¿Quieres saber más? No te preocupes, te contactamos!",
+      "styles": {
+        "display": "block",
+        "position": "absolute",
+        "width": "360px",
+        "height": "240px",
+        "margin": "0px 0px 8px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "40px",
+        "line-height": "60px",
+        "border": "0px none rgb(255, 255, 255)"
+      }
+    },
+    {
+      "tag": "button",
+      "classes": "btn-filled contact-form__submit-btn",
+      "text": "Enviar",
+      "styles": {
+        "display": "flex",
+        "justify-content": "center",
+        "align-items": "center",
+        "gap": "10px",
+        "width": "504px",
+        "height": "40px",
+        "margin": "16px 0px 0px",
+        "padding": "10px 24px",
+        "color": "rgb(255, 255, 255)",
+        "background-color": "rgb(1, 52, 81)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "14px",
+        "font-weight": "500",
+        "line-height": "20px",
+        "letter-spacing": "0.1px",
+        "text-align": "center",
+        "border": "0px none rgb(255, 255, 255)",
+        "border-radius": "100px",
+        "box-shadow": "rgba(0, 0, 0, 0.15) 0px 1px 3px 1px, rgba(0, 0, 0, 0.3) 0px 1px 2px 0px"
+      }
+    }
+  ]
+}

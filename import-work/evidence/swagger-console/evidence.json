@@ -1,0 +1,59 @@
+{
+  "block_name": "swagger-console",
+  "selector": ".swagger",
+  "source_url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/swagger",
+  "captured_at": "2026-08-10",
+  "breakpoints": [
+    {
+      "label": "desktop",
+      "width": 1440,
+      "height": 900,
+      "present": true,
+      "box": {
+        "x": 250,
+        "y": 254,
+        "width": 1190,
+        "height": 900
+      },
+      "above_the_fold": true,
+      "ratio": 1.32,
+      "screenshot": "desktop.png",
+      "context_screenshot": "desktop-context.jpg"
+    },
+    {
+      "label": "tablet",
+      "width": 768,
+      "height": 1024,
+      "present": true,
+      "box": {
+        "x": 16,
+        "y": 326,
+        "width": 736,
+        "height": 1024
+      },
+      "above_the_fold": true,
+      "ratio": 0.72,
+      "screenshot": "tablet.png",
+      "context_screenshot": "tablet-context.jpg"
+    },
+    {
+      "label": "mobile",
+      "width": 375,
+      "height": 812,
+      "present": true,
+      "box": {
+        "x": 16,
+        "y": 354,
+        "width": 343,
+        "height": 812
+      },
+      "above_the_fold": true,
+      "ratio": 0.42,
+      "screenshot": "mobile.png",
+      "context_screenshot": "mobile-context.jpg"
+    }
+  ],
+  "fragment": "fragment.html",
+  "fragment_from": "desktop",
+  "computed_styles": "computed-styles.json"
+}

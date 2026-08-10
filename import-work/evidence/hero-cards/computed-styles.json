@@ -1,0 +1,177 @@
+{
+  "root": {
+    "tag": "div",
+    "classes": "hero-with-cards",
+    "text": null,
+    "styles": {
+      "display": "block",
+      "width": "1440px",
+      "height": "1518px",
+      "margin": "0px 0px 80px",
+      "color": "rgba(0, 0, 0, 0.87)",
+      "background-image": "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(\"https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/contact-form/2025-04/a4368ae230d81b0dd338147e85052dce3c9ed9de.webp?VersionId=RKvWl2QptHYxkhhaS1wuT1t.acRRHTrg\")",
+      "font-family": "Poppins, sans-serif",
+      "font-size": "16px",
+      "line-height": "24px",
+      "text-align": "center",
+      "border": "0px none rgba(0, 0, 0, 0.87)"
+    }
+  },
+  "children": [
+    {
+      "tag": "h1",
+      "classes": "hero__content__title",
+      "text": "API REST",
+      "styles": {
+        "display": "block",
+        "width": "1080px",
+        "height": "80px",
+        "margin": "0px 0px 16px",
+        "color": "rgb(255, 255, 255)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "64px",
+        "font-weight": "600",
+        "line-height": "80px",
+        "letter-spacing": "-0.5px",
+        "text-align": "center",
+        "border": "0px none rgb(255, 255, 255)"
+      }
+    },
+    {
+      "tag": "h4",
+      "classes": null,
+      "text": "Integración flexible",
+      "styles": {
+        "display": "block",
+        "width": "284px",
+        "height": "22px",
+        "margin": "0px 0px 8px",
+        "color": "rgba(0, 0, 0, 0.87)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "18px",
+        "font-weight": "500",
+        "line-height": "22px",
+        "letter-spacing": "0.25px",
+        "border": "0px none rgba(0, 0, 0, 0.87)"
+      }
+    },
+    {
+      "tag": "p",
+      "classes": null,
+      "text": "La misma API permite realizar compras en un paso, compras en dos pasos, y compras tipo MOTO (Mail Or",
+      "styles": {
+        "display": "block",
+        "width": "284px",
+        "height": "128px",
+        "margin": "0px 0px 16px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "h4",
+      "classes": null,
+      "text": "Seguridad avanzada",
+      "styles": {
+        "display": "block",
+        "width": "284px",
+        "height": "22px",
+        "margin": "0px 0px 8px",
+        "color": "rgba(0, 0, 0, 0.87)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "18px",
+        "font-weight": "500",
+        "line-height": "22px",
+        "letter-spacing": "0.25px",
+        "border": "0px none rgba(0, 0, 0, 0.87)"
+      }
+    },
+    {
+      "tag": "p",
+      "classes": null,
+      "text": "Mensajes JSON + Base64 firmados con SHA 256 y soporte 3‑D Secure 2.x.",
+      "styles": {
+        "display": "block",
+        "width": "284px",
+        "height": "96px",
+        "margin": "0px 0px 16px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "h4",
+      "classes": null,
+      "text": "Control de tu operativa",
+      "styles": {
+        "display": "block",
+        "width": "284px",
+        "height": "22px",
+        "margin": "0px 0px 8px",
+        "color": "rgba(0, 0, 0, 0.87)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "18px",
+        "font-weight": "500",
+        "line-height": "22px",
+        "letter-spacing": "0.25px",
+        "border": "0px none rgba(0, 0, 0, 0.87)"
+      }
+    },
+    {
+      "tag": "p",
+      "classes": null,
+      "text": "Gestiona pagos, anulaciones y devoluciones directamente desde tu servidor. Además, contamos con ento",
+      "styles": {
+        "display": "block",
+        "width": "284px",
+        "height": "192px",
+        "margin": "0px 0px 16px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "h4",
+      "classes": null,
+      "text": "Prevención de fraude",
+      "styles": {
+        "display": "block",
+        "width": "284px",
+        "height": "22px",
+        "margin": "0px 0px 8px",
+        "color": "rgba(0, 0, 0, 0.87)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "18px",
+        "font-weight": "500",
+        "line-height": "22px",
+        "letter-spacing": "0.25px",
+        "border": "0px none rgba(0, 0, 0, 0.87)"
+      }
+    },
+    {
+      "tag": "p",
+      "classes": null,
+      "text": "Nuestras herramientas avanzadas de análisis y nuestros equipos de expertos en fraude monitorean las ",
+      "styles": {
+        "display": "block",
+        "width": "284px",
+        "height": "160px",
+        "margin": "0px 0px 16px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    }
+  ]
+}

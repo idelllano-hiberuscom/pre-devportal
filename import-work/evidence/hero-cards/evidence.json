@@ -1,0 +1,59 @@
+{
+  "block_name": "hero-cards",
+  "selector": ".hero-with-cards",
+  "source_url": "https://pre-devportaltpv.cloud.cecabank.es/integraciones/api",
+  "captured_at": "2026-08-10",
+  "breakpoints": [
+    {
+      "label": "desktop",
+      "width": 1440,
+      "height": 900,
+      "present": true,
+      "box": {
+        "x": 0,
+        "y": 97,
+        "width": 1440,
+        "height": 1518
+      },
+      "above_the_fold": true,
+      "ratio": 0.95,
+      "screenshot": "desktop.png",
+      "context_screenshot": "desktop-context.jpg"
+    },
+    {
+      "label": "tablet",
+      "width": 768,
+      "height": 1024,
+      "present": true,
+      "box": {
+        "x": 0,
+        "y": 81,
+        "width": 768,
+        "height": 2152
+      },
+      "above_the_fold": true,
+      "ratio": 0.36,
+      "screenshot": "tablet.png",
+      "context_screenshot": "tablet-context.jpg"
+    },
+    {
+      "label": "mobile",
+      "width": 375,
+      "height": 812,
+      "present": true,
+      "box": {
+        "x": 0,
+        "y": 81,
+        "width": 375,
+        "height": 2084
+      },
+      "above_the_fold": true,
+      "ratio": 0.18,
+      "screenshot": "mobile.png",
+      "context_screenshot": "mobile-context.jpg"
+    }
+  ],
+  "fragment": "fragment.html",
+  "fragment_from": "desktop",
+  "computed_styles": "computed-styles.json"
+}

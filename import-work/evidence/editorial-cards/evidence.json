@@ -1,0 +1,59 @@
+{
+  "block_name": "editorial-cards",
+  "selector": ".blog-featured",
+  "source_url": "https://pre-devportaltpv.cloud.cecabank.es/blog",
+  "captured_at": "2026-08-10",
+  "breakpoints": [
+    {
+      "label": "desktop",
+      "width": 1440,
+      "height": 900,
+      "present": true,
+      "box": {
+        "x": 0,
+        "y": 897,
+        "width": 1440,
+        "height": 717
+      },
+      "above_the_fold": true,
+      "ratio": 2.01,
+      "screenshot": "desktop.png",
+      "context_screenshot": "desktop-context.jpg"
+    },
+    {
+      "label": "tablet",
+      "width": 768,
+      "height": 1024,
+      "present": true,
+      "box": {
+        "x": 0,
+        "y": 881,
+        "width": 768,
+        "height": 736
+      },
+      "above_the_fold": true,
+      "ratio": 1.04,
+      "screenshot": "tablet.png",
+      "context_screenshot": "tablet-context.jpg"
+    },
+    {
+      "label": "mobile",
+      "width": 375,
+      "height": 812,
+      "present": true,
+      "box": {
+        "x": 0,
+        "y": 625,
+        "width": 375,
+        "height": 798
+      },
+      "above_the_fold": true,
+      "ratio": 0.47,
+      "screenshot": "mobile.png",
+      "context_screenshot": "mobile-context.jpg"
+    }
+  ],
+  "fragment": "fragment.html",
+  "fragment_from": "desktop",
+  "computed_styles": "computed-styles.json"
+}

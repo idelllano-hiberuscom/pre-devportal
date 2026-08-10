@@ -1,0 +1,41 @@
+{
+  "url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/iframe",
+  "timestamp": "2026-08-10T07:35:45.588Z",
+  "paths": {
+    "documentPath": "/herramientas-para-desarrolladores/con-integracion/iframe",
+    "htmlFilePath": "/herramientas-para-desarrolladores/con-integracion/iframe.plain.html",
+    "mdFilePath": "/herramientas-para-desarrolladores/con-integracion/iframe.md",
+    "dirPath": "/herramientas-para-desarrolladores/con-integracion",
+    "filename": "iframe"
+  },
+  "screenshot": "import-work\\pages\\11-herramientas-para-desarrolladores-con-integracion-iframe\\screenshot.png",
+  "html": {
+    "filePath": "import-work\\pages\\11-herramientas-para-desarrolladores-con-integracion-iframe\\cleaned.html",
+    "size": 498672
+  },
+  "metadata": {
+    "title": "Cecabank",
+    "description": "Description for Cecabank",
+    "google": "notranslate",
+    "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+    "theme-color": "#000000"
+  },
+  "images": {
+    "count": 5,
+    "mapping": {
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/2025-04/logo.png?VersionId=3KeoM4llfc5X6HI4qMketuTOsgUFeErs": "./images/3fa793f9c17617ad136d898554715026.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/company-logo/2025-04/logo-footer.png.webp?VersionId=x2TfK26.E6IBZuXwroUxxQx0mXEcIhQT&itok=5NVoBU4U": "./images/2a8268e3d68b67194d74ffe523f6cd94.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/company-certifications/2025-06/logo_mastercard.png.webp?VersionId=etKGd.JxlILNooDGTeqsQRNsHILB9Jbq&itok=ZmhdLw_7": "./images/a4d6f056a1abde52b0e47537e281286e.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/company-certifications/2025-06/visa_logo.png.webp?VersionId=dkpWfXJF7IjTR.4ONGVZ_RYQxpjR1mp8&itok=-i_hwP9F": "./images/93468d66c6927a8afb0727d57dade396.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/company-certifications/2025-06/logo_american_express.png.webp?VersionId=pPyy.Fztn_Q44WZbBw.bNb4xUmT60GpL&itok=KDt-DksG": "./images/c71f4cf72e66db8fd601ead4f49eab04.png"
+    },
+    "stats": {
+      "total": 5,
+      "converted": 4,
+      "skipped": 1,
+      "failed": 0,
+      "tooLarge": 0,
+      "limitReached": 0
+    }
+  }
+}

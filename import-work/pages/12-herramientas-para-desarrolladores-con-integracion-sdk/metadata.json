@@ -1,0 +1,35 @@
+{
+  "url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/sdk",
+  "timestamp": "2026-08-10T07:35:50.084Z",
+  "paths": {
+    "documentPath": "/herramientas-para-desarrolladores/con-integracion/sdk",
+    "htmlFilePath": "/herramientas-para-desarrolladores/con-integracion/sdk.plain.html",
+    "mdFilePath": "/herramientas-para-desarrolladores/con-integracion/sdk.md",
+    "dirPath": "/herramientas-para-desarrolladores/con-integracion",
+    "filename": "sdk"
+  },
+  "screenshot": "import-work\\pages\\12-herramientas-para-desarrolladores-con-integracion-sdk\\screenshot.png",
+  "html": {
+    "filePath": "import-work\\pages\\12-herramientas-para-desarrolladores-con-integracion-sdk\\cleaned.html",
+    "size": 460474
+  },
+  "metadata": {
+    "title": "Cecabank",
+    "description": "Description for Cecabank",
+    "google": "notranslate",
+    "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+    "theme-color": "#000000"
+  },
+  "images": {
+    "count": 0,
+    "mapping": {},
+    "stats": {
+      "total": 5,
+      "converted": 0,
+      "skipped": 0,
+      "failed": 0,
+      "tooLarge": 0,
+      "limitReached": 0
+    }
+  }
+}

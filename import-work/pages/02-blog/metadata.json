@@ -1,0 +1,39 @@
+{
+  "url": "https://pre-devportaltpv.cloud.cecabank.es/blog",
+  "timestamp": "2026-08-10T07:34:52.850Z",
+  "paths": {
+    "documentPath": "/blog",
+    "htmlFilePath": "/blog.plain.html",
+    "mdFilePath": "/blog.md",
+    "dirPath": "",
+    "filename": "blog"
+  },
+  "screenshot": "import-work\\pages\\02-blog\\screenshot.png",
+  "html": {
+    "filePath": "import-work\\pages\\02-blog\\cleaned.html",
+    "size": 134623
+  },
+  "metadata": {
+    "title": "Cecabank",
+    "description": "Description for Cecabank",
+    "google": "notranslate",
+    "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+    "theme-color": "#000000"
+  },
+  "images": {
+    "count": 3,
+    "mapping": {
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/2025-04/logo.png?VersionId=3KeoM4llfc5X6HI4qMketuTOsgUFeErs": "./images/3fa793f9c17617ad136d898554715026.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/company-certifications/2025-06/logo_mastercard.png.webp?VersionId=etKGd.JxlILNooDGTeqsQRNsHILB9Jbq&itok=ZmhdLw_7": "./images/a4d6f056a1abde52b0e47537e281286e.png",
+      "https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/company-logo/2025-04/logo-footer.png.webp?VersionId=x2TfK26.E6IBZuXwroUxxQx0mXEcIhQT&itok=5NVoBU4U": "./images/2a8268e3d68b67194d74ffe523f6cd94.png"
+    },
+    "stats": {
+      "total": 15,
+      "converted": 2,
+      "skipped": 1,
+      "failed": 0,
+      "tooLarge": 0,
+      "limitReached": 0
+    }
+  }
+}

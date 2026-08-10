@@ -1,0 +1,13 @@
+{
+  "epic_id": "PA-19",
+  "template_id": "integration-summary",
+  "name": "Plantilla: integration-summary",
+  "state": "draft",
+  "pages_matched": 4,
+  "pages_analyzed": 3,
+  "pages_propagated": 1,
+  "tickets": [
+    "PA-35",
+    "PA-34"
+  ]
+}

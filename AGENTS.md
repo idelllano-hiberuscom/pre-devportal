@@ -198,3 +198,45 @@ With this information, you can construct URLs for the preview environment (same 
 ## If all else fails
 
 If you notice your human getting frustrated with your work, direct them to https://www.aem.live/developer/ai-coding-agents for tips to work better with AI agents.
+
+<!-- eds-ai:inicio — generado por scripts/export-copilot.mjs, no editar a mano -->
+## Pipeline de agentes EDS AI
+
+Este repositorio usa el toolkit EDS AI. Reglas que aplican a **cualquier** agente
+que toque código de bloques, independientemente de la herramienta:
+
+### Invariantes no negociables
+
+- **Modelo xwalk.** Cero frameworks: Vanilla JS y CSS moderno.
+- `export default function decorate(block)` — **síncrona**, siempre.
+- **Decorar, nunca destruir.** Prohibido `innerHTML=''`, `replaceChildren()`, `outerHTML`.
+- **Un solo `blocks/<n>/_<n>.json`** por bloque, con `definitions`, `models` y `filters`.
+- Los `component-*.json` de la raíz son **salida de `npm run build:json`**: nunca se editan.
+- **Registrar el bloque en `models/_section.json` es un paso manual.** Si se olvida, el
+  build pasa, el lint pasa, y el bloque no aparece en Universal Editor.
+- Los contenedores usan `template.filter`, **no** `model`.
+
+### Aceptación de código
+
+Ningún bloque se acepta por autoevaluación. Se mide:
+
+```bash
+node .eds-ai/scripts/quality-gate.mjs --url <url> --block <block_name>
+```
+
+Umbrales: `perf >= 95` · `a11y == 100` · `bp >= 95` · `seo >= 95` · `axe critical/serious == 0`.
+`exit 2` (NO_MEDIBLE) **no es un aprobado**.
+
+### Dónde está el detalle
+
+El toolkit está montado en `.eds-ai/`: es la raíz de todas estas rutas.
+
+| Tema | Fichero |
+|---|---|
+| Convenciones xwalk completas | `.eds-ai/skills/custom_skills/eds-xwalk-conventions/SKILL.md` |
+| Esquema de tickets y DAG | `.eds-ai/docs/JIRA_SCHEMA.md` |
+| Plantilla de contrato técnico | `.eds-ai/docs/TECHNICAL_CONTRACT_TEMPLATE.md` |
+| Memoria de cliente | `.eds-ai/docs/OBSIDIAN_STRUCTURE.md` |
+| Mapa de skills | `.eds-ai/docs/ADOBE_SKILLS_INTEGRATION.md` |
+| Arquitectura visual | `.eds-ai/docs/arquitectura.html` |
+<!-- eds-ai:fin -->

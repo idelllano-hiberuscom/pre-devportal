@@ -1,0 +1,114 @@
+{
+  "ticket_id": "PA-27",
+  "component_id": "cmp-accordion",
+  "block_name": "accordion",
+  "variant": null,
+  "local_identity": "accordion",
+  "title": "Accordion",
+  "state": "approved",
+  "depends_on": [],
+  "epic": {
+    "id": "PA-17",
+    "nombre": "Plantilla: home-help-shared",
+    "tipo": "plantilla"
+  },
+  "templates": {
+    "primary": "home-help-shared",
+    "additional": []
+  },
+  "confidence_score": 0.97,
+  "is_container": true,
+  "technical_contract": {
+    "confluence_url": "https://hiberus-team-dxp.atlassian.net/wiki/spaces/PA/pages/214401025",
+    "local_path": ".eds-pipeline/contracts/accordion.md",
+    "assets_dir": ".eds-pipeline/assets/accordion/",
+    "breakpoints_capturados": [
+      "desktop",
+      "tablet",
+      "mobile"
+    ],
+    "completo": true,
+    "incomplete_reasons": [],
+    "confluence_attachments": {
+      "uploaded": [
+        "computed-styles.json",
+        "desktop-context.jpg",
+        "desktop.png",
+        "evidence.json",
+        "fragment.html",
+        "mobile-context.jpg",
+        "mobile.png",
+        "tablet-context.jpg",
+        "tablet.png"
+      ],
+      "referenced": [
+        "desktop.png",
+        "desktop-context.jpg",
+        "tablet.png",
+        "tablet-context.jpg",
+        "mobile.png",
+        "mobile-context.jpg"
+      ],
+      "missing": [],
+      "verified": true
+    }
+  },
+  "source": {
+    "portal_url": "https://pre-devportaltpv.cloud.cecabank.es",
+    "page_url": "https://pre-devportaltpv.cloud.cecabank.es/ayuda",
+    "pages": [
+      "https://pre-devportaltpv.cloud.cecabank.es/ayuda"
+    ],
+    "selector": ".accordion-container",
+    "snapshot_date": "2026-08-10"
+  },
+  "dedup": {
+    "verdict": "collection",
+    "closest_match": "accordion (Adobe Block Collection)",
+    "similarity": 0.98,
+    "rationale": "Coinciden contenedor, item repetible, summary y richtext; no hay diferencia funcional."
+  },
+  "content_mapping": [
+    {
+      "source_selector": ".accordion-item__header__title",
+      "target_field": "summary",
+      "type": "text"
+    },
+    {
+      "source_selector": ".accordion-item__content",
+      "target_field": "text",
+      "type": "richtext"
+    }
+  ],
+  "repeat_selector": ".accordion-container__items > component-wrapper",
+  "ambiguities": [],
+  "business_input_required": false,
+  "collision": null,
+  "created_by": "component-architect",
+  "approved_by": "human-gate-2",
+  "assigned_to": "eds-developer",
+  "branch": null,
+  "history": [
+    {
+      "date": "2026-08-10",
+      "from": null,
+      "to": "draft",
+      "by": "task-writer",
+      "note": "Creado desde propuesta-componentes.json aprobada en Gate 1"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "draft",
+      "to": "draft",
+      "by": "task-writer",
+      "note": "Decisiones humanas de Gate 2 aplicadas; el ticket permanece draft pendiente de aprobación explícita."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "draft",
+      "to": "approved",
+      "by": "human-gate-2",
+      "note": "Gate 2: aprobar todo"
+    }
+  ]
+}

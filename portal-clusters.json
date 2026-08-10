@@ -1,0 +1,321 @@
+{
+  "portal": "https://pre-devportaltpv.cloud.cecabank.es",
+  "fecha": "2026-08-10",
+  "estado_pipeline": "D0",
+  "origen": "authoritative-list",
+  "fuente": "C:\\desa\\pre_devportal\\urls.txt",
+  "metodo": "simhash-64 sobre esqueleto DOM renderizado, pesos paso de banda, TF binario",
+  "parametros": {
+    "umbral_cluster": 10,
+    "umbral_propagacion": 6,
+    "peso_repeticion": "binario",
+    "pesos": "banda",
+    "metrica": "simhash",
+    "representantes_por_cluster": 2,
+    "camino": "A - navegador Playwright",
+    "modelo_destino_posterior": "xwalk (EDS + Universal Editor)"
+  },
+  "calibracion": {
+    "recomendacion": "umbral 10",
+    "justificacion": "Mejor compromiso antes de la fusion brusca de 12 a 8 clusters. Mantiene 12 grupos con confianza media por cluster entre 0.918 y 1.000. No hay meseta estable en el rango util, por lo que la agrupacion se marca moderadamente fragil y se conserva el umbral estricto de propagacion 6.",
+    "intento_html_crudo": "No valido: 1 cluster para las 31 paginas en todos los umbrales 4-24 por shell HTML comun. Se recalibro sobre DOM renderizado."
+  },
+  "total_pages_requested": 31,
+  "total_pages_discovered": 31,
+  "clusters_detected": 12,
+  "intento_html_crudo_clusters": [
+    {
+      "template_id": "cluster-01",
+      "ruta_dominante": "/herramientas-para-desarrolladores/*",
+      "pages_matched": 31,
+      "representantes": [
+        "https://pre-devportaltpv.cloud.cecabank.es/inicio",
+        "https://pre-devportaltpv.cloud.cecabank.es/empieza-con-nosotros"
+      ],
+      "representative_analyzed": "https://pre-devportaltpv.cloud.cecabank.es/inicio",
+      "motivo_representante": "Medoide: la página más típica del cluster",
+      "locales_detected": [
+        "es"
+      ],
+      "representative_per_locale": {
+        "es": "https://pre-devportaltpv.cloud.cecabank.es/inicio"
+      },
+      "fingerprint": "0000000000000000",
+      "secciones_medias": 2,
+      "confidence_avg": 1,
+      "confidence_min": 1,
+      "outliers_flagged": 0,
+      "outliers": [],
+      "paginas": [
+        "https://pre-devportaltpv.cloud.cecabank.es/inicio",
+        "https://pre-devportaltpv.cloud.cecabank.es/empieza-con-nosotros",
+        "https://pre-devportaltpv.cloud.cecabank.es/ayuda",
+        "https://pre-devportaltpv.cloud.cecabank.es/blog",
+        "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores",
+        "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/hosted-checkout",
+        "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones",
+        "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/tokenizacion",
+        "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones",
+        "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/swagger",
+        "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/sdk",
+        "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/iframe",
+        "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/pagos-moto",
+        "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/pay-by-link",
+        "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/plugins/resumen",
+        "https://pre-devportaltpv.cloud.cecabank.es/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce",
+        "https://pre-devportaltpv.cloud.cecabank.es/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop",
+        "https://pre-devportaltpv.cloud.cecabank.es/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce",
+        "https://pre-devportaltpv.cloud.cecabank.es/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento",
+        "https://pre-devportaltpv.cloud.cecabank.es/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp",
+        "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/otros/google-pay",
+        "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/otros/apple-pay",
+        "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/otros/bizum",
+        "https://pre-devportaltpv.cloud.cecabank.es/fraude",
+        "https://pre-devportaltpv.cloud.cecabank.es/integraciones/hosted-checkout",
+        "https://pre-devportaltpv.cloud.cecabank.es/plugin",
+        "https://pre-devportaltpv.cloud.cecabank.es/integraciones/sdk",
+        "https://pre-devportaltpv.cloud.cecabank.es/integraciones/iframe",
+        "https://pre-devportaltpv.cloud.cecabank.es/integraciones/api",
+        "https://pre-devportaltpv.cloud.cecabank.es/sin-integracion/pagos-moto",
+        "https://pre-devportaltpv.cloud.cecabank.es/sin-integracion/pago-por-email"
+      ]
+    }
+  ],
+  "clusters": [
+    {
+      "template_id": "plugin-integration-detail-a",
+      "ruta_dominante": "/plugin/*",
+      "pages_matched": 5,
+      "representantes": ["https://pre-devportaltpv.cloud.cecabank.es/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce", "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/hosted-checkout"],
+      "representative_analyzed": "https://pre-devportaltpv.cloud.cecabank.es/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce",
+      "motivo_representante": "Medoide; el segundo representante tiene el mayor esqueleto renderizado no duplicado.",
+      "confidence_avg": 0.928,
+      "confidence_min": 0.797,
+      "outliers_flagged": 1,
+      "outliers": [{ "url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/iframe", "distancia": 13, "confianza": 0.797 }],
+      "analizar": true
+    },
+    {
+      "template_id": "developer-tools-payment-detail",
+      "ruta_dominante": "/herramientas-para-desarrolladores/*",
+      "pages_matched": 4,
+      "representantes": ["https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/pay-by-link", "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/plugins/resumen"],
+      "representative_analyzed": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/pay-by-link",
+      "motivo_representante": "Medoide; el segundo representante tiene el mayor esqueleto renderizado no duplicado.",
+      "confidence_avg": 0.918,
+      "confidence_min": 0.859,
+      "outliers_flagged": 1,
+      "outliers": [{ "url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/otros/apple-pay", "distancia": 9, "confianza": 0.859 }],
+      "analizar": true
+    },
+    {
+      "template_id": "integration-summary",
+      "ruta_dominante": "/integraciones/*",
+      "pages_matched": 4,
+      "representantes": ["https://pre-devportaltpv.cloud.cecabank.es/integraciones/hosted-checkout", "https://pre-devportaltpv.cloud.cecabank.es/integraciones/api"],
+      "representative_analyzed": "https://pre-devportaltpv.cloud.cecabank.es/integraciones/hosted-checkout",
+      "motivo_representante": "Medoide; el segundo representante tiene el mayor esqueleto renderizado no duplicado.",
+      "confidence_avg": 0.934,
+      "confidence_min": 0.891,
+      "outliers_flagged": 1,
+      "outliers": [{ "url": "https://pre-devportaltpv.cloud.cecabank.es/integraciones/sdk", "distancia": 7, "confianza": 0.891 }],
+      "analizar": true
+    },
+    {
+      "template_id": "developer-tools-api-detail",
+      "ruta_dominante": "/herramientas-para-desarrolladores/*",
+      "pages_matched": 3,
+      "representantes": ["https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/tokenizacion", "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones"],
+      "representative_analyzed": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/tokenizacion",
+      "motivo_representante": "Medoide; el segundo representante tiene el mayor esqueleto renderizado no duplicado.",
+      "confidence_avg": 0.932,
+      "confidence_min": 0.891,
+      "outliers_flagged": 1,
+      "outliers": [{ "url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones", "distancia": 7, "confianza": 0.891 }],
+      "analizar": true
+    },
+    {
+      "template_id": "plugin-payment-detail-b",
+      "ruta_dominante": "/plugin/*",
+      "pages_matched": 3,
+      "representantes": ["https://pre-devportaltpv.cloud.cecabank.es/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce", "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/otros/bizum"],
+      "representative_analyzed": "https://pre-devportaltpv.cloud.cecabank.es/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce",
+      "motivo_representante": "Medoide; el segundo representante tiene el mayor esqueleto renderizado no duplicado.",
+      "confidence_avg": 0.932,
+      "confidence_min": 0.859,
+      "outliers_flagged": 0,
+      "outliers": [],
+      "analizar": true
+    },
+    {
+      "template_id": "no-integration-detail",
+      "ruta_dominante": "/sin-integracion/*",
+      "pages_matched": 3,
+      "representantes": ["https://pre-devportaltpv.cloud.cecabank.es/sin-integracion/pagos-moto", "https://pre-devportaltpv.cloud.cecabank.es/sin-integracion/pago-por-email"],
+      "representative_analyzed": "https://pre-devportaltpv.cloud.cecabank.es/sin-integracion/pagos-moto",
+      "motivo_representante": "Medoide; el segundo representante tiene el mayor esqueleto renderizado no duplicado.",
+      "confidence_avg": 0.932,
+      "confidence_min": 0.891,
+      "outliers_flagged": 0,
+      "outliers": [],
+      "analizar": true
+    },
+    {
+      "template_id": "home-help-shared",
+      "ruta_dominante": "/inicio",
+      "pages_matched": 2,
+      "representantes": ["https://pre-devportaltpv.cloud.cecabank.es/inicio", "https://pre-devportaltpv.cloud.cecabank.es/ayuda"],
+      "representative_analyzed": "https://pre-devportaltpv.cloud.cecabank.es/inicio",
+      "motivo_representante": "Medoide; el segundo miembro se conserva por superar el umbral estricto de propagacion.",
+      "confidence_avg": 0.938,
+      "confidence_min": 0.875,
+      "outliers_flagged": 0,
+      "outliers": [],
+      "analizar": true
+    },
+    {
+      "template_id": "developer-tools-sdk-moto",
+      "ruta_dominante": "/herramientas-para-desarrolladores/*",
+      "pages_matched": 2,
+      "representantes": ["https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/sdk", "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/pagos-moto"],
+      "representative_analyzed": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/sdk",
+      "motivo_representante": "Medoide; el segundo representante tiene el mayor esqueleto renderizado no duplicado.",
+      "confidence_avg": 0.961,
+      "confidence_min": 0.922,
+      "outliers_flagged": 0,
+      "outliers": [],
+      "analizar": true
+    },
+    {
+      "template_id": "blog-fraud-shared",
+      "ruta_dominante": "/blog",
+      "pages_matched": 2,
+      "representantes": ["https://pre-devportaltpv.cloud.cecabank.es/blog", "https://pre-devportaltpv.cloud.cecabank.es/fraude"],
+      "representative_analyzed": "https://pre-devportaltpv.cloud.cecabank.es/blog",
+      "motivo_representante": "Medoide; el segundo representante tiene el mayor esqueleto renderizado no duplicado.",
+      "confidence_avg": 0.953,
+      "confidence_min": 0.906,
+      "outliers_flagged": 0,
+      "outliers": [],
+      "analizar": true
+    },
+    {
+      "template_id": "onboarding-singleton",
+      "ruta_dominante": "/empieza-con-nosotros",
+      "pages_matched": 1,
+      "representantes": ["https://pre-devportaltpv.cloud.cecabank.es/empieza-con-nosotros"],
+      "representative_analyzed": "https://pre-devportaltpv.cloud.cecabank.es/empieza-con-nosotros",
+      "motivo_representante": "Pagina unica: no existe otra pagina a la que propagar esta huella.",
+      "confidence_avg": 1,
+      "confidence_min": 1,
+      "outliers_flagged": 0,
+      "outliers": [],
+      "analizar": true
+    },
+    {
+      "template_id": "developer-tools-index-singleton",
+      "ruta_dominante": "/herramientas-para-desarrolladores",
+      "pages_matched": 1,
+      "representantes": ["https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores"],
+      "representative_analyzed": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores",
+      "motivo_representante": "Pagina unica: no existe otra pagina a la que propagar esta huella.",
+      "confidence_avg": 1,
+      "confidence_min": 1,
+      "outliers_flagged": 0,
+      "outliers": [],
+      "analizar": true
+    },
+    {
+      "template_id": "swagger-singleton",
+      "ruta_dominante": "/herramientas-para-desarrolladores/*",
+      "pages_matched": 1,
+      "representantes": ["https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/swagger"],
+      "representative_analyzed": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/swagger",
+      "motivo_representante": "Pagina unica: no existe otra pagina a la que propagar esta huella.",
+      "confidence_avg": 1,
+      "confidence_min": 1,
+      "outliers_flagged": 0,
+      "outliers": [],
+      "analizar": true
+    }
+  ],
+  "pages_not_clustered": 0,
+  "singleton_clusters": 3,
+  "singleton_clusters_note": "Las 3 paginas singleton estan clasificadas en clusters propios y ya se contabilizan entre los 21 representantes; no son paginas adicionales sin clasificar.",
+  "paginas_fallidas": [],
+  "sensibilidad_html_crudo": [
+    {
+      "umbral": 4,
+      "clusters": 1
+    },
+    {
+      "umbral": 6,
+      "clusters": 1
+    },
+    {
+      "umbral": 8,
+      "clusters": 1
+    },
+    {
+      "umbral": 10,
+      "clusters": 1
+    },
+    {
+      "umbral": 12,
+      "clusters": 1
+    },
+    {
+      "umbral": 16,
+      "clusters": 1
+    },
+    {
+      "umbral": 20,
+      "clusters": 1
+    },
+    {
+      "umbral": 24,
+      "clusters": 1
+    }
+  ],
+  "sensibilidad": [
+    { "umbral": 0, "clusters": 30 },
+    { "umbral": 1, "clusters": 29 },
+    { "umbral": 2, "clusters": 28 },
+    { "umbral": 3, "clusters": 28 },
+    { "umbral": 4, "clusters": 27 },
+    { "umbral": 6, "clusters": 18 },
+    { "umbral": 8, "clusters": 14 },
+    { "umbral": 10, "clusters": 12 },
+    { "umbral": 12, "clusters": 8 },
+    { "umbral": 16, "clusters": 6 },
+    { "umbral": 20, "clusters": 3 },
+    { "umbral": 24, "clusters": 2 }
+  ],
+  "aviso": "Agrupacion moderadamente fragil: no hay meseta estable en el rango util. No propagar paginas con distancia mayor que 6.",
+  "coverage": {
+    "urls_es_solicitadas": 31,
+    "urls_es_cubiertas": 31,
+    "urls_en_detectadas": 0,
+    "completa": true
+  },
+  "paginas_propagadas": [
+    { "url": "https://pre-devportaltpv.cloud.cecabank.es/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop", "template_id": "plugin-integration-detail-a", "distancia": 1, "confianza": 0.984 },
+    { "url": "https://pre-devportaltpv.cloud.cecabank.es/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento", "template_id": "plugin-integration-detail-a", "distancia": 0, "confianza": 1 },
+    { "url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/otros/google-pay", "template_id": "developer-tools-payment-detail", "distancia": 6, "confianza": 0.906 },
+    { "url": "https://pre-devportaltpv.cloud.cecabank.es/integraciones/iframe", "template_id": "integration-summary", "distancia": 5, "confianza": 0.922 },
+    { "url": "https://pre-devportaltpv.cloud.cecabank.es/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp", "template_id": "plugin-payment-detail-b", "distancia": 4, "confianza": 0.938 },
+    { "url": "https://pre-devportaltpv.cloud.cecabank.es/plugin", "template_id": "no-integration-detail", "distancia": 6, "confianza": 0.906 }
+  ],
+  "desglose_analisis": {
+    "representantes": 21,
+    "outliers": 4,
+    "sin_clasificar": 0,
+    "total": 25,
+    "paginas_propagadas": 6
+  },
+  "tokens_estimados": 625000,
+  "estimated_analysis_cost": "25 de 31 paginas requeririan analisis profundo; 6 se propagarian por plantilla con verificacion de huella",
+  "descartadas": [],
+  "motivo_descartadas": "Ninguna: urls.txt define el universo autoritativo de D0.",
+  "nota": "D0 finalizado con umbral 10 aprobado por el usuario. No se ejecuto scraping profundo, analisis de contenido, propuesta de bloques ni fase D1."
+}

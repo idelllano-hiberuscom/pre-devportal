@@ -1,0 +1,456 @@
+{
+  "root": {
+    "tag": "div",
+    "classes": "pie-chart",
+    "text": null,
+    "styles": {
+      "display": "block",
+      "width": "1440px",
+      "height": "608px",
+      "margin": "80px 0px 192px",
+      "color": "rgba(0, 0, 0, 0.87)",
+      "font-family": "Poppins, sans-serif",
+      "font-size": "16px",
+      "line-height": "24px",
+      "border": "0px none rgba(0, 0, 0, 0.87)"
+    }
+  },
+  "children": [
+    {
+      "tag": "ul",
+      "classes": "pie-chart-slice__details__list",
+      "text": null,
+      "styles": {
+        "display": "block",
+        "width": "480px",
+        "height": "96px",
+        "color": "rgb(119, 119, 123)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "text-align": "end",
+        "border": "0px none rgb(119, 119, 123)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "pie-chart-slice__list__item ng-star-inserted",
+      "text": "Tipo",
+      "styles": {
+        "display": "list-item",
+        "width": "480px",
+        "height": "32px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "text-align": "end",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "pie-chart-slice__list__item ng-star-inserted",
+      "text": "Importe",
+      "styles": {
+        "display": "list-item",
+        "width": "480px",
+        "height": "32px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "text-align": "end",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "pie-chart-slice__list__item ng-star-inserted",
+      "text": "Moneda",
+      "styles": {
+        "display": "list-item",
+        "width": "480px",
+        "height": "32px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "text-align": "end",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "ul",
+      "classes": "pie-chart-slice__details__list",
+      "text": null,
+      "styles": {
+        "display": "block",
+        "width": "480px",
+        "height": "32px",
+        "color": "rgb(119, 119, 123)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "text-align": "end",
+        "border": "0px none rgb(119, 119, 123)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "pie-chart-slice__list__item ng-star-inserted",
+      "text": "Intentos erróneos",
+      "styles": {
+        "display": "list-item",
+        "width": "480px",
+        "height": "32px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "text-align": "end",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "ul",
+      "classes": "pie-chart-slice__details__list",
+      "text": null,
+      "styles": {
+        "display": "block",
+        "width": "480px",
+        "height": "32px",
+        "color": "rgb(119, 119, 123)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "text-align": "end",
+        "border": "0px none rgb(119, 119, 123)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "pie-chart-slice__list__item ng-star-inserted",
+      "text": "En comercio electrónico (Visa, MC)",
+      "styles": {
+        "display": "list-item",
+        "width": "480px",
+        "height": "32px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "text-align": "end",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "ul",
+      "classes": "pie-chart-slice__details__list",
+      "text": null,
+      "styles": {
+        "display": "block",
+        "width": "480px",
+        "height": "32px",
+        "color": "rgb(119, 119, 123)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(119, 119, 123)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "pie-chart-slice__list__item ng-star-inserted",
+      "text": "Establecidas por Cecabank",
+      "styles": {
+        "display": "list-item",
+        "width": "480px",
+        "height": "32px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "ul",
+      "classes": "pie-chart-slice__details__list",
+      "text": null,
+      "styles": {
+        "display": "block",
+        "width": "480px",
+        "height": "32px",
+        "color": "rgb(119, 119, 123)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(119, 119, 123)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "pie-chart-slice__list__item ng-star-inserted",
+      "text": "Operativa anterior del usuario",
+      "styles": {
+        "display": "list-item",
+        "width": "480px",
+        "height": "32px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "ul",
+      "classes": "pie-chart-slice__details__list",
+      "text": null,
+      "styles": {
+        "display": "block",
+        "width": "480px",
+        "height": "192px",
+        "color": "rgb(119, 119, 123)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(119, 119, 123)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "pie-chart-slice__list__item ng-star-inserted",
+      "text": "Dispositivo",
+      "styles": {
+        "display": "list-item",
+        "width": "480px",
+        "height": "32px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "pie-chart-slice__list__item ng-star-inserted",
+      "text": "Navegador",
+      "styles": {
+        "display": "list-item",
+        "width": "480px",
+        "height": "32px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "pie-chart-slice__list__item ng-star-inserted",
+      "text": "ISP",
+      "styles": {
+        "display": "list-item",
+        "width": "480px",
+        "height": "32px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "pie-chart-slice__list__item ng-star-inserted",
+      "text": "Idioma",
+      "styles": {
+        "display": "list-item",
+        "width": "480px",
+        "height": "32px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "pie-chart-slice__list__item ng-star-inserted",
+      "text": "Localización",
+      "styles": {
+        "display": "list-item",
+        "width": "480px",
+        "height": "32px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "pie-chart-slice__list__item ng-star-inserted",
+      "text": "Horario",
+      "styles": {
+        "display": "list-item",
+        "width": "480px",
+        "height": "32px",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "ul",
+      "classes": "pie-chart-slice__details__list",
+      "text": null,
+      "styles": {
+        "display": "block",
+        "color": "rgb(119, 119, 123)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(119, 119, 123)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "pie-chart-slice__list__item ng-star-inserted",
+      "text": "Tipo",
+      "styles": {
+        "display": "list-item",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "pie-chart-slice__list__item ng-star-inserted",
+      "text": "Importe",
+      "styles": {
+        "display": "list-item",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "pie-chart-slice__list__item ng-star-inserted",
+      "text": "Moneda",
+      "styles": {
+        "display": "list-item",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "ul",
+      "classes": "pie-chart-slice__details__list",
+      "text": null,
+      "styles": {
+        "display": "block",
+        "color": "rgb(119, 119, 123)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(119, 119, 123)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "pie-chart-slice__list__item ng-star-inserted",
+      "text": "Intentos erróneos",
+      "styles": {
+        "display": "list-item",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "ul",
+      "classes": "pie-chart-slice__details__list",
+      "text": null,
+      "styles": {
+        "display": "block",
+        "color": "rgb(119, 119, 123)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(119, 119, 123)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "pie-chart-slice__list__item ng-star-inserted",
+      "text": "En comercio electrónico (Visa, MC)",
+      "styles": {
+        "display": "list-item",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "ul",
+      "classes": "pie-chart-slice__details__list",
+      "text": null,
+      "styles": {
+        "display": "block",
+        "color": "rgb(119, 119, 123)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(119, 119, 123)"
+      }
+    },
+    {
+      "tag": "li",
+      "classes": "pie-chart-slice__list__item ng-star-inserted",
+      "text": "Establecidas por Cecabank",
+      "styles": {
+        "display": "list-item",
+        "color": "rgb(118, 118, 122)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(118, 118, 122)"
+      }
+    },
+    {
+      "tag": "ul",
+      "classes": "pie-chart-slice__details__list",
+      "text": null,
+      "styles": {
+        "display": "block",
+        "color": "rgb(119, 119, 123)",
+        "font-family": "Poppins, sans-serif",
+        "font-size": "16px",
+        "line-height": "32px",
+        "border": "0px none rgb(119, 119, 123)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+<h1>Contrato Técnico — cards--plugins</h1><blockquote><p>Ticket: PA-32 (https://hiberus-team-dxp.atlassian.net/browse/PA-32)   ·   Confluence: https://hiberus-team-dxp.atlassian.net/wiki/spaces/PA/pages/214237185</p></blockquote><blockquote><p>component_id: cmp-plugin-cards   ·   block_name: cards   ·   is_container: sí</p></blockquote><blockquote><p>Origen: https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/plugins/resumen   ·   Snapshot: 2026-08-10   ·   Confianza: 0.83</p></blockquote><blockquote><p>Evidencia: adjuntos de esta página</p></blockquote><p>**Variante EDS:** `plugins`</p><p>**Selector repetible del portal:** `.plugin-list &gt; plugin-card`</p><p>---</p><h2>1. Descripción funcional</h2><p>Plugin Cards corresponde a `cmp-plugin-cards` y se materializa sobre el bloque EDS `cards` con variante `plugins`.</p><p>El componente aparece 1 veces en el portal; 1 apariciones fueron verificadas.</p><p>Las páginas observadas son: https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/plugins/resumen.</p><p>Las plantillas asociadas son developer-tools-payment-detail; developer-tools-payment-detail es la plantilla primaria de Jira.</p><p>Las cinco tarjetas comparten logo, version, fecha, compatibilidad, descripcion y enlace. Son una variante de cards porque el comportamiento sigue siendo un enlace estatico por item.</p><p>Punto de partida: cards (local): Mantiene imagen y contenido repetible, pero requiere enlace de tarjeta y metadatos editoriales dentro del richtext..</p><p>**Apariciones en el portal:** 1 — https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/plugins/resumen</p><p>**Posición en página:** above the fold en desktop</p><p>**Variantes observadas:** ninguna</p><h2>2. Evidencia visual</h2><table><tbody><tr><th>Breakpoint</th><th>Componente local resoluble</th><th>En contexto local resoluble</th><th>Medidas del componente</th><th>Above the fold</th></tr><tr><td>desktop 1440px</td><td>`desktop.png`</td><td>`desktop-context.jpg`</td><td>1126px × 652px</td><td>sí</td></tr><tr><td>tablet 768px</td><td>`tablet.png`</td><td>`tablet-context.jpg`</td><td>672px × 898px</td><td>sí</td></tr><tr><td>mobile 375px</td><td>`mobile.png`</td><td>`mobile-context.jpg`</td><td>279px × 1546px</td><td>sí</td></tr></tbody></table><ac:image ac:align="center" ac:width="900" ac:alt="desktop.png"><ri:attachment ri:filename="desktop.png" /></ac:image><ac:image ac:align="center" ac:width="900" ac:alt="desktop-context.jpg"><ri:attachment ri:filename="desktop-context.jpg" /></ac:image><ac:image ac:align="center" ac:width="900" ac:alt="tablet.png"><ri:attachment ri:filename="tablet.png" /></ac:image><ac:image ac:align="center" ac:width="900" ac:alt="tablet-context.jpg"><ri:attachment ri:filename="tablet-context.jpg" /></ac:image><ac:image ac:align="center" ac:width="900" ac:alt="mobile.png"><ri:attachment ri:filename="mobile.png" /></ac:image><ac:image ac:align="center" ac:width="900" ac:alt="mobile-context.jpg"><ri:attachment ri:filename="mobile-context.jpg" /></ac:image><p>**Comportamiento responsivo medido:**</p><ul><li>**desktop 1440px:** caja medida 1126px × 652px; ratio 1.73; posición x=282px, y=383px.</li><li>**tablet 768px:** caja medida 672px × 898px; ratio 0.75; posición x=48px, y=519px.</li><li>**mobile 375px:** caja medida 279px × 1546px; ratio 0.18; posición x=48px, y=603px.</li></ul><h2>3. DOM del portal → DOM de entrada EDS</h2><h3>3a. Fragmento real del portal (EVIDENCIA — no escribir selectores contra este DOM)</h3><pre><code>&lt;div class=&quot;plugin-list&quot;&gt;
+    &lt;plugin-card&gt;
+&lt;a class=&quot;plugin-card ng-star-inserted&quot; href=&quot;/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce&quot;&gt;
+  &lt;div class=&quot;plugin-card-header&quot;&gt;
+    &lt;img class=&quot;plugin-card-img&quot; src=&quot;https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/plugin/woocommerce-logo-transp.png.webp?VersionId=JZU9WaCI6CwpsRG74LBlVMkaIF.BoYYb&amp;amp;itok=bmpvJFCo&quot; alt=&quot;Woocomerce&quot; height=&quot;100&quot; width=&quot;494&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;plugin-card-body&quot;&gt;
+    &lt;div&gt;
+      &lt;span jhitranslate=&quot;global.api.plugins.version&quot;&gt;Versión:&lt;/span&gt; 1.4.2
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;span jhitranslate=&quot;global.api.plugins.date&quot;&gt;Fecha:&lt;/span&gt; 19/10/2023
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;span jhitranslate=&quot;global.api.plugins.compatibility&quot;&gt;Compatibilidad:&lt;/span&gt;
+      WooCommerce
+    &lt;/div&gt;
+    &lt;div class=&quot;plugin-card-description ng-star-inserted&quot;&gt;
+      Permite habilitar pagos con tarjeta en tiendas WooCommerce mediante una integración sencilla del TPV Virtual.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+&lt;/plugin-card&gt;&lt;plugin-card&gt;
+&lt;a class=&quot;plugin-card ng-star-inserted&quot; href=&quot;/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop&quot;&gt;
+  &lt;div class=&quot;plugin-card-header&quot;&gt;
+    &lt;img class=&quot;plugin-card-img&quot; src=&quot;https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/plugin/prestashop-transparente1.png.webp?VersionId=gGpZ0OMRqJ8HYvcoHLrfTzfC1ONsf9dV&amp;amp;itok=FutV7IrK&quot; alt=&quot;Prestashop&quot; height=&quot;100&quot; width=&quot;607&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;plugin-card-body&quot;&gt;
+    &lt;div&gt;
+      &lt;span jhitranslate=&quot;global.api.plugins.version&quot;&gt;Versión:&lt;/span&gt; 1.4.2
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;span jhitranslate=&quot;global.api.plugins.date&quot;&gt;Fecha:&lt;/span&gt; 19/10/2023
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;span jhitranslate=&quot;global.api.plugins.compatibility&quot;&gt;Compatibilidad:&lt;/span&gt;
+      Prestashop 1.6 y 1.7
+    &lt;/div&gt;
+    &lt;div class=&quot;plugin-card-description ng-star-inserted&quot;&gt;
+      Solución para integrar el TPV Virtual en tiendas PrestaShop, con compatibilidad total y proceso de pago transparente.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+&lt;/plugin-card&gt;&lt;plugin-card&gt;
+&lt;a class=&quot;plugin-card ng-star-inserted&quot; href=&quot;/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento&quot;&gt;
+  &lt;div class=&quot;plugin-card-header&quot;&gt;
+    &lt;img class=&quot;plugin-card-img&quot; src=&quot;https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/plugin/magento-transparente1.png.webp?VersionId=oLhJcGjLEKShi2Zp_NqMN29Tyl9tKQHT&amp;amp;itok=6WK98ruH&quot; alt=&quot;Magento&quot; height=&quot;100&quot; width=&quot;362&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;plugin-card-body&quot;&gt;
+    &lt;div&gt;
+      &lt;span jhitranslate=&quot;global.api.plugins.version&quot;&gt;Versión:&lt;/span&gt; 1.4.2
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;span jhitranslate=&quot;global.api.plugins.date&quot;&gt;Fecha:&lt;/span&gt; 19/03/2023
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;span jhitranslate=&quot;global.api.plugins.compatibility&quot;&gt;Compatibilidad:&lt;/span&gt;
+      Magento
+    &lt;/div&gt;
+    &lt;div class=&quot;plugin-card-description ng-star-inserted&quot;&gt;
+      Integración del TPV Virtual con Magento, ofreciendo alta seguridad y rendimiento en entornos de e-commerce escalables.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+&lt;/plugin-card&gt;&lt;plugin-card&gt;
+&lt;a class=&quot;plugin-card ng-star-inserted&quot; href=&quot;/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce&quot;&gt;
+  &lt;div class=&quot;plugin-card-header&quot;&gt;
+    &lt;img class=&quot;plugin-card-img&quot; src=&quot;https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/plugin/oscommerce-transparente.png.webp?VersionId=ipGI9_T5NE689Q6tBufs4q4FbUiqgIcX&amp;amp;itok=wWO-vW2L&quot; alt=&quot;OsCommerce&quot; height=&quot;605&quot; width=&quot;3545&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;plugin-card-body&quot;&gt;
+    &lt;div&gt;
+      &lt;span jhitranslate=&quot;global.api.plugins.version&quot;&gt;Versión:&lt;/span&gt; 1.4.2
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;span jhitranslate=&quot;global.api.plugins.date&quot;&gt;Fecha:&lt;/span&gt; 19/10/2023
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;span jhitranslate=&quot;global.api.plugins.compatibility&quot;&gt;Compatibilidad:&lt;/span&gt;
+      osCommerce
+    &lt;/div&gt;
+    &lt;div class=&quot;plugin-card-description ng-star-inserted&quot;&gt;
+      Módulo de TPV para osCommerce que simplifica la gestión de pagos sin requerir configuraciones técnicas complejas.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+&lt;/plugin-card&gt;&lt;plugin-card&gt;
+&lt;a class=&quot;plugin-card ng-star-inserted&quot; href=&quot;/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp&quot;&gt;
+  &lt;div class=&quot;plugin-card-header&quot;&gt;
+    &lt;img class=&quot;plugin-card-img&quot; src=&quot;https://aws-cecabank-drupal-s3.s3.eu-west-1.amazonaws.com/public/styles/medium/public/plugin/Give%20Logo.png.webp?VersionId=XEI6K2EXaM6o4JV_pH5XoH.Yji5M_lj8&amp;amp;itok=z78z2bUX&quot; alt=&quot;GiveWP&quot; height=&quot;100&quot; width=&quot;305&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;plugin-card-body&quot;&gt;
+    &lt;div&gt;
+      &lt;span jhitranslate=&quot;global.api.plugins.version&quot;&gt;Versión:&lt;/span&gt; 1.4.2
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;span jhitranslate=&quot;global.api.plugins.date&quot;&gt;Fecha:&lt;/span&gt; 10/06/2015
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;span jhitranslate=&quot;global.api.plugins.compatibility&quot;&gt;Compatibilidad:&lt;/span&gt;
+      WordPress (GiveWP)
+    &lt;/div&gt;
+    &lt;div class=&quot;plugin-card-description ng-star-inserted&quot;&gt;
+      Plugin para ONGs que integra el TPV Virtual con los formularios de donación de GiveWP, permitiendo la gestión de pagos y obtener reportes.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+&lt;/plugin-card&gt;
+&lt;/div&gt;</code></pre><h3>3b. DOM DE ENTRADA — matriz EDS (EL CONTRATO)</h3><pre><code>cards (plugins)
+  card*
+    image + imageAlt
+    text: version + fecha + compatibilidad + descripcion
+    link</code></pre><h3>3c. Mapeo portal → EDS</h3><table><tbody><tr><th>Celda/campo EDS</th><th>Elemento del portal</th><th>Tipo y nota</th></tr><tr><td>item/fila 0 / `image`</td><td>`.plugin-card-img`</td><td>`image`; estado pendiente_dam</td></tr><tr><td>item/fila 1 / `imageAlt`</td><td>`.plugin-card-img img`</td><td>`text`; atributo alt</td></tr><tr><td>item/fila 2 / `text`</td><td>`.plugin-card-body`</td><td>`richtext`</td></tr><tr><td>item/fila 3 / `link`</td><td>`a.plugin-card`</td><td>`text`; atributo href</td></tr></tbody></table><p>**content_mapping íntegro y vinculante:**</p><pre><code>[
+  {
+    &quot;source_selector&quot;: &quot;.plugin-card-img&quot;,
+    &quot;target_field&quot;: &quot;image&quot;,
+    &quot;type&quot;: &quot;image&quot;,
+    &quot;status&quot;: &quot;pendiente_dam&quot;
+  },
+  {
+    &quot;source_selector&quot;: &quot;.plugin-card-img img&quot;,
+    &quot;target_field&quot;: &quot;imageAlt&quot;,
+    &quot;type&quot;: &quot;text&quot;,
+    &quot;source_attribute&quot;: &quot;alt&quot;
+  },
+  {
+    &quot;source_selector&quot;: &quot;.plugin-card-body&quot;,
+    &quot;target_field&quot;: &quot;text&quot;,
+    &quot;type&quot;: &quot;richtext&quot;
+  },
+  {
+    &quot;source_selector&quot;: &quot;a.plugin-card&quot;,
+    &quot;target_field&quot;: &quot;link&quot;,
+    &quot;type&quot;: &quot;text&quot;,
+    &quot;source_attribute&quot;: &quot;href&quot;
+  }
+]</code></pre><p>El contribuidor debe iterar `.plugin-list &gt; plugin-card` y aplicar cada entrada de `content_mapping` dentro de cada item.</p><h3>3d. DOM DE SALIDA — referencia, no contrato de entrada</h3><pre><code>&lt;div class=&quot;cards plugins&quot;&gt;
+  &lt;div class=&quot;cards-content&quot;&gt;&lt;!-- nodos originales decorados desde la matriz de 3b --&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre><h2>4. Estilos extraídos del portal</h2><p>Valores medidos en adjuntos de esta página:</p><table><tbody><tr><th>Elemento medido</th><th>Propiedades computadas</th></tr><tr><td>`div.plugin-list`</td><td>`display: grid; gap: 24px; grid-template-columns: 263.5px 263.5px 263.5px 263.5px; grid-template-rows: 306px 322px; width: 1126px; height: 652px; margin: 32px 32px 51.2px; color: rgba(0, 0, 0, 0.87); font-family: Poppins, sans-serif; font-size: 16px; line-height: 24px; border: 0px none rgba(0, 0, 0, 0.87)`</td></tr><tr><td>`a.plugin-card.ng-star-inserted`</td><td>`display: flex; flex-direction: column; justify-content: space-between; width: 263.5px; height: 306px; min-height: 280px; padding: 24px; color: rgb(1, 127, 155); background-color: rgb(255, 255, 255); font-family: Poppins, sans-serif; font-size: 16px; line-height: 32px; border: 0px none rgb(1, 127, 155); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.15) 2px 0px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 4px 0px`</td></tr><tr><td>`img.plugin-card-img`</td><td>`display: block; width: 180px; max-width: 180px; height: 36.8125px; margin: 26.5938px 17.75px; color: rgb(1, 127, 155); font-family: Poppins, sans-serif; font-size: 16px; line-height: 32px; border: 0px none rgb(1, 127, 155); object-fit: contain; aspect-ratio: auto 494 / 100; overflow: clip`</td></tr><tr><td>`a.plugin-card.ng-star-inserted`</td><td>`display: flex; flex-direction: column; justify-content: space-between; width: 263.5px; height: 306px; min-height: 280px; padding: 24px; color: rgb(1, 127, 155); background-color: rgb(255, 255, 255); font-family: Poppins, sans-serif; font-size: 16px; line-height: 32px; border: 0px none rgb(1, 127, 155); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.15) 2px 0px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 4px 0px`</td></tr><tr><td>`img.plugin-card-img`</td><td>`display: block; width: 180px; max-width: 180px; height: 29.4531px; margin: 30.2656px 17.75px; color: rgb(1, 127, 155); font-family: Poppins, sans-serif; font-size: 16px; line-height: 32px; border: 0px none rgb(1, 127, 155); object-fit: contain; aspect-ratio: auto 607 / 100; overflow: clip`</td></tr><tr><td>`a.plugin-card.ng-star-inserted`</td><td>`display: flex; flex-direction: column; justify-content: space-between; width: 263.5px; height: 306px; min-height: 280px; padding: 24px; color: rgb(1, 127, 155); background-color: rgb(255, 255, 255); font-family: Poppins, sans-serif; font-size: 16px; line-height: 32px; border: 0px none rgb(1, 127, 155); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.15) 2px 0px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 4px 0px`</td></tr><tr><td>`img.plugin-card-img`</td><td>`display: block; width: 180px; max-width: 180px; height: 49.9062px; margin: 20.0469px 17.75px; color: rgb(1, 127, 155); font-family: Poppins, sans-serif; font-size: 16px; line-height: 32px; border: 0px none rgb(1, 127, 155); object-fit: contain; aspect-ratio: auto 362 / 100; overflow: clip`</td></tr><tr><td>`a.plugin-card.ng-star-inserted`</td><td>`display: flex; flex-direction: column; justify-content: space-between; width: 263.5px; height: 306px; min-height: 280px; padding: 24px; color: rgb(1, 127, 155); background-color: rgb(255, 255, 255); font-family: Poppins, sans-serif; font-size: 16px; line-height: 32px; border: 0px none rgb(1, 127, 155); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.15) 2px 0px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 4px 0px`</td></tr><tr><td>`img.plugin-card-img`</td><td>`display: block; width: 180px; max-width: 180px; height: 31.0781px; margin: 29.4531px 17.75px; color: rgb(1, 127, 155); font-family: Poppins, sans-serif; font-size: 16px; line-height: 32px; border: 0px none rgb(1, 127, 155); object-fit: contain; aspect-ratio: auto 3545 / 605; overflow: clip`</td></tr><tr><td>`a.plugin-card.ng-star-inserted`</td><td>`display: flex; flex-direction: column; justify-content: space-between; width: 263.5px; height: 322px; min-height: 280px; padding: 24px; color: rgb(1, 127, 155); background-color: rgb(255, 255, 255); font-family: Poppins, sans-serif; font-size: 16px; line-height: 32px; border: 0px none rgb(1, 127, 155); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.15) 2px 0px 2px 0px, rgba(0, 0, 0, 0.15) 0px 2px 4px 0px`</td></tr><tr><td>`img.plugin-card-img`</td><td>`display: block; width: 180px; max-width: 180px; height: 58.9062px; margin: 15.5469px 17.75px; color: rgb(1, 127, 155); font-family: Poppins, sans-serif; font-size: 16px; line-height: 32px; border: 0px none rgb(1, 127, 155); object-fit: contain; aspect-ratio: auto 305 / 100; overflow: clip`</td></tr></tbody></table><p>**Tokens existentes que deben reutilizarse:** se comparan y reutilizan durante implementación; cualquier valor no medido permanece sujeto a los tokens del repositorio y no a estimación visual.</p><h2>5. Campos editables (Universal Editor)</h2><p>**Contenedor raíz:** usa `template.filter`; los campos siguientes pertenecen a cada item repetible.</p><table><tbody><tr><th>Campo</th><th>name</th><th>component</th><th>valueType</th><th>Requerido</th><th>Descripción para el autor</th></tr><tr><td>image</td><td>`image`</td><td>`reference`</td><td>`string`</td><td>sí</td><td>Campo extraído de la propuesta aprobada.</td></tr><tr><td>imageAlt</td><td>`imageAlt`</td><td>`text`</td><td>`string`</td><td>sí</td><td>Campo extraído de la propuesta aprobada.</td></tr><tr><td>text</td><td>`text`</td><td>`richtext`</td><td>`string`</td><td>sí</td><td>Campo extraído de la propuesta aprobada.</td></tr><tr><td>link</td><td>`link`</td><td>`text`</td><td>`string`</td><td>sí</td><td>Campo extraído de la propuesta aprobada.</td></tr></tbody></table><h2>6. Imágenes y rendimiento</h2><table><tbody><tr><th>Imagen/campo</th><th>Origen</th><th>Dimensiones intrínsecas</th><th>Ratio</th><th>LCP</th><th>Tratamiento</th></tr><tr><td>image</td><td>celda del bloque desde selector del portal</td><td>⚠️ NO EXTRAÍDO — la captura mide el componente, no el asset intrínseco</td><td>⚠️ NO EXTRAÍDO</td><td>sí, componente above the fold</td><td>Referencia DAM; EDS entrega picture cuando aplique</td></tr></tbody></table><ul><li>Las dimensiones de la tabla de sección 2 son del recorte del componente, no del asset; no se reutilizan como dimensiones intrínsecas.</li><li>Los estados `pendiente_dam` o `convertir_svg_local_o_dam` del content_mapping se resuelven como assets locales versionados o DAM autorables antes de contribución.</li><li>Las referencias de imagen deben producir `&lt;picture&gt;` optimizado en EDS; no se copian URLs del portal.</li></ul><h2>7. Interacciones y estados</h2><table><tbody><tr><th>Elemento</th><th>Estado</th><th>Comportamiento</th><th>Implementación</th></tr><tr><td>enlace de tarjeta</td><td>default</td><td>Usa estructura semántica y tokens existentes del repositorio.</td><td>HTML/CSS/JS según la referencia aprobada.</td></tr><tr><td>enlace de tarjeta</td><td>hover</td><td>Usa tokens interactivos existentes; no se inventan valores visuales del portal.</td><td>CSS.</td></tr><tr><td>enlace de tarjeta</td><td>focus-visible</td><td>Indicador de foco visible con tokens existentes.</td><td>CSS :focus-visible.</td></tr><tr><td>enlace de tarjeta</td><td>active</td><td>Ejecuta únicamente la acción asociada al control.</td><td>Patrón accesible aprobado.</td></tr><tr><td>enlace de tarjeta</td><td>disabled</td><td>Solo existe si la semántica del control lo requiere.</td><td>Atributo disabled/aria-disabled.</td></tr></tbody></table><p>**¿Requiere JS?** Sí cuando enlace de tarjeta requiera comportamiento; no queda una decisión humana pendiente sobre el patrón de interacción.</p><h2>8. Accesibilidad</h2><ul><li>**Nivel objetivo:** WCAG 2.1 AA.</li><li>**Contraste medido cuando hay par explícito color/fondo:**</li><li>a.plugin-card: rgb(1, 127, 155) sobre rgb(255, 255, 255) = 4.66:1.</li><li>a.plugin-card: rgb(1, 127, 155) sobre rgb(255, 255, 255) = 4.66:1.</li><li>a.plugin-card: rgb(1, 127, 155) sobre rgb(255, 255, 255) = 4.66:1.</li><li>a.plugin-card: rgb(1, 127, 155) sobre rgb(255, 255, 255) = 4.66:1.</li><li>a.plugin-card: rgb(1, 127, 155) sobre rgb(255, 255, 255) = 4.66:1.</li><li>**Orden de tabulación:** debe seguir el orden DOM de enlace de tarjeta; el patrón accesible aprobado define el foco y la activación.</li><li>**Etiquetas requeridas:** los campos de imagen requieren alt; los controles requieren nombre accesible visible o equivalente.</li><li>**Problemas del portal original que no se replican:** atributos Angular y custom elements no se trasladan al DOM EDS.</li></ul><h2>9. Dependencias</h2><ul><li>**Depende de:** PA-31.</li><li>**Requerido por:** ningún ticket declarado en la propuesta.</li><li>Las plantillas adicionales (ninguna) son asociaciones de alcance, no dependencias técnicas.</li></ul><h2>10. Ambigüedades y decisiones pendientes</h2><ul><li>Ninguna ambigüedad declarada en la propuesta aprobada.</li></ul>

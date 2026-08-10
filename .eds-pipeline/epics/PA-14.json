@@ -1,0 +1,12 @@
+{
+  "epic_id": "PA-14",
+  "template_id": "swagger-singleton",
+  "name": "Plantilla: swagger-singleton",
+  "state": "draft",
+  "pages_matched": 1,
+  "pages_analyzed": 1,
+  "pages_propagated": 0,
+  "tickets": [
+    "PA-24"
+  ]
+}

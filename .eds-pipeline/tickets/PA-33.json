@@ -1,0 +1,140 @@
+{
+  "ticket_id": "PA-33",
+  "component_id": "cmp-editorial-cards",
+  "block_name": "cards",
+  "variant": "editorial",
+  "local_identity": "cards--editorial",
+  "title": "Editorial Cards",
+  "state": "approved",
+  "depends_on": [
+    "PA-32"
+  ],
+  "epic": {
+    "id": "PA-20",
+    "nombre": "Plantilla: blog-fraud-shared",
+    "tipo": "plantilla"
+  },
+  "templates": {
+    "primary": "blog-fraud-shared",
+    "additional": []
+  },
+  "confidence_score": 0.93,
+  "is_container": true,
+  "technical_contract": {
+    "confluence_url": "https://hiberus-team-dxp.atlassian.net/wiki/spaces/PA/pages/214073346",
+    "local_path": ".eds-pipeline/contracts/cards--editorial.md",
+    "assets_dir": ".eds-pipeline/assets/cards--editorial/",
+    "breakpoints_capturados": [
+      "desktop",
+      "tablet",
+      "mobile"
+    ],
+    "completo": true,
+    "incomplete_reasons": [],
+    "confluence_attachments": {
+      "uploaded": [
+        "computed-styles.json",
+        "desktop-context.jpg",
+        "desktop.png",
+        "evidence.json",
+        "fragment.html",
+        "mobile-context.jpg",
+        "mobile.png",
+        "tablet-context.jpg",
+        "tablet.png"
+      ],
+      "referenced": [
+        "desktop.png",
+        "desktop-context.jpg",
+        "tablet.png",
+        "tablet-context.jpg",
+        "mobile.png",
+        "mobile-context.jpg"
+      ],
+      "missing": [],
+      "verified": true
+    }
+  },
+  "source": {
+    "portal_url": "https://pre-devportaltpv.cloud.cecabank.es",
+    "page_url": "https://pre-devportaltpv.cloud.cecabank.es/blog",
+    "pages": [
+      "https://pre-devportaltpv.cloud.cecabank.es/blog"
+    ],
+    "selector": ".blog-featured",
+    "snapshot_date": "2026-08-10"
+  },
+  "dedup": {
+    "verdict": "variant",
+    "closest_match": "cards (local)",
+    "similarity": 0.94,
+    "rationale": "Imagen y richtext repetibles coinciden exactamente; la jerarquia featured y el grid editorial son solo CSS."
+  },
+  "content_mapping": [
+    {
+      "source_selector": ".blog-entry__image",
+      "target_field": "image",
+      "type": "image",
+      "status": "pendiente_dam"
+    },
+    {
+      "source_selector": ".blog-entry__image img",
+      "target_field": "imageAlt",
+      "type": "text",
+      "source_attribute": "alt"
+    },
+    {
+      "source_selector": ".blog-entry__content",
+      "target_field": "text",
+      "type": "richtext"
+    }
+  ],
+  "repeat_selector": ".blog-entry",
+  "ambiguities": [],
+  "business_input_required": false,
+  "collision": {
+    "shared_target": "blocks/cards/*",
+    "components": [
+      "cmp-icon-cards",
+      "cmp-editorial-cards",
+      "cmp-plugin-cards",
+      "cmp-logo-cards"
+    ],
+    "status": "resolved-serial",
+    "dispatch_safe": true,
+    "serial_order": [
+      "PA-25",
+      "PA-31",
+      "PA-32",
+      "PA-33"
+    ],
+    "resolution": "Implementación serial sobre un único bloque cards: logos → icon-cards → plugins → editorial."
+  },
+  "created_by": "component-architect",
+  "approved_by": "human-gate-2",
+  "assigned_to": "eds-developer",
+  "branch": null,
+  "history": [
+    {
+      "date": "2026-08-10",
+      "from": null,
+      "to": "draft",
+      "by": "task-writer",
+      "note": "Creado desde propuesta-componentes.json aprobada en Gate 1"
+    },
+    {
+      "date": "2026-08-10",
+      "from": "draft",
+      "to": "draft",
+      "by": "task-writer",
+      "note": "Decisiones humanas de Gate 2 aplicadas; el ticket permanece draft pendiente de aprobación explícita."
+    },
+    {
+      "date": "2026-08-10",
+      "from": "draft",
+      "to": "approved",
+      "by": "human-gate-2",
+      "note": "Gate 2: aprobar todo"
+    }
+  ]
+}

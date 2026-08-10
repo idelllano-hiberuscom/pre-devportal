@@ -1,0 +1,59 @@
+{
+  "block_name": "logo-cards",
+  "selector": ".payment-methods",
+  "source_url": "https://pre-devportaltpv.cloud.cecabank.es/empieza-con-nosotros",
+  "captured_at": "2026-08-10",
+  "breakpoints": [
+    {
+      "label": "desktop",
+      "width": 1440,
+      "height": 900,
+      "present": true,
+      "box": {
+        "x": 0,
+        "y": 3386,
+        "width": 1440,
+        "height": 244
+      },
+      "above_the_fold": false,
+      "ratio": 5.9,
+      "screenshot": "desktop.png",
+      "context_screenshot": "desktop-context.jpg"
+    },
+    {
+      "label": "tablet",
+      "width": 768,
+      "height": 1024,
+      "present": true,
+      "box": {
+        "x": 0,
+        "y": 2892,
+        "width": 768,
+        "height": 436
+      },
+      "above_the_fold": false,
+      "ratio": 1.76,
+      "screenshot": "tablet.png",
+      "context_screenshot": "tablet-context.jpg"
+    },
+    {
+      "label": "mobile",
+      "width": 375,
+      "height": 812,
+      "present": true,
+      "box": {
+        "x": 0,
+        "y": 2912,
+        "width": 375,
+        "height": 312
+      },
+      "above_the_fold": false,
+      "ratio": 1.2,
+      "screenshot": "mobile.png",
+      "context_screenshot": "mobile-context.jpg"
+    }
+  ],
+  "fragment": "fragment.html",
+  "fragment_from": "desktop",
+  "computed_styles": "computed-styles.json"
+}

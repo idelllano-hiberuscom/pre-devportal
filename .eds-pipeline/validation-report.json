@@ -1,0 +1,86 @@
+{
+  "valid": true,
+  "tickets": 12,
+  "contracts": 12,
+  "epics": 12,
+  "completeness_criteria": "Only unresolved external inputs or real contradictions remain incomplete after Gate 2 decisions",
+  "incomplete_contracts": 2,
+  "evidence_files": 108,
+  "confluence_image_macros_verified": 72,
+  "jira_json_attachments_verified": 12,
+  "approved": 12,
+  "dependency_free": 9,
+  "dispatch_eligible": 9,
+  "eligibility_rule": "approved + all depends_on done",
+  "eligible": [
+    "PA-25",
+    "PA-27",
+    "PA-28",
+    "PA-35",
+    "PA-26",
+    "PA-29",
+    "PA-34",
+    "PA-30",
+    "PA-24"
+  ],
+  "waiting": [
+    {
+      "ticket_id": "PA-31",
+      "waits_for": [
+        "PA-25"
+      ]
+    },
+    {
+      "ticket_id": "PA-32",
+      "waits_for": [
+        "PA-31"
+      ]
+    },
+    {
+      "ticket_id": "PA-33",
+      "waits_for": [
+        "PA-32"
+      ]
+    }
+  ],
+  "incomplete_approved": [
+    {
+      "ticket_id": "PA-24",
+      "block_name": "swagger-console",
+      "reasons": [
+        "authEndpoint y openApiEndpoint permanecen vacios hasta que el cliente proporcione los endpoints y el contrato externo de autenticacion/OpenAPI."
+      ]
+    },
+    {
+      "ticket_id": "PA-26",
+      "block_name": "contact-form",
+      "reasons": [
+        "El endpoint action no aparece en el HTML capturado y debe aportarlo el cliente antes de implementar el envio.",
+        "El cliente debe definir la politica de tratamiento, retencion y consentimiento de los datos enviados."
+      ]
+    }
+  ],
+  "workflow_transitions": [
+    {
+      "id": "11",
+      "name": "Por hacer",
+      "to": "Por hacer"
+    },
+    {
+      "id": "21",
+      "name": "En curso",
+      "to": "En curso"
+    },
+    {
+      "id": "31",
+      "name": "En revisión",
+      "to": "En revisión"
+    },
+    {
+      "id": "41",
+      "name": "Listo",
+      "to": "Listo"
+    }
+  ],
+  "failures": []
+}
