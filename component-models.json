@@ -161,6 +161,35 @@
     ]
   },
   {
+    "id": "card-editorial",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false,
+        "required": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": "",
+        "required": true
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string",
+        "required": true
+      }
+    ]
+  },
+  {
     "id": "card-logo",
     "fields": [
       {
