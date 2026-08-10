@@ -211,7 +211,8 @@
         "name": "text",
         "value": "",
         "label": "Text",
-        "valueType": "string"
+        "valueType": "string",
+        "required": true
       }
     ]
   },
