@@ -5,6 +5,23 @@ function isImageCell(cell) {
   return Boolean(cell.querySelector('picture'));
 }
 
+function decorateIconCard(li, cells) {
+  const [imageCell, altCell, ...bodyCells] = cells;
+  if (imageCell) {
+    imageCell.className = 'cards-card-image';
+    li.append(imageCell);
+  }
+  if (altCell) {
+    altCell.className = 'cards-card-alt';
+    altCell.setAttribute('aria-hidden', 'true');
+    li.append(altCell);
+  }
+  bodyCells.forEach((cell) => {
+    cell.className = 'cards-card-body';
+    li.append(cell);
+  });
+}
+
 function decorateDefaultCard(li, cells) {
   cells.forEach((cell) => {
     cell.className = isImageCell(cell) ? 'cards-card-image' : 'cards-card-body';
@@ -49,6 +66,7 @@ function decorateLogoCard(li, cells) {
 
 export default function decorate(block) {
   const isLogoVariant = block.classList.contains('logos');
+  const isIconCardsVariant = block.classList.contains('icon-cards');
   const ul = document.createElement('ul');
 
   while (block.firstElementChild) {
@@ -65,6 +83,8 @@ export default function decorate(block) {
         li.append(imageCell);
       }
       altText = decorateLogoCard(li, cells);
+    } else if (isIconCardsVariant) {
+      decorateIconCard(li, cells);
     } else {
       decorateDefaultCard(li, cells);
     }
