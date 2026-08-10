@@ -39,6 +39,42 @@ const getCell = (row) => row?.firstElementChild || row;
 
 const getText = (row) => getCell(row)?.textContent?.trim() || '';
 
+const ROW_ORDER = [
+  'image',
+  'imageAlt',
+  'heading',
+  'nameLabel',
+  'emailLabel',
+  'phoneLabel',
+  'companyLabel',
+  'messageLabel',
+  'submitLabel',
+  'action',
+];
+
+const propOf = (row) => row.querySelector('[data-aue-prop]')?.dataset.aueProp
+  || row.dataset?.aueProp
+  || null;
+
+/**
+ * Maps the block rows onto the model fields.
+ *
+ * AEM omits the row of any field that was never authored, so a form with no
+ * image and no action arrives with 8 rows instead of 10 and reading them by
+ * position silently shifts every field. When the rows carry their field name
+ * we key off that; otherwise position is all we have and every row is present.
+ */
+const resolveRows = (rows) => {
+  const byProp = new Map();
+  rows.forEach((row) => {
+    const prop = propOf(row);
+    if (prop) byProp.set(prop, row);
+  });
+  if (!byProp.size) return ROW_ORDER.map((_, index) => rows[index]);
+  return ROW_ORDER.map((name, index) => byProp.get(name)
+    || (rows.length === ROW_ORDER.length ? rows[index] : undefined));
+};
+
 const setControlValidity = (control) => {
   if (control.checkValidity()) {
     control.removeAttribute('aria-invalid');
@@ -91,15 +127,6 @@ function focusFirstInvalidField(form) {
 
 export default function decorate(block) {
   const rows = [...block.children];
-
-  if (rows.length < 10) {
-    // eslint-disable-next-line no-console
-    console.warn('The contact-form block is missing required contract rows.');
-    return;
-  }
-
-  contactFormCount += 1;
-  const idPrefix = `contact-form-${contactFormCount}`;
   const [
     imageRow,
     imageAltRow,
@@ -111,7 +138,28 @@ export default function decorate(block) {
     messageRow,
     submitRow,
     actionRow,
-  ] = rows;
+  ] = resolveRows(rows);
+
+  // The image and the action are optional and already guarded below; without
+  // the labels there is no form to build.
+  const missing = Object.entries({
+    heading: headingRow,
+    nameLabel: nameRow,
+    emailLabel: emailRow,
+    phoneLabel: phoneRow,
+    companyLabel: companyRow,
+    messageLabel: messageRow,
+    submitLabel: submitRow,
+  }).filter(([, row]) => !row).map(([name]) => name);
+
+  if (missing.length) {
+    // eslint-disable-next-line no-console
+    console.warn(`The contact-form block is missing required rows: ${missing.join(', ')}`);
+    return;
+  }
+
+  contactFormCount += 1;
+  const idPrefix = `contact-form-${contactFormCount}`;
 
   const content = document.createElement('div');
   content.className = 'contact-form-content';
@@ -142,7 +190,7 @@ export default function decorate(block) {
   form.className = 'contact-form-form';
   form.noValidate = true;
   form.method = 'post';
-  moveInstrumentation(getCell(actionRow), form);
+  if (actionRow) moveInstrumentation(getCell(actionRow), form);
 
   const action = getText(actionRow);
   if (action) {
