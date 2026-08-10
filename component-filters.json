@@ -14,18 +14,38 @@
       "title",
       "hero",
       "cards",
+      "cards-editorial",
       "cards-logos",
       "cards-icon-cards",
       "cards-plugins",
       "carousel",
       "columns",
-      "fragment"
+      "fragment",
+      "code-block",
+      "pie-chart",
+      "video",
+      "tabs",
+      "accordion",
+      "contact-form",
+      "swagger-console"
+    ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordion-item"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "cards-editorial",
+    "components": [
+      "card-editorial"
     ]
   },
   {
@@ -65,6 +85,24 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "pie-chart",
+    "components": [
+      "pie-chart-item"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tabs-item"
+    ]
+  },
+  {
+    "id": "video",
+    "components": [
+      "video-item"
     ]
   }
 ]
