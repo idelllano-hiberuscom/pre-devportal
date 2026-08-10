@@ -16,7 +16,8 @@
   margin: 16px;
 }
 
-.cards .cards-card-alt {
+.cards .cards-card-alt,
+.cards .cards-card-link {
   position: absolute;
   width: 1px;
   height: 1px;

@@ -130,6 +130,14 @@ export default function decorate(block) {
       if (bodyCell) {
         bodyCell.className = 'cards-card-body';
       }
+      if (altCell) {
+        altCell.className = 'cards-card-alt';
+        altCell.setAttribute('aria-hidden', 'true');
+      }
+      if (linkCell) {
+        linkCell.className = 'cards-card-link';
+        linkCell.setAttribute('aria-hidden', 'true');
+      }
 
       const href = linkCell?.textContent.trim() || '#';
       const anchor = document.createElement('a');
@@ -138,6 +146,8 @@ export default function decorate(block) {
       if (imageCell) anchor.append(imageCell);
       if (bodyCell) anchor.append(bodyCell);
       li.append(anchor);
+      if (altCell) li.append(altCell);
+      if (linkCell) li.append(linkCell);
     } else {
       decorateDefaultCard(li, cells);
     }
