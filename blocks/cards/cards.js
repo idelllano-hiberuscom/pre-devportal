@@ -71,7 +71,13 @@ function optimizeCardImages(li, altText, width) {
       false,
       [{ width }],
     );
-    moveInstrumentation(img, optimizedPic.querySelector('img'));
+    const optimizedImg = optimizedPic.querySelector('img');
+    ['width', 'height'].forEach((attribute) => {
+      if (img.hasAttribute(attribute)) {
+        optimizedImg.setAttribute(attribute, img.getAttribute(attribute));
+      }
+    });
+    moveInstrumentation(img, optimizedImg);
     img.closest('picture').replaceWith(optimizedPic);
   });
 }
