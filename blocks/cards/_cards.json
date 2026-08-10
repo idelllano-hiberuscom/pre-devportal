@@ -32,6 +32,22 @@
       }
     },
     {
+      "title": "Cards Editorial",
+      "id": "cards-editorial",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Cards",
+              "filter": "cards-editorial",
+              "variant": "editorial"
+            }
+          }
+        }
+      }
+    },
+    {
       "title": "Card",
       "id": "card",
       "plugins": {
@@ -41,6 +57,21 @@
             "template": {
               "name": "Card",
               "model": "card"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Card Editorial",
+      "id": "card-editorial",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Card",
+              "model": "card-editorial"
             }
           }
         }
@@ -91,6 +122,37 @@
           }
         }
       }
+    },
+    {
+      "title": "Cards Plugins",
+      "id": "cards-plugins",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Cards",
+              "filter": "cards-plugins",
+              "variant": "plugins"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Card Plugin",
+      "id": "card-plugin",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Card",
+              "model": "card-plugin"
+            }
+          }
+        }
+      }
     }
   ],
   "models": [
@@ -110,6 +172,35 @@
           "value": "",
           "label": "Text",
           "valueType": "string"
+        }
+      ]
+    },
+    {
+      "id": "card-editorial",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "multi": false,
+          "required": true
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "imageAlt",
+          "label": "Alt",
+          "value": "",
+          "required": true
+        },
+        {
+          "component": "richtext",
+          "name": "text",
+          "value": "",
+          "label": "Text",
+          "valueType": "string",
+          "required": true
         }
       ]
     },
@@ -168,6 +259,43 @@
           "required": true
         }
       ]
+    },
+    {
+      "id": "card-plugin",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "multi": false,
+          "required": true
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "imageAlt",
+          "label": "Alt",
+          "value": "",
+          "required": true
+        },
+        {
+          "component": "richtext",
+          "name": "text",
+          "value": "",
+          "label": "Text",
+          "valueType": "string",
+          "required": true
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "link",
+          "label": "Link",
+          "value": "",
+          "required": true
+        }
+      ]
     }
   ],
   "filters": [
@@ -175,6 +303,12 @@
       "id": "cards",
       "components": [
         "card"
+      ]
+    },
+    {
+      "id": "cards-editorial",
+      "components": [
+        "card-editorial"
       ]
     },
     {
@@ -187,6 +321,12 @@
       "id": "cards-icon-cards",
       "components": [
         "card-icon"
+      ]
+    },
+    {
+      "id": "cards-plugins",
+      "components": [
+        "card-plugin"
       ]
     }
   ]
