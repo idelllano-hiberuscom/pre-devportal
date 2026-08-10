@@ -14,6 +14,8 @@
       "title",
       "hero",
       "cards",
+      "cards-logos",
+      "cards-icon-cards",
       "columns",
       "fragment",
       "accordion"
@@ -29,6 +31,18 @@
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "cards-logos",
+    "components": [
+      "card-logo"
+    ]
+  },
+  {
+    "id": "cards-icon-cards",
+    "components": [
+      "card-icon"
     ]
   },
   {
