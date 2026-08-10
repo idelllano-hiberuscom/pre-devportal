@@ -49,11 +49,18 @@
         "title",
         "hero",
         "cards",
+        "cards-editorial",
         "cards-logos",
         "cards-icon-cards",
+        "cards-plugins",
         "columns",
         "fragment",
-        "pie-chart"
+        "pie-chart",
+        "video",
+        "tabs",
+        "accordion",
+        "contact-form",
+        "swagger-console"
       ]
     }
   ]
