@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'nonce-aem' 'strict-dynamic' 'unsafe-inline' http: https:; base-uri 'self'; object-src 'none';"
+    >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script nonce="aem" type="module">
+      import {
+        decorateBlocks,
+        decorateIcons,
+        decorateSections,
+        loadSection,
+        loadSections,
+        waitForFirstImage,
+      } from '/scripts/aem.js';
+
+      window.hlx = window.hlx || {};
+      window.hlx.codeBasePath = '';
+
+      window.addEventListener('DOMContentLoaded', async () => {
+        const main = document.querySelector('main');
+        decorateIcons(main);
+        decorateSections(main);
+        decorateBlocks(main);
+        document.body.classList.add('appear');
+        await loadSection(main.querySelector('.section'), waitForFirstImage);
+        await loadSections(main);
+      });
+    </script>
+  </head>
+  <body>
+    <main>
+      <div>
+        <h1>Swagger Console</h1>
+        <p>Focused test content for the pending authenticated shell and authored block fields.</p>
+      </div>
+      <div>
+        <div class="swagger-console">
+          <div>
+            <div>backgroundImage</div>
+            <div>
+              <picture>
+                <img src="/icons/search.svg" alt="">
+              </picture>
+            </div>
+          </div>
+          <div>
+            <div>recoveryLink</div>
+            <div><a href="/recovery">¿Has olvidado tu contraseña?</a></div>
+          </div>
+          <div>
+            <div>registerLink</div>
+            <div><a href="/register">Regístrate</a></div>
+          </div>
+          <div>
+            <div>authEndpoint</div>
+            <div></div>
+          </div>
+          <div>
+            <div>openApiEndpoint</div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
