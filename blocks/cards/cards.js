@@ -101,6 +101,7 @@ function decorateLogoCard(li, cells) {
 export default function decorate(block) {
   const isLogoVariant = block.classList.contains('logos');
   const isIconCardsVariant = block.classList.contains('icon-cards');
+  const isPluginsVariant = block.classList.contains('plugins');
   const ul = document.createElement('ul');
 
   while (block.firstElementChild) {
@@ -119,6 +120,24 @@ export default function decorate(block) {
       altText = decorateLogoCard(li, cells);
     } else if (isIconCardsVariant) {
       altText = decorateIconCard(li, cells);
+    } else if (isPluginsVariant) {
+      const [imageCell, altCell, bodyCell, linkCell] = cells;
+      altText = altCell?.textContent.trim() || '';
+
+      if (imageCell) {
+        imageCell.className = 'cards-card-image';
+      }
+      if (bodyCell) {
+        bodyCell.className = 'cards-card-body';
+      }
+
+      const href = linkCell?.textContent.trim() || '#';
+      const anchor = document.createElement('a');
+      anchor.href = href;
+
+      if (imageCell) anchor.append(imageCell);
+      if (bodyCell) anchor.append(bodyCell);
+      li.append(anchor);
     } else {
       decorateDefaultCard(li, cells);
     }
