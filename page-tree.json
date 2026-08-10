@@ -1,0 +1,634 @@
+{
+  "site": "pre-devportal",
+  "package_name": "pre-devportal-content",
+  "content_root": "/content/pre-devportal",
+  "author_url": "https://author-p34633-e913315.adobeaemcloud.com",
+  "mode": "B",
+  "skeleton_verified": true,
+  "skeleton": {
+    "page_resource_type": "core/franklin/components/page/v1/page",
+    "root_node_name": "root",
+    "root_resource_type": "core/franklin/components/root/v1/root",
+    "section_resource_type": "core/franklin/components/section/v1/section",
+    "block_resource_type": "core/franklin/components/block/v1/block",
+    "item_resource_type": "core/franklin/components/block/v1/block/item"
+  },
+  "source_summary": {
+    "requested_urls": 31,
+    "processed_pages": 31,
+    "from_import_work": 25,
+    "from_portal_read": 0,
+    "portal_read_errors": 6,
+    "intermediate_pages": 10,
+    "pages_with_components": 11,
+    "component_instances": 17
+  },
+  "pages": [
+    {
+      "path": "/content/pre-devportal/ayuda",
+      "title": "Ayuda",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/ayuda",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": [
+            {
+              "block": "contact-form",
+              "ticket_id": "PA-26",
+              "name": "Contact Form",
+              "model": "contact-form"
+            },
+            {
+              "block": "accordion",
+              "ticket_id": "PA-27",
+              "name": "Accordion",
+              "filter": "accordion"
+            }
+          ]
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/blog",
+      "title": "Novedades",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/blog",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": [
+            {
+              "block": "cards",
+              "ticket_id": "PA-33",
+              "name": "Cards",
+              "filter": "cards-editorial",
+              "classes": "editorial"
+            }
+          ]
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/empieza-con-nosotros",
+      "title": "Empieza con nosotros...",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/empieza-con-nosotros",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": [
+            {
+              "block": "cards",
+              "ticket_id": "PA-25",
+              "name": "Cards",
+              "filter": "cards-logos",
+              "classes": "logos"
+            },
+            {
+              "block": "tabs",
+              "ticket_id": "PA-28",
+              "name": "Tabs",
+              "filter": "tabs"
+            }
+          ]
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/fraude",
+      "title": "Fraude",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/fraude",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": [
+            {
+              "block": "pie-chart",
+              "ticket_id": "PA-30",
+              "name": "Pie Chart",
+              "filter": "pie-chart"
+            }
+          ]
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/herramientas-para-desarrolladores",
+      "title": "Herramientas para desarrolladores",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/inicio",
+      "title": "¡Bienvenido al Portal de Desarrolladores de e-commerce!",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/inicio",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": [
+            {
+              "block": "contact-form",
+              "ticket_id": "PA-26",
+              "name": "Contact Form",
+              "model": "contact-form"
+            },
+            {
+              "block": "video",
+              "ticket_id": "PA-29",
+              "name": "Video",
+              "filter": "video"
+            },
+            {
+              "block": "cards",
+              "ticket_id": "PA-31",
+              "name": "Cards",
+              "filter": "cards-icon-cards",
+              "classes": "icon-cards"
+            }
+          ]
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/integraciones",
+      "title": "Integraciones",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "intermediate": true
+    },
+    {
+      "path": "/content/pre-devportal/plugin",
+      "title": "Plugin",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/plugin",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "source": "portal-read-error",
+      "content_unavailable": true
+    },
+    {
+      "path": "/content/pre-devportal/sin-integracion",
+      "title": "Sin Integracion",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "intermediate": true
+    },
+    {
+      "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion",
+      "title": "Con Integracion",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "intermediate": true
+    },
+    {
+      "path": "/content/pre-devportal/herramientas-para-desarrolladores/otros",
+      "title": "Otros",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "intermediate": true
+    },
+    {
+      "path": "/content/pre-devportal/herramientas-para-desarrolladores/sin-integracion",
+      "title": "Sin Integracion",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "intermediate": true
+    },
+    {
+      "path": "/content/pre-devportal/integraciones/api",
+      "title": "API REST",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/integraciones/api",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": [
+            {
+              "block": "cards",
+              "ticket_id": "PA-31",
+              "name": "Cards",
+              "filter": "cards-icon-cards",
+              "classes": "icon-cards"
+            },
+            {
+              "block": "code-block",
+              "ticket_id": "PA-34",
+              "name": "Code Block",
+              "model": "code-block"
+            },
+            {
+              "block": "carousel",
+              "ticket_id": "PA-35",
+              "name": "Carousel",
+              "filter": "carousel"
+            }
+          ]
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/integraciones/hosted-checkout",
+      "title": "Hosted Checkout",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/integraciones/hosted-checkout",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": [
+            {
+              "block": "carousel",
+              "ticket_id": "PA-35",
+              "name": "Carousel",
+              "filter": "carousel"
+            }
+          ]
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/integraciones/iframe",
+      "title": "Iframe",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/integraciones/iframe",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "source": "portal-read-error",
+      "content_unavailable": true
+    },
+    {
+      "path": "/content/pre-devportal/integraciones/sdk",
+      "title": "SDK",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/integraciones/sdk",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": [
+            {
+              "block": "carousel",
+              "ticket_id": "PA-35",
+              "name": "Carousel",
+              "filter": "carousel"
+            }
+          ]
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/plugin/herramientas-para-desarrolladores",
+      "title": "Herramientas Para Desarrolladores",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "intermediate": true
+    },
+    {
+      "path": "/content/pre-devportal/sin-integracion/pago-por-email",
+      "title": "Pago por eMail",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/sin-integracion/pago-por-email",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/sin-integracion/pagos-moto",
+      "title": "Pagos MOTO",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/sin-integracion/pagos-moto",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/api",
+      "title": "Api",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "intermediate": true
+    },
+    {
+      "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/hosted-checkout",
+      "title": "Hosted Checkout",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/hosted-checkout",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/iframe",
+      "title": "Iframe",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/iframe",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/sdk",
+      "title": "Sdk",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/sdk",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/herramientas-para-desarrolladores/otros/apple-pay",
+      "title": "Apple Pay",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/otros/apple-pay",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/herramientas-para-desarrolladores/otros/bizum",
+      "title": "Bizum",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/otros/bizum",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/herramientas-para-desarrolladores/otros/google-pay",
+      "title": "Google Pay",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/otros/google-pay",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "source": "portal-read-error",
+      "content_unavailable": true
+    },
+    {
+      "path": "/content/pre-devportal/herramientas-para-desarrolladores/sin-integracion/pagos-moto",
+      "title": "Pagos Moto",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/pagos-moto",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/herramientas-para-desarrolladores/sin-integracion/pay-by-link",
+      "title": "Pay By Link",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/pay-by-link",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/herramientas-para-desarrolladores/sin-integracion/plugins",
+      "title": "Plugins",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "intermediate": true
+    },
+    {
+      "path": "/content/pre-devportal/plugin/herramientas-para-desarrolladores/sin-integracion",
+      "title": "Sin Integracion",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "intermediate": true
+    },
+    {
+      "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones",
+      "title": "Anulacion De Operaciones",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones",
+      "title": "Gestor De Operaciones",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/api/swagger",
+      "title": "Swagger",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/swagger",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": [
+            {
+              "block": "swagger-console",
+              "ticket_id": "PA-24",
+              "name": "Swagger Console",
+              "model": "swagger-console"
+            }
+          ]
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/api/tokenizacion",
+      "title": "Tokenizacion",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/con-integracion/api/tokenizacion",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": [
+            {
+              "block": "code-block",
+              "ticket_id": "PA-34",
+              "name": "Code Block",
+              "model": "code-block"
+            }
+          ]
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/herramientas-para-desarrolladores/sin-integracion/plugins/resumen",
+      "title": "Resumen",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/herramientas-para-desarrolladores/sin-integracion/plugins/resumen",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": [
+            {
+              "block": "cards",
+              "ticket_id": "PA-32",
+              "name": "Cards",
+              "filter": "cards-plugins",
+              "classes": "plugins"
+            }
+          ]
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/plugin/herramientas-para-desarrolladores/sin-integracion/plugins",
+      "title": "Plugins",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "intermediate": true
+    },
+    {
+      "path": "/content/pre-devportal/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp",
+      "title": "Givewp",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "source": "portal-read-error",
+      "content_unavailable": true
+    },
+    {
+      "path": "/content/pre-devportal/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento",
+      "title": "Magento",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "source": "portal-read-error",
+      "content_unavailable": true
+    },
+    {
+      "path": "/content/pre-devportal/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce",
+      "title": "Oscommerce",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "source": "import-work"
+    },
+    {
+      "path": "/content/pre-devportal/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop",
+      "title": "Prestashop",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "source": "portal-read-error",
+      "content_unavailable": true
+    },
+    {
+      "path": "/content/pre-devportal/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce",
+      "title": "Woocomerce",
+      "source_url": "https://pre-devportaltpv.cloud.cecabank.es/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce",
+      "sections": [
+        {
+          "name": "section",
+          "blocks": []
+        }
+      ],
+      "source": "import-work"
+    }
+  ]
+}

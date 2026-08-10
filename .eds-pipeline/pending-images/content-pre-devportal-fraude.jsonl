@@ -1,0 +1,6 @@
+{"page":"/content/pre-devportal/fraude","componente":"pie-chart","campo":"icon","item":0,"selector_origen":".pie-chart__list > component-wrapper:nth-of-type(1) .pie-chart__list .pie-chart-slice__icon svg","ticket_id":"PA-30"}
+{"page":"/content/pre-devportal/fraude","componente":"pie-chart","campo":"icon","item":1,"selector_origen":".pie-chart__list > component-wrapper:nth-of-type(2) .pie-chart__list .pie-chart-slice__icon svg","ticket_id":"PA-30"}
+{"page":"/content/pre-devportal/fraude","componente":"pie-chart","campo":"icon","item":2,"selector_origen":".pie-chart__list > component-wrapper:nth-of-type(3) .pie-chart__list .pie-chart-slice__icon svg","ticket_id":"PA-30"}
+{"page":"/content/pre-devportal/fraude","componente":"pie-chart","campo":"icon","item":3,"selector_origen":".pie-chart__list > component-wrapper:nth-of-type(4) .pie-chart__list .pie-chart-slice__icon svg","ticket_id":"PA-30"}
+{"page":"/content/pre-devportal/fraude","componente":"pie-chart","campo":"icon","item":4,"selector_origen":".pie-chart__list > component-wrapper:nth-of-type(5) .pie-chart__list .pie-chart-slice__icon svg","ticket_id":"PA-30"}
+{"page":"/content/pre-devportal/fraude","componente":"pie-chart","campo":"icon","item":5,"selector_origen":".pie-chart__list > component-wrapper:nth-of-type(6) .pie-chart__list .pie-chart-slice__icon svg","ticket_id":"PA-30"}

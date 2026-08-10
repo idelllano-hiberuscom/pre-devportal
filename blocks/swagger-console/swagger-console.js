@@ -207,6 +207,7 @@ export default function decorate(block) {
   const entries = getEntries(block);
   const config = readSwaggerConfig(entries);
   const { authEndpoint, openApiEndpoint } = resolveEndpoints(config);
+  const isMockIntegration = !authEndpoint || !openApiEndpoint;
   const backgroundImage = sanitizeUrl(config.backgroundImage || '');
   const recoveryLink = sanitizeUrl(config.recoveryLink || '/recovery');
   const registerLink = sanitizeUrl(config.registerLink || '/register');
@@ -282,19 +283,20 @@ export default function decorate(block) {
   content.append(login, frame);
   block.append(content, source);
 
-  if (!authEndpoint || !openApiEndpoint) {
-    submitButton.disabled = true;
+  if (isMockIntegration) {
+    block.dataset.mockIntegration = 'true';
     setState(
       block,
       form,
       status,
-      'configuration-pending',
-      'Configuración pendiente para la consola de API.',
+      'ready',
+      'Modo mock activo. Inicia sesión para probar la integración.',
     );
-    return;
+    // eslint-disable-next-line no-console
+    console.info('[swagger-console:mock]', { event: 'integration-ready' });
+  } else {
+    setState(block, form, status, 'ready', 'Inicia sesión para cargar la consola de API.');
   }
-
-  setState(block, form, status, 'ready', 'Inicia sesión para cargar la consola de API.');
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -304,6 +306,17 @@ export default function decorate(block) {
     passwordInput.disabled = true;
 
     try {
+      if (isMockIntegration) {
+        // eslint-disable-next-line no-console
+        console.info('[swagger-console:mock]', {
+          event: 'authentication-submitted',
+          emailProvided: Boolean(emailInput.value),
+          passwordProvided: Boolean(passwordInput.value),
+        });
+        setState(block, form, status, 'ready', 'Autenticación mock completada.');
+        return;
+      }
+
       const authResponse = await fetch(authEndpoint, {
         method: 'POST',
         credentials: 'include',

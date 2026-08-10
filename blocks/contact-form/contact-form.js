@@ -149,6 +149,7 @@ export default function decorate(block) {
     form.action = action;
   } else {
     block.dataset.missingAction = 'true';
+    block.dataset.mockIntegration = 'true';
   }
 
   [
@@ -187,10 +188,16 @@ export default function decorate(block) {
       return;
     }
 
-    if (!form.action) {
+    if (!action) {
       event.preventDefault();
+      const formData = new FormData(form);
       // eslint-disable-next-line no-console
-      console.warn('The contact-form action is not configured in authored content.');
+      console.info('[contact-form:mock]', {
+        event: 'submission-completed',
+        populatedFields: [...formData.entries()]
+          .filter(([, value]) => String(value).trim())
+          .map(([name]) => name),
+      });
     }
   });
 

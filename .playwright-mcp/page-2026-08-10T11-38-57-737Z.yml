@@ -1,0 +1,47 @@
+- generic [ref=f7e6]:
+  - generic [ref=f7e7]:
+    - generic [ref=f7e11]:
+      - heading "CX Enterprise" [level=2] [ref=f7e15]
+      - generic [ref=f7e16]: Inicie sesión para acceder a CX Enterprise para su organización.
+    - generic [ref=f7e17]:
+      - main [ref=f7e21]:
+        - generic [ref=f7e23]:
+          - generic [ref=f7e26]:
+            - generic [ref=f7e27]:
+              - generic [ref=f7e28]:
+                - img "Information"
+              - generic [ref=f7e29]: ¿Sueles iniciar sesión con Facebook, Google o Apple? Introduce tu correo electrónico a continuación y te ayudaremos a iniciar sesión.
+            - button "Close" [ref=f7e31] [cursor=pointer]: ×
+          - generic [ref=f7e33]:
+            - heading "Inicio de sesión" [level=1] [ref=f7e35]
+            - generic [ref=f7e37]:
+              - generic [ref=f7e38]:
+                - paragraph [ref=f7e39]:
+                  - text: ¿Eres un nuevo usuario?
+                  - link "Crear una cuenta" [ref=f7e40] [cursor=pointer]:
+                    - /url: ""
+                - generic [ref=f7e41]:
+                  - generic [ref=f7e42]: Dirección de correo electrónico
+                  - textbox "Dirección de correo electrónico" [active] [ref=f7e47]
+              - button "Continuar" [ref=f7e51] [cursor=pointer]
+            - list [ref=f7e53]:
+              - listitem [ref=f7e54]:
+                - link "Obtener ayuda sobre cómo iniciar sesión" [ref=f7e55] [cursor=pointer]:
+                  - /url: ""
+      - button "Contact us" [ref=f7e56] [cursor=pointer]
+  - complementary:
+    - link [ref=f7e57] [cursor=pointer]:
+      - /url: https://stock.adobe.com/ro/contributor/200802437/blend-images?as_channel=adobe_com&as_source=susi&as_campclass=brand&as_campaign=stock_images&as_audience=users&as_content=contributor_page
+      - generic [ref=f7e58]:
+        - img "Stock" [ref=f7e60]
+        - text: Blend Images
+  - generic [ref=f7e61]:
+    - generic [ref=f7e62]: Copyright © 2026 Adobe. All rights reserved.
+    - link "Condiciones de uso" [ref=f7e63] [cursor=pointer]:
+      - /url: ""
+    - link "Preferencias de cookies" [ref=f7e64] [cursor=pointer]:
+      - /url: "#CookiePreferences"
+    - link "Privacidad" [ref=f7e65] [cursor=pointer]:
+      - /url: https://www.adobe.com/go/privacy_policy_linkfree_es
+    - link "No vender ni compartir mi información personal" [ref=f7e66] [cursor=pointer]:
+      - /url: https://www.adobe.com/privacy/us-rights-linkfree.html

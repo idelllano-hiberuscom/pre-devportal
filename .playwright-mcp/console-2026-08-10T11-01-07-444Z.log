@@ -1,0 +1,35 @@
+[     606ms] [INFO] [swagger-console:mock] {event: integration-ready} @ http://localhost:3000/blocks/swagger-console/swagger-console.js:295
+[     954ms] [INFO] [swagger-console:mock] {event: authentication-submitted, emailProvided: true, passwordProvided: true} @ http://localhost:3000/drafts/swagger-console:96
+[    5779ms] [INFO] [contact-form:mock] {event: submission-completed, populatedFields: Array(5)} @ http://localhost:3000/drafts/contact-form:72
+[    5790ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/nav.plain.html:0
+[    5791ms] [ERROR] failed to load module for header TypeError: Cannot read properties of null (reading 'firstElementChild')
+    at Module.decorate (http://localhost:3000/blocks/header/header.js:125:19)
+    at async http://localhost:3000/scripts/aem.js:564:15 @ http://localhost:3000/drafts/contact-form:72
+[    5792ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/footer.plain.html:0
+[    5793ms] [ERROR] failed to load module for footer TypeError: Cannot read properties of null (reading 'firstElementChild')
+    at Module.decorate (http://localhost:3000/blocks/footer/footer.js:17:19)
+    at async http://localhost:3000/scripts/aem.js:564:15 @ http://localhost:3000/drafts/contact-form:72
+[   16158ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/nav.plain.html:0
+[   16159ms] [ERROR] failed to load module for header TypeError: Cannot read properties of null (reading 'firstElementChild')
+    at Module.decorate (http://localhost:3000/blocks/header/header.js:125:19)
+    at async http://localhost:3000/scripts/aem.js:564:15 @ http://localhost:3000/drafts/contact-form:72
+[   16182ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/footer.plain.html:0
+[   16182ms] [ERROR] failed to load module for footer TypeError: Cannot read properties of null (reading 'firstElementChild')
+    at Module.decorate (http://localhost:3000/blocks/footer/footer.js:17:19)
+    at async http://localhost:3000/scripts/aem.js:564:15 @ http://localhost:3000/drafts/contact-form:72
+[  120392ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/footer.plain.html:0
+[  120392ms] [ERROR] failed to load module for footer TypeError: Cannot read properties of null (reading 'firstElementChild')
+    at Module.decorate (http://localhost:3000/blocks/footer/footer.js:17:19)
+    at async http://localhost:3000/scripts/aem.js:564:15 @ http://localhost:3000/drafts/contact-form:72
+[  120393ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/nav.plain.html:0
+[  120394ms] [ERROR] failed to load module for header TypeError: Cannot read properties of null (reading 'firstElementChild')
+    at Module.decorate (http://localhost:3000/blocks/header/header.js:125:19)
+    at async http://localhost:3000/scripts/aem.js:564:15 @ http://localhost:3000/drafts/contact-form:72
+[ 1536062ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/nav.plain.html:0
+[ 1536063ms] [ERROR] failed to load module for header TypeError: Cannot read properties of null (reading 'firstElementChild')
+    at Module.decorate (http://localhost:3000/blocks/header/header.js:125:19)
+    at async http://localhost:3000/scripts/aem.js:564:15 @ http://localhost:3000/drafts/contact-form:72
+[ 1536064ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/footer.plain.html:0
+[ 1536065ms] [ERROR] failed to load module for footer TypeError: Cannot read properties of null (reading 'firstElementChild')
+    at Module.decorate (http://localhost:3000/blocks/footer/footer.js:17:19)
+    at async http://localhost:3000/scripts/aem.js:564:15 @ http://localhost:3000/drafts/contact-form:72

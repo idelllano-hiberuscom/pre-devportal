@@ -1,0 +1,6 @@
+{"page":"/content/pre-devportal/inicio","componente":"contact-form","campo":"image","selector_origen":".contact-form__img","ticket_id":"PA-26"}
+{"page":"/content/pre-devportal/inicio","componente":"video","campo":"uri","item":0,"selector_origen":"source:nth-of-type(1) source","ticket_id":"PA-29"}
+{"page":"/content/pre-devportal/inicio","componente":"cards","campo":"image","item":0,"selector_origen":".features-with-image__content__cards > div:nth-of-type(1) .icon-card__header svg","ticket_id":"PA-31"}
+{"page":"/content/pre-devportal/inicio","componente":"cards","campo":"image","item":1,"selector_origen":".features-with-image__content__cards > div:nth-of-type(2) .icon-card__header svg","ticket_id":"PA-31"}
+{"page":"/content/pre-devportal/inicio","componente":"cards","campo":"image","item":2,"selector_origen":".features-with-image__content__cards > div:nth-of-type(3) .icon-card__header svg","ticket_id":"PA-31"}
+{"page":"/content/pre-devportal/inicio","componente":"cards","campo":"image","item":3,"selector_origen":".features-with-image__content__cards > div:nth-of-type(4) .icon-card__header svg","ticket_id":"PA-31"}
