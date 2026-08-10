@@ -55,6 +55,7 @@
         "cards-plugins",
         "columns",
         "fragment",
+        "tabs",
         "accordion",
         "contact-form",
         "swagger-console"

@@ -20,6 +20,7 @@
       "cards-plugins",
       "columns",
       "fragment",
+      "tabs",
       "accordion",
       "contact-form",
       "swagger-console"
@@ -74,6 +75,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tabs-item"
     ]
   }
 ]
