@@ -304,6 +304,36 @@
     ]
   },
   {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "media_image",
+        "label": "Imagen",
+        "description": "Campo extraído de la propuesta aprobada.",
+        "required": true,
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "media_imageAlt",
+        "label": "Texto alternativo",
+        "description": "Campo extraído de la propuesta aprobada.",
+        "required": true
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content_text",
+        "label": "Texto",
+        "description": "Campo extraído de la propuesta aprobada.",
+        "required": true
+      }
+    ]
+  },
+  {
     "id": "code-block",
     "fields": [
       {
