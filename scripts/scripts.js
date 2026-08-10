@@ -46,6 +46,21 @@ export function moveInstrumentation(from, to) {
 }
 
 /**
+ * Resolves a path that is relative to the site root.
+ *
+ * On the delivery hosts the site is mounted at the origin root, so "/nav" is
+ * already correct. Universal Editor renders straight from the author, where
+ * the same page lives under /content/<site>/ and "/nav" resolves to the
+ * server root instead — a 404, which leaves the header and footer empty.
+ * @param {string} path site-root-relative path, e.g. "/nav"
+ * @returns {string} the path resolved for the current host
+ */
+export function rootPath(path) {
+  const [, content, site] = window.location.pathname.split('/');
+  return content === 'content' && site ? `/content/${site}${path}` : path;
+}
+
+/**
  * load fonts.css and set a session storage flag
  */
 async function loadFonts() {
