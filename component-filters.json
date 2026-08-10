@@ -20,8 +20,15 @@
       "cards-plugins",
       "columns",
       "fragment",
+      "accordion",
       "contact-form",
       "swagger-console"
+    ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordion-item"
     ]
   },
   {
