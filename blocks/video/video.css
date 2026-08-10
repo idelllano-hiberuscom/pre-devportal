@@ -1,0 +1,32 @@
+.video {
+  padding: 1rem;
+}
+
+.video .video-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.video .video-item {
+  width: 100%;
+}
+
+.video .video-item video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+@media (width >= 600px) {
+  .video {
+    padding: 1.5rem;
+  }
+}
+
+@media (width >= 900px) {
+  .video {
+    padding: 2rem;
+  }
+}
