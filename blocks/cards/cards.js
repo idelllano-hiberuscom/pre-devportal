@@ -71,7 +71,13 @@ function optimizeCardImages(li, altText, width) {
       false,
       [{ width }],
     );
-    moveInstrumentation(img, optimizedPic.querySelector('img'));
+    const optimizedImg = optimizedPic.querySelector('img');
+    ['width', 'height'].forEach((attribute) => {
+      if (img.hasAttribute(attribute)) {
+        optimizedImg.setAttribute(attribute, img.getAttribute(attribute));
+      }
+    });
+    moveInstrumentation(img, optimizedImg);
     img.closest('picture').replaceWith(optimizedPic);
   });
 }
@@ -101,6 +107,7 @@ function decorateLogoCard(li, cells) {
 export default function decorate(block) {
   const isLogoVariant = block.classList.contains('logos');
   const isIconCardsVariant = block.classList.contains('icon-cards');
+  const isPluginsVariant = block.classList.contains('plugins');
   const ul = document.createElement('ul');
 
   while (block.firstElementChild) {
@@ -119,6 +126,34 @@ export default function decorate(block) {
       altText = decorateLogoCard(li, cells);
     } else if (isIconCardsVariant) {
       altText = decorateIconCard(li, cells);
+    } else if (isPluginsVariant) {
+      const [imageCell, altCell, bodyCell, linkCell] = cells;
+      altText = altCell?.textContent.trim() || '';
+
+      if (imageCell) {
+        imageCell.className = 'cards-card-image';
+      }
+      if (bodyCell) {
+        bodyCell.className = 'cards-card-body';
+      }
+      if (altCell) {
+        altCell.className = 'cards-card-alt';
+        altCell.setAttribute('aria-hidden', 'true');
+      }
+      if (linkCell) {
+        linkCell.className = 'cards-card-link';
+        linkCell.setAttribute('aria-hidden', 'true');
+      }
+
+      const href = linkCell?.textContent.trim() || '#';
+      const anchor = document.createElement('a');
+      anchor.href = href;
+
+      if (imageCell) anchor.append(imageCell);
+      if (bodyCell) anchor.append(bodyCell);
+      li.append(anchor);
+      if (altCell) li.append(altCell);
+      if (linkCell) li.append(linkCell);
     } else {
       decorateDefaultCard(li, cells);
     }

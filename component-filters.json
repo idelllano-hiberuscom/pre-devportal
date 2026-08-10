@@ -16,6 +16,7 @@
       "cards",
       "cards-logos",
       "cards-icon-cards",
+      "cards-plugins",
       "carousel",
       "columns",
       "fragment"
@@ -37,6 +38,12 @@
     "id": "cards-icon-cards",
     "components": [
       "card-icon"
+    ]
+  },
+  {
+    "id": "cards-plugins",
+    "components": [
+      "card-plugin"
     ]
   },
   {
