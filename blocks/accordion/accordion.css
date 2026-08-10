@@ -1,3 +1,8 @@
+.accordion-intro .default-content-wrapper h2 {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
 .accordion > .accordion-item {
   border-top: 1px solid var(--light-color);
 }
@@ -29,9 +34,9 @@
 .accordion .accordion-item-summary::after {
   content: '+';
   flex-shrink: 0;
-  font-size: var(--heading-font-size-s);
+  font-size: 24px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 24px;
 }
 
 .accordion .accordion-item-details[open] > .accordion-item-summary::after {

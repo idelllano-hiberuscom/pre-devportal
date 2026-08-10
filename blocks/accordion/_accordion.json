@@ -39,14 +39,17 @@
           "component": "text",
           "valueType": "string",
           "name": "summary",
-          "label": "Summary"
+          "label": "Summary",
+          "value": "",
+          "required": true
         },
         {
           "component": "richtext",
           "valueType": "string",
           "name": "text",
           "label": "Text",
-          "value": ""
+          "value": "",
+          "required": true
         }
       ]
     }

@@ -1,5 +1,7 @@
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
+let accordionGroupId = 0;
+
 function buildSummary(cell) {
   const summary = document.createElement('summary');
   summary.className = 'accordion-item-summary';
@@ -28,16 +30,28 @@ function buildBody(cells) {
 }
 
 export default function decorate(block) {
+  accordionGroupId += 1;
+  const groupName = `accordion-${accordionGroupId}`;
+  const section = block.closest('.section');
+  section?.classList.add('accordion-section');
+  section?.previousElementSibling?.classList.add('accordion-intro');
+
   [...block.children].forEach((row) => {
     const [summaryCell, ...contentCells] = [...row.children];
 
-    if (!summaryCell) {
+    if (!summaryCell || !summaryCell.textContent.trim()) {
       return;
     }
 
     const details = document.createElement('details');
     details.className = 'accordion-item-details';
+    details.setAttribute('name', groupName);
     moveInstrumentation(row, details);
+
+    if (row.hasAttribute('open')) {
+      details.setAttribute('open', '');
+      row.removeAttribute('open');
+    }
 
     details.append(buildSummary(summaryCell));
 
