@@ -20,6 +20,7 @@
       "cards-plugins",
       "columns",
       "fragment",
+      "pie-chart",
       "video",
       "tabs",
       "accordion",
@@ -76,6 +77,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "pie-chart",
+    "components": [
+      "pie-chart-item"
     ]
   },
   {
