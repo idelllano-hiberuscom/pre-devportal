@@ -304,6 +304,57 @@
     ]
   },
   {
+    "id": "code-block",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "language",
+        "label": "Language",
+        "valueType": "string",
+        "required": true,
+        "options": [
+          {
+            "name": "JSON",
+            "value": "json"
+          },
+          {
+            "name": "XML",
+            "value": "xml"
+          },
+          {
+            "name": "HTML",
+            "value": "html"
+          },
+          {
+            "name": "JavaScript",
+            "value": "javascript"
+          },
+          {
+            "name": "Shell",
+            "value": "shell"
+          },
+          {
+            "name": "Text",
+            "value": "text"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "name": "code",
+        "label": "Code",
+        "valueType": "string",
+        "required": true
+      }
+    ]
+  },
+  {
     "id": "columns",
     "fields": [
       {

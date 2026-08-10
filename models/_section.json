@@ -55,6 +55,7 @@
         "cards-plugins",
         "columns",
         "fragment",
+        "code-block",
         "pie-chart",
         "video",
         "tabs",
