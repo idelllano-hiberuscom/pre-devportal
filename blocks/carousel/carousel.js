@@ -18,6 +18,7 @@ function updateActiveSlide(slides, controls, activeIndex) {
     const isActive = index === activeIndex;
     slide.classList.toggle('is-active', isActive);
     slide.hidden = !isActive;
+    slide.tabIndex = isActive ? 0 : -1;
   });
 
   controls.forEach((control, index) => {
@@ -28,8 +29,24 @@ function updateActiveSlide(slides, controls, activeIndex) {
   });
 }
 
+function getSlideCells(slide) {
+  const cells = [...slide.children];
+  const imageCell = slide.querySelector(':scope > [data-aue-prop="media_image"]') || cells[0];
+  const altCellByProp = slide.querySelector(':scope > [data-aue-prop="media_imageAlt"]');
+  const textCellByProp = slide.querySelector(':scope > [data-aue-prop="content_text"]');
+  const fallbackAltCell = !altCellByProp && cells.length > 2 ? cells[1] : altCellByProp;
+  const textCell = textCellByProp
+    || cells.find((cell) => cell !== imageCell && cell !== fallbackAltCell);
+
+  return {
+    imageCell,
+    altCell: fallbackAltCell,
+    textCell,
+  };
+}
+
 function decorateSlide(slide, index, total, carouselId) {
-  const [imageCell, altCell, textCell] = [...slide.children];
+  const { imageCell, altCell, textCell } = getSlideCells(slide);
   const slideId = `${carouselId}-slide-${index + 1}`;
   const media = document.createElement('div');
   const body = document.createElement('div');
@@ -37,8 +54,7 @@ function decorateSlide(slide, index, total, carouselId) {
 
   slide.classList.add('carousel-slide');
   slide.id = slideId;
-  slide.setAttribute('role', 'group');
-  slide.setAttribute('aria-roledescription', 'slide');
+  slide.setAttribute('role', 'tabpanel');
   slide.setAttribute('aria-label', `Step ${index + 1} of ${total}`);
 
   media.className = 'carousel-slide-media';
@@ -91,17 +107,24 @@ export default function decorate(block) {
   slidesWrapper.setAttribute('aria-label', 'Carousel');
 
   controlsWrapper.className = 'carousel-controls';
+  controlsWrapper.setAttribute('role', 'tablist');
   controlsWrapper.setAttribute('aria-label', 'Carousel navigation');
+
+  const activateSlide = (index) => updateActiveSlide(slides, controls, index);
 
   slides.forEach((slide, index) => {
     const slideId = decorateSlide(slide, index, slides.length, carouselId);
     const control = document.createElement('button');
+    const controlId = `${carouselId}-control-${index + 1}`;
 
     control.className = 'carousel-control';
     control.type = 'button';
+    control.id = controlId;
+    control.setAttribute('role', 'tab');
     control.setAttribute('aria-controls', slideId);
     control.setAttribute('aria-label', `Go to step ${index + 1}`);
-    control.addEventListener('click', () => updateActiveSlide(slides, controls, index));
+    control.addEventListener('click', () => activateSlide(index));
+    slide.setAttribute('aria-labelledby', controlId);
 
     controls.push(control);
     controlsWrapper.append(control);
@@ -109,15 +132,32 @@ export default function decorate(block) {
   });
 
   controlsWrapper.addEventListener('keydown', (event) => {
+    if (!controls.length) return;
+
+    if (event.key === 'Home') {
+      event.preventDefault();
+      controls[0].focus();
+      activateSlide(0);
+      return;
+    }
+
+    if (event.key === 'End') {
+      event.preventDefault();
+      controls[controls.length - 1].focus();
+      activateSlide(controls.length - 1);
+      return;
+    }
+
     const direction = KEYBOARD_DIRECTIONS[event.key];
     if (!direction) return;
 
     const currentIndex = controls.findIndex((control) => control === document.activeElement);
+    if (currentIndex < 0) return;
     const nextIndex = getControlIndex(currentIndex, controls.length, direction);
 
     event.preventDefault();
     controls[nextIndex].focus();
-    controls[nextIndex].click();
+    activateSlide(nextIndex);
   });
 
   block.append(slidesWrapper);
