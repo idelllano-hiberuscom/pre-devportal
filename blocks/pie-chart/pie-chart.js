@@ -52,18 +52,17 @@ export default function decorate(block) {
     const title = cells[0]?.textContent.trim() ?? '';
     const rawValue = parseFloat(cells[1]?.textContent.trim());
     const value = Number.isFinite(rawValue) && rawValue > 0 ? rawValue : 0;
-    const iconEl = cells[2]?.querySelector('picture, img, svg');
-    const iconAlt = cells[3]?.textContent.trim() ?? title;
-    const detailsEl = cells[4];
-
-    const color = getColor('', index);
+    const hasColorCell = cells.length > 4;
+    const color = getColor(hasColorCell ? cells[2]?.textContent : '', index);
+    const iconEl = cells[hasColorCell ? 3 : 2]?.querySelector('picture, img, svg');
+    const detailsEl = cells[hasColorCell ? 4 : 3];
 
     /* Icon */
     if (iconEl) {
       const figure = document.createElement('figure');
       figure.className = 'pie-chart-item-icon';
       const clone = iconEl.cloneNode(true);
-      if (clone.tagName === 'IMG') clone.alt = iconAlt;
+      if (clone.tagName === 'IMG') clone.alt = clone.alt || title;
       figure.append(clone);
       li.append(figure);
     }
@@ -99,10 +98,6 @@ export default function decorate(block) {
   const visual = document.createElement('div');
   visual.className = 'pie-chart-visual';
 
-  const canvas = document.createElement('canvas');
-  canvas.setAttribute('aria-hidden', 'true');
-  visual.append(canvas);
-
   const summary = document.createElement('p');
   summary.className = 'pie-chart-summary visually-hidden';
   visual.append(summary);
@@ -118,6 +113,10 @@ export default function decorate(block) {
     summary.textContent = 'No hay datos disponibles.';
     return;
   }
+
+  const canvas = document.createElement('canvas');
+  canvas.setAttribute('aria-hidden', 'true');
+  visual.prepend(canvas);
 
   summary.textContent = validItems
     .map((d) => `${d.title}: ${d.value}`)

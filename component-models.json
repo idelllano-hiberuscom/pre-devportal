@@ -296,12 +296,6 @@
         "multi": false
       },
       {
-        "component": "text",
-        "name": "iconAlt",
-        "label": "Icon Alt",
-        "valueType": "string"
-      },
-      {
         "component": "richtext",
         "name": "details",
         "label": "Details",
