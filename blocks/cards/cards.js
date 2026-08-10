@@ -2,7 +2,58 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
 function isImageCell(cell) {
-  return Boolean(cell.querySelector('picture'));
+  return Boolean(cell?.querySelector('picture'));
+}
+
+function isEmptyCell(cell) {
+  return Boolean(cell) && !cell.textContent.trim() && !cell.children.length;
+}
+
+function getIconCardCells(cells) {
+  const [firstCell, secondCell, ...remainingCells] = cells;
+
+  if (isImageCell(firstCell)) {
+    return {
+      imageCell: firstCell,
+      altCell: secondCell,
+      bodyCells: remainingCells,
+    };
+  }
+
+  if (isEmptyCell(firstCell)) {
+    return {
+      imageCell: null,
+      altCell: secondCell,
+      bodyCells: remainingCells,
+    };
+  }
+
+  return {
+    imageCell: null,
+    altCell: firstCell,
+    bodyCells: cells.slice(1),
+  };
+}
+
+function decorateIconCard(li, cells) {
+  const { imageCell, altCell, bodyCells } = getIconCardCells(cells);
+  const altText = altCell?.textContent.trim() || '';
+
+  if (imageCell) {
+    imageCell.className = 'cards-card-image';
+    li.append(imageCell);
+  }
+  if (altCell) {
+    altCell.className = 'cards-card-alt';
+    altCell.setAttribute('aria-hidden', 'true');
+    li.append(altCell);
+  }
+  bodyCells.forEach((cell) => {
+    cell.className = 'cards-card-body';
+    li.append(cell);
+  });
+
+  return altText;
 }
 
 function decorateDefaultCard(li, cells) {
@@ -49,6 +100,7 @@ function decorateLogoCard(li, cells) {
 
 export default function decorate(block) {
   const isLogoVariant = block.classList.contains('logos');
+  const isIconCardsVariant = block.classList.contains('icon-cards');
   const ul = document.createElement('ul');
 
   while (block.firstElementChild) {
@@ -65,6 +117,8 @@ export default function decorate(block) {
         li.append(imageCell);
       }
       altText = decorateLogoCard(li, cells);
+    } else if (isIconCardsVariant) {
+      altText = decorateIconCard(li, cells);
     } else {
       decorateDefaultCard(li, cells);
     }
