@@ -1,5 +1,8 @@
 {
   "mappings": [
-    "/content/pre-devportal:/"
+    "/content/pre-devportal/:/",
+    "https://author-p34633-e913315.adobeaemcloud.com/:/",
+    "https://main--pre-devportal--idelllano-hiberuscom.aem.page/:/",
+    "https://main--pre-devportal--idelllano-hiberuscom.aem.live/:/"
   ]
 }
