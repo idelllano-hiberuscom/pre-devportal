@@ -49,9 +49,19 @@
         "title",
         "hero",
         "cards",
+        "cards-editorial",
+        "cards-logos",
+        "cards-icon-cards",
+        "cards-plugins",
         "columns",
         "fragment",
-        "code-block"
+        "code-block",
+        "pie-chart",
+        "video",
+        "tabs",
+        "accordion",
+        "contact-form",
+        "swagger-console"
       ]
     }
   ]
