@@ -156,6 +156,36 @@
               }
             }
           }
+        },
+        {
+          "title": "Pie Chart",
+          "id": "pie-chart",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Pie Chart",
+                  "filter": "pie-chart"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Pie Chart Item",
+          "id": "pie-chart-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Pie Chart Item",
+                  "model": "pie-chart-item"
+                }
+              }
+            }
+          }
         }
       ]
     }
