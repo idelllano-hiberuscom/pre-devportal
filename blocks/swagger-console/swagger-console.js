@@ -1,11 +1,29 @@
-import { readBlockConfig } from '../../scripts/aem.js';
+import {
+  createOptimizedPicture,
+  toClassName,
+} from '../../scripts/aem.js';
 
 const ORDERED_FIELDS = [
   'backgroundImage',
   'recoveryLink',
   'registerLink',
-  'endpoints',
+  'authEndpoint',
+  'openApiEndpoint',
 ];
+
+const FIELD_ALIASES = {
+  'background-image': 'backgroundImage',
+  backgroundimage: 'backgroundImage',
+  'recovery-link': 'recoveryLink',
+  recoverylink: 'recoveryLink',
+  'register-link': 'registerLink',
+  registerlink: 'registerLink',
+  'auth-endpoint': 'authEndpoint',
+  authendpoint: 'authEndpoint',
+  'open-api-endpoint': 'openApiEndpoint',
+  openapiendpoint: 'openApiEndpoint',
+  endpoints: 'endpoints',
+};
 
 const sanitizeUrl = (value) => {
   if (!value || typeof value !== 'string') return '';
@@ -20,60 +38,69 @@ const sanitizeUrl = (value) => {
   return '';
 };
 
+const normalizeFieldName = (value) => FIELD_ALIASES[toClassName(value)] || '';
+
 const getCell = (row) => {
   const children = [...row.children];
   if (children.length > 1) return children[1];
   return children[0] || row;
 };
 
-const extractCellValue = (row, fieldName) => {
-  const cell = getCell(row);
+const extractCellValue = (cell, fieldName) => {
   if (!cell) return '';
   if (fieldName === 'backgroundImage') {
     const image = cell.querySelector('img');
     if (image?.src) return image.src;
   }
   const link = cell.querySelector('a');
-  if (link) return link.href;
+  if (link?.href) return link.href;
   return cell.textContent.trim();
 };
 
-const readSwaggerConfig = (block) => {
+const getEntries = (block) => {
   const rows = [...block.querySelectorAll(':scope > div')];
   const hasLabels = rows.every((row) => row.children.length > 1);
-  if (hasLabels) return readBlockConfig(block);
-  return rows.reduce((config, row, index) => {
-    const fieldName = ORDERED_FIELDS[index];
-    if (!fieldName) return config;
-    config[fieldName] = extractCellValue(row, fieldName);
-    return config;
-  }, {});
+  const entries = rows.reduce((result, row, index) => {
+    const fieldName = hasLabels
+      ? normalizeFieldName(row.children[0]?.textContent || '')
+      : ORDERED_FIELDS[index];
+    if (!fieldName) return result;
+
+    const cell = getCell(row);
+    result.push({
+      fieldName,
+      cell,
+      content: cell?.cloneNode(true) || null,
+      value: extractCellValue(cell, fieldName),
+    });
+    return result;
+  }, []);
+
+  if (!hasLabels && rows.length === 4) {
+    const endpointsCell = getCell(rows[3]);
+    entries.push({
+      fieldName: 'endpoints',
+      cell: endpointsCell,
+      content: endpointsCell?.cloneNode(true) || null,
+      value: extractCellValue(endpointsCell, 'endpoints'),
+    });
+  }
+
+  return entries;
 };
 
-const createLabeledInput = (labelText, type, name) => {
-  const wrapper = document.createElement('label');
-  wrapper.className = 'swagger-console-field';
-  const label = document.createElement('span');
-  label.textContent = labelText;
-  const input = document.createElement('input');
-  input.type = type;
-  input.name = name;
-  input.required = true;
-  input.autocomplete = name === 'email' ? 'email' : 'current-password';
-  wrapper.append(label, input);
-  return { wrapper, input };
-};
+const readSwaggerConfig = (entries) => entries.reduce((config, entry) => {
+  config[entry.fieldName] = entry.value;
+  return config;
+}, {});
 
-const setState = (block, statusEl, state, message) => {
-  block.dataset.state = state;
-  if (message) statusEl.textContent = message;
-};
+const getEntry = (entries, fieldName) => entries.find((entry) => entry.fieldName === fieldName);
 
-export default function decorate(block) {
-  const config = readSwaggerConfig(block);
-  let authEndpoint = sanitizeUrl(config.authendpoint || config.authEndpoint || '');
-  let openApiEndpoint = sanitizeUrl(config.openapiendpoint || config.openApiEndpoint || '');
+const resolveEndpoints = (config) => {
+  let authEndpoint = sanitizeUrl(config.authEndpoint || '');
+  let openApiEndpoint = sanitizeUrl(config.openApiEndpoint || '');
   const endpointsRaw = config.endpoints || '';
+
   if ((!authEndpoint || !openApiEndpoint) && endpointsRaw) {
     try {
       const parsed = JSON.parse(endpointsRaw);
@@ -85,12 +112,108 @@ export default function decorate(block) {
       openApiEndpoint = openApiEndpoint || sanitizeUrl(openapi);
     }
   }
-  const backgroundImage = sanitizeUrl(config.backgroundimage || config.backgroundImage || '');
-  const recoveryLink = sanitizeUrl(config.recoverylink || config.recoveryLink || '/recovery');
-  const registerLink = sanitizeUrl(config.registerlink || config.registerLink || '/register');
+
+  return { authEndpoint, openApiEndpoint };
+};
+
+const createLabeledInput = (labelText, type, name) => {
+  const wrapper = document.createElement('label');
+  wrapper.className = 'swagger-console-field';
+
+  const label = document.createElement('span');
+  label.className = 'swagger-console-label';
+  label.textContent = labelText;
+
+  const control = document.createElement('span');
+  control.className = 'swagger-console-control';
+
+  const input = document.createElement('input');
+  input.className = 'swagger-console-input';
+  input.type = type;
+  input.name = name;
+  input.required = true;
+  input.autocomplete = name === 'email' ? 'email' : 'current-password';
+
+  control.append(input);
+  wrapper.append(label, control);
+
+  return {
+    wrapper,
+    control,
+    input,
+  };
+};
+
+const decorateBackground = (login, backgroundEntry, fallbackUrl) => {
+  const media = document.createElement('div');
+  media.className = 'swagger-console-background';
+  media.setAttribute('aria-hidden', 'true');
+
+  const picture = backgroundEntry?.content?.querySelector('picture');
+  const image = backgroundEntry?.content?.querySelector('img');
+
+  if (picture) {
+    media.append(picture.cloneNode(true));
+  } else if (image?.src) {
+    media.append(createOptimizedPicture(image.src, '', false, [{ width: '1200' }]));
+  } else if (fallbackUrl) {
+    media.style.backgroundImage = `url("${fallbackUrl}")`;
+  }
+
+  const backgroundImage = media.querySelector('img');
+  if (backgroundImage) {
+    backgroundImage.alt = '';
+    backgroundImage.loading = 'eager';
+    backgroundImage.decoding = 'async';
+  }
+
+  login.append(media);
+};
+
+const createLink = (entry, href, className, fallbackText) => {
+  const link = entry?.content?.querySelector('a')?.cloneNode(true) || document.createElement('a');
+  link.className = className;
+  link.href = sanitizeUrl(link.getAttribute('href') || href) || href;
+  link.textContent = link.textContent.trim() || fallbackText;
+  return link;
+};
+
+const createPasswordToggle = (input) => {
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'swagger-console-password-toggle';
+  button.setAttribute('aria-pressed', 'false');
+  button.setAttribute('aria-label', 'Mostrar contraseña');
+  button.textContent = 'Mostrar';
+
+  button.addEventListener('click', () => {
+    const isVisible = input.type === 'text';
+    input.type = isVisible ? 'password' : 'text';
+    button.setAttribute('aria-pressed', String(!isVisible));
+    button.setAttribute('aria-label', isVisible ? 'Mostrar contraseña' : 'Ocultar contraseña');
+    button.textContent = isVisible ? 'Mostrar' : 'Ocultar';
+  });
+
+  return button;
+};
+
+const setState = (block, form, status, state, message) => {
+  block.dataset.state = state;
+  form.setAttribute('aria-busy', String(state === 'loading'));
+  status.textContent = message;
+};
+
+export default function decorate(block) {
+  const entries = getEntries(block);
+  const config = readSwaggerConfig(entries);
+  const { authEndpoint, openApiEndpoint } = resolveEndpoints(config);
+  const backgroundImage = sanitizeUrl(config.backgroundImage || '');
+  const recoveryLink = sanitizeUrl(config.recoveryLink || '/recovery');
+  const registerLink = sanitizeUrl(config.registerLink || '/register');
 
   const content = document.createElement('div');
   content.className = 'swagger-console-content';
+
   const source = document.createElement('div');
   source.className = 'swagger-console-source';
   source.hidden = true;
@@ -98,40 +221,53 @@ export default function decorate(block) {
     source.append(block.firstChild);
   }
 
-  const loginContainer = document.createElement('div');
-  loginContainer.className = 'swagger-console-login';
-  if (backgroundImage) {
-    loginContainer.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("${backgroundImage}")`;
-  }
+  const login = document.createElement('div');
+  login.className = 'swagger-console-login';
+  decorateBackground(login, getEntry(entries, 'backgroundImage'), backgroundImage);
+
+  const panel = document.createElement('div');
+  panel.className = 'swagger-console-panel';
 
   const form = document.createElement('form');
   form.className = 'swagger-console-form';
   form.noValidate = true;
 
   const { wrapper: emailWrapper, input: emailInput } = createLabeledInput('Email', 'email', 'email');
-  const { wrapper: passwordWrapper, input: passwordInput } = createLabeledInput('Contraseña', 'password', 'password');
+  const {
+    wrapper: passwordWrapper,
+    control: passwordControl,
+    input: passwordInput,
+  } = createLabeledInput('Contraseña', 'password', 'password');
+  passwordControl.append(createPasswordToggle(passwordInput));
+
+  const hintLink = createLink(
+    getEntry(entries, 'recoveryLink'),
+    recoveryLink,
+    'swagger-console-hint',
+    '¿Has olvidado tu contraseña?',
+  );
+
   const submitButton = document.createElement('button');
   submitButton.type = 'submit';
   submitButton.className = 'swagger-console-submit';
   submitButton.textContent = 'Entrar';
 
-  const hintLink = document.createElement('a');
-  hintLink.className = 'swagger-console-hint';
-  hintLink.href = recoveryLink;
-  hintLink.textContent = '¿Has olvidado tu contraseña?';
-
   const registerText = document.createElement('p');
   registerText.className = 'swagger-console-register';
   const registerPrefix = document.createElement('span');
   registerPrefix.textContent = '¿No tienes una cuenta? ';
-  const registerAnchor = document.createElement('a');
-  registerAnchor.href = registerLink;
-  registerAnchor.textContent = 'Regístrate';
+  const registerAnchor = createLink(
+    getEntry(entries, 'registerLink'),
+    registerLink,
+    'swagger-console-register-link',
+    'Regístrate',
+  );
   registerText.append(registerPrefix, registerAnchor);
 
   const status = document.createElement('p');
   status.className = 'swagger-console-status';
   status.setAttribute('aria-live', 'polite');
+  status.setAttribute('role', 'status');
 
   const frame = document.createElement('iframe');
   frame.className = 'swagger-console-frame';
@@ -141,23 +277,32 @@ export default function decorate(block) {
   frame.referrerPolicy = 'no-referrer';
 
   form.append(emailWrapper, passwordWrapper, hintLink, submitButton);
-  loginContainer.append(form, registerText, status);
-  content.append(loginContainer, frame);
-  block.append(content);
-  block.append(source);
+  panel.append(form, registerText, status);
+  login.append(panel);
+  content.append(login, frame);
+  block.append(content, source);
 
   if (!authEndpoint || !openApiEndpoint) {
-    setState(block, status, 'configuration-pending', 'Configuración pendiente para la consola de API.');
     submitButton.disabled = true;
+    setState(
+      block,
+      form,
+      status,
+      'configuration-pending',
+      'Configuración pendiente para la consola de API.',
+    );
     return;
   }
 
-  setState(block, status, 'ready', 'Inicia sesión para cargar la consola de API.');
+  setState(block, form, status, 'ready', 'Inicia sesión para cargar la consola de API.');
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    setState(block, status, 'loading', 'Cargando consola de API...');
+    setState(block, form, status, 'loading', 'Cargando consola de API...');
     submitButton.disabled = true;
+    emailInput.disabled = true;
+    passwordInput.disabled = true;
+
     try {
       const authResponse = await fetch(authEndpoint, {
         method: 'POST',
@@ -170,15 +315,18 @@ export default function decorate(block) {
           password: passwordInput.value,
         }),
       });
+
       if (!authResponse.ok) throw new Error('AUTH_FAILED');
 
       frame.src = openApiEndpoint;
       frame.hidden = false;
-      setState(block, status, 'ready', 'Consola de API cargada.');
+      setState(block, form, status, 'ready', 'Consola de API cargada.');
     } catch (e) {
-      setState(block, status, 'error', 'No se pudo cargar la consola de API.');
+      setState(block, form, status, 'error', 'No se pudo cargar la consola de API.');
     } finally {
       submitButton.disabled = false;
+      emailInput.disabled = false;
+      passwordInput.disabled = false;
       passwordInput.value = '';
     }
   });

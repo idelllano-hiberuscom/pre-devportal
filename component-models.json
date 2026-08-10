@@ -301,9 +301,17 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "endpoints",
-        "label": "Endpoints",
-        "description": "Auth and OpenAPI endpoints as JSON or comma-separated URLs.",
+        "name": "authEndpoint",
+        "label": "Auth Endpoint",
+        "description": "Authentication endpoint used before loading the API console.",
+        "required": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "openApiEndpoint",
+        "label": "OpenAPI Endpoint",
+        "description": "OpenAPI or Swagger endpoint loaded after a successful authentication.",
         "required": false
       }
     ]
