@@ -1,5 +1,3 @@
-import { moveInstrumentation } from '../../scripts/scripts.js';
-
 const KEYBOARD_DIRECTIONS = {
   ArrowLeft: -1,
   ArrowRight: 1,
@@ -81,12 +79,10 @@ function decorateSlide(slide, index, total, carouselId) {
     const img = slide.querySelector('img');
     const alt = altCell.textContent.trim();
 
-    if (img) {
-      if (alt) img.alt = alt;
-      moveInstrumentation(altCell, img);
-    }
-
-    altCell.remove();
+    if (img && alt) img.alt = alt;
+    // [BLOCK AUDITOR FIX] Preserve the authored field and its UE instrumentation.
+    altCell.classList.add('carousel-slide-alt');
+    media.append(altCell);
   }
 
   return slideId;
@@ -124,7 +120,8 @@ export default function decorate(block) {
     control.setAttribute('aria-controls', slideId);
     control.setAttribute('aria-label', `Go to step ${index + 1}`);
     control.addEventListener('click', () => activateSlide(index));
-    slide.setAttribute('aria-labelledby', controlId);
+    // [BLOCK AUDITOR FIX] A single slide has no rendered tablist to label the panel.
+    if (slides.length > 1) slide.setAttribute('aria-labelledby', controlId);
 
     controls.push(control);
     controlsWrapper.append(control);

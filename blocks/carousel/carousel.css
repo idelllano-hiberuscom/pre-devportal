@@ -32,8 +32,23 @@
 }
 
 .carousel .carousel-slide-image img {
+  /* [BLOCK AUDITOR FIX] Reserve the measured 352 x 416 media ratio to prevent CLS. */
+  aspect-ratio: 11 / 13;
   height: auto;
   object-fit: cover;
+}
+
+/* [BLOCK AUDITOR FIX] Keep the authored alt field editable without duplicating visible text. */
+.carousel .carousel-slide-alt {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .carousel .carousel-slide-body {
