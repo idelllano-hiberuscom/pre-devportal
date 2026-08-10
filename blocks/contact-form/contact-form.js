@@ -92,7 +92,7 @@ function focusFirstInvalidField(form) {
 export default function decorate(block) {
   const rows = [...block.children];
 
-  if (rows.length < 9) {
+  if (rows.length < 10) {
     // eslint-disable-next-line no-console
     console.warn('The contact-form block is missing required contract rows.');
     return;
@@ -102,6 +102,7 @@ export default function decorate(block) {
   const idPrefix = `contact-form-${contactFormCount}`;
   const [
     imageRow,
+    imageAltRow,
     headingRow,
     nameRow,
     emailRow,
@@ -124,6 +125,10 @@ export default function decorate(block) {
     const mediaElement = mediaAsset.closest('picture') || mediaAsset;
     mediaElement.classList.add('contact-form-image');
     moveInstrumentation(imageCell, mediaElement);
+    const imgEl = mediaElement.querySelector('img') || (mediaElement.tagName === 'IMG' ? mediaElement : null);
+    if (imgEl && !imgEl.alt) {
+      imgEl.alt = getText(imageAltRow);
+    }
     media.append(mediaElement);
   }
 
