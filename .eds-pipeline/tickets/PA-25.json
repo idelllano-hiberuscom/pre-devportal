@@ -139,4 +139,10 @@
     {
       "date": "2026-08-10",
       "from": "in_dev",
-      "t
+      "to": "failed",
+      "by": "dispatch-copilot-tasks",
+      "note": "La tarea cloud terminó sin cambios (PR #1, 0 archivos): el contrato y la evidencia no estaban versionados en HEAD."
+    }
+  ],
+  "copilot_task_id": "28c6774d-d972-494e-8d19-36bffdf992c4"
+}
