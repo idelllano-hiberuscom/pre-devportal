@@ -19,7 +19,8 @@
       "cards-icon-cards",
       "cards-plugins",
       "columns",
-      "fragment"
+      "fragment",
+      "swagger-console"
     ]
   },
   {

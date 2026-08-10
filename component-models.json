@@ -336,5 +336,50 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "swagger-console",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "backgroundImage",
+        "label": "Background Image",
+        "description": "Background image for the authentication area.",
+        "required": false
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "recoveryLink",
+        "label": "Recovery Link",
+        "description": "Recovery link shown below the form.",
+        "required": true
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "registerLink",
+        "label": "Register Link",
+        "description": "Registration link shown in the disclaimer.",
+        "required": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "authEndpoint",
+        "label": "Auth Endpoint",
+        "description": "Authentication endpoint used before loading the API console.",
+        "required": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "openApiEndpoint",
+        "label": "OpenAPI Endpoint",
+        "description": "OpenAPI or Swagger endpoint loaded after a successful authentication.",
+        "required": false
+      }
+    ]
   }
 ]
