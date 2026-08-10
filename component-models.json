@@ -214,5 +214,42 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "swagger-console",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "backgroundImage",
+        "label": "Background Image",
+        "description": "Background image for the authentication area.",
+        "required": false
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "recoveryLink",
+        "label": "Recovery Link",
+        "description": "Recovery link shown below the form.",
+        "required": true
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "registerLink",
+        "label": "Register Link",
+        "description": "Registration link shown in the disclaimer.",
+        "required": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "endpoints",
+        "label": "Endpoints",
+        "description": "Auth and OpenAPI endpoints as JSON or comma-separated URLs.",
+        "required": false
+      }
+    ]
   }
 ]

@@ -1,0 +1,92 @@
+.swagger-console {
+  max-width: 1190px;
+  margin: 0 auto;
+}
+
+.swagger-console .swagger-console-content {
+  display: grid;
+  min-height: 812px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.swagger-console .swagger-console-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+  background-color: #013451;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.swagger-console .swagger-console-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.swagger-console .swagger-console-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: var(--body-font-size-xs);
+}
+
+.swagger-console .swagger-console-field input {
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font: inherit;
+}
+
+.swagger-console .swagger-console-hint,
+.swagger-console .swagger-console-register a {
+  color: #fff;
+}
+
+.swagger-console .swagger-console-submit {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  border: 0;
+  border-radius: 100px;
+  background-color: #013451;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.swagger-console .swagger-console-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.swagger-console .swagger-console-register,
+.swagger-console .swagger-console-status {
+  margin: 0;
+  font-size: var(--body-font-size-xs);
+}
+
+.swagger-console .swagger-console-frame {
+  width: 100%;
+  min-height: 812px;
+  border: 0;
+  background-color: #fff;
+}
+
+@media (width >= 900px) {
+  .swagger-console .swagger-console-content {
+    grid-template-columns: minmax(320px, 435px) 1fr;
+  }
+
+  .swagger-console .swagger-console-login {
+    padding: 32px;
+  }
+}
