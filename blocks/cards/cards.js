@@ -12,6 +12,19 @@ function decorateDefaultCard(li, cells) {
   });
 }
 
+function optimizeCardImages(li, altText, width) {
+  li.querySelectorAll('picture > img').forEach((img) => {
+    const optimizedPic = createOptimizedPicture(
+      img.src,
+      altText || img.alt,
+      false,
+      [{ width }],
+    );
+    moveInstrumentation(img, optimizedPic.querySelector('img'));
+    img.closest('picture').replaceWith(optimizedPic);
+  });
+}
+
 function decorateLogoCard(li, cells) {
   const [altCell, ...bodyCells] = cells.filter((cell) => !isImageCell(cell));
   const altText = altCell?.textContent.trim() || '';
@@ -37,13 +50,13 @@ function decorateLogoCard(li, cells) {
 export default function decorate(block) {
   const isLogoVariant = block.classList.contains('logos');
   const ul = document.createElement('ul');
-  const altTexts = [];
 
   while (block.firstElementChild) {
     const row = block.firstElementChild;
     const li = document.createElement('li');
     moveInstrumentation(row, li);
     const cells = [...row.children];
+    let altText = '';
 
     if (isLogoVariant) {
       const imageCell = cells.find(isImageCell);
@@ -51,26 +64,15 @@ export default function decorate(block) {
         imageCell.className = 'cards-card-image';
         li.append(imageCell);
       }
-      altTexts.push(decorateLogoCard(li, cells));
+      altText = decorateLogoCard(li, cells);
     } else {
       decorateDefaultCard(li, cells);
-      altTexts.push('');
     }
 
+    optimizeCardImages(li, altText, isLogoVariant ? '288' : '750');
     ul.append(li);
     row.remove();
   }
-
-  ul.querySelectorAll('picture > img').forEach((img, index) => {
-    const optimizedPic = createOptimizedPicture(
-      img.src,
-      altTexts[index] || img.alt,
-      false,
-      [{ width: isLogoVariant ? '288' : '750' }],
-    );
-    moveInstrumentation(img, optimizedPic.querySelector('img'));
-    img.closest('picture').replaceWith(optimizedPic);
-  });
 
   block.append(ul);
 }
