@@ -49,11 +49,15 @@
         "title",
         "hero",
         "cards",
+        "cards-editorial",
         "cards-logos",
         "cards-icon-cards",
+        "cards-plugins",
         "columns",
         "fragment",
-        "accordion"
+        "accordion",
+        "contact-form",
+        "swagger-console"
       ]
     }
   ]
