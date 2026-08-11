@@ -2,14 +2,46 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
 
 let accordionGroupId = 0;
 
+/**
+ * Builds the lucide `plus` glyph the portal uses as the open/close affordance.
+ * The vertical bar is hidden by CSS when the item is open, turning it into a minus.
+ * @returns {SVGElement}
+ */
+function createToggleIcon() {
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('class', 'accordion-item-icon');
+  svg.setAttribute('viewBox', '0 0 24 24');
+  svg.setAttribute('fill', 'none');
+  svg.setAttribute('stroke', 'currentColor');
+  svg.setAttribute('stroke-width', '2');
+  svg.setAttribute('stroke-linecap', 'round');
+  svg.setAttribute('stroke-linejoin', 'round');
+  svg.setAttribute('aria-hidden', 'true');
+  svg.setAttribute('focusable', 'false');
+
+  const horizontal = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  horizontal.setAttribute('d', 'M5 12h14');
+
+  const vertical = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  vertical.setAttribute('class', 'accordion-item-icon-bar');
+  vertical.setAttribute('d', 'M12 5v14');
+
+  svg.append(horizontal, vertical);
+  return svg;
+}
+
 function buildSummary(cell) {
   const summary = document.createElement('summary');
   summary.className = 'accordion-item-summary';
   moveInstrumentation(cell, summary);
 
+  const text = document.createElement('span');
+  text.className = 'accordion-item-title';
   while (cell.firstChild) {
-    summary.append(cell.firstChild);
+    text.append(cell.firstChild);
   }
+
+  summary.append(text, createToggleIcon());
 
   return summary;
 }
@@ -34,7 +66,15 @@ export default function decorate(block) {
   const groupName = `accordion-${accordionGroupId}`;
   const section = block.closest('.section');
   section?.classList.add('accordion-section');
-  section?.previousElementSibling?.classList.add('accordion-intro');
+
+  // The portal centres the section heading above the list. It may be authored either in the
+  // preceding section or as default content in this one, so mark whichever we find.
+  const wrapperSibling = block.parentElement?.previousElementSibling;
+  if (wrapperSibling?.classList.contains('default-content-wrapper')) {
+    wrapperSibling.classList.add('accordion-intro');
+  } else {
+    section?.previousElementSibling?.classList.add('accordion-intro');
+  }
 
   [...block.children].forEach((row) => {
     const [summaryCell, ...contentCells] = [...row.children];

@@ -7,8 +7,9 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
 export default function decorate(block) {
   const wrapper = document.createElement('div');
   wrapper.className = 'video-content';
+  const rows = [...block.children];
 
-  [...block.children].forEach((row) => {
+  rows.forEach((row) => {
     const item = document.createElement('div');
     item.className = 'video-item';
     moveInstrumentation(row, item);
@@ -51,5 +52,8 @@ export default function decorate(block) {
     wrapper.append(item);
   });
 
+  // Las filas de origen se retiraban antes: sin esto la URI y las celdas vacías quedaban
+  // visibles como texto debajo del reproductor.
+  rows.forEach((row) => row.remove());
   block.append(wrapper);
 }

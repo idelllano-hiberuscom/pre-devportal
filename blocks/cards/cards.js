@@ -82,23 +82,16 @@ function optimizeCardImages(li, altText, width) {
   });
 }
 
+/* El contrato de la variante logos declara únicamente image + imageAlt: el portal no muestra
+   texto dentro del círculo. */
 function decorateLogoCard(li, cells) {
-  const [altCell, ...bodyCells] = cells.filter((cell) => !isImageCell(cell));
+  const [altCell] = cells.filter((cell) => !isImageCell(cell));
   const altText = altCell?.textContent.trim() || '';
 
   if (altCell) {
     altCell.className = 'cards-card-alt';
     altCell.setAttribute('aria-hidden', 'true');
     li.append(altCell);
-  }
-
-  bodyCells.forEach((cell) => {
-    cell.className = 'cards-card-body';
-    li.append(cell);
-  });
-
-  if (bodyCells.some((cell) => cell.textContent.trim())) {
-    li.classList.add('has-body');
   }
 
   return altText;

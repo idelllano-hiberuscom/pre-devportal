@@ -222,13 +222,6 @@
           "label": "Alt",
           "value": "",
           "required": true
-        },
-        {
-          "component": "richtext",
-          "name": "text",
-          "value": "",
-          "label": "Text",
-          "valueType": "string"
         }
       ]
     },

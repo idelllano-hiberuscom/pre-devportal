@@ -29,6 +29,15 @@ const GENERIC_LANGUAGE_TOKENS = new Set([
   'numbers',
 ]);
 
+const JS_KEYWORDS = new Set([
+  'async', 'await', 'break', 'case', 'catch', 'class', 'const', 'continue', 'default', 'delete',
+  'do', 'else', 'export', 'extends', 'finally', 'for', 'from', 'function', 'if', 'import', 'in',
+  'instanceof', 'let', 'new', 'of', 'return', 'static', 'super', 'switch', 'this', 'throw', 'try',
+  'typeof', 'var', 'void', 'while', 'yield',
+]);
+
+const JS_LITERALS = new Set(['true', 'false', 'null', 'undefined', 'NaN', 'Infinity']);
+
 function isGenericLanguageToken(token) {
   return token.split(/[-_]/).every((part) => !part || GENERIC_LANGUAGE_TOKENS.has(part));
 }
@@ -80,6 +89,110 @@ function normalizeCode(value = '') {
     .replace(/\u00a0/g, ' ')
     .replace(/^\n+|\n+$/g, '');
 }
+
+/*
+ * Resaltado de sintaxis mínimo y sin dependencias.
+ * El portal usa highlight.js; aquí se reproduce únicamente el conjunto de tokens que sus
+ * capturas muestran (clave, cadena, número, literal, comentario, etiqueta, puntuación) para
+ * los lenguajes que declara el modelo. Cada tokenizador recibe una línea y devuelve
+ * [{ text, type }]; `type` vacío significa texto sin clasificar.
+ */
+
+/** Ejecuta un patrón maestro sobre la línea y clasifica cada coincidencia. */
+function tokenizeWith(line, pattern, classify) {
+  const tokens = [];
+  let lastIndex = 0;
+  const regex = new RegExp(pattern.source, pattern.flags.includes('g') ? pattern.flags : `${pattern.flags}g`);
+  let match = regex.exec(line);
+
+  while (match) {
+    if (match.index > lastIndex) {
+      tokens.push({ text: line.slice(lastIndex, match.index), type: '' });
+    }
+    tokens.push({ text: match[0], type: classify(match) });
+    lastIndex = match.index + match[0].length;
+    if (match[0].length === 0) regex.lastIndex += 1;
+    match = regex.exec(line);
+  }
+
+  if (lastIndex < line.length) {
+    tokens.push({ text: line.slice(lastIndex), type: '' });
+  }
+
+  return tokens;
+}
+
+const JSON_PATTERN = /("(?:\\.|[^"\\])*")(\s*:)?|\b(-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)\b|\b(true|false|null)\b|([{}[\],:])/;
+
+function tokenizeJson(line) {
+  return tokenizeWith(line, JSON_PATTERN, (match) => {
+    if (match[1]) return match[2] ? 'attr' : 'string';
+    if (match[3]) return 'number';
+    if (match[4]) return 'literal';
+    if (match[5]) return 'punctuation';
+    return '';
+  }).flatMap((token) => {
+    // Una clave llega como `"nombre":`; se parte para colorear los dos puntos como puntuación.
+    if (token.type !== 'attr') return token;
+    const separator = token.text.indexOf(':');
+    if (separator < 0) return token;
+    return [
+      { text: token.text.slice(0, separator), type: 'attr' },
+      { text: token.text.slice(separator), type: 'punctuation' },
+    ];
+  });
+}
+
+const JS_PATTERN = /(\/\/.*$)|("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|`(?:\\.|[^`\\])*`)|\b(-?\d+(?:\.\d+)?)\b|\b([A-Za-z_$][\w$]*)\b|([{}[\]();,.:=+\-*/<>!?&|])/;
+
+function tokenizeJavascript(line) {
+  return tokenizeWith(line, JS_PATTERN, (match) => {
+    if (match[1]) return 'comment';
+    if (match[2]) return 'string';
+    if (match[3]) return 'number';
+    if (match[4]) {
+      if (JS_KEYWORDS.has(match[4])) return 'keyword';
+      if (JS_LITERALS.has(match[4])) return 'literal';
+      return '';
+    }
+    if (match[5]) return 'punctuation';
+    return '';
+  });
+}
+
+const MARKUP_PATTERN = /(<!--.*?-->)|(<\/?[A-Za-z][\w:-]*)|(\/?>)|([A-Za-z_:][\w:.-]*)(?==)|("(?:[^"]*)"|'(?:[^']*)')|([=])/;
+
+function tokenizeMarkup(line) {
+  return tokenizeWith(line, MARKUP_PATTERN, (match) => {
+    if (match[1]) return 'comment';
+    if (match[2]) return 'tag';
+    if (match[3]) return 'tag';
+    if (match[4]) return 'attr';
+    if (match[5]) return 'string';
+    if (match[6]) return 'punctuation';
+    return '';
+  });
+}
+
+const SHELL_PATTERN = /(#.*$)|("(?:\\.|[^"\\])*"|'(?:[^']*)')|(\s-{1,2}[A-Za-z][\w-]*)|([|><;&])/;
+
+function tokenizeShell(line) {
+  return tokenizeWith(line, SHELL_PATTERN, (match) => {
+    if (match[1]) return 'comment';
+    if (match[2]) return 'string';
+    if (match[3]) return 'attr';
+    if (match[4]) return 'punctuation';
+    return '';
+  });
+}
+
+const TOKENIZERS = {
+  json: tokenizeJson,
+  javascript: tokenizeJavascript,
+  html: tokenizeMarkup,
+  xml: tokenizeMarkup,
+  shell: tokenizeShell,
+};
 
 function announceStatus(liveRegion, message) {
   liveRegion.textContent = '';
@@ -146,15 +259,34 @@ function createCopyIcon() {
   return icon;
 }
 
-function buildCodeLines(codeText) {
+function buildCodeLines(codeText, language) {
   const list = document.createElement('ol');
   list.className = 'code-block-lines';
+  const tokenize = TOKENIZERS[language];
 
   codeText.split('\n').forEach((line) => {
     const item = document.createElement('li');
     const content = document.createElement('span');
     content.className = 'code-block-line';
-    content.textContent = line || ' ';
+
+    if (!line) {
+      content.textContent = ' ';
+    } else if (!tokenize) {
+      content.textContent = line;
+    } else {
+      tokenize(line).forEach(({ text, type }) => {
+        if (!text) return;
+        if (!type) {
+          content.append(document.createTextNode(text));
+          return;
+        }
+        const span = document.createElement('span');
+        span.className = `code-token-${type}`;
+        span.textContent = text;
+        content.append(span);
+      });
+    }
+
     item.append(content);
     list.append(item);
   });
@@ -178,21 +310,21 @@ export default function decorate(block) {
   const content = document.createElement('div');
   content.className = 'code-block-content';
 
+  // Barra de cabecera navy del portal: título en blanco a la izquierda, copiar a la derecha.
   const header = document.createElement('div');
   header.className = 'code-block-header';
 
-  const meta = document.createElement('div');
-  meta.className = 'code-block-meta';
-
-  if (titleCell && title) {
+  if (titleCell) {
     titleCell.className = 'code-block-title';
     titleCell.textContent = title;
-    meta.append(titleCell);
+    header.append(titleCell);
   }
 
+  // El portal no muestra etiqueta de lenguaje: el campo se conserva oculto para que
+  // Universal Editor siga pudiendo editarlo sin alterar el aspecto.
   languageCell.className = 'code-block-language';
   languageCell.textContent = formatLanguage(language);
-  meta.append(languageCell);
+  languageCell.setAttribute('aria-hidden', 'true');
 
   const actions = document.createElement('div');
   actions.className = 'code-block-actions';
@@ -214,7 +346,7 @@ export default function decorate(block) {
   });
 
   actions.append(copyButton, liveRegion);
-  header.append(meta, actions);
+  header.append(actions);
 
   codeCell.className = 'code-block-body';
   codeCell.textContent = '';
@@ -224,11 +356,12 @@ export default function decorate(block) {
 
   const code = document.createElement('code');
   code.className = `code-block-code language-${language}`;
-  code.append(buildCodeLines(codeText || ''));
+  code.dataset.language = language;
+  code.append(buildCodeLines(codeText || '', language));
 
   pre.append(code);
   codeCell.append(pre);
-  content.append(header, codeCell);
+  content.append(header, codeCell, languageCell);
 
   rows.forEach((row) => row.remove());
   block.append(content);

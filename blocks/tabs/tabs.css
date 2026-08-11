@@ -20,32 +20,34 @@
   padding: 0;
 }
 
+/* Medido en el portal: la etiqueta de pestaña es un h3 de 24px/34px, peso 500, ls .25px.
+   El 16px anterior venía del ul contenedor, no de la etiqueta. */
 .tabs .tabs-list [role="tab"] {
-  background: none;
   border: 0;
   border-bottom: 2px solid transparent;
-  color: rgb(1 127 155);
-  cursor: pointer;
-  font-family: var(--font-family-base, Poppins, sans-serif);
-  font-size: 16px;
+  padding: 0 0 4px;
+  background: none;
+  color: var(--brand-accent);
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-l);
   font-weight: 500;
   letter-spacing: 0.25px;
   line-height: 34px;
-  padding: 0 0 4px;
+  cursor: pointer;
   transition: color 0.2s, border-color 0.2s;
 }
 
 .tabs .tabs-list [role="tab"][aria-selected="true"] {
-  border-bottom-color: rgb(1 52 81);
-  color: rgb(1 52 81);
+  border-bottom-color: var(--brand-primary);
+  color: var(--brand-primary);
 }
 
 .tabs .tabs-list [role="tab"]:hover {
-  color: rgb(1 52 81);
+  color: var(--brand-primary);
 }
 
 .tabs .tabs-list [role="tab"]:focus-visible {
-  outline: 2px solid rgb(1 127 155);
+  outline: 2px solid var(--brand-accent);
   outline-offset: 2px;
 }
 
@@ -54,6 +56,6 @@
 }
 
 .tabs .tabs-error {
-  color: #c00;
   margin-bottom: 8px;
+  color: #b3261e;
 }

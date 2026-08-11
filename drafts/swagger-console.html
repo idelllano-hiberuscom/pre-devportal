@@ -1,38 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="script-src 'nonce-aem' 'strict-dynamic' 'unsafe-inline' http: https:; base-uri 'self'; object-src 'none';"
-    >
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Validación local reproducible del bloque swagger-console.">
+    <meta name="nav" content="/drafts/empty-nav">
+    <meta name="footer" content="/drafts/empty-footer">
+    <title>swagger-console draft</title>
     <link rel="stylesheet" href="/styles/styles.css">
-    <script nonce="aem" type="module">
-      import {
-        decorateBlocks,
-        decorateIcons,
-        decorateSections,
-        loadSection,
-        loadSections,
-        waitForFirstImage,
-      } from '/scripts/aem.js';
-
-      window.hlx = window.hlx || {};
-      window.hlx.codeBasePath = '';
-
-      window.addEventListener('DOMContentLoaded', async () => {
-        const main = document.querySelector('main');
-        decorateIcons(main);
-        decorateSections(main);
-        decorateBlocks(main);
-        document.body.classList.add('appear');
-        await loadSection(main.querySelector('.section'), waitForFirstImage);
-        await loadSections(main);
-      });
-    </script>
+    <script type="module" src="/scripts/scripts.js"></script>
   </head>
   <body>
+    <header></header>
     <main>
       <div>
         <h1>Swagger Console</h1>
@@ -44,7 +23,7 @@
             <div>backgroundImage</div>
             <div>
               <picture>
-                <img src="/icons/search.svg" alt="">
+                <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221190%22%20height%3D%22900%22%20viewBox%3D%220%200%201190%20900%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%230d2430%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%232c4a52%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%221190%22%20height%3D%22900%22%20fill%3D%22url%28%23g%29%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2212%25%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.35%22%20font-family%3D%22sans-serif%22%20font-size%3D%2245%22%20text-anchor%3D%22middle%22%3Efotograf%C3%ADa%3C%2Ftext%3E%3C%2Fsvg%3E" alt="">
               </picture>
             </div>
           </div>
@@ -67,5 +46,6 @@
         </div>
       </div>
     </main>
+    <footer></footer>
   </body>
 </html>

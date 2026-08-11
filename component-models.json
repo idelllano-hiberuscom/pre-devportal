@@ -228,13 +228,6 @@
         "label": "Alt",
         "value": "",
         "required": true
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
       }
     ]
   },
@@ -535,11 +528,11 @@
         "required": true
       },
       {
-        "component": "number",
-        "name": "value",
-        "label": "Value",
-        "valueType": "number",
-        "required": true
+        "component": "text",
+        "name": "color",
+        "label": "Segment colour",
+        "description": "Optional CSS colour for the segment. Leave empty to use the measured palette of the original portal.",
+        "valueType": "string"
       },
       {
         "component": "reference",
@@ -547,6 +540,13 @@
         "label": "Icon",
         "valueType": "string",
         "multi": false
+      },
+      {
+        "component": "text",
+        "name": "iconAlt",
+        "label": "Icon alternative text",
+        "description": "Leave empty if the icon is purely decorative and the title already conveys the meaning.",
+        "valueType": "string"
       },
       {
         "component": "richtext",

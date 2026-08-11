@@ -1,3 +1,9 @@
+/*
+ * Medidas del portal (import-work/evidence/hero-cards/, /integraciones/api):
+ * fotografía a sangre + linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)) · texto centrado
+ * h1 64px / 600 / 80px en blanco · entradilla 16/32 en blanco · margin inferior 80px
+ */
+
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
@@ -5,33 +11,97 @@
 
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+  margin-bottom: 40px;
+  padding: 64px 24px;
+  isolation: isolate;
+  text-align: center;
 }
 
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
-}
-
-.hero picture {
+.hero .hero-background {
   position: absolute;
-  z-index: -1;
   inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+  z-index: -2;
+  background-color: var(--brand-primary);
 }
 
-.hero img {
-  object-fit: cover;
+.hero .hero-background picture,
+.hero .hero-background img {
+  display: block;
   width: 100%;
   height: 100%;
 }
 
+.hero .hero-background img {
+  object-fit: cover;
+}
+
+/* Velo medido del portal: negro al 30% sobre la fotografía. */
+.hero::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: rgb(0 0 0 / 30%);
+  content: "";
+}
+
+.hero .hero-content {
+  max-width: 1080px;
+  color: var(--background-color);
+}
+
+.hero .hero-content > :first-child {
+  margin-top: 0;
+}
+
+.hero .hero-content > :last-child {
+  margin-bottom: 0;
+}
+
+.hero .hero-content :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0 0 16px;
+  color: var(--background-color);
+}
+
+.hero .hero-content p {
+  margin: 0 0 16px;
+  color: var(--background-color);
+  font-size: var(--body-font-size-s);
+  line-height: var(--paragraph-line-height);
+}
+
+.hero .hero-content p:last-child {
+  margin-bottom: 0;
+}
+
+.hero .hero-content a:any-link {
+  color: var(--background-color);
+  text-decoration: underline;
+}
+
+.hero .hero-alt {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  margin: -1px;
+  padding: 0;
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 @media (width >= 900px) {
   .hero {
-    padding: 40px 32px;
+    min-height: 520px;
+    margin-bottom: 80px;
+    padding: 96px 32px;
+  }
+
+  .hero .hero-content :is(h1) {
+    line-height: 80px;
   }
 }

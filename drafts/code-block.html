@@ -1,35 +1,38 @@
-<main>
-  <div>
-    <h1>Code Block</h1>
-    <p>Preview for the PA-34 code block implementation.</p>
-    <div class="code-block">
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Validación local reproducible del bloque code-block.">
+    <meta name="nav" content="/drafts/empty-nav">
+    <meta name="footer" content="/drafts/empty-footer">
+    <title>code-block draft</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script type="module" src="/scripts/scripts.js"></script>
+  </head>
+  <body>
+    <header></header>
+    <main>
       <div>
-        <div>Petición (request)</div>
-      </div>
-      <div>
-        <div>json</div>
-      </div>
-      <div>
-        <div>{
+        <div class="code-block">
+          <div><div>Petición (request)</div></div>
+          <div><div>json</div></div>
+          <div><div><pre>{
   "cifrado": "SHA2",
   "parametros": "&lt;JSON_BASE64&gt;",
   "firma": "&lt;SHA256(ClaveCifrado + JSON_BASE64)&gt;"
-}</div>
+}</pre></div></div>
+        </div>
+        <div class="code-block">
+          <div><div>Ejemplo de llamada</div></div>
+          <div><div>shell</div></div>
+          <div><div><pre># autenticación contra el TPV
+curl -X POST "https://api.example.com/pago" \
+  -H "Content-Type: application/json" \
+  -d '{"importe": 1000}'</pre></div></div>
+        </div>
       </div>
-    </div>
-    <div class="code-block">
-      <div>
-        <div></div>
-      </div>
-      <div>
-        <div>xml</div>
-      </div>
-      <div>
-        <div>&lt;TRANSACCION&gt;
-  &lt;CODIGO&gt;0&lt;/CODIGO&gt;
-  &lt;DESCRIPCION&gt;OK&lt;/DESCRIPCION&gt;
-&lt;/TRANSACCION&gt;</div>
-      </div>
-    </div>
-  </div>
-</main>
+    </main>
+    <footer></footer>
+  </body>
+</html>

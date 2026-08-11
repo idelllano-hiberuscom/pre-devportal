@@ -1,124 +1,153 @@
+/*
+ * Medidas del portal (.eds-pipeline/assets/pie-chart/):
+ * raíz margin 80px 0 192px · rótulos 16px/32px sobre rgb(118,118,122) ·
+ * títulos de grupo subrayados en teal · tres grupos a la derecha alineados a la derecha y
+ * tres a la izquierda alineados a la izquierda · en móvil el donut va arriba y los grupos
+ * se apilan mostrando su icono sobre el título.
+ */
+
 .pie-chart {
-  margin: 80px 0 192px;
-  font-family: var(--body-font-family, Poppins, sans-serif);
-  font-size: 16px;
-  line-height: 24px;
+  margin: 40px 0 80px;
 }
 
 .pie-chart .pie-chart-visual {
   display: flex;
   justify-content: center;
-  margin-block-end: 32px;
+  margin-bottom: 40px;
 }
 
-.pie-chart .pie-chart-visual canvas {
+.pie-chart .pie-chart-donut {
   width: 100%;
   max-width: 340px;
   height: auto;
 }
 
+/* Un único trazo blanco produce a la vez los separadores radiales, los huecos entre
+   bandas y el borde del agujero, tal como se miden en la captura. */
+.pie-chart .pie-chart-band {
+  stroke: var(--background-color);
+  stroke-width: 2;
+}
+
 .pie-chart .pie-chart-items {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .pie-chart .pie-chart-item {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 8px 16px;
-  align-items: start;
-  border-inline-start: 4px solid var(--item-color, currentcolor);
-  padding-inline-start: 12px;
+  margin: 0;
 }
 
 .pie-chart .pie-chart-item-icon {
-  grid-row: 1 / 3;
-  grid-column: 1;
-  margin: 0;
   display: flex;
   align-items: center;
+  margin: 0 0 8px;
 }
 
-.pie-chart .pie-chart-item-icon img,
-.pie-chart .pie-chart-item-icon svg {
-  width: 40px;
-  height: 40px;
+.pie-chart .pie-chart-item-icon img {
+  width: 32px;
+  height: 32px;
   object-fit: contain;
 }
 
 .pie-chart .pie-chart-item-title {
-  margin: 0;
-  font-weight: 600;
-  color: rgb(0 0 0 / 87%);
-}
-
-.pie-chart .pie-chart-item-value {
-  margin: 0;
-  color: rgb(119 119 123);
-  font-size: 14px;
+  margin: 0 0 8px;
+  border-bottom: 1px solid var(--brand-accent);
+  padding-bottom: 8px;
+  color: var(--text-color);
 }
 
 .pie-chart .pie-chart-item-details {
-  grid-column: 2;
-  color: rgb(118 118 122);
-  line-height: 32px;
+  color: var(--text-secondary);
+  font-size: var(--body-font-size-s);
+  line-height: var(--paragraph-line-height);
 }
 
 .pie-chart .pie-chart-item-details ul,
 .pie-chart .pie-chart-item-details ol {
   margin: 0;
-  padding-inline-start: 16px;
-  text-align: end;
+  padding: 0;
+  list-style: none;
 }
 
 .pie-chart .pie-chart-item-details li {
-  line-height: 32px;
+  line-height: var(--paragraph-line-height);
 }
 
-.pie-chart .visually-hidden {
+.pie-chart .pie-chart-item-details > :first-child {
+  margin-top: 0;
+}
+
+.pie-chart .pie-chart-item-details > :last-child {
+  margin-bottom: 0;
+}
+
+/* Campos que el portal no muestra pero deben seguir siendo editables. */
+.pie-chart .pie-chart-item-color,
+.pie-chart .pie-chart-item-icon-alt {
   position: absolute;
   width: 1px;
   height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
   border: 0;
-}
-
-@media (width >= 600px) {
-  .pie-chart .pie-chart-items {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-  }
+  margin: -1px;
+  padding: 0;
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 @media (width >= 900px) {
+  /* El portal da al donut ~39% del ancho (564px de 1440) y reparte el resto entre las dos
+     columnas de rótulos. La columna central se acota para conservar esa proporción sin
+     estrangular los títulos, que a 24px necesitan unos 300px. */
   .pie-chart {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
+    grid-template-columns: minmax(0, 1fr) clamp(260px, 36%, 480px) minmax(0, 1fr);
     align-items: center;
+    gap: 32px 48px;
+    margin: 80px 0 192px;
   }
 
   .pie-chart .pie-chart-visual {
-    margin-block-end: 0;
+    grid-row: 1 / -1;
+    grid-column: 2;
+    margin-bottom: 0;
   }
 
+  .pie-chart .pie-chart-donut {
+    max-width: 480px;
+  }
+
+  /* Lista y elementos comparten la rejilla del bloque. */
   .pie-chart .pie-chart-items {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    display: contents;
+  }
+
+  .pie-chart .pie-chart-item {
+    grid-row: var(--pie-row);
+    grid-column: var(--pie-column);
+  }
+
+  .pie-chart .pie-chart-item-right {
+    text-align: right;
+  }
+
+  .pie-chart .pie-chart-item-left {
+    text-align: left;
+  }
+
+  /* En escritorio los iconos sólo aparecen dentro del donut. */
+  .pie-chart .pie-chart-item-icon {
+    display: none;
   }
 }
 
 @media (width >= 1200px) {
-  .pie-chart .pie-chart-visual canvas {
-    max-width: 480px;
+  .pie-chart .pie-chart-donut {
+    max-width: 564px;
   }
 }
