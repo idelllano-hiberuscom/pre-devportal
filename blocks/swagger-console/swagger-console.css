@@ -1,3 +1,15 @@
+/*
+ * Medidas del portal (.eds-pipeline/assets/swagger-console/):
+ * contenedor 1190x900 · fotografía a sangre completa · tarjeta clara centrada de ~594px con
+ * ~80px de padding lateral · columna de formulario de 435px (medida) · campos de 52px con
+ * etiqueta flotante · enlace de recuperación alineado a la derecha, 14px, gris apagado ·
+ * botón "Entrar" pill navy 14/500/20 con sombra de botón · registro centrado 14px ls .25
+ *
+ * Desviación deliberada: en la captura la tarjeta es translúcida y deja ver la fotografía.
+ * Aquí se usa un blanco al 92% con desenfoque para garantizar el contraste AA del texto
+ * sobre cualquier imagen que elija el autor.
+ */
+
 .swagger-console {
   max-width: 1190px;
   margin: 0 auto;
@@ -5,38 +17,24 @@
 
 .swagger-console .swagger-console-content {
   display: grid;
-  min-height: 812px;
-  border: 1px solid #d9d9d9;
-  border-radius: 8px;
+  border-radius: var(--radius-card);
   overflow: hidden;
-  background-color: #fff;
 }
 
 .swagger-console .swagger-console-login {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 24px 16px;
-  background-color: #013451;
-  color: #fff;
+  justify-content: center;
+  min-height: 560px;
+  padding: 40px 16px;
   isolation: isolate;
-}
-
-.swagger-console .swagger-console-login::after {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  content: '';
-  background: linear-gradient(rgb(0 0 0 / 30%), rgb(0 0 0 / 30%));
 }
 
 .swagger-console .swagger-console-background {
   position: absolute;
   inset: 0;
-  z-index: -2;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  z-index: -1;
 }
 
 .swagger-console .swagger-console-background picture,
@@ -50,36 +48,72 @@
   object-fit: cover;
 }
 
+/* Tarjeta clara centrada sobre la fotografía. */
 .swagger-console .swagger-console-panel {
   display: grid;
   gap: 16px;
   width: 100%;
+  max-width: 594px;
+  border-radius: var(--radius-card);
+  padding: 40px 24px;
+  background-color: rgb(255 255 255 / 92%);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(12px);
 }
 
 .swagger-console .swagger-console-form {
   display: grid;
-  gap: 16px;
+  gap: 24px;
+  width: 100%;
+  max-width: 435px;
+  margin: 0 auto;
 }
 
+/* Campo con etiqueta flotante. */
 .swagger-console .swagger-console-field {
-  display: grid;
-  gap: 8px;
-  font-size: 14px;
-  line-height: 24px;
-}
-
-.swagger-console .swagger-console-label {
-  font-weight: 500;
+  position: relative;
+  display: block;
 }
 
 .swagger-console .swagger-console-control {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 10px 12px;
-  border: 1px solid #d0d0d0;
+  height: 52px;
+  border: 1px solid var(--text-muted);
   border-radius: 4px;
-  background-color: #fff;
+  padding: 0 12px;
+  background-color: var(--background-color);
+}
+
+.swagger-console .swagger-console-label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  padding: 0 4px;
+  background-color: var(--background-color);
+  color: var(--text-muted);
+  font-size: var(--body-font-size-s);
+  line-height: 1;
+  transform: translateY(-50%);
+  transition: top 0.15s ease, font-size 0.15s ease, color 0.15s ease;
+  pointer-events: none;
+}
+
+/* La etiqueta precede al control en el DOM, así que se consulta desde el campo con :has(). */
+.swagger-console .swagger-console-field:focus-within .swagger-console-label {
+  color: var(--brand-primary);
+}
+
+.swagger-console .swagger-console-field:focus-within .swagger-console-label,
+.swagger-console .swagger-console-field:has(.swagger-console-input:not(:placeholder-shown)) .swagger-console-label {
+  top: 0;
+  font-size: 12px;
+}
+
+.swagger-console .swagger-console-field:focus-within .swagger-console-control {
+  border-color: var(--brand-primary);
+  border-width: 2px;
 }
 
 .swagger-console .swagger-console-input {
@@ -87,60 +121,67 @@
   min-width: 0;
   border: 0;
   padding: 0;
-  color: #201f1f;
   background: transparent;
+  color: var(--text-color);
   font: inherit;
+  font-size: var(--body-font-size-s);
 }
 
 .swagger-console .swagger-console-input:focus {
   outline: 0;
 }
 
-.swagger-console .swagger-console-control:focus-within {
-  outline: 2px solid #fff;
-  outline-offset: 2px;
-}
-
 .swagger-console .swagger-console-password-toggle {
   flex-shrink: 0;
   border: 0;
   padding: 0;
-  color: #013451;
   background: none;
+  color: var(--brand-primary);
   font: inherit;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: var(--body-font-size-xs);
+  line-height: var(--body-line-height);
   cursor: pointer;
 }
 
-.swagger-console .swagger-console-hint,
-.swagger-console .swagger-console-register-link {
-  color: #fff;
+.swagger-console .swagger-console-password-toggle:hover {
+  color: var(--brand-accent);
 }
 
 .swagger-console .swagger-console-hint {
+  color: var(--text-muted);
+  font-size: var(--body-font-size-xs);
+  letter-spacing: 0.25px;
+  line-height: var(--body-line-height);
   text-align: right;
+}
+
+.swagger-console .swagger-console-hint:hover {
+  color: var(--brand-accent);
 }
 
 .swagger-console .swagger-console-submit {
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
   gap: 10px;
+  align-items: center;
+  justify-content: center;
   min-height: 40px;
   margin-top: 16px;
   border: 0;
-  border-radius: 100px;
+  border-radius: var(--radius-pill);
   padding: 10px 24px;
-  color: #fff;
-  background-color: #013451;
-  box-shadow:
-    0 1px 3px 1px rgb(0 0 0 / 15%),
-    0 1px 2px 0 rgb(0 0 0 / 30%);
-  font-size: 14px;
+  background-color: var(--brand-primary);
+  box-shadow: var(--shadow-button);
+  color: var(--background-color);
+  font-size: var(--body-font-size-xs);
   font-weight: 500;
+  letter-spacing: 0.1px;
   line-height: 20px;
   cursor: pointer;
+}
+
+.swagger-console .swagger-console-submit:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
 }
 
 .swagger-console .swagger-console-submit:disabled {
@@ -148,23 +189,34 @@
   cursor: not-allowed;
 }
 
+.swagger-console .swagger-console-submit:hover:not(:disabled) {
+  background-color: var(--brand-accent);
+}
+
 .swagger-console .swagger-console-register,
 .swagger-console .swagger-console-status {
   margin: 0;
-  font-size: 14px;
-  line-height: 24px;
+  color: var(--text-muted);
+  font-size: var(--body-font-size-xs);
   letter-spacing: 0.25px;
+  line-height: var(--body-line-height);
+  text-align: center;
 }
 
-.swagger-console .swagger-console-register {
-  text-align: center;
+.swagger-console .swagger-console-register-link {
+  color: var(--brand-primary);
+  text-decoration: underline;
+}
+
+.swagger-console .swagger-console-register-link:hover {
+  color: var(--brand-accent);
 }
 
 .swagger-console .swagger-console-frame {
   width: 100%;
   min-height: 480px;
   border: 0;
-  background-color: #fff;
+  background-color: var(--background-color);
 }
 
 .swagger-console .swagger-console-source {
@@ -172,18 +224,14 @@
 }
 
 @media (width >= 600px) {
-  .swagger-console .swagger-console-content {
-    min-height: 1024px;
-  }
-
-  .swagger-console .swagger-console-login {
-    padding: 32px 24px;
+  .swagger-console .swagger-console-panel {
+    padding: 56px 80px;
   }
 }
 
 @media (width >= 900px) {
-  .swagger-console .swagger-console-panel {
-    max-width: 435px;
+  .swagger-console .swagger-console-login {
+    min-height: 720px;
   }
 
   .swagger-console .swagger-console-submit {
@@ -192,16 +240,7 @@
 }
 
 @media (width >= 1200px) {
-  .swagger-console .swagger-console-content {
-    grid-template-columns: minmax(320px, 435px) 1fr;
-    min-height: 900px;
-  }
-
   .swagger-console .swagger-console-login {
-    padding: 32px;
-  }
-
-  .swagger-console .swagger-console-frame {
     min-height: 900px;
   }
 }

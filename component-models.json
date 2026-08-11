@@ -228,13 +228,6 @@
         "label": "Alt",
         "value": "",
         "required": true
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
       }
     ]
   },
@@ -489,6 +482,33 @@
     ]
   },
   {
+    "id": "feature-list-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "icon",
+        "label": "Icon",
+        "valueType": "string",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "iconAlt",
+        "label": "Icon alternative text",
+        "description": "Leave empty if the icon is decorative and the title already conveys the meaning.",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Text",
+        "description": "Title and description of the feature. The title should be a heading.",
+        "valueType": "string",
+        "required": true
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
@@ -535,11 +555,11 @@
         "required": true
       },
       {
-        "component": "number",
-        "name": "value",
-        "label": "Value",
-        "valueType": "number",
-        "required": true
+        "component": "text",
+        "name": "color",
+        "label": "Segment colour",
+        "description": "Optional CSS colour for the segment. Leave empty to use the measured palette of the original portal.",
+        "valueType": "string"
       },
       {
         "component": "reference",
@@ -549,10 +569,37 @@
         "multi": false
       },
       {
+        "component": "text",
+        "name": "iconAlt",
+        "label": "Icon alternative text",
+        "description": "Leave empty if the icon is purely decorative and the title already conveys the meaning.",
+        "valueType": "string"
+      },
+      {
         "component": "richtext",
         "name": "details",
         "label": "Details",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "sidenav",
+    "fields": [
+      {
+        "component": "text",
+        "name": "searchLabel",
+        "label": "Search placeholder",
+        "description": "Text shown inside the search box. Defaults to Buscar.",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "nav",
+        "label": "Navigation",
+        "description": "Nested list of links. A list item that contains its own list becomes a group: a heading at the first level and an expandable item below that.",
+        "valueType": "string",
+        "required": true
       }
     ]
   },
@@ -624,10 +671,11 @@
     "id": "video-item",
     "fields": [
       {
-        "component": "aem-content",
+        "component": "text",
         "valueType": "string",
         "name": "uri",
-        "label": "URI"
+        "label": "URL del vídeo",
+        "description": "URL del vídeo, absoluta o relativa al sitio (por ejemplo /assets/video-demo.webm). No sirve una ruta del DAM: la entrega solo reescribe a una URL servible los campos reference de imagen, así que un /content/dam/... se publica tal cual y da 404. Los vídeos se sirven desde el repositorio o desde un origen externo."
       },
       {
         "component": "multiselect",

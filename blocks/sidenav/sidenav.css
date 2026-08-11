@@ -1,0 +1,198 @@
+/*
+ * Medidas del portal (/herramientas-para-desarrolladores, speedcode-sidenav):
+ * panel 250px con borde derecho · cabecera padding 32px 24px · input 14px/21px
+ * enlace 14px/24px, padding 8px 24px, alto 40px
+ *   actual        rgb(1,127,155) peso 500 ls 0.1px
+ *   grupo         rgb(32,31,31) peso 500 ls 0.25px, sangrado 24px, con filete inferior
+ *   enlace normal rgb(32,31,31) peso 400 ls 0.25px
+ */
+
+.sidenav-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- buscador ---- */
+.sidenav .sidenav-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  border: 1px solid var(--brand-accent);
+  border-radius: var(--radius-pill);
+  padding: 8px 16px;
+}
+
+.sidenav .sidenav-search-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--brand-primary);
+}
+
+.sidenav .sidenav-search-input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-xs);
+  line-height: 21px;
+}
+
+.sidenav .sidenav-search-input:focus {
+  outline: 0;
+}
+
+.sidenav .sidenav-search:focus-within {
+  outline: 2px solid var(--brand-accent);
+  outline-offset: 1px;
+}
+
+/* ---- árbol ---- */
+.sidenav .sidenav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidenav .sidenav-item {
+  margin: 0;
+  line-height: var(--body-line-height);
+}
+
+.sidenav .sidenav-item.is-hidden {
+  display: none;
+}
+
+.sidenav .sidenav-link,
+.sidenav .sidenav-group-title,
+.sidenav .sidenav-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 8px 24px;
+  color: #201f1f;
+  font-size: var(--body-font-size-xs);
+  letter-spacing: 0.25px;
+  line-height: var(--body-line-height);
+  text-decoration: none;
+}
+
+.sidenav a.sidenav-link:any-link {
+  color: #201f1f;
+  text-decoration: none;
+}
+
+/* Encabezado de grupo de primer nivel: peso 500 y filete inferior, sangrado 24px. */
+.sidenav .sidenav-group-title {
+  border-bottom: 1px solid var(--border-color);
+  margin: 0 24px;
+  padding: 8px 0;
+  font-weight: 500;
+}
+
+.sidenav .sidenav-group-title a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.sidenav .sidenav-toggle {
+  justify-content: space-between;
+  width: 100%;
+  border: 0;
+  background: none;
+  font-family: var(--body-font-family);
+  text-align: left;
+  cursor: pointer;
+}
+
+.sidenav .sidenav-chevron {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s ease;
+}
+
+.sidenav .sidenav-item.is-open > .sidenav-toggle .sidenav-chevron {
+  transform: rotate(90deg);
+}
+
+/* Los niveles anidados quedan plegados salvo que el grupo esté abierto o el filtro lo fuerce. */
+.sidenav .sidenav-group > .sidenav-list-2,
+.sidenav .sidenav-group > .sidenav-list-3 {
+  display: none;
+}
+
+.sidenav .sidenav-group.is-open > .sidenav-list,
+.sidenav .sidenav-group.is-forced-open > .sidenav-list,
+.sidenav .sidenav-list-1 > .sidenav-group > .sidenav-list-2 {
+  display: block;
+}
+
+.sidenav .sidenav-list-3 .sidenav-link {
+  padding-left: 40px;
+}
+
+.sidenav .sidenav-link:hover,
+.sidenav a.sidenav-link:any-link:hover,
+.sidenav .sidenav-toggle:hover {
+  color: var(--brand-accent);
+}
+
+/* Página actual. */
+.sidenav .sidenav-link.is-current,
+.sidenav a.sidenav-link.is-current:any-link {
+  color: var(--brand-accent);
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+.sidenav .sidenav-link:focus-visible,
+.sidenav .sidenav-toggle:focus-visible {
+  outline: 2px solid var(--brand-accent);
+  outline-offset: -2px;
+}
+
+/*
+ * Layout de página: el sidenav ocupa la columna izquierda y el resto de secciones la
+ * derecha. Solo a partir de escritorio; por debajo queda como un bloque más, arriba.
+ */
+.sidenav-section .sidenav-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+@media (width >= 1200px) {
+  main.has-sidenav {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    align-items: start;
+  }
+
+  main.has-sidenav > .section {
+    grid-column: 2;
+    width: 100%;
+  }
+
+  main.has-sidenav > .section.sidenav-section {
+    grid-row: 1 / -1;
+    grid-column: 1;
+    margin: 0;
+    border-right: 1px solid var(--border-color);
+    padding: 0;
+  }
+
+  .sidenav-section .sidenav-panel {
+    position: sticky;
+    top: var(--nav-height);
+    padding: 32px 0;
+  }
+
+  .sidenav-section .sidenav-search {
+    margin: 0 24px 8px;
+  }
+}

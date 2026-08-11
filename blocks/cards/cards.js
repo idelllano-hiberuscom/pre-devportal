@@ -9,34 +9,49 @@ function isEmptyCell(cell) {
   return Boolean(cell) && !cell.textContent.trim() && !cell.children.length;
 }
 
-function getIconCardCells(cells) {
-  const [firstCell, secondCell, ...remainingCells] = cells;
+/** Una celda de enlace es una ruta o URL suelta, o un ancla. */
+function isLinkCell(cell) {
+  const text = cell?.textContent.trim() || '';
+  return Boolean(cell?.querySelector('a')) || /^(?:https?:\/\/|\/)\S*$/.test(text);
+}
 
-  if (isImageCell(firstCell)) {
-    return {
-      imageCell: firstCell,
-      altCell: secondCell,
-      bodyCells: remainingCells,
-    };
+/*
+ * AEM omite la fila de cualquier campo que el autor no haya rellenado, así que las celdas no
+ * se pueden leer por posición fija: el blog está autorizado con el modelo `card` base
+ * (image + text, sin imageAlt) y leer la segunda celda como alt dejaba el titular y la fecha
+ * dentro de un contenedor oculto — el texto no se pintaba.
+ *
+ * La imagen se reconoce por contenido. Para el resto se combina el orden del modelo con lo
+ * que la variante declara: si la variante tiene campo de texto y solo queda una celda, esa
+ * celda es el texto, no el alt.
+ */
+function resolveCells(cells, { hasText = true, hasLink = false } = {}) {
+  const imageCell = cells.find(isImageCell) || null;
+  const rest = cells.filter((cell) => cell !== imageCell && !isEmptyCell(cell));
+
+  let linkCell = null;
+  if (hasLink) {
+    const index = rest.findIndex(isLinkCell);
+    if (index >= 0) [linkCell] = rest.splice(index, 1);
   }
 
-  if (isEmptyCell(firstCell)) {
-    return {
-      imageCell: null,
-      altCell: secondCell,
-      bodyCells: remainingCells,
-    };
+  let altCell = null;
+  let bodyCells = [];
+  if (!hasText) {
+    [altCell] = rest;
+  } else if (rest.length > 1) {
+    [altCell, ...bodyCells] = rest;
+  } else {
+    bodyCells = rest;
   }
 
   return {
-    imageCell: null,
-    altCell: firstCell,
-    bodyCells: cells.slice(1),
+    imageCell, altCell, bodyCells, linkCell,
   };
 }
 
 function decorateIconCard(li, cells) {
-  const { imageCell, altCell, bodyCells } = getIconCardCells(cells);
+  const { imageCell, altCell, bodyCells } = resolveCells(cells);
   const altText = altCell?.textContent.trim() || '';
 
   if (imageCell) {
@@ -82,8 +97,10 @@ function optimizeCardImages(li, altText, width) {
   });
 }
 
+/* El contrato de la variante logos declara únicamente image + imageAlt: el portal no muestra
+   texto dentro del círculo, así que la celda restante es siempre el alt. */
 function decorateLogoCard(li, cells) {
-  const [altCell, ...bodyCells] = cells.filter((cell) => !isImageCell(cell));
+  const { altCell } = resolveCells(cells, { hasText: false });
   const altText = altCell?.textContent.trim() || '';
 
   if (altCell) {
@@ -92,20 +109,11 @@ function decorateLogoCard(li, cells) {
     li.append(altCell);
   }
 
-  bodyCells.forEach((cell) => {
-    cell.className = 'cards-card-body';
-    li.append(cell);
-  });
-
-  if (bodyCells.some((cell) => cell.textContent.trim())) {
-    li.classList.add('has-body');
-  }
-
   return altText;
 }
 
 function decorateEditorialCard(li, cells) {
-  const [imageCell, altCell, ...bodyCells] = cells;
+  const { imageCell, altCell, bodyCells } = resolveCells(cells);
   const altText = altCell?.textContent.trim() || '';
 
   if (imageCell) {
@@ -125,11 +133,36 @@ function decorateEditorialCard(li, cells) {
   return altText;
 }
 
+/*
+ * En /inicio las cuatro tarjetas ocupan la mitad izquierda y a la derecha va un retrato.
+ * En EDS eso no puede ser un bloque dentro de un `columns`: decorateBlocks solo recorre
+ * `div.section > div > div`, así que un bloque anidado nunca llegaría a decorarse y el
+ * backend lo entrega aplanado. La composición se resuelve, como en feature-list, marcando
+ * la sección cuando el bloque convive con una imagen de contenido por defecto.
+ */
+function splitSectionWithImage(block) {
+  const section = block.closest('.section');
+  if (!section) return;
+
+  const aside = [...section.children]
+    .find((child) => child !== block.parentElement
+      && child.classList.contains('default-content-wrapper')
+      && child.querySelector('picture'));
+
+  if (!aside) return;
+  aside.classList.add('cards-aside');
+  section.classList.add('cards-section-split');
+}
+
 export default function decorate(block) {
   const isLogoVariant = block.classList.contains('logos');
-  const isIconCardsVariant = block.classList.contains('icon-cards');
+  // icon-grid es la rejilla de tres columnas de /inicio: mismo item que icon-cards, otra
+  // disposicion, asi que comparten la decoracion.
+  const isIconCardsVariant = block.classList.contains('icon-cards')
+    || block.classList.contains('icon-grid');
   const isPluginsVariant = block.classList.contains('plugins');
   const isEditorialVariant = block.classList.contains('editorial');
+  if (isIconCardsVariant) splitSectionWithImage(block);
   const ul = document.createElement('ul');
 
   while (block.firstElementChild) {
@@ -151,15 +184,17 @@ export default function decorate(block) {
     } else if (isEditorialVariant) {
       altText = decorateEditorialCard(li, cells);
     } else if (isPluginsVariant) {
-      const [imageCell, altCell, bodyCell, linkCell] = cells;
+      const {
+        imageCell, altCell, bodyCells, linkCell,
+      } = resolveCells(cells, { hasLink: true });
       altText = altCell?.textContent.trim() || '';
 
       if (imageCell) {
         imageCell.className = 'cards-card-image';
       }
-      if (bodyCell) {
-        bodyCell.className = 'cards-card-body';
-      }
+      bodyCells.forEach((cell) => {
+        cell.className = 'cards-card-body';
+      });
       if (altCell) {
         altCell.className = 'cards-card-alt';
         altCell.setAttribute('aria-hidden', 'true');
@@ -174,7 +209,7 @@ export default function decorate(block) {
       anchor.href = href;
 
       if (imageCell) anchor.append(imageCell);
-      if (bodyCell) anchor.append(bodyCell);
+      bodyCells.forEach((cell) => anchor.append(cell));
       li.append(anchor);
       if (altCell) li.append(altCell);
       if (linkCell) li.append(linkCell);

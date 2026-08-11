@@ -1,20 +1,138 @@
+/*
+ * Medidas del portal (footer-cecabank):
+ * raiz fondo rgb(1,52,81), flex column, gap 40px, padding 112px 96px
+ * contenido 1248px: marca a la izquierda (395px, logo 224x40) y enlaces a la derecha (789px)
+ * enlaces en rejilla de 3 columnas de 210px con gap 80px
+ * titular de grupo blanco 16px/32px peso 500; enlaces blancos 16px/32px
+ * certificaciones en su propia fila, con los logos de marca a 48px de alto
+ */
+
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: var(--brand-primary);
+  color: var(--background-color);
+  font-size: var(--body-font-size-s);
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+/* No se resetea `footer .footer > div`: .footer-inner es hijo directo y ese selector le ganaba
+   en especificidad, dejándolo sin relleno y con el logotipo cortado en el borde. */
+footer .footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 56px 24px;
 }
 
-footer .footer p {
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* marca */
+footer .footer-brand p {
   margin: 0;
+  line-height: 0;
+}
+
+footer .footer-brand img {
+  width: 224px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* enlaces */
+footer .footer-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+footer .footer-link-section :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0 0 8px;
+  color: var(--background-color);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: var(--paragraph-line-height);
+}
+
+footer .footer-link-section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer .footer-link-section li {
+  line-height: var(--paragraph-line-height);
+}
+
+footer a:any-link {
+  color: var(--background-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--background-color);
+  text-decoration: underline;
+}
+
+/* certificaciones */
+footer .footer-certifications {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-top: 1px solid rgb(255 255 255 / 20%);
+  padding-top: 32px;
+}
+
+footer .footer-certifications :is(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+  color: var(--background-color);
+  font-size: var(--body-font-size-s);
+  font-weight: 500;
+  line-height: var(--paragraph-line-height);
+}
+
+/* Una sola fila de sellos, tanto si vienen en un único párrafo (contenido plano) como en un
+   párrafo por imagen (un componente de imagen por logotipo desde Universal Editor). */
+footer .footer-certification-logos,
+footer .footer-certifications p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  margin: 0;
+  line-height: 0;
+}
+
+footer .footer-certifications img {
+  width: auto;
+  max-width: 100%;
+  height: 48px;
+  object-fit: contain;
 }
 
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+  footer .footer-inner {
+    gap: 40px;
+    padding: 112px 96px;
+  }
+
+  footer .footer-content {
+    flex-direction: row;
+    gap: 64px;
+  }
+
+  footer .footer-brand {
+    flex: 0 0 395px;
+  }
+
+  footer .footer-links {
+    flex: 1 1 auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 80px;
   }
 }

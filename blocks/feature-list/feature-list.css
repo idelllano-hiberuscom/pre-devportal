@@ -1,0 +1,160 @@
+/*
+ * Medidas del portal (/inicio, section.feature-list):
+ * raíz grid 540px/540px · gap 40px · padding 320px 160px · fondo rgb(1,52,81)
+ * titular 40px/60px peso 400 blanco con border-right 2px solid rgb(1,127,155)
+ * lista flex column gap 56px · item flex row gap 36px · icono 108x108
+ * h4 del item 40px/60px peso 400 blanco · p 16px/32px blanco
+ */
+
+/*
+ * La sección se pinta a sangre en navy y con los bordes en diagonal, no rectos: el portal
+ * recorta el bloque con clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%). Por eso el
+ * relleno vertical es tan generoso — el recorte se come las esquinas.
+ */
+.section.feature-list-section {
+  margin: 0;
+  padding: 96px 0;
+  background-color: var(--brand-primary);
+  color: var(--background-color);
+  clip-path: polygon(0 6%, 100% 0, 100% 94%, 0 100%);
+}
+
+.section.feature-list-section :is(h1, h2, h3, h4, h5, h6),
+.section.feature-list-section p,
+.section.feature-list-section li {
+  color: var(--background-color);
+}
+
+.feature-list-intro > :first-child {
+  margin-top: 0;
+}
+
+.feature-list-intro > :last-child {
+  margin-bottom: 0;
+}
+
+.feature-list .feature-list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feature-list .feature-list-item {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.feature-list .feature-list-item-icon {
+  flex-shrink: 0;
+  width: 72px;
+  line-height: 0;
+}
+
+.feature-list .feature-list-item-icon picture,
+.feature-list .feature-list-item-icon img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.feature-list .feature-list-item-body > :first-child {
+  margin-top: 0;
+}
+
+.feature-list .feature-list-item-body > :last-child {
+  margin-bottom: 0;
+}
+
+/* El titular de cada item se mide igual que el h2 de sección: 40/60 peso 400. */
+.feature-list .feature-list-item-body :is(h2, h3, h4, h5) {
+  margin: 0 0 8px;
+  color: var(--background-color);
+  font-size: var(--heading-font-size-xl);
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.5;
+}
+
+.feature-list .feature-list-item-body p {
+  margin: 0 0 16px;
+  color: var(--background-color);
+  font-size: var(--body-font-size-s);
+  line-height: var(--paragraph-line-height);
+}
+
+.feature-list .feature-list-item-body p:last-child {
+  margin-bottom: 0;
+}
+
+.feature-list .feature-list-item-alt {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  margin: -1px;
+  padding: 0;
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@media (width >= 900px) {
+  /* El portal mide padding 320px 160px y recorta al 15%: el relleno grande existe justamente
+     para que la diagonal no muerda el contenido. */
+  .section.feature-list-section {
+    padding: 200px 0;
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .feature-list .feature-list-items {
+    gap: 56px;
+  }
+
+  .feature-list .feature-list-item {
+    gap: 36px;
+  }
+
+  .feature-list .feature-list-item-icon {
+    width: 108px;
+  }
+
+  .feature-list .feature-list-item-body :is(h2, h3, h4, h5) {
+    line-height: 60px;
+  }
+
+  /*
+   * Composición de sección: titular a la izquierda y lista a la derecha, con el divisor
+   * teal medido en el portal sobre el borde derecho del titular.
+   */
+  .section.feature-list-section-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 40px;
+    max-width: none;
+    margin-inline: 0;
+    padding: 200px max(32px, calc(50vw - 568px));
+  }
+
+  .section.feature-list-section-split > div {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .section.feature-list-section-split > .feature-list-intro {
+    border-right: 2px solid var(--brand-accent);
+    padding-right: 40px;
+  }
+
+  .feature-list-intro :is(h1, h2) {
+    font-size: var(--heading-font-size-xl);
+    font-weight: 400;
+    line-height: 60px;
+  }
+}

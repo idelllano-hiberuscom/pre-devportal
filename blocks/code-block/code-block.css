@@ -1,10 +1,16 @@
+/*
+ * Medidas del portal (.eds-pipeline/assets/code-block/):
+ * raíz fondo rgba(119,119,123,.04), radio 8px, sombra de la casa, margin-bottom 32px, overflow hidden.
+ * Cabecera: barra navy de marca (muestreada #003552 -> token #013451), título e icono en blanco.
+ * Cuerpo: numeración en gris apagado; tokens muestreados clave #005ec8, cadena #022f64,
+ * puntuación #78787c.
+ */
+
 .code-block {
   margin-bottom: 32px;
-  border-radius: 8px;
-  background-color: rgb(119 119 123 / 4%);
-  box-shadow:
-    rgb(0 0 0 / 15%) 2px 0 2px 0,
-    rgb(0 0 0 / 15%) 0 2px 4px 0;
+  border-radius: var(--radius-card);
+  background-color: var(--surface-subtle);
+  box-shadow: var(--shadow-card);
   color: var(--text-color);
   overflow: hidden;
 }
@@ -16,66 +22,53 @@
 
 .code-block .code-block-header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 16px 16px 0;
-}
-
-.code-block .code-block-meta {
-  display: flex;
-  flex: 1;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
-  min-width: 0;
+  padding: 14px 24px;
+  background-color: var(--brand-primary);
+  color: var(--background-color);
 }
 
 .code-block .code-block-title {
+  flex: 1;
+  min-width: 0;
   margin: 0;
-  color: var(--text-color);
-  font-size: var(--body-font-size-s);
-  font-weight: 600;
-}
-
-.code-block .code-block-language {
-  border-radius: 999px;
-  background-color: var(--background-color);
-  color: var(--dark-color);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  padding: 4px 10px;
-  text-transform: uppercase;
+  color: var(--background-color);
+  font-size: var(--body-font-size-xs);
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  line-height: var(--body-line-height);
 }
 
 .code-block .code-block-actions {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: flex-end;
 }
 
 .code-block .code-block-copy {
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   width: 36px;
-  height: 36px;
+  height: 26px;
   border: 0;
-  border-radius: 999px;
-  background-color: var(--text-color);
+  border-radius: 4px;
+  padding: 1px 6px;
+  background-color: transparent;
   color: var(--background-color);
   cursor: pointer;
-  flex-shrink: 0;
-  padding: 0;
 }
 
 .code-block .code-block-copy:hover {
-  background-color: var(--dark-color);
+  background-color: rgb(255 255 255 / 15%);
 }
 
 .code-block .code-block-copy:focus-visible {
-  outline: 2px solid var(--link-color);
+  outline: 2px solid var(--background-color);
   outline-offset: 2px;
 }
 
@@ -85,12 +78,13 @@
 }
 
 .code-block .code-block-body {
-  padding: 0 16px 16px;
+  padding: 16px 24px 24px;
 }
 
 .code-block .code-block-pre {
-  margin: 12px 0 0;
-  padding: 16px 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
   background-color: transparent;
 }
 
@@ -100,24 +94,21 @@
 
 .code-block .code-block-lines {
   margin: 0;
-  padding-left: 44px;
-  color: inherit;
-  font-family:
-    SFMono-Regular,
-    consolas,
-    "Liberation Mono",
-    menlo,
-    monospace;
+  padding-left: 28px;
+  color: var(--text-color);
+  font-family: SFMono-Regular, consolas, "Liberation Mono", menlo, monospace;
   font-size: var(--body-font-size-xs);
-  line-height: 1.5;
+  line-height: 24px;
 }
 
 .code-block .code-block-lines li {
   padding-left: 12px;
 }
 
+/* El portal numera sin punto: se sustituye el marcador por el contador desnudo. */
 .code-block .code-block-lines li::marker {
-  color: var(--dark-color);
+  color: var(--text-muted);
+  content: counter(list-item);
 }
 
 .code-block .code-block-line {
@@ -125,24 +116,48 @@
   white-space: pre;
 }
 
+/* Tokens — colores muestreados de la captura del portal. */
+.code-block .code-token-attr {
+  color: #005ec8;
+}
+
+.code-block .code-token-string {
+  color: #022f64;
+}
+
+.code-block .code-token-punctuation {
+  color: var(--text-muted);
+}
+
+.code-block .code-token-number,
+.code-block .code-token-literal {
+  color: #005ec8;
+}
+
+.code-block .code-token-keyword {
+  color: var(--brand-primary);
+  font-weight: 500;
+}
+
+.code-block .code-token-tag {
+  color: #005ec8;
+}
+
+.code-block .code-token-comment {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* El lenguaje se conserva en el DOM para Universal Editor pero no se muestra. */
+.code-block .code-block-language,
 .code-block .code-block-status {
   position: absolute;
   width: 1px;
   height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
   border: 0;
-}
-
-@media (width >= 600px) {
-  .code-block .code-block-header {
-    padding: 16px 20px 0;
-  }
-
-  .code-block .code-block-body {
-    padding: 0 20px 20px;
-  }
+  margin: -1px;
+  padding: 0;
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
 }

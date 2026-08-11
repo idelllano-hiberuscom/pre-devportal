@@ -1,0 +1,259 @@
+[
+  {
+    "dir": "01-ayuda",
+    "docPath": "/ayuda",
+    "title": "Ayuda",
+    "subtitle": "",
+    "headings": [
+      "Preguntas Frecuentes",
+      "Funcionalidad y contratación del TPV-Virtual",
+      "Integración técnica",
+      "Servicios adicionales",
+      "Seguridad y normativa",
+      "¿Quieres saber más? No te preocupes, te contactamos!"
+    ],
+    "imageCount": 5
+  },
+  {
+    "dir": "02-blog",
+    "docPath": "/blog",
+    "title": "Novedades",
+    "subtitle": "",
+    "headings": [
+      "Test blog",
+      "Entradas recientes"
+    ],
+    "imageCount": 3
+  },
+  {
+    "dir": "03-empieza-con-nosotros",
+    "docPath": "/empieza-con-nosotros",
+    "title": "Empieza con nosotros...",
+    "subtitle": "Crea un formulario de pago de forma rápida e intégralo como mejor se adapte a tu comercio online.",
+    "headings": [
+      "API REST",
+      "Funcionalidades",
+      "Posibles métodos de pago aceptados",
+      "SDK",
+      "iframe",
+      "Hosted Checkout",
+      "Plugins"
+    ],
+    "imageCount": 14
+  },
+  {
+    "dir": "04-fraude",
+    "docPath": "/fraude",
+    "title": "Fraude",
+    "subtitle": "Todas nuestras soluciones se encuentran integradas con nuestro Monitor de Fraude el cual garantiza la robustez necesaria para una operativa segura y basada en todos los estándares de calidad del mercado.",
+    "headings": [
+      "¿Cómo valora el Monitor de Fraude?"
+    ],
+    "imageCount": 5
+  },
+  {
+    "dir": "05-herramientas-para-desarrolladores",
+    "docPath": "/herramientas-para-desarrolladores",
+    "title": "Herramientas para desarrolladores",
+    "subtitle": "Disponemos de SDK, API y más herramientas de integración para que puedas empezar a recibir pagos.",
+    "headings": [],
+    "imageCount": 2
+  },
+  {
+    "dir": "06-herramientas-para-desarrolladores-con-integracion-api-anulacion-de-operaciones",
+    "docPath": "/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones",
+    "title": "",
+    "subtitle": "",
+    "headings": [],
+    "imageCount": 5
+  },
+  {
+    "dir": "07-herramientas-para-desarrolladores-con-integracion-api-gestor-de-operaciones",
+    "docPath": "/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones",
+    "title": "",
+    "subtitle": "",
+    "headings": [],
+    "imageCount": 5
+  },
+  {
+    "dir": "08-herramientas-para-desarrolladores-con-integracion-api-swagger",
+    "docPath": "/herramientas-para-desarrolladores/con-integracion/api/swagger",
+    "title": "",
+    "subtitle": "",
+    "headings": [],
+    "imageCount": 5
+  },
+  {
+    "dir": "09-herramientas-para-desarrolladores-con-integracion-api-tokenizacion",
+    "docPath": "/herramientas-para-desarrolladores/con-integracion/api/tokenizacion",
+    "title": "",
+    "subtitle": "",
+    "headings": [],
+    "imageCount": 5
+  },
+  {
+    "dir": "10-herramientas-para-desarrolladores-con-integracion-hosted-checkout",
+    "docPath": "/herramientas-para-desarrolladores/con-integracion/hosted-checkout",
+    "title": "",
+    "subtitle": "",
+    "headings": [],
+    "imageCount": 5
+  },
+  {
+    "dir": "11-herramientas-para-desarrolladores-con-integracion-iframe",
+    "docPath": "/herramientas-para-desarrolladores/con-integracion/iframe",
+    "title": "",
+    "subtitle": "",
+    "headings": [],
+    "imageCount": 5
+  },
+  {
+    "dir": "12-herramientas-para-desarrolladores-con-integracion-sdk",
+    "docPath": "/herramientas-para-desarrolladores/con-integracion/sdk",
+    "title": "",
+    "subtitle": "",
+    "headings": [],
+    "imageCount": 0
+  },
+  {
+    "dir": "13-herramientas-para-desarrolladores-otros-apple-pay",
+    "docPath": "/herramientas-para-desarrolladores/otros/apple-pay",
+    "title": "",
+    "subtitle": "",
+    "headings": [],
+    "imageCount": 2
+  },
+  {
+    "dir": "14-herramientas-para-desarrolladores-otros-bizum",
+    "docPath": "/herramientas-para-desarrolladores/otros/bizum",
+    "title": "",
+    "subtitle": "",
+    "headings": [],
+    "imageCount": 1
+  },
+  {
+    "dir": "15-herramientas-para-desarrolladores-sin-integracion-pagos-moto",
+    "docPath": "/herramientas-para-desarrolladores/sin-integracion/pagos-moto",
+    "title": "",
+    "subtitle": "",
+    "headings": [],
+    "imageCount": 0
+  },
+  {
+    "dir": "16-herramientas-para-desarrolladores-sin-integracion-pay-by-link",
+    "docPath": "/herramientas-para-desarrolladores/sin-integracion/pay-by-link",
+    "title": "",
+    "subtitle": "",
+    "headings": [],
+    "imageCount": 0
+  },
+  {
+    "dir": "17-herramientas-para-desarrolladores-sin-integracion-plugins-resumen",
+    "docPath": "/herramientas-para-desarrolladores/sin-integracion/plugins/resumen",
+    "title": "",
+    "subtitle": "",
+    "headings": [],
+    "imageCount": 4
+  },
+  {
+    "dir": "18-inicio",
+    "docPath": "/inicio",
+    "title": "¡Bienvenido al Portal de Desarrolladores de e-commerce!",
+    "subtitle": "Comienza a recibir pagos online en tan solo unos clicks. Ofrecemos distintas opciones de integración adaptadas a tu negocio.",
+    "headings": [
+      "La solución de pagos online adaptada a tu negocio",
+      "Elige la integración que más se adapta a tu comercio online",
+      "¿Quieres saber más? No te preocupes, ¡te contactamos!"
+    ],
+    "imageCount": 5
+  },
+  {
+    "dir": "19-integraciones-api",
+    "docPath": "/integraciones/api",
+    "title": "API REST",
+    "subtitle": "La integración mediante API REST ofrece un conjunto de servicios REST que facilitan la autenticación y autorización de pagos con tarjetas en entornos de prueba y producción. Cuenta con tres tipos distintos de operación. Además, se disponen de servicios para anulación total y devolución parcial de operaciones. Todos los servicios intercambian mensajes JSON codificados en Base64 y protegidos mediante firma SHA 256.",
+    "headings": [
+      "¿Cómo funciona nuestra integración API REST a nivel técnico?",
+      "Paso a paso",
+      "Entornos y endpoints",
+      "Sandbox",
+      "Producción",
+      "Paso a paso de la integración",
+      "Flujo de Pago en Dos Pasos",
+      "Anulaciones y Devoluciones"
+    ],
+    "imageCount": 11
+  },
+  {
+    "dir": "20-integraciones-hosted-checkout",
+    "docPath": "/integraciones/hosted-checkout",
+    "title": "Hosted Checkout",
+    "subtitle": "La integración Hosted se basa en la redirección del cliente a un formulario de pago alojado en Cecabank. El cliente llega al formulario desde la página web del comercio a través de una redirección. Con este tipo de integración se facilita el cumplimiento de la norma PCI-DSS de la web. Nosotros nos encargamos de la recogida de los datos de la tarjeta.",
+    "headings": [
+      "¿Cómo funciona nuestra integración Hosted Checkout a nivel técnico?",
+      "Paso a paso",
+      "Entornos y endpoints",
+      "Sandbox",
+      "Producción",
+      "Paso a paso de la Migración"
+    ],
+    "imageCount": 9
+  },
+  {
+    "dir": "21-integraciones-sdk",
+    "docPath": "/integraciones/sdk",
+    "title": "SDK",
+    "subtitle": "El SDK del TPV-Virtual de Cecabank permite a los comercios integrar fácilmente pagos seguros desde sus aplicaciones móviles, tanto para plataformas iOS como Android. Cecabank proporciona librerías específicas para cada sistema operativo, facilitando así un proceso de integración rápido, seguro y eficiente.",
+    "headings": [
+      "¿Cómo funciona nuestra integración SDK a nivel técnico?",
+      "Paso a paso",
+      "Entornos y endpoints",
+      "Sandbox",
+      "Producción",
+      "Paso a paso de la Integración SDK iOS"
+    ],
+    "imageCount": 11
+  },
+  {
+    "dir": "22-plugin-herramientas-para-desarrolladores-sin-integracion-plugins-oscommerce",
+    "docPath": "/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce",
+    "title": "",
+    "subtitle": "",
+    "headings": [],
+    "imageCount": 0
+  },
+  {
+    "dir": "23-plugin-herramientas-para-desarrolladores-sin-integracion-plugins-woocomerce",
+    "docPath": "/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce",
+    "title": "",
+    "subtitle": "",
+    "headings": [],
+    "imageCount": 0
+  },
+  {
+    "dir": "24-sin-integracion-pago-por-email",
+    "docPath": "/sin-integracion/pago-por-email",
+    "title": "Pago por eMail",
+    "subtitle": "El pago por email de Cecabank es una solución rápida y segura que permite cobrar a tus clientes sin necesidad de una web o TPV físico. Solo tienes que generar un enlace de pago y enviarlo por correo: ellos pagan, tú cobras. Ideal para ventas a distancia, presupuestos o cobros personalizados.",
+    "headings": [
+      "Entornos y endpoints",
+      "Sandbox",
+      "Producción",
+      "Paso a paso Generación enlace de cobro"
+    ],
+    "imageCount": 5
+  },
+  {
+    "dir": "25-sin-integracion-pagos-moto",
+    "docPath": "/sin-integracion/pagos-moto",
+    "title": "Pagos MOTO",
+    "subtitle": "La modalidad MOTO se usa cuando la tarjeta se comunica por teléfono o e-mail y el cliente no está presente en la web o en la app. En estos casos no se realiza autenticación 3-DS: basta con disponer de los datos de la tarjeta y lanzar una autorización directa al emisor. El TPV-Virtual la gestiona en un único paso.",
+    "headings": [
+      "Entornos y endpoints",
+      "Sandbox",
+      "Producción",
+      "Paso a paso"
+    ],
+    "imageCount": 5
+  }
+]

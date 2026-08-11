@@ -1,6 +1,19 @@
 import { loadFragment } from '../fragment/fragment.js';
 
 /**
+ * ¿La celda es una ruta de fragmento o el contenido del panel?
+ *
+ * El contrato modela el segundo campo como `fragmentPath`, pero el contenido migrado lo trae
+ * con el texto de la pestaña escrito directamente. Se acepta como ruta únicamente lo que lo
+ * parece: un solo token que empieza por `/`. Cualquier otra cosa es el contenido del panel.
+ * @param {string} value
+ * @returns {boolean}
+ */
+function isFragmentPath(value) {
+  return /^\/\S*$/.test(value);
+}
+
+/**
  * loads and decorates the tabs block
  * @param {Element} block The block element
  */
@@ -8,7 +21,7 @@ export default function decorate(block) {
   const rows = [...block.children];
   if (!rows.length) return;
 
-  // Build tab list and panels from each row: row[0]=title, row[1]=fragmentPath
+  // Cada fila es: row[0]=título, row[1]=ruta de fragmento o contenido en línea
   const tabList = document.createElement('ul');
   tabList.setAttribute('role', 'tablist');
   tabList.className = 'tabs-list';
@@ -20,7 +33,8 @@ export default function decorate(block) {
     const cells = [...row.children];
     const titleEl = cells[0];
     const pathEl = cells[1];
-    const fragmentPath = pathEl ? pathEl.textContent.trim() : '';
+    const cellText = pathEl ? pathEl.textContent.trim() : '';
+    const fragmentPath = isFragmentPath(cellText) ? cellText : '';
     const tabId = `tab-${i}`;
     const panelId = `panel-${i}`;
 
@@ -46,6 +60,17 @@ export default function decorate(block) {
     panel.setAttribute('aria-live', 'polite');
     panel.hidden = i !== 0;
     panel.dataset.path = fragmentPath;
+
+    /*
+     * Contenido en línea: la celda se mueve al panel en lugar de copiarla, para que conserve
+     * su instrumentación y siga siendo editable en Universal Editor.
+     */
+    if (!fragmentPath && pathEl) {
+      pathEl.classList.add('tabs-panel-content');
+      panel.append(pathEl);
+      panel.dataset.loaded = 'inline';
+    }
+
     panels.push(panel);
 
     // Hide original row

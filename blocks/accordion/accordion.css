@@ -1,14 +1,29 @@
-.accordion-intro .default-content-wrapper h2 {
+/*
+ * Medidas del portal (.eds-pipeline/assets/accordion/):
+ * contenedor margin-top 80px · h2 40/60 centrado · tarjeta 938px centrada, alto 72px,
+ * fondo blanco, radio 8px, sombra de la casa · padding 24px 16px · separación 24px ·
+ * icono "+" en teal de marca (muestreado #1c8da6 -> token #017f9b).
+ */
+
+.accordion-intro h2,
+.accordion-intro.default-content-wrapper h2 {
   margin-bottom: 8px;
   text-align: center;
 }
 
-.accordion > .accordion-item {
-  border-top: 1px solid var(--light-color);
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 940px;
+  margin: 0 auto;
 }
 
-.accordion > .accordion-item:last-child {
-  border-bottom: 1px solid var(--light-color);
+.accordion > .accordion-item {
+  border-radius: var(--radius-card);
+  background-color: var(--background-color);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
 }
 
 .accordion .accordion-item-details {
@@ -20,40 +35,54 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 24px 0;
-  cursor: pointer;
+  padding: 24px 16px;
+  color: var(--text-color);
   font-size: var(--body-font-size-s);
-  font-weight: 600;
+  font-weight: 400;
+  line-height: var(--body-line-height);
   list-style: none;
+  cursor: pointer;
 }
 
 .accordion .accordion-item-summary::-webkit-details-marker {
   display: none;
 }
 
-.accordion .accordion-item-summary::after {
-  content: '+';
-  flex-shrink: 0;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 24px;
+.accordion .accordion-item-title > :first-child {
+  margin-top: 0;
 }
 
-.accordion .accordion-item-details[open] > .accordion-item-summary::after {
-  content: '−';
+.accordion .accordion-item-title > :last-child {
+  margin-bottom: 0;
+}
+
+.accordion .accordion-item-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--brand-accent);
+  transition: color 0.2s;
+}
+
+/* Abierto: se oculta la barra vertical y el "+" pasa a "−", como en el portal. */
+.accordion .accordion-item-details[open] .accordion-item-icon-bar {
+  display: none;
 }
 
 .accordion .accordion-item-summary:hover {
-  color: var(--link-hover-color);
+  color: var(--brand-accent);
 }
 
 .accordion .accordion-item-summary:focus-visible {
-  outline: 2px solid var(--link-color);
-  outline-offset: 6px;
+  outline: 2px solid var(--brand-accent);
+  outline-offset: -2px;
 }
 
 .accordion .accordion-item-body {
-  padding-bottom: 24px;
+  padding: 0 16px 24px;
+  color: var(--text-secondary);
+  font-size: var(--body-font-size-s);
+  line-height: var(--paragraph-line-height);
 }
 
 .accordion .accordion-item-body > :first-child {
@@ -62,4 +91,10 @@
 
 .accordion .accordion-item-body > :last-child {
   margin-bottom: 0;
+}
+
+@media (width >= 900px) {
+  .accordion {
+    gap: 24px;
+  }
 }

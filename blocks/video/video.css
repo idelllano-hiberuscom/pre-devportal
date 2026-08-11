@@ -1,32 +1,44 @@
-.video {
-  padding: 1rem;
-}
+/*
+ * Aviso de evidencia: la captura de este componente
+ * (.eds-pipeline/assets/video/) NO corresponde al componente del portal Angular. El fragmento
+ * capturado es un envoltorio Drupal (article.media--type-video, asset en aws-cecabank-drupal-s3)
+ * y su computed-styles.json no tiene hijos, así que no hay tratamiento visual que reproducir.
+ *
+ * Lo único derivable de la fuente es la proporción del vídeo: <video width="640" height="480">,
+ * es decir 4:3, no 16:9. El resto se limita a tokens del cliente y a un reproductor sobrio.
+ * Cuando exista una referencia real del portal, este bloque debe revisarse.
+ */
 
 .video .video-content {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 24px;
 }
 
 .video .video-item {
   width: 100%;
+  border-radius: var(--radius-card);
+  background-color: var(--surface-subtle);
+  overflow: hidden;
 }
 
 .video .video-item video {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
-}
 
-@media (width >= 600px) {
-  .video {
-    padding: 1.5rem;
-  }
+  /* Proporción de la fuente: 640x480. */
+  aspect-ratio: 4 / 3;
+  background-color: var(--brand-primary);
+  object-fit: contain;
 }
 
 @media (width >= 900px) {
-  .video {
-    padding: 2rem;
+  .video .video-content {
+    align-items: center;
+  }
+
+  .video .video-item {
+    max-width: 960px;
   }
 }

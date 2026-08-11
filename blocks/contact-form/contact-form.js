@@ -59,10 +59,11 @@ const propOf = (row) => row.querySelector('[data-aue-prop]')?.dataset.aueProp
 /**
  * Maps the block rows onto the model fields.
  *
- * AEM omits the row of any field that was never authored, so a form with no
- * image and no action arrives with 8 rows instead of 10 and reading them by
- * position silently shifts every field. When the rows carry their field name
- * we key off that; otherwise position is all we have and every row is present.
+ * The delivered markup never has one row per model field, so position alone shifts
+ * everything: `imageAlt` gets no row at all — AEM folds it into the alt attribute of the
+ * image it describes — and the optional `action` may or may not arrive. Inside Universal
+ * Editor the rows do carry their field name, so there we key off that; in delivery the
+ * image is the only row identifiable by content, and the rest follow the model order.
  */
 const resolveRows = (rows) => {
   const byProp = new Map();
@@ -70,9 +71,12 @@ const resolveRows = (rows) => {
     const prop = propOf(row);
     if (prop) byProp.set(prop, row);
   });
-  if (!byProp.size) return ROW_ORDER.map((_, index) => rows[index]);
-  return ROW_ORDER.map((name, index) => byProp.get(name)
-    || (rows.length === ROW_ORDER.length ? rows[index] : undefined));
+  if (byProp.size) return ROW_ORDER.map((name) => byProp.get(name));
+
+  const imageRow = rows.find((row) => getCell(row)?.querySelector('picture, img'));
+  const rest = rows.filter((row) => row !== imageRow);
+  // El alt no ocupa fila: ya viaja en la imagen, así que su hueco queda vacío a propósito.
+  return [imageRow, undefined, ...rest.slice(0, ROW_ORDER.length - 2)];
 };
 
 const setControlValidity = (control) => {

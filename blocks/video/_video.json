@@ -36,10 +36,11 @@
       "id": "video-item",
       "fields": [
         {
-          "component": "aem-content",
+          "component": "text",
           "valueType": "string",
           "name": "uri",
-          "label": "URI"
+          "label": "URL del vídeo",
+          "description": "URL del vídeo, absoluta o relativa al sitio (por ejemplo /assets/video-demo.webm). No sirve una ruta del DAM: la entrega solo reescribe a una URL servible los campos reference de imagen, así que un /content/dam/... se publica tal cual y da 404. Los vídeos se sirven desde el repositorio o desde un origen externo."
         },
         {
           "component": "multiselect",

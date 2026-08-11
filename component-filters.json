@@ -27,7 +27,10 @@
       "tabs",
       "accordion",
       "contact-form",
-      "swagger-console"
+      "swagger-console",
+      "feature-list",
+      "sidenav",
+      "cards-icon-grid"
     ]
   },
   {
@@ -67,6 +70,12 @@
     ]
   },
   {
+    "id": "cards-icon-grid",
+    "components": [
+      "card-icon"
+    ]
+  },
+  {
     "id": "carousel",
     "components": [
       "carousel-item"
@@ -84,7 +93,19 @@
       "text",
       "image",
       "button",
-      "title"
+      "title",
+      "cards",
+      "cards-editorial",
+      "cards-logos",
+      "cards-icon-cards",
+      "cards-plugins",
+      "cards-icon-grid"
+    ]
+  },
+  {
+    "id": "feature-list",
+    "components": [
+      "feature-list-item"
     ]
   },
   {

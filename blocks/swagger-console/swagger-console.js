@@ -133,6 +133,9 @@ const createLabeledInput = (labelText, type, name) => {
   input.name = name;
   input.required = true;
   input.autocomplete = name === 'email' ? 'email' : 'current-password';
+  // El portal usa campos con etiqueta flotante: la etiqueta descansa dentro del recuadro y
+  // sube al enfocar o al haber valor. El placeholder en blanco habilita :placeholder-shown.
+  input.placeholder = ' ';
 
   control.append(input);
   wrapper.append(label, control);
