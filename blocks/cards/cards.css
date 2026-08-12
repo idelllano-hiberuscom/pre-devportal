@@ -62,8 +62,12 @@
   color: var(--background-color);
 }
 
+/* El portal mide la fecha y el titular en blanco sobre la imagen. El color hay que
+   declararlo en los tres: la regla global de titulares fija --text-color y gana a la
+   herencia del contenedor. */
 .cards.editorial .cards-card-body h5 {
   margin: 0 0 8px;
+  color: var(--background-color);
   font-size: 16px;
   line-height: 20px;
 }
