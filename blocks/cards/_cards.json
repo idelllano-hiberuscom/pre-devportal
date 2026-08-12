@@ -25,7 +25,7 @@
             "template": {
               "name": "Cards",
               "filter": "cards-logos",
-              "variant": "logos"
+              "classes": "logos"
             }
           }
         }
@@ -41,7 +41,7 @@
             "template": {
               "name": "Cards",
               "filter": "cards-editorial",
-              "variant": "editorial"
+              "classes": "editorial"
             }
           }
         }
@@ -102,7 +102,7 @@
             "template": {
               "name": "Cards",
               "filter": "cards-icon-cards",
-              "variant": "icon-cards"
+              "classes": "icon-cards"
             }
           }
         }
@@ -133,7 +133,7 @@
             "template": {
               "name": "Cards",
               "filter": "cards-plugins",
-              "variant": "plugins"
+              "classes": "plugins"
             }
           }
         }
