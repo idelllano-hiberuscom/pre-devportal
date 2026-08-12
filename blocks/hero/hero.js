@@ -13,22 +13,38 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
  * loads and decorates the hero block
  * @param {Element} block The block element
  */
-const BLOCK_LEVEL = 'h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, table';
-
 export default function decorate(block) {
   const rows = [...block.children];
   if (!rows.length) return;
 
   /*
    * AEM omite la fila de cualquier campo que el autor no haya rellenado, así que leer por
-   * posición desplaza los campos: un hero sin texto alternativo llega con dos filas y el
-   * texto acabaría tratado como alt. Cada fila se identifica por su contenido.
+   * posición ciega desplaza los campos: un hero sin texto alternativo llega con dos filas y
+   * el titular acabaría tratado como alt.
+   *
+   * La imagen sí se reconoce por contenido. Para las dos filas de texto no sirve mirar el
+   * contenido, porque EDS envuelve el texto plano en <p> y entonces el alt es indistinguible
+   * de un párrafo; se usa el orden del modelo (image, imageAlt, text), que es el que AEM
+   * respeta al emitir las filas.
    */
   const cellOf = (row) => row?.firstElementChild || row;
   const imageRow = rows.find((row) => cellOf(row)?.querySelector('picture, img'));
   const rest = rows.filter((row) => row !== imageRow);
-  const textRows = rest.filter((row) => cellOf(row)?.querySelector(BLOCK_LEVEL));
-  const altRow = rest.find((row) => !textRows.includes(row));
+
+  let altRow;
+  let textRows;
+  if (rest.length > 1) {
+    [altRow] = rest;
+    textRows = rest.slice(1);
+  } else {
+    // Una sola fila: es el texto salvo que no traiga titular ni varios bloques.
+    const only = rest[0];
+    const cell = cellOf(only);
+    const isText = !only || cell?.querySelector('h1, h2, h3, h4, h5, h6')
+      || (cell?.children.length || 0) > 1;
+    altRow = isText ? undefined : only;
+    textRows = isText && only ? [only] : [];
+  }
 
   const imageCell = cellOf(imageRow);
   const altCell = cellOf(altRow);
