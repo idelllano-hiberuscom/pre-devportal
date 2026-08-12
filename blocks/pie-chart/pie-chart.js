@@ -148,7 +148,20 @@ export default function decorate(block) {
 
   rows.forEach((row, index) => {
     const cells = [...row.children];
-    const [titleCell, colorCell, iconCell, iconAltCell, detailsCell] = cells;
+
+    /*
+     * AEM omite la fila de cualquier campo vacío y el contenido migrado todavía declara el
+     * campo heredado `value` en sus modelFields, así que el número de celdas y su orden no
+     * son fiables: leyéndolas por posición, la lista de detalles caía en el hueco de iconAlt
+     * y no se pintaba. Cada celda se identifica por su contenido.
+     */
+    const iconCell = cells.find((cell) => cell.querySelector('picture, img'));
+    const detailsCell = cells.find((cell) => cell.querySelector('ul, ol, li'));
+    const plain = cells.filter((cell) => cell !== iconCell && cell !== detailsCell
+      && cell.textContent.trim());
+    const [titleCell, ...restPlain] = plain;
+    const colorCell = restPlain.find((cell) => isColor(cell.textContent.trim()));
+    const iconAltCell = restPlain.find((cell) => cell !== colorCell);
 
     const li = document.createElement('li');
     li.className = 'pie-chart-item';
@@ -167,8 +180,10 @@ export default function decorate(block) {
     if (iconImg) {
       const figure = document.createElement('figure');
       figure.className = 'pie-chart-item-icon';
-      iconImg.alt = iconAlt;
-      if (!iconAlt) iconImg.setAttribute('aria-hidden', 'true');
+      // Se respeta el alt que ya traiga el asset; solo se sobreescribe si hay uno autorizado.
+      const alt = iconAlt || iconImg.alt || '';
+      iconImg.alt = alt;
+      if (!alt) iconImg.setAttribute('aria-hidden', 'true');
       figure.append(iconImg.closest('picture') || iconImg);
       li.append(figure);
     }

@@ -238,14 +238,17 @@ header nav .nav-sections ul > li > ul > li {
     position: relative;
   }
 
+  /* Panel de primer nivel: tarjeta blanca con la sombra de la casa, como en el portal. */
   header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
     display: block;
     position: absolute;
-    left: -24px;
-    width: 200px;
     top: 150%;
-    padding: 16px;
-    background-color: var(--light-color);
+    left: -24px;
+    width: 240px;
+    border-radius: var(--radius-card);
+    padding: 16px 0;
+    background-color: var(--background-color);
+    box-shadow: var(--shadow-card);
     white-space: initial;
   }
 
@@ -253,16 +256,64 @@ header nav .nav-sections ul > li > ul > li {
     content: '';
     position: absolute;
     top: -8px;
-    left: 16px;
+    left: 24px;
     width: 0;
     height: 0;
-    border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid var(--light-color);
+    border-bottom: 8px solid var(--background-color);
+    border-left: 8px solid transparent;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
-    padding: 8px 0;
+    padding: 8px 24px;
+  }
+
+  /*
+   * Segundo nivel. En el portal, el grupo señalado abre un panel contiguo a la derecha con sus
+   * enlaces y va en peso 500. Se escopan bajo .nav-drop para que su especificidad supere a
+   * todas las reglas del primer nivel y la cascada quede ascendente.
+   */
+  header nav .nav-sections .default-content-wrapper .nav-drop .nav-drop-group {
+    position: relative;
+    cursor: pointer;
+  }
+
+  header nav .nav-sections .default-content-wrapper .nav-drop .nav-drop-group.is-active {
+    font-weight: 500;
+  }
+
+  header nav .nav-sections .default-content-wrapper .nav-drop .nav-drop-group > ul {
+    display: none;
+  }
+
+  header nav .nav-sections .default-content-wrapper .nav-drop .nav-drop-group > ul > li {
+    padding: 8px 24px;
+  }
+
+  header nav .nav-sections .default-content-wrapper .nav-drop .nav-drop-group > ul::before {
+    content: none;
+  }
+
+  header nav .nav-sections .default-content-wrapper .nav-drop[aria-expanded='true'] .nav-drop-group.is-active > ul {
+    display: block;
+    position: absolute;
+    top: -16px;
+    left: 100%;
+    width: 240px;
+    margin-left: 16px;
+    border-radius: var(--radius-card);
+    padding: 16px 0;
+    background-color: var(--background-color);
+    box-shadow: var(--shadow-card);
+    font-weight: 400;
+  }
+}
+
+/* En móvil el menú es una lista desplegada: los dos niveles se muestran sangrados. */
+@media (width < 900px) {
+  header nav[aria-expanded='true'] .nav-sections .nav-drop-group > ul {
+    display: block;
+    padding-left: 16px;
   }
 }
 

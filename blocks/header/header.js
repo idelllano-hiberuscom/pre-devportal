@@ -146,11 +146,37 @@ export default async function decorate(block) {
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
+
+      /*
+       * El portal abre "Pagos online" como un menú de dos niveles: el primer panel lista los
+       * grupos y el segundo, al lado, los enlaces del grupo señalado. Cualquier <li> de
+       * segundo nivel que traiga su propia lista se convierte en uno de esos grupos.
+       */
+      const groups = [...navSection.querySelectorAll(':scope > ul > li')]
+        .filter((item) => item.querySelector(':scope > ul'));
+
+      groups.forEach((group, index) => {
+        group.classList.add('nav-drop-group');
+        if (index === 0) group.classList.add('is-active');
+
+        const activate = (event) => {
+          // El grupo solo despliega su panel: no debe cerrar el menú padre.
+          event.stopPropagation();
+          groups.forEach((other) => other.classList.toggle('is-active', other === group));
+        };
+        group.addEventListener('mouseenter', activate);
+        group.addEventListener('click', activate);
+      });
+
       navSection.addEventListener('click', () => {
         if (isDesktop.matches) {
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
           toggleAllNavSections(navSections);
           navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+          // Al abrir, el primer grupo queda señalado, como en el portal.
+          if (!expanded && groups.length) {
+            groups.forEach((other, i) => other.classList.toggle('is-active', i === 0));
+          }
         }
       });
     });
