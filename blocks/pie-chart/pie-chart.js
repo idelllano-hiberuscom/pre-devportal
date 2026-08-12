@@ -18,6 +18,18 @@ const ICON_RADIUS = 62;
 const ICON_SIZE = 15;
 const VIEWBOX = 100;
 
+/**
+ * El contenido migrado puede traer un campo de peso heredado donde ahora va el color.
+ * Solo se acepta como color lo que el navegador reconoce como tal, así que un "1" residual
+ * cae a la paleta medida en lugar de pintar un sector inválido.
+ */
+function isColor(value) {
+  if (!value) return false;
+  const probe = new Option().style;
+  probe.color = value;
+  return probe.color !== '';
+}
+
 /** Paleta medida, en sentido horario desde el sector superior derecho. */
 const SEGMENT_COLORS = [
   '#418d9e',
@@ -143,8 +155,10 @@ export default function decorate(block) {
     moveInstrumentation(row, li);
 
     const title = titleCell?.textContent.trim() ?? '';
-    const color = colorCell?.textContent.trim()
-      || SEGMENT_COLORS[index % SEGMENT_COLORS.length];
+    const authoredColor = colorCell?.textContent.trim() || '';
+    const color = isColor(authoredColor)
+      ? authoredColor
+      : SEGMENT_COLORS[index % SEGMENT_COLORS.length];
 
     const iconImg = iconCell?.querySelector('img');
     const iconAlt = iconAltCell?.textContent.trim() || '';
