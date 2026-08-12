@@ -338,9 +338,28 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores",
     "replaceSections": [
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
+      {
+        "name": "sidenav",
+        "blocks": [
+          {
+            "block": "sidenav",
+            "name": "Section Navigation",
+            "model": "sidenav",
+            "fields": [
+              "searchLabel@text",
+              "nav@richtext"
+            ],
+            "props": {
+              "searchLabel": "Buscar",
+              "nav": "<ul><li><a href=\"/herramientas-para-desarrolladores\">Inicio</a></li><li>Con integración<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/hosted-checkout\">Hosted checkout</a></li><li>API<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones\">Gestor de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/tokenizacion\">Tokenización</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones\">Anulación de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/swagger\">Swagger</a></li></ul></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/sdk\">SDK</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/iframe\">Iframe</a></li></ul></li><li>Sin integración<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pagos-moto\">Pagos MOTO</a></li><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pay-by-link\">Pay by link</a></li><li>Plugins<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/plugins/resumen\">Resumen</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce\">WooCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop\">PrestaShop</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento\">Magento</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce\">osCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp\">GiveWP</a></li></ul></li></ul></li><li>Otros<ul><li><a href=\"/herramientas-para-desarrolladores/otros/google-pay\">Google pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/apple-pay\">Apple pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/bizum\">Bizum</a></li></ul></li></ul>"
+            }
+          }
+        ]
+      },
       {
         "name": "hero",
         "blocks": [
@@ -366,9 +385,28 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones",
     "replaceSections": [
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
+      {
+        "name": "sidenav",
+        "blocks": [
+          {
+            "block": "sidenav",
+            "name": "Section Navigation",
+            "model": "sidenav",
+            "fields": [
+              "searchLabel@text",
+              "nav@richtext"
+            ],
+            "props": {
+              "searchLabel": "Buscar",
+              "nav": "<ul><li><a href=\"/herramientas-para-desarrolladores\">Inicio</a></li><li>Con integración<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/hosted-checkout\">Hosted checkout</a></li><li>API<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones\">Gestor de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/tokenizacion\">Tokenización</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones\">Anulación de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/swagger\">Swagger</a></li></ul></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/sdk\">SDK</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/iframe\">Iframe</a></li></ul></li><li>Sin integración<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pagos-moto\">Pagos MOTO</a></li><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pay-by-link\">Pay by link</a></li><li>Plugins<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/plugins/resumen\">Resumen</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce\">WooCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop\">PrestaShop</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento\">Magento</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce\">osCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp\">GiveWP</a></li></ul></li></ul></li><li>Otros<ul><li><a href=\"/herramientas-para-desarrolladores/otros/google-pay\">Google pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/apple-pay\">Apple pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/bizum\">Bizum</a></li></ul></li></ul>"
+            }
+          }
+        ]
+      },
       {
         "name": "hero",
         "blocks": [
@@ -394,9 +432,28 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones",
     "replaceSections": [
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
+      {
+        "name": "sidenav",
+        "blocks": [
+          {
+            "block": "sidenav",
+            "name": "Section Navigation",
+            "model": "sidenav",
+            "fields": [
+              "searchLabel@text",
+              "nav@richtext"
+            ],
+            "props": {
+              "searchLabel": "Buscar",
+              "nav": "<ul><li><a href=\"/herramientas-para-desarrolladores\">Inicio</a></li><li>Con integración<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/hosted-checkout\">Hosted checkout</a></li><li>API<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones\">Gestor de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/tokenizacion\">Tokenización</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones\">Anulación de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/swagger\">Swagger</a></li></ul></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/sdk\">SDK</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/iframe\">Iframe</a></li></ul></li><li>Sin integración<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pagos-moto\">Pagos MOTO</a></li><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pay-by-link\">Pay by link</a></li><li>Plugins<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/plugins/resumen\">Resumen</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce\">WooCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop\">PrestaShop</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento\">Magento</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce\">osCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp\">GiveWP</a></li></ul></li></ul></li><li>Otros<ul><li><a href=\"/herramientas-para-desarrolladores/otros/google-pay\">Google pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/apple-pay\">Apple pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/bizum\">Bizum</a></li></ul></li></ul>"
+            }
+          }
+        ]
+      },
       {
         "name": "hero",
         "blocks": [
@@ -423,9 +480,28 @@
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/api/swagger",
     "replaceSections": [
       "section",
-      "section_1"
+      "section_1",
+      "section_2"
     ],
     "sections": [
+      {
+        "name": "sidenav",
+        "blocks": [
+          {
+            "block": "sidenav",
+            "name": "Section Navigation",
+            "model": "sidenav",
+            "fields": [
+              "searchLabel@text",
+              "nav@richtext"
+            ],
+            "props": {
+              "searchLabel": "Buscar",
+              "nav": "<ul><li><a href=\"/herramientas-para-desarrolladores\">Inicio</a></li><li>Con integración<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/hosted-checkout\">Hosted checkout</a></li><li>API<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones\">Gestor de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/tokenizacion\">Tokenización</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones\">Anulación de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/swagger\">Swagger</a></li></ul></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/sdk\">SDK</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/iframe\">Iframe</a></li></ul></li><li>Sin integración<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pagos-moto\">Pagos MOTO</a></li><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pay-by-link\">Pay by link</a></li><li>Plugins<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/plugins/resumen\">Resumen</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce\">WooCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop\">PrestaShop</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento\">Magento</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce\">osCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp\">GiveWP</a></li></ul></li></ul></li><li>Otros<ul><li><a href=\"/herramientas-para-desarrolladores/otros/google-pay\">Google pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/apple-pay\">Apple pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/bizum\">Bizum</a></li></ul></li></ul>"
+            }
+          }
+        ]
+      },
       {
         "name": "hero",
         "blocks": [
@@ -468,9 +544,28 @@
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/api/tokenizacion",
     "replaceSections": [
       "section",
-      "section_1"
+      "section_1",
+      "section_2"
     ],
     "sections": [
+      {
+        "name": "sidenav",
+        "blocks": [
+          {
+            "block": "sidenav",
+            "name": "Section Navigation",
+            "model": "sidenav",
+            "fields": [
+              "searchLabel@text",
+              "nav@richtext"
+            ],
+            "props": {
+              "searchLabel": "Buscar",
+              "nav": "<ul><li><a href=\"/herramientas-para-desarrolladores\">Inicio</a></li><li>Con integración<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/hosted-checkout\">Hosted checkout</a></li><li>API<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones\">Gestor de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/tokenizacion\">Tokenización</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones\">Anulación de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/swagger\">Swagger</a></li></ul></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/sdk\">SDK</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/iframe\">Iframe</a></li></ul></li><li>Sin integración<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pagos-moto\">Pagos MOTO</a></li><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pay-by-link\">Pay by link</a></li><li>Plugins<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/plugins/resumen\">Resumen</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce\">WooCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop\">PrestaShop</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento\">Magento</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce\">osCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp\">GiveWP</a></li></ul></li></ul></li><li>Otros<ul><li><a href=\"/herramientas-para-desarrolladores/otros/google-pay\">Google pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/apple-pay\">Apple pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/bizum\">Bizum</a></li></ul></li></ul>"
+            }
+          }
+        ]
+      },
       {
         "name": "hero",
         "blocks": [
@@ -512,9 +607,28 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/hosted-checkout",
     "replaceSections": [
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
+      {
+        "name": "sidenav",
+        "blocks": [
+          {
+            "block": "sidenav",
+            "name": "Section Navigation",
+            "model": "sidenav",
+            "fields": [
+              "searchLabel@text",
+              "nav@richtext"
+            ],
+            "props": {
+              "searchLabel": "Buscar",
+              "nav": "<ul><li><a href=\"/herramientas-para-desarrolladores\">Inicio</a></li><li>Con integración<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/hosted-checkout\">Hosted checkout</a></li><li>API<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones\">Gestor de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/tokenizacion\">Tokenización</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones\">Anulación de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/swagger\">Swagger</a></li></ul></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/sdk\">SDK</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/iframe\">Iframe</a></li></ul></li><li>Sin integración<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pagos-moto\">Pagos MOTO</a></li><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pay-by-link\">Pay by link</a></li><li>Plugins<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/plugins/resumen\">Resumen</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce\">WooCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop\">PrestaShop</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento\">Magento</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce\">osCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp\">GiveWP</a></li></ul></li></ul></li><li>Otros<ul><li><a href=\"/herramientas-para-desarrolladores/otros/google-pay\">Google pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/apple-pay\">Apple pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/bizum\">Bizum</a></li></ul></li></ul>"
+            }
+          }
+        ]
+      },
       {
         "name": "hero",
         "blocks": [
@@ -540,9 +654,28 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/iframe",
     "replaceSections": [
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
+      {
+        "name": "sidenav",
+        "blocks": [
+          {
+            "block": "sidenav",
+            "name": "Section Navigation",
+            "model": "sidenav",
+            "fields": [
+              "searchLabel@text",
+              "nav@richtext"
+            ],
+            "props": {
+              "searchLabel": "Buscar",
+              "nav": "<ul><li><a href=\"/herramientas-para-desarrolladores\">Inicio</a></li><li>Con integración<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/hosted-checkout\">Hosted checkout</a></li><li>API<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones\">Gestor de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/tokenizacion\">Tokenización</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones\">Anulación de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/swagger\">Swagger</a></li></ul></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/sdk\">SDK</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/iframe\">Iframe</a></li></ul></li><li>Sin integración<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pagos-moto\">Pagos MOTO</a></li><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pay-by-link\">Pay by link</a></li><li>Plugins<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/plugins/resumen\">Resumen</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce\">WooCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop\">PrestaShop</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento\">Magento</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce\">osCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp\">GiveWP</a></li></ul></li></ul></li><li>Otros<ul><li><a href=\"/herramientas-para-desarrolladores/otros/google-pay\">Google pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/apple-pay\">Apple pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/bizum\">Bizum</a></li></ul></li></ul>"
+            }
+          }
+        ]
+      },
       {
         "name": "hero",
         "blocks": [
@@ -568,9 +701,28 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/sdk",
     "replaceSections": [
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
+      {
+        "name": "sidenav",
+        "blocks": [
+          {
+            "block": "sidenav",
+            "name": "Section Navigation",
+            "model": "sidenav",
+            "fields": [
+              "searchLabel@text",
+              "nav@richtext"
+            ],
+            "props": {
+              "searchLabel": "Buscar",
+              "nav": "<ul><li><a href=\"/herramientas-para-desarrolladores\">Inicio</a></li><li>Con integración<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/hosted-checkout\">Hosted checkout</a></li><li>API<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones\">Gestor de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/tokenizacion\">Tokenización</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones\">Anulación de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/swagger\">Swagger</a></li></ul></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/sdk\">SDK</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/iframe\">Iframe</a></li></ul></li><li>Sin integración<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pagos-moto\">Pagos MOTO</a></li><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pay-by-link\">Pay by link</a></li><li>Plugins<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/plugins/resumen\">Resumen</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce\">WooCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop\">PrestaShop</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento\">Magento</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce\">osCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp\">GiveWP</a></li></ul></li></ul></li><li>Otros<ul><li><a href=\"/herramientas-para-desarrolladores/otros/google-pay\">Google pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/apple-pay\">Apple pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/bizum\">Bizum</a></li></ul></li></ul>"
+            }
+          }
+        ]
+      },
       {
         "name": "hero",
         "blocks": [
@@ -596,9 +748,28 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/otros/apple-pay",
     "replaceSections": [
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
+      {
+        "name": "sidenav",
+        "blocks": [
+          {
+            "block": "sidenav",
+            "name": "Section Navigation",
+            "model": "sidenav",
+            "fields": [
+              "searchLabel@text",
+              "nav@richtext"
+            ],
+            "props": {
+              "searchLabel": "Buscar",
+              "nav": "<ul><li><a href=\"/herramientas-para-desarrolladores\">Inicio</a></li><li>Con integración<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/hosted-checkout\">Hosted checkout</a></li><li>API<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones\">Gestor de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/tokenizacion\">Tokenización</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones\">Anulación de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/swagger\">Swagger</a></li></ul></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/sdk\">SDK</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/iframe\">Iframe</a></li></ul></li><li>Sin integración<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pagos-moto\">Pagos MOTO</a></li><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pay-by-link\">Pay by link</a></li><li>Plugins<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/plugins/resumen\">Resumen</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce\">WooCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop\">PrestaShop</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento\">Magento</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce\">osCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp\">GiveWP</a></li></ul></li></ul></li><li>Otros<ul><li><a href=\"/herramientas-para-desarrolladores/otros/google-pay\">Google pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/apple-pay\">Apple pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/bizum\">Bizum</a></li></ul></li></ul>"
+            }
+          }
+        ]
+      },
       {
         "name": "hero",
         "blocks": [
@@ -624,9 +795,28 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/otros/bizum",
     "replaceSections": [
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
+      {
+        "name": "sidenav",
+        "blocks": [
+          {
+            "block": "sidenav",
+            "name": "Section Navigation",
+            "model": "sidenav",
+            "fields": [
+              "searchLabel@text",
+              "nav@richtext"
+            ],
+            "props": {
+              "searchLabel": "Buscar",
+              "nav": "<ul><li><a href=\"/herramientas-para-desarrolladores\">Inicio</a></li><li>Con integración<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/hosted-checkout\">Hosted checkout</a></li><li>API<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones\">Gestor de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/tokenizacion\">Tokenización</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones\">Anulación de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/swagger\">Swagger</a></li></ul></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/sdk\">SDK</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/iframe\">Iframe</a></li></ul></li><li>Sin integración<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pagos-moto\">Pagos MOTO</a></li><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pay-by-link\">Pay by link</a></li><li>Plugins<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/plugins/resumen\">Resumen</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce\">WooCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop\">PrestaShop</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento\">Magento</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce\">osCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp\">GiveWP</a></li></ul></li></ul></li><li>Otros<ul><li><a href=\"/herramientas-para-desarrolladores/otros/google-pay\">Google pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/apple-pay\">Apple pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/bizum\">Bizum</a></li></ul></li></ul>"
+            }
+          }
+        ]
+      },
       {
         "name": "hero",
         "blocks": [
@@ -652,9 +842,28 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/sin-integracion/pagos-moto",
     "replaceSections": [
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
+      {
+        "name": "sidenav",
+        "blocks": [
+          {
+            "block": "sidenav",
+            "name": "Section Navigation",
+            "model": "sidenav",
+            "fields": [
+              "searchLabel@text",
+              "nav@richtext"
+            ],
+            "props": {
+              "searchLabel": "Buscar",
+              "nav": "<ul><li><a href=\"/herramientas-para-desarrolladores\">Inicio</a></li><li>Con integración<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/hosted-checkout\">Hosted checkout</a></li><li>API<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones\">Gestor de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/tokenizacion\">Tokenización</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones\">Anulación de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/swagger\">Swagger</a></li></ul></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/sdk\">SDK</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/iframe\">Iframe</a></li></ul></li><li>Sin integración<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pagos-moto\">Pagos MOTO</a></li><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pay-by-link\">Pay by link</a></li><li>Plugins<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/plugins/resumen\">Resumen</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce\">WooCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop\">PrestaShop</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento\">Magento</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce\">osCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp\">GiveWP</a></li></ul></li></ul></li><li>Otros<ul><li><a href=\"/herramientas-para-desarrolladores/otros/google-pay\">Google pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/apple-pay\">Apple pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/bizum\">Bizum</a></li></ul></li></ul>"
+            }
+          }
+        ]
+      },
       {
         "name": "hero",
         "blocks": [
@@ -680,9 +889,28 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/sin-integracion/pay-by-link",
     "replaceSections": [
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
+      {
+        "name": "sidenav",
+        "blocks": [
+          {
+            "block": "sidenav",
+            "name": "Section Navigation",
+            "model": "sidenav",
+            "fields": [
+              "searchLabel@text",
+              "nav@richtext"
+            ],
+            "props": {
+              "searchLabel": "Buscar",
+              "nav": "<ul><li><a href=\"/herramientas-para-desarrolladores\">Inicio</a></li><li>Con integración<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/hosted-checkout\">Hosted checkout</a></li><li>API<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones\">Gestor de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/tokenizacion\">Tokenización</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones\">Anulación de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/swagger\">Swagger</a></li></ul></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/sdk\">SDK</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/iframe\">Iframe</a></li></ul></li><li>Sin integración<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pagos-moto\">Pagos MOTO</a></li><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pay-by-link\">Pay by link</a></li><li>Plugins<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/plugins/resumen\">Resumen</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce\">WooCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop\">PrestaShop</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento\">Magento</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce\">osCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp\">GiveWP</a></li></ul></li></ul></li><li>Otros<ul><li><a href=\"/herramientas-para-desarrolladores/otros/google-pay\">Google pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/apple-pay\">Apple pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/bizum\">Bizum</a></li></ul></li></ul>"
+            }
+          }
+        ]
+      },
       {
         "name": "hero",
         "blocks": [
@@ -709,9 +937,28 @@
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/sin-integracion/plugins/resumen",
     "replaceSections": [
       "section",
-      "section_1"
+      "section_1",
+      "section_2"
     ],
     "sections": [
+      {
+        "name": "sidenav",
+        "blocks": [
+          {
+            "block": "sidenav",
+            "name": "Section Navigation",
+            "model": "sidenav",
+            "fields": [
+              "searchLabel@text",
+              "nav@richtext"
+            ],
+            "props": {
+              "searchLabel": "Buscar",
+              "nav": "<ul><li><a href=\"/herramientas-para-desarrolladores\">Inicio</a></li><li>Con integración<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/hosted-checkout\">Hosted checkout</a></li><li>API<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones\">Gestor de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/tokenizacion\">Tokenización</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones\">Anulación de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/swagger\">Swagger</a></li></ul></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/sdk\">SDK</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/iframe\">Iframe</a></li></ul></li><li>Sin integración<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pagos-moto\">Pagos MOTO</a></li><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pay-by-link\">Pay by link</a></li><li>Plugins<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/plugins/resumen\">Resumen</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce\">WooCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop\">PrestaShop</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento\">Magento</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce\">osCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp\">GiveWP</a></li></ul></li></ul></li><li>Otros<ul><li><a href=\"/herramientas-para-desarrolladores/otros/google-pay\">Google pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/apple-pay\">Apple pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/bizum\">Bizum</a></li></ul></li></ul>"
+            }
+          }
+        ]
+      },
       {
         "name": "hero",
         "blocks": [
@@ -786,7 +1033,8 @@
   {
     "path": "/content/pre-devportal/inicio",
     "replaceSections": [
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
       {
@@ -806,6 +1054,47 @@
               "imageAlt": "",
               "text": "<h1>¡Bienvenido al Portal de Desarrolladores de e-commerce!</h1>\n<p>Comienza a recibir pagos online en tan solo unos clicks. Ofrecemos distintas opciones de integración adaptadas a tu negocio.</p>"
             }
+          }
+        ]
+      },
+      {
+        "name": "features",
+        "content": [
+          "<h2>Elige la integración que más se adapta a tu comercio online</h2>"
+        ],
+        "blocks": [
+          {
+            "block": "feature-list",
+            "name": "Feature List",
+            "filter": "feature-list",
+            "itemModel": "feature-list-item",
+            "itemFields": [
+              "icon@reference",
+              "iconAlt@text",
+              "text@richtext"
+            ],
+            "items": [
+              {
+                "icon": "/content/dam/pre-devportal/demo/icon-plug.png",
+                "iconAlt": "",
+                "text": "<h4>Hosted</h4>\n<p>Experiencia de pago segura proporcionada por Cecabank. ¡La integración más sencilla!</p>"
+              },
+              {
+                "icon": "/content/dam/pre-devportal/demo/icon-file.png",
+                "iconAlt": "",
+                "text": "<h4>Iframe</h4>\n<p>Integración con mayor control sobre el diseño de tu página. ¡Todo integrado sin saltos de navegación para tus clientes!</p>"
+              },
+              {
+                "icon": "/content/dam/pre-devportal/demo/icon-gear.png",
+                "iconAlt": "",
+                "text": "<h4>JavaScript</h4>\n<p>Componentes fáciles de integrar en tu página de pago. Nos amoldamos a tu experiencia de usuario.</p>"
+              },
+              {
+                "icon": "/content/dam/pre-devportal/demo/icon-shuffle.png",
+                "iconAlt": "",
+                "text": "<h4>API</h4>\n<p>Mantén un control mayor en el diseño de tu página. La captura de la información se realiza en tu web sin que tus clientes tengan que ser redirigidos a ventanas emergentes.</p>"
+              }
+            ]
           }
         ]
       }
@@ -1164,6 +1453,288 @@
               "image": "/content/dam/pre-devportal/demo/hero-plugins.jpg",
               "imageAlt": "",
               "text": "<h1>Pagos MOTO</h1>\n<p>La modalidad MOTO se usa cuando la tarjeta se comunica por teléfono o e-mail y el cliente no está presente en la web o en la app. En estos casos no se realiza autenticación 3-DS: basta con disponer de los datos de la tarjeta y lanzar una autorización directa al emisor. El TPV-Virtual la gestiona en un único paso.</p>"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion",
+    "replaceSections": [
+      "section",
+      "section_1"
+    ],
+    "sections": [
+      {
+        "name": "sidenav",
+        "blocks": [
+          {
+            "block": "sidenav",
+            "name": "Section Navigation",
+            "model": "sidenav",
+            "fields": [
+              "searchLabel@text",
+              "nav@richtext"
+            ],
+            "props": {
+              "searchLabel": "Buscar",
+              "nav": "<ul><li><a href=\"/herramientas-para-desarrolladores\">Inicio</a></li><li>Con integración<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/hosted-checkout\">Hosted checkout</a></li><li>API<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones\">Gestor de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/tokenizacion\">Tokenización</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones\">Anulación de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/swagger\">Swagger</a></li></ul></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/sdk\">SDK</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/iframe\">Iframe</a></li></ul></li><li>Sin integración<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pagos-moto\">Pagos MOTO</a></li><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pay-by-link\">Pay by link</a></li><li>Plugins<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/plugins/resumen\">Resumen</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce\">WooCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop\">PrestaShop</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento\">Magento</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce\">osCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp\">GiveWP</a></li></ul></li></ul></li><li>Otros<ul><li><a href=\"/herramientas-para-desarrolladores/otros/google-pay\">Google pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/apple-pay\">Apple pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/bizum\">Bizum</a></li></ul></li></ul>"
+            }
+          }
+        ]
+      },
+      {
+        "name": "hero",
+        "blocks": [
+          {
+            "block": "hero",
+            "name": "Hero",
+            "model": "hero",
+            "fields": [
+              "image@reference",
+              "imageAlt@text",
+              "text@richtext"
+            ],
+            "props": {
+              "image": "/content/dam/pre-devportal/demo/hero-herramientas.jpg",
+              "imageAlt": "",
+              "text": "<h1>Con Integracion</h1>"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/api",
+    "replaceSections": [
+      "section",
+      "section_1"
+    ],
+    "sections": [
+      {
+        "name": "sidenav",
+        "blocks": [
+          {
+            "block": "sidenav",
+            "name": "Section Navigation",
+            "model": "sidenav",
+            "fields": [
+              "searchLabel@text",
+              "nav@richtext"
+            ],
+            "props": {
+              "searchLabel": "Buscar",
+              "nav": "<ul><li><a href=\"/herramientas-para-desarrolladores\">Inicio</a></li><li>Con integración<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/hosted-checkout\">Hosted checkout</a></li><li>API<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones\">Gestor de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/tokenizacion\">Tokenización</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones\">Anulación de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/swagger\">Swagger</a></li></ul></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/sdk\">SDK</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/iframe\">Iframe</a></li></ul></li><li>Sin integración<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pagos-moto\">Pagos MOTO</a></li><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pay-by-link\">Pay by link</a></li><li>Plugins<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/plugins/resumen\">Resumen</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce\">WooCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop\">PrestaShop</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento\">Magento</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce\">osCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp\">GiveWP</a></li></ul></li></ul></li><li>Otros<ul><li><a href=\"/herramientas-para-desarrolladores/otros/google-pay\">Google pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/apple-pay\">Apple pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/bizum\">Bizum</a></li></ul></li></ul>"
+            }
+          }
+        ]
+      },
+      {
+        "name": "hero",
+        "blocks": [
+          {
+            "block": "hero",
+            "name": "Hero",
+            "model": "hero",
+            "fields": [
+              "image@reference",
+              "imageAlt@text",
+              "text@richtext"
+            ],
+            "props": {
+              "image": "/content/dam/pre-devportal/demo/hero-herramientas.jpg",
+              "imageAlt": "",
+              "text": "<h1>Api</h1>"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/content/pre-devportal/herramientas-para-desarrolladores/otros",
+    "replaceSections": [
+      "section",
+      "section_1"
+    ],
+    "sections": [
+      {
+        "name": "sidenav",
+        "blocks": [
+          {
+            "block": "sidenav",
+            "name": "Section Navigation",
+            "model": "sidenav",
+            "fields": [
+              "searchLabel@text",
+              "nav@richtext"
+            ],
+            "props": {
+              "searchLabel": "Buscar",
+              "nav": "<ul><li><a href=\"/herramientas-para-desarrolladores\">Inicio</a></li><li>Con integración<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/hosted-checkout\">Hosted checkout</a></li><li>API<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones\">Gestor de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/tokenizacion\">Tokenización</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones\">Anulación de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/swagger\">Swagger</a></li></ul></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/sdk\">SDK</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/iframe\">Iframe</a></li></ul></li><li>Sin integración<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pagos-moto\">Pagos MOTO</a></li><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pay-by-link\">Pay by link</a></li><li>Plugins<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/plugins/resumen\">Resumen</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce\">WooCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop\">PrestaShop</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento\">Magento</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce\">osCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp\">GiveWP</a></li></ul></li></ul></li><li>Otros<ul><li><a href=\"/herramientas-para-desarrolladores/otros/google-pay\">Google pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/apple-pay\">Apple pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/bizum\">Bizum</a></li></ul></li></ul>"
+            }
+          }
+        ]
+      },
+      {
+        "name": "hero",
+        "blocks": [
+          {
+            "block": "hero",
+            "name": "Hero",
+            "model": "hero",
+            "fields": [
+              "image@reference",
+              "imageAlt@text",
+              "text@richtext"
+            ],
+            "props": {
+              "image": "/content/dam/pre-devportal/demo/hero-herramientas.jpg",
+              "imageAlt": "",
+              "text": "<h1>Otros</h1>"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/content/pre-devportal/herramientas-para-desarrolladores/otros/google-pay",
+    "replaceSections": [
+      "section",
+      "section_1"
+    ],
+    "sections": [
+      {
+        "name": "sidenav",
+        "blocks": [
+          {
+            "block": "sidenav",
+            "name": "Section Navigation",
+            "model": "sidenav",
+            "fields": [
+              "searchLabel@text",
+              "nav@richtext"
+            ],
+            "props": {
+              "searchLabel": "Buscar",
+              "nav": "<ul><li><a href=\"/herramientas-para-desarrolladores\">Inicio</a></li><li>Con integración<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/hosted-checkout\">Hosted checkout</a></li><li>API<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones\">Gestor de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/tokenizacion\">Tokenización</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones\">Anulación de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/swagger\">Swagger</a></li></ul></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/sdk\">SDK</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/iframe\">Iframe</a></li></ul></li><li>Sin integración<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pagos-moto\">Pagos MOTO</a></li><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pay-by-link\">Pay by link</a></li><li>Plugins<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/plugins/resumen\">Resumen</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce\">WooCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop\">PrestaShop</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento\">Magento</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce\">osCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp\">GiveWP</a></li></ul></li></ul></li><li>Otros<ul><li><a href=\"/herramientas-para-desarrolladores/otros/google-pay\">Google pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/apple-pay\">Apple pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/bizum\">Bizum</a></li></ul></li></ul>"
+            }
+          }
+        ]
+      },
+      {
+        "name": "hero",
+        "blocks": [
+          {
+            "block": "hero",
+            "name": "Hero",
+            "model": "hero",
+            "fields": [
+              "image@reference",
+              "imageAlt@text",
+              "text@richtext"
+            ],
+            "props": {
+              "image": "/content/dam/pre-devportal/demo/hero-herramientas.jpg",
+              "imageAlt": "",
+              "text": "<h1>Google Pay</h1>"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/content/pre-devportal/herramientas-para-desarrolladores/sin-integracion",
+    "replaceSections": [
+      "section",
+      "section_1"
+    ],
+    "sections": [
+      {
+        "name": "sidenav",
+        "blocks": [
+          {
+            "block": "sidenav",
+            "name": "Section Navigation",
+            "model": "sidenav",
+            "fields": [
+              "searchLabel@text",
+              "nav@richtext"
+            ],
+            "props": {
+              "searchLabel": "Buscar",
+              "nav": "<ul><li><a href=\"/herramientas-para-desarrolladores\">Inicio</a></li><li>Con integración<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/hosted-checkout\">Hosted checkout</a></li><li>API<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones\">Gestor de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/tokenizacion\">Tokenización</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones\">Anulación de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/swagger\">Swagger</a></li></ul></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/sdk\">SDK</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/iframe\">Iframe</a></li></ul></li><li>Sin integración<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pagos-moto\">Pagos MOTO</a></li><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pay-by-link\">Pay by link</a></li><li>Plugins<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/plugins/resumen\">Resumen</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce\">WooCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop\">PrestaShop</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento\">Magento</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce\">osCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp\">GiveWP</a></li></ul></li></ul></li><li>Otros<ul><li><a href=\"/herramientas-para-desarrolladores/otros/google-pay\">Google pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/apple-pay\">Apple pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/bizum\">Bizum</a></li></ul></li></ul>"
+            }
+          }
+        ]
+      },
+      {
+        "name": "hero",
+        "blocks": [
+          {
+            "block": "hero",
+            "name": "Hero",
+            "model": "hero",
+            "fields": [
+              "image@reference",
+              "imageAlt@text",
+              "text@richtext"
+            ],
+            "props": {
+              "image": "/content/dam/pre-devportal/demo/hero-herramientas.jpg",
+              "imageAlt": "",
+              "text": "<h1>Sin Integracion</h1>"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/content/pre-devportal/herramientas-para-desarrolladores/sin-integracion/plugins",
+    "replaceSections": [
+      "section",
+      "section_1"
+    ],
+    "sections": [
+      {
+        "name": "sidenav",
+        "blocks": [
+          {
+            "block": "sidenav",
+            "name": "Section Navigation",
+            "model": "sidenav",
+            "fields": [
+              "searchLabel@text",
+              "nav@richtext"
+            ],
+            "props": {
+              "searchLabel": "Buscar",
+              "nav": "<ul><li><a href=\"/herramientas-para-desarrolladores\">Inicio</a></li><li>Con integración<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/hosted-checkout\">Hosted checkout</a></li><li>API<ul><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones\">Gestor de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/tokenizacion\">Tokenización</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones\">Anulación de operaciones</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/api/swagger\">Swagger</a></li></ul></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/sdk\">SDK</a></li><li><a href=\"/herramientas-para-desarrolladores/con-integracion/iframe\">Iframe</a></li></ul></li><li>Sin integración<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pagos-moto\">Pagos MOTO</a></li><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/pay-by-link\">Pay by link</a></li><li>Plugins<ul><li><a href=\"/herramientas-para-desarrolladores/sin-integracion/plugins/resumen\">Resumen</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce\">WooCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/prestashop\">PrestaShop</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/magento\">Magento</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce\">osCommerce</a></li><li><a href=\"/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/givewp\">GiveWP</a></li></ul></li></ul></li><li>Otros<ul><li><a href=\"/herramientas-para-desarrolladores/otros/google-pay\">Google pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/apple-pay\">Apple pay</a></li><li><a href=\"/herramientas-para-desarrolladores/otros/bizum\">Bizum</a></li></ul></li></ul>"
+            }
+          }
+        ]
+      },
+      {
+        "name": "hero",
+        "blocks": [
+          {
+            "block": "hero",
+            "name": "Hero",
+            "model": "hero",
+            "fields": [
+              "image@reference",
+              "imageAlt@text",
+              "text@richtext"
+            ],
+            "props": {
+              "image": "/content/dam/pre-devportal/demo/hero-herramientas.jpg",
+              "imageAlt": "",
+              "text": "<h1>Plugins</h1>"
             }
           }
         ]
