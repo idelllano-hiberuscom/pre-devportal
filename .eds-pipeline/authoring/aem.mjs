@@ -250,7 +250,60 @@ async function author(specFile, only, dry) {
   if (!dry) console.log(`\n${ok}/${list.length} páginas autorizadas`);
 }
 
-if (CMD === 'get') {
+/*
+ * Escribe a disco el cuerpo del formulario de una página, sin hacer ninguna petición.
+ * Permite revisar exactamente lo que se va a escribir y hacer el POST autenticado aparte:
+ *   node aem.mjs payload spec.json /content/pre-devportal/inicio out.form
+ *   curl -X POST -H "Authorization: Bearer $AEM_TOKEN" \
+ *        -H "Content-Type: application/x-www-form-urlencoded; charset=UTF-8" \
+ *        --data-binary @out.form "$AUTHOR/content/pre-devportal/inicio/jcr:content/root"
+ */
+function payload(specFile, pagePath, outFile) {
+  const specs = JSON.parse(fs.readFileSync(specFile, 'utf8'));
+  const spec = specs.find((s) => s.path === pagePath || s.path.endsWith(pagePath));
+  if (!spec) { console.error(`no hay spec para ${pagePath}`); process.exit(1); }
+
+  const form = new URLSearchParams();
+  const nodes = pageNodes(spec);
+  for (const name of spec.replaceSections || Object.keys(nodes)) {
+    form.append(`./${name}@Delete`, 'true');
+  }
+  flatten('./', nodes, form);
+
+  fs.writeFileSync(outFile, form.toString());
+  console.log(`${spec.path}`);
+  console.log(`  ${[...form.keys()].length} propiedades -> ${outFile} (${fs.statSync(outFile).size} bytes)`);
+  console.log(`  destino: ${spec.path}/jcr:content/root`);
+}
+
+/** Genera el payload de todas las páginas del spec en un directorio, sin hacer peticiones. */
+function payloadAll(specFile, outDir) {
+  const specs = JSON.parse(fs.readFileSync(specFile, 'utf8'));
+  fs.mkdirSync(outDir, { recursive: true });
+  const index = [];
+  for (const spec of specs) {
+    const slug = spec.path.replace(/^\/content\/pre-devportal\/?/, '').replace(/\//g, '__') || 'root';
+    const file = path.join(outDir, `${slug}.form`);
+    const form = new URLSearchParams();
+    const nodes = pageNodes(spec);
+    for (const name of spec.replaceSections || Object.keys(nodes)) {
+      form.append(`./${name}@Delete`, 'true');
+    }
+    flatten('./', nodes, form);
+    fs.writeFileSync(file, form.toString());
+    index.push({ slug, target: `${spec.path}/jcr:content/root`, props: [...form.keys()].length });
+  }
+  fs.writeFileSync(path.join(outDir, 'index.tsv'),
+    index.map((e) => `${e.slug}\t${e.target}\t${e.props}`).join('\n'));
+  console.log(`${index.length} payloads en ${outDir}`);
+  index.forEach((e) => console.log(`  ${String(e.props).padStart(4)} props  ${e.target}`));
+}
+
+if (CMD === 'payload') {
+  payload(ARGS[0], ARGS[1], ARGS[2]);
+} else if (CMD === 'payload-all') {
+  payloadAll(ARGS[0], ARGS[1]);
+} else if (CMD === 'get') {
   const r = await req('GET', ARGS[0]);
   console.log(`HTTP ${r.status}`);
   console.log(r.text.slice(0, Number(ARGS[1] || 1200)));

@@ -8,8 +8,15 @@
  * y las secciones existentes enriquecidas con las referencias de imagen que faltaban.
  */
 import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const S = '/private/tmp/claude-501/-Volumes-SanDisk-Portable-SSD-Media-programacion-pre-devportal/c9c278ae-a2b8-4e15-bcb3-55744ce1f5c1/scratchpad';
+// Rutas relativas al propio script: la ruta del repositorio contiene espacios, así que
+// fileURLToPath y no URL.pathname.
+const HERE = path.dirname(fileURLToPath(import.meta.url));
+
+
+const S = HERE;
 const DAM = '/content/dam/pre-devportal/demo';
 const ROOT = '/content/pre-devportal';
 
@@ -178,9 +185,18 @@ for (const [docPath, page] of pages(site)) {
   }
 
   if (sections.length) {
+    // Solo se borran nodos de sección: los nombres que se van a reescribir más las secciones
+    // existentes que quedarían huérfanas. Nunca propiedades del nodo root — incluir
+    // jcr:primaryType o sling:resourceType aquí lo dejaría sin tipo y rompería la página.
+    const willWrite = sections.map((_, i) => (i === 0 ? 'section' : `section_${i}`));
+    const existingSections = Object.entries(root)
+      .filter(([, v]) => v && typeof v === 'object'
+        && String(v['sling:resourceType'] || '').includes('section'))
+      .map(([k]) => k);
+
     specs.push({
       path: `${ROOT}${docPath}`,
-      replaceSections: [...new Set(['hero', ...Object.keys(root)])],
+      replaceSections: [...new Set([...willWrite, ...existingSections])],
       sections,
     });
   }

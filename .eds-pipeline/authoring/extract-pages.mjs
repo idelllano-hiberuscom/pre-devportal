@@ -6,7 +6,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const REPO = '/Volumes/SanDisk Portable SSD Media/programacion/pre-devportal';
+import { fileURLToPath } from 'node:url';
+
+// Rutas relativas al propio script: la ruta del repositorio contiene espacios, así que
+// fileURLToPath y no URL.pathname.
+const HERE = path.dirname(fileURLToPath(import.meta.url));
+
+const REPO = path.resolve(HERE, '..', '..');
 const PAGES = path.join(REPO, 'import-work', 'pages');
 
 const decode = (s) => s
@@ -53,7 +59,7 @@ for (const dir of fs.readdirSync(PAGES).sort()) {
 }
 
 fs.writeFileSync(
-  '/private/tmp/claude-501/-Volumes-SanDisk-Portable-SSD-Media-programacion-pre-devportal/c9c278ae-a2b8-4e15-bcb3-55744ce1f5c1/scratchpad/page-content.json',
+  path.join(HERE, 'page-content.json'),
   JSON.stringify(out, null, 2),
 );
 

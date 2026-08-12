@@ -5,8 +5,15 @@
  */
 import { chromium } from 'playwright';
 import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const OUT = '/private/tmp/claude-501/-Volumes-SanDisk-Portable-SSD-Media-programacion-pre-devportal/c9c278ae-a2b8-4e15-bcb3-55744ce1f5c1/scratchpad/demo-assets';
+// Rutas relativas al propio script: la ruta del repositorio contiene espacios, así que
+// fileURLToPath y no URL.pathname.
+const HERE = path.dirname(fileURLToPath(import.meta.url));
+
+
+const OUT = path.join(HERE, 'demo-assets');
 fs.mkdirSync(OUT, { recursive: true });
 
 // Fotografías de hero y de composición: degradados de marca con una malla suave encima.

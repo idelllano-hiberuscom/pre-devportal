@@ -2,10 +2,8 @@
   {
     "path": "/content/pre-devportal/ayuda",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
       {
@@ -82,10 +80,8 @@
   {
     "path": "/content/pre-devportal/blog",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
       {
@@ -147,10 +143,8 @@
   {
     "path": "/content/pre-devportal/empieza-con-nosotros",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
       {
@@ -253,10 +247,8 @@
   {
     "path": "/content/pre-devportal/fraude",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
       {
@@ -346,9 +338,6 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
       "section"
     ],
     "sections": [
@@ -377,9 +366,6 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/api/anulacion-de-operaciones",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
       "section"
     ],
     "sections": [
@@ -408,9 +394,6 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/api/gestor-de-operaciones",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
       "section"
     ],
     "sections": [
@@ -439,10 +422,8 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/api/swagger",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
       {
@@ -486,10 +467,8 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/api/tokenizacion",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
       {
@@ -533,9 +512,6 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/hosted-checkout",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
       "section"
     ],
     "sections": [
@@ -564,9 +540,6 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/iframe",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
       "section"
     ],
     "sections": [
@@ -595,9 +568,6 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/con-integracion/sdk",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
       "section"
     ],
     "sections": [
@@ -626,9 +596,6 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/otros/apple-pay",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
       "section"
     ],
     "sections": [
@@ -657,9 +624,6 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/otros/bizum",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
       "section"
     ],
     "sections": [
@@ -688,9 +652,6 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/sin-integracion/pagos-moto",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
       "section"
     ],
     "sections": [
@@ -719,9 +680,6 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/sin-integracion/pay-by-link",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
       "section"
     ],
     "sections": [
@@ -750,10 +708,8 @@
   {
     "path": "/content/pre-devportal/herramientas-para-desarrolladores/sin-integracion/plugins/resumen",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
       {
@@ -830,9 +786,7 @@
   {
     "path": "/content/pre-devportal/inicio",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType"
+      "section"
     ],
     "sections": [
       {
@@ -860,10 +814,8 @@
   {
     "path": "/content/pre-devportal/integraciones/api",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
       {
@@ -973,10 +925,8 @@
   {
     "path": "/content/pre-devportal/integraciones/hosted-checkout",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
       {
@@ -1043,10 +993,8 @@
   {
     "path": "/content/pre-devportal/integraciones/sdk",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
-      "section"
+      "section",
+      "section_1"
     ],
     "sections": [
       {
@@ -1113,9 +1061,6 @@
   {
     "path": "/content/pre-devportal/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/oscommerce",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
       "section"
     ],
     "sections": [
@@ -1144,9 +1089,6 @@
   {
     "path": "/content/pre-devportal/plugin/herramientas-para-desarrolladores/sin-integracion/plugins/woocomerce",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
       "section"
     ],
     "sections": [
@@ -1175,9 +1117,6 @@
   {
     "path": "/content/pre-devportal/sin-integracion/pago-por-email",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
       "section"
     ],
     "sections": [
@@ -1206,9 +1145,6 @@
   {
     "path": "/content/pre-devportal/sin-integracion/pagos-moto",
     "replaceSections": [
-      "hero",
-      "jcr:primaryType",
-      "sling:resourceType",
       "section"
     ],
     "sections": [

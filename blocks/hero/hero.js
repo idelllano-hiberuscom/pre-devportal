@@ -13,13 +13,25 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
  * loads and decorates the hero block
  * @param {Element} block The block element
  */
+const BLOCK_LEVEL = 'h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, table';
+
 export default function decorate(block) {
   const rows = [...block.children];
   if (!rows.length) return;
 
-  const [imageRow, altRow, ...textRows] = rows;
-  const imageCell = imageRow?.firstElementChild || imageRow;
-  const altCell = altRow?.firstElementChild || altRow;
+  /*
+   * AEM omite la fila de cualquier campo que el autor no haya rellenado, así que leer por
+   * posición desplaza los campos: un hero sin texto alternativo llega con dos filas y el
+   * texto acabaría tratado como alt. Cada fila se identifica por su contenido.
+   */
+  const cellOf = (row) => row?.firstElementChild || row;
+  const imageRow = rows.find((row) => cellOf(row)?.querySelector('picture, img'));
+  const rest = rows.filter((row) => row !== imageRow);
+  const textRows = rest.filter((row) => cellOf(row)?.querySelector(BLOCK_LEVEL));
+  const altRow = rest.find((row) => !textRows.includes(row));
+
+  const imageCell = cellOf(imageRow);
+  const altCell = cellOf(altRow);
 
   const media = document.createElement('div');
   media.className = 'hero-background';
