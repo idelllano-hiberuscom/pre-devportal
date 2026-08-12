@@ -68,12 +68,33 @@ enriquecidas:
 La autoría es idempotente: cada sección declarada se borra y se reescribe, así que se puede
 volver a ejecutar sin duplicar nodos.
 
-## Después de autorizar
+## Estado actual (2026-08-12)
 
-Las páginas siguen sin ser visibles en `*.aem.page` hasta que se hace preview. Eso se
-dispara desde el Sites console de AEM (Publicar → Publicar en preview) o desde Universal
-Editor con el botón de preview. Sin ese paso `main--pre-devportal--idelllano-hiberuscom.aem.page`
-seguirá devolviendo 404.
+- las 42 imágenes están en `/content/dam/pre-devportal/demo`
+- las **25 páginas están autorizadas** con hero, el h1 y la entradilla reales del portal, y
+  las referencias de imagen rellenas en todos los bloques
+- verificado en el endpoint de delivery del author, que es lo que consume EDS:
+  `/bin/franklin.delivery/idelllano-hiberuscom/pre-devportal/main/inicio.html` devuelve el
+  hero con su `<picture>` del DAM, el `<h1>` y la instrumentación de Universal Editor
+- **falta el preview**: sin él, `main--pre-devportal--idelllano-hiberuscom.aem.page` sigue
+  devolviendo 404
+
+## Cómo disparar el preview
+
+La admin API de aem.live no sirve aquí: `POST https://admin.hlx.page/preview/idelllano-hiberuscom/pre-devportal/main/<pagina>`
+responde **401 `error from content-bus`**, porque con AEM como origen el preview se replica
+desde el propio author, no desde el repositorio.
+
+Así que se hace desde AEM, y son dos clics:
+
+1. Sites console → `/content/pre-devportal` → seleccionar las páginas (o la raíz con sus
+   descendientes) → **Publicar** → publica a preview
+2. o abrir cualquier página en Universal Editor y usar su botón de preview
+
+Por API sería `POST /bin/replicate.json` con `path`, `cmd=Activate` y el `agentId` del agente
+de preview, pero no está verificado cuál es el id en este entorno: las páginas traían
+`cq:lastReplicationAction_preview`, lo que confirma que el agente existe, pero no su nombre.
+Conviene comprobarlo en `/etc/replication/agents.author` antes de automatizarlo.
 
 ## Aviso sobre `value` en pie-chart
 
