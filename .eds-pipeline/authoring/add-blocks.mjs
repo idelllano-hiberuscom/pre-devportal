@@ -131,7 +131,7 @@ const sidenavSection = () => ({
   sidenav: {
     'jcr:primaryType': 'nt:unstructured',
     'sling:resourceType': RT.block,
-    name: 'Section Navigation',
+    name: 'Sidenav',
     model: 'sidenav',
     modelFields: ['searchLabel@text', 'nav@richtext'],
     searchLabel: 'Buscar',
