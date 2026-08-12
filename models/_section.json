@@ -62,7 +62,9 @@
         "tabs",
         "accordion",
         "contact-form",
-        "swagger-console"
+        "swagger-console",
+        "feature-list",
+        "sidenav"
       ]
     }
   ]

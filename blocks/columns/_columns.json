@@ -50,7 +50,12 @@
         "text",
         "image",
         "button",
-        "title"
+        "title",
+        "cards",
+        "cards-editorial",
+        "cards-logos",
+        "cards-icon-cards",
+        "cards-plugins"
       ]
     }
   ]

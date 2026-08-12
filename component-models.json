@@ -482,6 +482,33 @@
     ]
   },
   {
+    "id": "feature-list-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "icon",
+        "label": "Icon",
+        "valueType": "string",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "iconAlt",
+        "label": "Icon alternative text",
+        "description": "Leave empty if the icon is decorative and the title already conveys the meaning.",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Text",
+        "description": "Title and description of the feature. The title should be a heading.",
+        "valueType": "string",
+        "required": true
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
@@ -553,6 +580,26 @@
         "name": "details",
         "label": "Details",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "sidenav",
+    "fields": [
+      {
+        "component": "text",
+        "name": "searchLabel",
+        "label": "Search placeholder",
+        "description": "Text shown inside the search box. Defaults to Buscar.",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "nav",
+        "label": "Navigation",
+        "description": "Nested list of links. A list item that contains its own list becomes a group: a heading at the first level and an expandable item below that.",
+        "valueType": "string",
+        "required": true
       }
     ]
   },

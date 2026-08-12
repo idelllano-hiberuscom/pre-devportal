@@ -132,10 +132,14 @@ export default async function decorate(block) {
   });
 
   const navBrand = nav.querySelector('.nav-brand');
-  const brandLink = navBrand.querySelector('.button');
+  const brandLink = navBrand?.querySelector('.button');
   if (brandLink) {
     brandLink.className = '';
-    brandLink.closest('.button-container').className = '';
+    // decorateButtons de este proyecto marca el párrafo como `button-wrapper`, no como el
+    // `button-container` del boilerplate. Buscar el nombre antiguo devolvía null y la
+    // excepción tumbaba la decoración completa del header, que quedaba vacío.
+    const wrapper = brandLink.closest('.button-wrapper, .button-container');
+    if (wrapper) wrapper.className = '';
   }
 
   const navSections = nav.querySelector('.nav-sections');
