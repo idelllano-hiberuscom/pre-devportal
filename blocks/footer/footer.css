@@ -30,10 +30,34 @@ footer .footer-content {
   gap: 40px;
 }
 
+/*
+ * En las páginas con menú lateral el pie no va a sangre: arranca donde acaba el menú, como en
+ * el portal. Se marca en el body porque el pie vive fuera de `main`, que es quien lleva la
+ * rejilla de dos columnas.
+ *
+ * Con `margin-left` y no con relleno, para que el fondo navy tampoco se cuele por debajo de
+ * la columna izquierda: con relleno el fondo seguía llegando a sangre.
+ */
+@media (width >= 1200px) {
+  body.has-sidenav footer {
+    margin-left: 250px;
+  }
+}
+
 /* marca */
 footer .footer-brand p {
   margin: 0;
   line-height: 0;
+}
+
+/* redes sociales, bajo el logotipo */
+footer .footer-brand .footer-social {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-top: 24px;
+  font-size: 24px;
+  line-height: 1;
 }
 
 footer .footer-brand img {
@@ -126,13 +150,20 @@ footer .footer-certifications img {
     gap: 64px;
   }
 
+  /*
+   * La marca cede ancho en lugar de imponerlo: en las páginas con menú lateral el pie se
+   * queda con 250px menos y, con una base fija de 395px, las columnas de enlaces se
+   * estrechaban tanto que partían palabras a media sílaba.
+   */
   footer .footer-brand {
-    flex: 0 0 395px;
+    flex: 0 1 395px;
+    min-width: 220px;
   }
 
+  /* La separación se ajusta al ancho disponible: 80px es lo medido a 1440 sin menú lateral. */
   footer .footer-links {
     flex: 1 1 auto;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 80px;
+    gap: clamp(32px, 5vw, 80px);
   }
 }

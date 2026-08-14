@@ -343,6 +343,76 @@
   }
 }
 
+/*
+ * Variante boxed: las tarjetas blancas que se solapan con el hero en las páginas de
+ * integración (el portal las llama icon-card, dentro de hero-with-cards).
+ * Medido en /integraciones/hosted-checkout:
+ *   tarjeta 348x320 · fondo blanco · radio 16 · sombra de la casa · padding 32
+ *   rejilla de 2 columnas de 348 con gap 24, centrada (720 en total)
+ *   icono 56x56 en teal con 16px por debajo
+ *   h4 18/22 peso 500 ls .25 · p 16/32 sobre rgb(118,118,122)
+ */
+.cards.boxed > ul {
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.cards.boxed > ul > li {
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  border-radius: 16px;
+  padding: 32px;
+  background-color: var(--background-color);
+  box-shadow: var(--shadow-card);
+}
+
+.cards.boxed .cards-card-image {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  line-height: 0;
+}
+
+.cards.boxed .cards-card-image img,
+.cards.boxed .cards-card-image svg {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  aspect-ratio: auto;
+}
+
+.cards.boxed > ul > li > .cards-card-body {
+  margin: 0;
+}
+
+.cards.boxed > ul > li > .cards-card-body :is(h2, h3, h4) {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  line-height: 22px;
+}
+
+.cards.boxed > ul > li > .cards-card-body p {
+  margin: 0 0 16px;
+  color: var(--text-secondary);
+  font-size: var(--body-font-size-s);
+  line-height: var(--paragraph-line-height);
+}
+
+.cards.boxed > ul > li > .cards-card-body p:last-child {
+  margin-bottom: 0;
+}
+
+@media (width >= 900px) {
+  .cards.boxed > ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 /* plugins variant */
 .cards.plugins > ul {
   grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));

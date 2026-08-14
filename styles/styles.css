@@ -385,3 +385,56 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+/*
+ * Estilo `banner`: la franja navy con los bordes en diagonal, con el contenido centrado.
+ * En el portal es `highlighted-image` y se usa para el diagrama de cada integración.
+ * Medido en /integraciones/hosted-checkout:
+ *   clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%) · padding 320px 160px
+ *   h2 40px/60px peso 400 en blanco, centrado, con un ancho máximo de 560px
+ * El relleno vertical es tan generoso justamente porque el recorte se come las esquinas.
+ */
+main .section.banner {
+  margin: 0;
+  padding: 96px 0;
+  background-color: var(--brand-primary);
+  color: var(--background-color);
+  clip-path: polygon(0 6%, 100% 0, 100% 94%, 0 100%);
+  text-align: center;
+}
+
+main .section.banner :is(h1, h2, h3, h4, h5, h6),
+main .section.banner p,
+main .section.banner li {
+  color: var(--background-color);
+}
+
+main .section.banner :is(h1, h2) {
+  max-width: 560px;
+  margin: 0 auto 8px;
+  font-size: var(--heading-font-size-xl);
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.5;
+}
+
+main .section.banner img {
+  width: 100%;
+  height: auto;
+}
+
+main .section.banner p {
+  margin: 0 0 16px;
+  line-height: 0;
+}
+
+@media (width >= 900px) {
+  main .section.banner {
+    padding: 200px 0;
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+  }
+
+  main .section.banner :is(h1, h2) {
+    line-height: 60px;
+  }
+}

@@ -178,17 +178,47 @@
     width: 100%;
   }
 
+  /*
+   * La columna del menú se estira a todo el alto de la rejilla. Hace falta decirlo a mano
+   * porque el `align-items: start` de arriba la encogía al alto de su contenido, y entonces
+   * el panel sticky no tenía recorrido: al bajar se iba con el resto de la página.
+   */
   main.has-sidenav > .section.sidenav-section {
     grid-row: 1 / -1;
     grid-column: 1;
+    align-self: stretch;
     margin: 0;
     border-right: 1px solid var(--border-color);
     padding: 0;
   }
 
+  /*
+   * El alto tiene que bajar por toda la cadena — sección, envoltorio y bloque — hasta el
+   * panel: el bloque contenedor de un sticky es su padre, así que si el bloque mide solo lo
+   * que mide el panel, no hay recorrido y el menú se va con la página al bajar.
+   */
+  main.has-sidenav > .section.sidenav-section > div,
+  main.has-sidenav > .section.sidenav-section .sidenav {
+    height: 100%;
+  }
+
+  /*
+   * El menú queda anclado bajo la cabecera, igual que en el portal. Va `fixed` y no `sticky`
+   * porque tiene que seguir a la vista también sobre el pie: con `sticky` solo se pega
+   * mientras `main` está en pantalla y al llegar abajo del todo se iba con él.
+   *
+   * La columna de 250px de la rejilla sigue reservando el hueco, así que sacarlo del flujo no
+   * desplaza el contenido. La altura se limita al hueco que deja la cabecera y el panel se
+   * desplaza solo: si no, con todos los grupos abiertos el final del menú era inalcanzable.
+   */
   .sidenav-section .sidenav-panel {
-    position: sticky;
+    position: fixed;
     top: var(--nav-height);
+    left: 0;
+    width: 250px;
+    max-height: calc(100dvh - var(--nav-height));
+    overflow-y: auto;
+    overscroll-behavior: contain;
     padding: 32px 0;
   }
 
